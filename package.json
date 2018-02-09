@@ -1,0 +1,23 @@
+{
+  "name": "styleguide",
+  "version": "0.0.1",
+  "description": "ASDA StyleGuide",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-centered": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "babel-core": "^6.26.0",
+    "brandai-storybook": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "author": "Chandler Van De Water",
+  "license": "ISC"
+}
