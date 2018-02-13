@@ -21,14 +21,19 @@ const BasicButton = styled.button`
 
   background: ${({ color }) => colors()[color]};
   border: ${({ color }) => `1px solid ${colors()[color]}`};
-  height: ${({ small }) => (small ? '40px' : '50px')};
-  min-width: ${({ small }) => (small ? '166px' : '240px')};
+  height: ${({ small }) => (small ? '30px' : '40px')};
+  min-width: ${({ small }) => (small ? '130px' : '200px')};
 
   span {
     position: relative;
     z-index: 2;
     font-family: 'Source Sans Pro';
-    font-size: ${({ small }) => (small ? '16px' : '18px')};
+    font-size: ${({ small }) => (small ? '15px' : '18px')};
+  }
+
+  &:focus, &:active {
+    outline: none;
+    box-shadow: ${({ color }) => `0 0 10px ${colors(.3)[color]}`};
   }
 
   &:before {

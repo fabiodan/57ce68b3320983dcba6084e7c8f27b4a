@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered';
 
 import Button from '../components/Button';
+import Input from '../components/Input';
 
 addDecorator(centered);
 
@@ -46,3 +47,8 @@ storiesOf('Button — Small', module)
   .add('Small Red Secondary', () => (
     <Button small color="red" secondary onClick={action('clicked')}>Remove</Button>
   ));
+
+  storiesOf('Input', module)
+    .add('Text', () => (
+      <Input />
+    ))
