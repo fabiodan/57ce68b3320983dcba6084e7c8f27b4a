@@ -82,7 +82,7 @@ class Input extends Component {
     this.state = {
       value: props.defaultValue || '',
       id: uniqueId('input'),
-      icon: false
+      icon: ''
     }
   }
 
@@ -92,7 +92,7 @@ class Input extends Component {
         this.setState({ icon: image })
       });
     } else {
-      this.setState({ icon: false });
+      this.setState({ icon: '' });
     }
   }
 
@@ -144,7 +144,7 @@ Input.propTypes = {
   ]),
   /** Which type of credit card icon should be displayed, or false if none */
   icon: PropTypes.oneOf([
-    false,
+    '',
     ...creditcards
   ]),
   /** Placeholder text */
@@ -155,7 +155,7 @@ Input.propTypes = {
   message: PropTypes.shape({
     text: PropTypes.string,
     type: PropTypes.oneOf([
-      'success', 'error'
+      '', 'success', 'error'
     ])
   }),
   /** Pre-fill the input's default value */
@@ -165,7 +165,7 @@ Input.propTypes = {
 Input.defaultProps = {
   color: 'gray',
   label: null,
-  icon: false,
+  icon: '',
   message: null,
   placeholder: '',
   defaultValue: ''

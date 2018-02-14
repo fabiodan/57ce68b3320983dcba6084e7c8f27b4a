@@ -46,7 +46,7 @@ storiesOf('Button', module)
 
 const imageUrl = '../images/creditcards';
 const iconOptions = [
-  false,
+  '',
   'blank',
   'amex',
   'cirrus',
@@ -74,7 +74,7 @@ storiesOf('Input', module)
     ~~~js
     <Input
       color="gray"
-      icon={false}
+      icon=""
       label={null}
       message={null}
       placeholder=""
@@ -84,14 +84,14 @@ storiesOf('Input', module)
   `)(() => {
 
     const messageText = text('Message Text', ''),
-          type = select('Message Type', [null, 'error', 'success'], null),
+          type = select('Message Type', ['', 'error', 'success'], ''),
           message = { text: messageText };
 
     if (!!type) message.type = type;
 
     return (
       <Input
-        icon={select('with icon', iconOptions, false)}
+        icon={select('with icon', iconOptions, '')}
         label={text('Label', 'Label')}
         placeholder={text('Placeholder', 'Placeholder')}
         message={message}
