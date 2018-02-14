@@ -13,16 +13,16 @@ const BasicButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  color: white;
+  font-weight: 600;
   transition: all .2s linear;
   -webkit-font-smoothing: antialiased;
   position: relative;
   cursor: pointer;
   padding: 0 20px;
 
+  color: ${({ color }) => (color === 'white' ? '#191919' : 'white')};;
   background: ${({ color }) => colors()[color]};
-  border: ${({ color }) => `1px solid ${colors()[color]}`};
+  border: ${({ color, overlay }) => `1px solid ${color === 'white' && overlay ? 'white' : colors()[color]}`};
   height: ${({ small }) => (small ? '30px' : '40px')};
   min-width: ${({ small }) => (small ? '130px' : '200px')};
 
@@ -53,17 +53,19 @@ const BasicButton = styled.button`
 
   &:hover {
     &:before {
-      opacity: 1;
+      opacity: ${({ color }) => (color === 'white' ? 0 : 1)};
     }
   }
 `;
 
 const SecondaryButton = styled(BasicButton)`
-  background: white;
-  color: ${({ color }) => colors()[color]};
+  background: ${({ overlay }) => (overlay ? `none` : 'white')};
+  color: ${({ color, overlay }) => (overlay ? 'white' : colors()[color])};
+  border-color: ${({ color, overlay }) => (overlay ? 'white' : colors()[color])};
+  text-shadow: ${({ overlay }) => (overlay ? `1px 1px 2px rgba(0,0,0,.2), 0 0 10px rgba(0,0,0,.5)` : 'none')};
 
   &:before {
-    background: ${({ color }) => `${colors(.1)[color]}`};
+    background: ${({ color, overlay }) => (overlay ? 'rgba(255,255,255,.1)' : `${colors(.1)[color]}`)};
   }
 `;
 
@@ -76,7 +78,8 @@ class Button extends PureComponent {
       small,
       disabled,
       loading,
-      onClick
+      onClick,
+      overlay
     } = this.props;
     const content = <span>{children}</span>;
 
@@ -86,6 +89,7 @@ class Button extends PureComponent {
           onClick={onClick}
           color={color}
           small={small}
+          overlay={overlay}
         >
           {content}
         </SecondaryButton>
@@ -97,6 +101,7 @@ class Button extends PureComponent {
         onClick={onClick}
         color={color}
         small={small}
+        overlay={overlay}
       >
         {content}
       </BasicButton>
@@ -117,10 +122,12 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   /** Display loading indicator? */
   loading: PropTypes.bool,
-  /** Color of the button as a string: green, blue, or red */
+  /** Color of the button as a string */
   color: PropTypes.oneOf([
-    'green', 'blue', 'red'
+    'green', 'blue', 'red', 'white'
   ]),
+  /** Is the button over an image? */
+  overlay: PropTypes.bool
 };
 
 Button.defaultProps = {
@@ -129,7 +136,8 @@ Button.defaultProps = {
   loading: false,
   disabled: false,
   color: 'green',
-  onClick: () => console.log('Button clicked')
+  onClick: () => console.log('Button clicked'),
+  overlay: false
 };
 
 export default Button;
