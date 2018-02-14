@@ -52,7 +52,7 @@ const StyledInput = styled.input`
   background: ${({ icon }) => (icon ? `url(${icon}) white no-repeat 10px` : 'white')};
   border: ${({ color }) => `1px solid ${colors()[color]}`};
   height: 40px;
-  min-width: 300px;
+  min-width: ${({ icon }) => (icon ? '263px' : '300px')};
   padding: ${({ icon }) => `0 13px ${icon ? ' 0 50px' : ''}`};
 
   &::placeholder {
