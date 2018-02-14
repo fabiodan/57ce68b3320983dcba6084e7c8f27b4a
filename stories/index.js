@@ -92,8 +92,8 @@ storiesOf('Input', module)
     return (
       <Input
         icon={select('with icon', iconOptions, false)}
-        label={text('Label', null)}
-        placeholder={text('Placeholder', null)}
+        label={text('Label', 'Label')}
+        placeholder={text('Placeholder', 'Placeholder')}
         message={message}
       />
     );
