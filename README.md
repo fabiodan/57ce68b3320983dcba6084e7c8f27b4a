@@ -5,7 +5,7 @@ This guide uses [Storybook](storybook.js.org) to implement the ASDA Pattern Libr
 
 ### Getting Started
 
-Firstly, you'll need [yarn](https://yarnpkg.com/lang/en/docs/install/) installed. 
+Firstly, you'll need [yarn](https://yarnpkg.com/lang/en/docs/install/) installed.
 
 1. Clone this repo
 2. `yarn install` from this repo's directory
@@ -25,3 +25,11 @@ A few addons have been included:
 - A first-pass test of [Brand.ai Storybook](https://github.com/brandai/brandai-storybook) is included. It allows devs to see exported, flat images of the designs stored in the designer's Pattern Library.
 You can see access these via the **Design Library** tab in the **Actions Panel** (access this with `⌘⇧C`).
 - View more [Storybook-supported `addons`](https://storybook.js.org/addons/addon-gallery/)
+
+
+### Deployment
+
+Currently, the StyleGuide™ is deployed to [Github Pages](chandlervdw.com/asda-styleguide) using [storybook-deployer](https://github.com/storybooks/storybook-deployer).
+```
+npm run deploy-storybook
+```
