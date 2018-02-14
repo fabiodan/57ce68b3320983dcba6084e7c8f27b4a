@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf, addDecorator } from '@storybook/react';
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered';
 
@@ -48,7 +49,27 @@ storiesOf('Button — Small', module)
     <Button small color="red" secondary onClick={action('clicked')}>Remove</Button>
   ));
 
+  const imageUrl = '../images/creditcards';
+  const iconOptions = [
+    false,
+    'blank',
+    'amex',
+    'cirrus',
+    'diners',
+    'discover',
+    'maestro',
+    'mastercard',
+    'plus',
+    'visa'
+  ];
+
   storiesOf('Input', module)
-    .add('Text', () => (
-      <Input />
+    .addDecorator(withKnobs)
+    .add('Text Input', () => (
+      <Input
+        icon={select('with icon', iconOptions, false)}
+        label={text('Label', 'Label')}
+        placeholder={text('Placeholder', 'Enter a value')}
+        error={text('Error Message', null)}
+      />
     ))

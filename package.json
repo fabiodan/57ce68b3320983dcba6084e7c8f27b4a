@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@storybook/addon-centered": "^3.3.12",
+    "@storybook/addon-knobs": "^3.3.13",
     "@storybook/react": "^3.3.12",
     "babel-core": "^6.26.0",
     "brandai-storybook": "^1.0.2"
