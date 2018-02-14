@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const colors = (percentage = '1') => ({
+export const colors = (percentage = '1') => ({
   green: `rgba(104, 165, 28, ${percentage})`,
   blue: `rgba(53, 148, 178, ${percentage})`,
   red: `rgba(242, 87, 87, ${percentage})`
@@ -18,6 +19,7 @@ const BasicButton = styled.button`
   -webkit-font-smoothing: antialiased;
   position: relative;
   cursor: pointer;
+  padding: 0 20px;
 
   background: ${({ color }) => colors()[color]};
   border: ${({ color }) => `1px solid ${colors()[color]}`};
@@ -67,15 +69,67 @@ const SecondaryButton = styled(BasicButton)`
 
 class Button extends PureComponent {
   render() {
-    const { children, secondary, color = 'green', small = false } = this.props,
-          content = <span>{children}</span>;
+    const {
+      children,
+      secondary,
+      color,
+      small,
+      disabled,
+      loading,
+      onClick
+    } = this.props;
+    const content = <span>{children}</span>;
 
     if (secondary) {
-      return <SecondaryButton color={color} small={small}>{content}</SecondaryButton>;
+      return (
+        <SecondaryButton
+          onClick={onClick}
+          color={color}
+          small={small}
+        >
+          {content}
+        </SecondaryButton>
+      );
     }
 
-    return <BasicButton color={color} small={small}>{content}</BasicButton>;
+    return (
+      <BasicButton
+        onClick={onClick}
+        color={color}
+        small={small}
+      >
+        {content}
+      </BasicButton>
+    );
   }
 }
+
+Button.propTypes = {
+  /** Button text */
+  children: PropTypes.string.isRequired,
+  /** Color of the button as a string */
+  onClick: PropTypes.func.isRequired,
+  /** Display in secondary style? */
+  secondary: PropTypes.bool,
+  /** Display in smaller style */
+  small: PropTypes.bool,
+  /** Disabled? */
+  disabled: PropTypes.bool,
+  /** Display loading indicator? */
+  loading: PropTypes.bool,
+  /** Color of the button as a string: green, blue, or red */
+  color: PropTypes.oneOf([
+    'green', 'blue', 'red'
+  ]),
+};
+
+Button.defaultProps = {
+  secondary: false,
+  small: false,
+  loading: false,
+  disabled: false,
+  color: 'green',
+  onClick: () => console.log('Button clicked')
+};
 
 export default Button;
