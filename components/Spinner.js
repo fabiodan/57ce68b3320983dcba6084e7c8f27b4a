@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const offset = 187,
@@ -49,9 +50,9 @@ const SVG = styled.svg`
   }
 `;
 
-const Spinner = ({ color, small = false }) => {
-  const scale = small ? 0.2 : 0.25,
-        scaledBase = `${base * scale}px`,
+/** Spinner component */
+const Spinner = ({ color, scale }) => {
+  const scaledBase = `${base * scale}px`,
         scaledView = viewBase * scale,
         scaledC = cBase * scale,
         scaledR = rBase * scale,
@@ -75,6 +76,18 @@ const Spinner = ({ color, small = false }) => {
      />
     </SVG>
   );
+};
+
+Spinner.propTypes = {
+  /** The color of the spinner as a string */
+  color: PropTypes.string,
+  /** The scale of the spinner as a decimal percentage */
+  scale: PropTypes.number,
+};
+
+Spinner.defaultProps = {
+  color: 'white',
+  scale: 0.25
 };
 
 export default Spinner;

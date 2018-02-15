@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -11,7 +11,7 @@ export const colors = (percentage = '1') => ({
   gray: `#4A4A4A`
 });
 
-const BasicButton = styled.button`
+const StyledButton = styled.button`
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -74,7 +74,7 @@ const BasicButton = styled.button`
   }
 `;
 
-const SecondaryButton = styled(BasicButton)`
+const SecondaryButton = styled(StyledButton)`
   background: ${({ overlay }) => (overlay ? `none` : 'white')};
   color: ${({ color, overlay }) => (overlay ? 'white' : colors()[color])};
   border-color: ${({ color, overlay }) => (overlay ? 'white' : colors()[color])};
@@ -93,61 +93,57 @@ const Loading = styled.div`
   justify-content: center;
 `;
 
-class Button extends PureComponent {
-  render() {
-    const {
-      children,
-      secondary,
-      color,
-      textColor,
-      small,
-      disabled,
-      loading,
-      onClick,
-      overlay
-    } = this.props;
+const Button = ({
+  children,
+  secondary,
+  color,
+  textColor,
+  small,
+  disabled,
+  loading,
+  onClick,
+  overlay
+}) => {
+  let content = <span>{children}</span>;
+  if (loading) {
+    let spinnerColor = secondary ? colors()[color] : 'white';
+    if (secondary && overlay) spinnerColor = 'white';
+    if (color === 'white') spinnerColor = colors()[textColor];
+    content = (
+      <Loading>
+        <Spinner color={spinnerColor} scale={small ? 0.2 : 0.25} />
+        {content}
+      </Loading>
+    );
+  }
 
-    let content = <span>{children}</span>;
-    if (loading) {
-      let spinnerColor = secondary ? colors()[color] : 'white';
-      if (secondary && overlay) spinnerColor = 'white';
-      if (color === 'white') spinnerColor = colors()[textColor];
-      content = (
-        <Loading>
-          <Spinner color={spinnerColor} small={small} />
-          {content}
-        </Loading>
-      );
-    }
-
-    if (secondary) {
-      return (
-        <SecondaryButton
-          onClick={onClick}
-          color={color}
-          small={small}
-          overlay={overlay}
-          disabled={disabled}
-        >
-          {content}
-        </SecondaryButton>
-      );
-    }
-
+  if (secondary) {
     return (
-      <BasicButton
+      <SecondaryButton
         onClick={onClick}
         color={color}
-        textColor={textColor}
         small={small}
         overlay={overlay}
         disabled={disabled}
       >
         {content}
-      </BasicButton>
+      </SecondaryButton>
     );
   }
-}
+
+  return (
+    <StyledButton
+      onClick={onClick}
+      color={color}
+      textColor={textColor}
+      small={small}
+      overlay={overlay}
+      disabled={disabled}
+    >
+      {content}
+    </StyledButton>
+  );
+};
 
 Button.propTypes = {
   /** Button text */

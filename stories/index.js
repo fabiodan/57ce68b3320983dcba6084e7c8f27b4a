@@ -1,2 +1,3 @@
 import ButtonStory from './ButtonStory';
-import Input from './InputStory';
+import InputStory from './InputStory';
+import TypographyStory from './TypographyStory';
