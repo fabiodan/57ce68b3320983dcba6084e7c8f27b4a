@@ -106,8 +106,8 @@ class Button extends PureComponent {
 
     let content = <span>{children}</span>;
     if (loading) {
-      let spinnerColor = colors()[color];
-      if (!secondary || overlay) spinnerColor = 'white';
+      let spinnerColor = secondary ? colors()[color] : 'white';
+      if (secondary && overlay) spinnerColor = 'white';
       if (color === 'white') spinnerColor = colors()[textColor];
       content = (
         <Loading>
