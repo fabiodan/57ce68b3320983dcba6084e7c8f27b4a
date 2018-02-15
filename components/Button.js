@@ -23,7 +23,8 @@ const BasicButton = styled.button`
   cursor: pointer;
   padding: ${({ small }) => (small ? '0 15px' : '0 20px')};
 
-  color: ${({ color, textColor }) => (color === 'white' ? colors()[textColor] : 'white')};
+  color: ${({ color, textColor, overlay, disabled }) =>
+    (color === 'white' ? colors(disabled && overlay ? 0.75 : 1)[textColor] : `rgba(255,255,255,${disabled && overlay ? 0.75 : 1})`)};
   background: ${({ color }) => colors()[color]};
   border: ${({ color, overlay }) => {
     if (overlay) {
@@ -35,6 +36,8 @@ const BasicButton = styled.button`
   height: ${({ small }) => (small ? '30px' : '40px')};
   min-width: ${({ small }) => (small ? '130px' : '200px')};
   box-shadow: ${({ overlay }) => (overlay ? '0 2px 3px rgba(0,0,0,.1)' : 'none')};
+  opacity: ${({ disabled, overlay }) => (!overlay && disabled ? 0.75 : 1)};
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
 
   span {
     position: relative;
@@ -121,6 +124,7 @@ class Button extends PureComponent {
           color={color}
           small={small}
           overlay={overlay}
+          disabled={disabled}
         >
           {content}
         </SecondaryButton>
@@ -134,6 +138,7 @@ class Button extends PureComponent {
         textColor={textColor}
         small={small}
         overlay={overlay}
+        disabled={disabled}
       >
         {content}
       </BasicButton>
