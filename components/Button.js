@@ -36,7 +36,10 @@ const BasicButton = styled.button`
   height: ${({ small }) => (small ? '30px' : '40px')};
   min-width: ${({ small }) => (small ? '130px' : '200px')};
   box-shadow: ${({ overlay }) => (overlay ? '0 2px 3px rgba(0,0,0,.1)' : 'none')};
-  opacity: ${({ disabled, overlay }) => (!overlay && disabled ? 0.75 : 1)};
+  opacity: ${({ disabled, overlay }) => {
+    if (overlay && disabled) return .9;
+    return disabled ? 0.6 : 1;
+  }};
   pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
 
   span {
