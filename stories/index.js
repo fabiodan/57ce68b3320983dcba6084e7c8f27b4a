@@ -65,7 +65,7 @@ storiesOf('Button', module)
 
       const color = select('Color', buttonOptions, 'green');
 
-      let textColor = 'green',
+      let textColor,
           overlay = false;
 
       if (color === 'white') {

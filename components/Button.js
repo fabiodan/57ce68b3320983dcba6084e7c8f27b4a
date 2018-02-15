@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import Spinner from './Spinner';
+
 export const colors = (percentage = '1') => ({
   green: `rgba(104, 165, 28, ${percentage})`,
   blue: `rgba(53, 148, 178, ${percentage})`,
@@ -19,7 +21,7 @@ const BasicButton = styled.button`
   -webkit-font-smoothing: antialiased;
   position: relative;
   cursor: pointer;
-  padding: 0 20px;
+  padding: ${({ small }) => (small ? '0 15px' : '0 20px')};
 
   color: ${({ color, textColor }) => (color === 'white' ? colors()[textColor] : 'white')};
   background: ${({ color }) => colors()[color]};
@@ -78,6 +80,13 @@ const SecondaryButton = styled(BasicButton)`
   }
 `;
 
+const Loading = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
 class Button extends PureComponent {
   render() {
     const {
@@ -91,7 +100,19 @@ class Button extends PureComponent {
       onClick,
       overlay
     } = this.props;
-    const content = <span>{children}</span>;
+
+    let content = <span>{children}</span>;
+    if (loading) {
+      let spinnerColor = colors()[color];
+      if (!secondary || overlay) spinnerColor = 'white';
+      if (color === 'white') spinnerColor = colors()[textColor];
+      content = (
+        <Loading>
+          <Spinner color={spinnerColor} small={small} />
+          {content}
+        </Loading>
+      );
+    }
 
     if (secondary) {
       return (
