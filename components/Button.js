@@ -5,7 +5,8 @@ import styled from 'styled-components';
 export const colors = (percentage = '1') => ({
   green: `rgba(104, 165, 28, ${percentage})`,
   blue: `rgba(53, 148, 178, ${percentage})`,
-  red: `rgba(242, 87, 87, ${percentage})`
+  red: `rgba(242, 87, 87, ${percentage})`,
+  gray: `#4A4A4A`
 });
 
 const BasicButton = styled.button`
@@ -20,11 +21,18 @@ const BasicButton = styled.button`
   cursor: pointer;
   padding: 0 20px;
 
-  color: ${({ color }) => (color === 'white' ? '#191919' : 'white')};;
+  color: ${({ color, textColor }) => (color === 'white' ? colors()[textColor] : 'white')};
   background: ${({ color }) => colors()[color]};
-  border: ${({ color, overlay }) => `1px solid ${color === 'white' && overlay ? 'white' : colors()[color]}`};
+  border: ${({ color, overlay }) => {
+    if (overlay) {
+      if (color === 'white') return `1px solid white`;
+      return `1px solid rgba(0,0,0,.15)`;
+    }
+    return `1px solid ${colors()[color]}`;
+  }};
   height: ${({ small }) => (small ? '30px' : '40px')};
   min-width: ${({ small }) => (small ? '130px' : '200px')};
+  box-shadow: ${({ overlay }) => (overlay ? '0 2px 3px rgba(0,0,0,.1)' : 'none')};
 
   span {
     position: relative;
@@ -62,7 +70,8 @@ const SecondaryButton = styled(BasicButton)`
   background: ${({ overlay }) => (overlay ? `none` : 'white')};
   color: ${({ color, overlay }) => (overlay ? 'white' : colors()[color])};
   border-color: ${({ color, overlay }) => (overlay ? 'white' : colors()[color])};
-  text-shadow: ${({ overlay }) => (overlay ? `1px 1px 2px rgba(0,0,0,.2), 0 0 10px rgba(0,0,0,.5)` : 'none')};
+  text-shadow: ${({ overlay }) => (overlay ? `0 1px 2px rgba(0,0,0,0.5), 0 0 15px rgba(0,0,0,.1)` : 'none')};
+  box-shadow: none;
 
   &:before {
     background: ${({ color, overlay }) => (overlay ? 'rgba(255,255,255,.1)' : `${colors(.1)[color]}`)};
@@ -75,6 +84,7 @@ class Button extends PureComponent {
       children,
       secondary,
       color,
+      textColor,
       small,
       disabled,
       loading,
@@ -100,6 +110,7 @@ class Button extends PureComponent {
       <BasicButton
         onClick={onClick}
         color={color}
+        textColor={textColor}
         small={small}
         overlay={overlay}
       >
@@ -125,6 +136,10 @@ Button.propTypes = {
   /** Color of the button as a string */
   color: PropTypes.oneOf([
     'green', 'blue', 'red', 'white'
+  ]),
+  /** Color of the button text when the background is white as a string */
+  textColor: PropTypes.oneOf([
+    'green', 'blue', 'red', 'gray'
   ]),
   /** Is the button over an image? */
   overlay: PropTypes.bool

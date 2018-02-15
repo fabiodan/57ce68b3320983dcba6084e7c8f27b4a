@@ -34,14 +34,15 @@ const BGImage = styled.div`
   }
 `;
 
+addDecorator(centered);
+
 const buttonOptions = [
   'green',
   'blue',
-  'red',
-  'white'
+  'red'
 ];
 
-addDecorator(centered);
+const textColorOptions = [...buttonOptions, 'gray'];
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
@@ -62,11 +63,28 @@ storiesOf('Button', module)
     `)
     (() => {
 
-      const overlay = boolean('Overlay image', false);
+      const color = select('Color', buttonOptions, 'green');
+
+      let textColor = 'green',
+          overlay = false;
+
+      if (color === 'white') {
+        textColor = select('Text Color', textColorOptions, 'green');
+        overlay = true;
+      } else {
+        overlay = boolean('Overlay image', false);
+      }
+
+      if (overlay) {
+        !buttonOptions.includes('white') && buttonOptions.push('white');
+      } else {
+        buttonOptions.includes('white') && buttonOptions.pop();
+      }
 
       const button = (
         <Button
-          color={select('Color', buttonOptions, 'green')}
+          color={color}
+          textColor={textColor}
           secondary={boolean('Secondary Style', false)}
           small={boolean('Small Size', false)}
           disabled={boolean('Disabled', false)}
