@@ -111,7 +111,7 @@ const Button = ({
     if (color === 'white') spinnerColor = colors()[textColor];
     content = (
       <Loading>
-        <Spinner color={spinnerColor} scale={small ? 0.2 : 0.25} />
+        <Spinner color={spinnerColor} small={small} scale={small ? 0.2 : 0.25} />
         {content}
       </Loading>
     );

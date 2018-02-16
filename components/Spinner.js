@@ -51,7 +51,10 @@ const SVG = styled.svg`
 `;
 
 /** Spinner component */
-const Spinner = ({ color, scale }) => {
+const Spinner = ({ color, scale: scaleProp, small }) => {
+  let scale = scaleProp;
+  if (small) scale = 0.2;
+
   const scaledBase = `${base * scale}px`,
         scaledView = viewBase * scale,
         scaledC = cBase * scale,
@@ -83,11 +86,14 @@ Spinner.propTypes = {
   color: PropTypes.string,
   /** The scale of the spinner as a decimal percentage */
   scale: PropTypes.number,
+  /** Is the spinner used on a small button? */
+  small: PropTypes.bool,
 };
 
 Spinner.defaultProps = {
   color: 'white',
-  scale: 0.25
+  scale: 0.25,
+  small: false
 };
 
 export default Spinner;
