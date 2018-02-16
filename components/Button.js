@@ -107,8 +107,13 @@ const Button = ({
   let content = <span>{children}</span>;
   if (loading) {
     let spinnerColor = secondary ? colors()[color] : 'white';
-    if (secondary && overlay) spinnerColor = 'white';
-    if (color === 'white') spinnerColor = colors()[textColor];
+
+    if (secondary && overlay) {
+      spinnerColor = 'white';
+    } else if (color === 'white') {
+      spinnerColor = colors()[textColor];
+    }
+
     content = (
       <Loading>
         <Spinner color={spinnerColor} small={small} scale={small ? 0.2 : 0.25} />
