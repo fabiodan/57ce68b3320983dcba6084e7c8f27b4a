@@ -59,7 +59,7 @@ const Heading = ({ children, color, size, align }) => {
   );
 };
 
-Heading.PropTypes = {
+Heading.propTypes = {
   /** Color in string format. Helpers for 'green', 'blue', 'red' and 'gray' */
   color: PropTypes.string,
   /** Alignment in string format. */
