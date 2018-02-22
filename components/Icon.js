@@ -43,8 +43,8 @@ export const iconOptions = [
 ];
 
 const Image = styled(ReactSVG)`
-  width: 30px;
-  height: 30px;
+  width: ${({ scale }) => `${scale * 30}px`};
+  height: ${({ scale }) => `${scale * 30}px`};
   rect, g {
     fill: ${({ color }) => colors()[color]};
   }
@@ -65,8 +65,8 @@ const Circle = styled.button`
 
   .svg-icon-wrapper {
     &, div {
-      width: 30px;
-      height: 30px;
+      width: ${({ scale }) => `${scale * 30}px`};
+      height: ${({ scale }) => `${scale * 30}px`};
     }
   }
 `;
@@ -90,15 +90,15 @@ class Icon extends Component {
   }
 
   render() {
-    const { icon: iconName, color, circle, circleColor } = this.props,
+    const { icon: iconName, circle, circleColor, ...props } = this.props,
           { icon } = this.state;
 
     let content = (
       <Image
         path={icon}
         alt={iconName}
-        color={color}
         wrapperClassName="svg-icon-wrapper"
+        {...props}
       />
     );
 
@@ -113,12 +113,14 @@ Icon.propTypes = {
   color: PropTypes.string,
   circle: PropTypes.bool,
   circleColor: PropTypes.string,
+  scale: PropTypes.number
 };
 
 Icon.defaultProps = {
   color: colors()['green'],
   circle: false,
-  circleColor: '#eee'
+  circleColor: '#eee',
+  scale: 1
 };
 
 export default Icon;

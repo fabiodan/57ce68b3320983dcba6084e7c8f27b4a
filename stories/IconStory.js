@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, select, boolean } from '@storybook/addon-knobs/react';
+import { text, select, number, boolean } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Icon, { iconOptions } from '../components/Icon';
@@ -38,6 +38,7 @@ const IconStory = storiesOf('Icon', module)
           color={select('Color', colorOptions, 'green')}
           circle={circle}
           circleColor={circleColor}
+          scale={number('Scale', 1)}
         />
       );
     }));
