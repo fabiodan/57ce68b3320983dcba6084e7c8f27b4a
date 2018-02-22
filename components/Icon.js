@@ -51,10 +51,10 @@ const Image = styled(ReactSVG)`
 `;
 
 const Circle = styled.button`
-  border-radius: 20px;
+  border-radius: ${({ scale }) => `${scale * 20}px`};
   background: ${({ circleColor }) => circleColor};
-  height: 40px;
-  width: 40px;
+  height: ${({ scale }) => `${scale * 40}px`};
+  width: ${({ scale }) => `${scale * 40}px`};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@ class Icon extends Component {
   }
 
   render() {
-    const { icon: iconName, circle, circleColor, ...props } = this.props,
+    const { icon: iconName, scale, circle, circleColor, ...props } = this.props,
           { icon } = this.state;
 
     let content = (
@@ -98,11 +98,16 @@ class Icon extends Component {
         path={icon}
         alt={iconName}
         wrapperClassName="svg-icon-wrapper"
+        scale={scale}
         {...props}
       />
     );
 
-    if (circle) content = <Circle circleColor={circleColor}>{content}</Circle>;
+    if (circle) {
+      content = (
+        <Circle scale={scale} circleColor={circleColor}>{content}</Circle>
+      );
+    }
 
     return content;
   }
