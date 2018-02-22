@@ -45,7 +45,7 @@ export const iconOptions = [
 const Image = styled(ReactSVG)`
   width: ${({ scale }) => `${scale * 30}px`};
   height: ${({ scale }) => `${scale * 30}px`};
-  rect, g {
+  g, use {
     fill: ${({ color }) => colors()[color]};
   }
 `;
