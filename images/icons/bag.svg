@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Bag</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,6 L4,4 C4,1.790861 5.790861,2.27779488e-13 8,2.27373675e-13 L10,2.27373675e-13 C12.209139,2.26967863e-13 14,1.790861 14,4 L14,6 L16.0605488,6 C16.5886121,6 17.0256617,6.41058679 17.0586014,6.93762171 L17.9336014,20.9376217 C17.9680519,21.4888309 17.5491363,21.963602 16.9979271,21.9980526 C16.9771596,21.9993505 16.9563567,22 16.9355488,22 L1.06445122,22 C0.512166472,22 0.0644512214,21.5522847 0.0644512214,21 C0.0644512214,20.979192 0.0651006781,20.9583892 0.0663986429,20.9376217 L0.941398643,6.93762171 C0.974338325,6.41058679 1.41138794,6 1.93945122,6 L4,6 Z M9,2 C7.34314575,2 6,3.34314575 6,5 L6,6 L12,6 L12,5 C12,3.34314575 10.6568542,2 9,2 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Bag">
+            <g id="Group" transform="translate(6.000000, 3.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#68A51C" xlink:href="#path-1"></use>
+                <g id="UI/Color/Flat/ASDA-Green-New" mask="url(#mask-2)" fill="#68A51C">
+                    <g transform="translate(-1.000000, 0.000000)" id="Base">
+                        <rect x="0" y="0" width="20" height="22"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -5,22 +5,10 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 
-import Input from '../components/Input';
+import Input, { creditCards as iconOptions } from '../components/Input';
 import Textarea from '../components/Textarea';
 
 const imageUrl = '../images/creditcards';
-const iconOptions = [
-  '',
-  'blank',
-  'amex',
-  'cirrus',
-  'diners',
-  'discover',
-  'maestro',
-  'mastercard',
-  'plus',
-  'visa'
-];
 
 const InputStory = storiesOf('Input', module)
   .add('Input with options', withInfo(`

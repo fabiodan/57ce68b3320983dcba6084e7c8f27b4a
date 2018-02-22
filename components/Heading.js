@@ -80,7 +80,7 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  color: 'gray',
+  color: 'textGray',
   align: 'left'
 };
 

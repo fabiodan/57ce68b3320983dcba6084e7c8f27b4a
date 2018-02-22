@@ -16,7 +16,7 @@ const sizeOptions = [
 ];
 
 const colorOptions = [
-  'gray',
+  'textGray',
   'green',
   'red'
 ];
@@ -33,7 +33,7 @@ const TypographyStory = storiesOf('Typography', module)
       ~~~js
       <Heading
         size="h1"
-        color="gray"
+        color="textGray"
         align="left"
       >
         Welcome to the ASDA StyleGuide™

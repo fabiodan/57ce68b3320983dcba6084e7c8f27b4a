@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
 import styled from 'styled-components';
 
-const creditcards = [
+import colors from '../utils';
+
+export const creditcards = [
   'blank',
   'amex',
   'cirrus',
@@ -14,12 +16,6 @@ const creditcards = [
   'plus',
   'visa'
 ];
-
-const colors = (percentage = 1) => ({
-  gray: `rgba(0, 0, 0, ${percentage})`,
-  green: `rgba(104, 165, 28, ${percentage})`,
-  red: `rgba(242, 87, 87, ${percentage})`
-});
 
 const Wrapper = styled.div`
   display: flex;
@@ -83,7 +79,7 @@ class Input extends Component {
       value: props.defaultValue || '',
       id: uniqueId('input'),
       icon: ''
-    }
+    };
   }
 
   componentWillReceiveProps = ({ icon }) => {

@@ -3,13 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Spinner from './Spinner';
-
-export const colors = (percentage = '1') => ({
-  green: `rgba(104, 165, 28, ${percentage})`,
-  blue: `rgba(53, 148, 178, ${percentage})`,
-  red: `rgba(242, 87, 87, ${percentage})`,
-  gray: `#4A4A4A`
-});
+import colors from '../utils';
 
 const StyledButton = styled.button`
   border-radius: 4px;
