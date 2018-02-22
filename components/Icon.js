@@ -1,0 +1,124 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import ReactSVG from 'react-svg';
+
+import colors from '../utils';
+
+export const iconOptions = [
+  'alert',
+  'bag',
+  'browse',
+  'calendar',
+  'chevron_left',
+  'chevron_right',
+  'circle_minus',
+  'circle_plus',
+  'click_&_collect',
+  'clock',
+  'close',
+  'facebook',
+  'feedback',
+  'google+',
+  'heart',
+  'heart_outline',
+  'help',
+  'home',
+  'info',
+  'list',
+  'loading',
+  'lock',
+  'mail',
+  'orders',
+  'printer',
+  'search',
+  'settings',
+  'star',
+  'trash',
+  'trolley',
+  'truck',
+  'twitter',
+  'upload',
+  'user'
+];
+
+const Image = styled(ReactSVG)`
+  width: 30px;
+  height: 30px;
+  rect, g {
+    fill: ${({ color }) => colors()[color]};
+  }
+`;
+
+const Circle = styled.button`
+  border-radius: 20px;
+  background: ${({ circleColor }) => circleColor};
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  .svg-icon-wrapper {
+    &, div {
+      width: 30px;
+      height: 30px;
+    }
+  }
+`;
+
+class Icon extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      icon: ''
+    };
+  }
+
+  componentWillReceiveProps = ({ icon }) => {
+    if (icon && iconOptions.includes(icon)) {
+      import(`../images/icons/${icon}.svg`).then((image) => {
+        this.setState({ icon: image })
+      });
+    } else {
+      this.setState({ icon: '' });
+    }
+  }
+
+  render() {
+    const { icon: iconName, color, circle, circleColor } = this.props,
+          { icon } = this.state;
+
+    let content = (
+      <Image
+        path={icon}
+        alt={iconName}
+        color={color}
+        wrapperClassName="svg-icon-wrapper"
+      />
+    );
+
+    if (circle) content = <Circle circleColor={circleColor}>{content}</Circle>;
+
+    return content;
+  }
+}
+
+Icon.propTypes = {
+  icon: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  circle: PropTypes.bool,
+  circleColor: PropTypes.string,
+};
+
+Icon.defaultProps = {
+  color: colors()['green'],
+  circle: false,
+  circleColor: '#eee'
+};
+
+export default Icon;
