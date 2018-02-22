@@ -106,6 +106,7 @@ class Input extends Component {
        message,
        status,
        type,
+       icon: unusedIcon,
        ...props
     } = this.props;
 
