@@ -26,7 +26,6 @@ export const iconOptions = [
   'home',
   'info',
   'list',
-  'loading',
   'lock',
   'mail',
   'orders',
@@ -90,7 +89,7 @@ class Icon extends Component {
   }
 
   render() {
-    const { icon: iconName, scale, circle, circleColor, ...props } = this.props,
+    const { icon: iconName, scale, circle, color, circleColor, ...props } = this.props,
           { icon } = this.state;
 
     let content = (
@@ -99,6 +98,7 @@ class Icon extends Component {
         alt={iconName}
         wrapperClassName="svg-icon-wrapper"
         scale={scale}
+        color={colors()[color]}
         {...props}
       />
     );
@@ -122,7 +122,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  color: colors()['green'],
+  color: 'green',
   circle: false,
   circleColor: '#eee',
   scale: 1

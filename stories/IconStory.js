@@ -4,6 +4,7 @@ import { text, select, number, boolean } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Icon, { iconOptions } from '../components/Icon';
+import Spinner from '../components/Spinner';
 
 const colorOptions = [
   'gray',
@@ -27,9 +28,7 @@ const IconStory = storiesOf('Icon', module)
     `)
     (() => {
       const circle = boolean('Circle BG', false);
-
-      let circleColor = null;
-
+      let circleColor;
       if (circle) circleColor = text('Circle color', '#eee');
 
       return (

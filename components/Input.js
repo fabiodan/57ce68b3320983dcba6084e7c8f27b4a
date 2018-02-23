@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import colors from '../utils';
 
-export const creditcards = [
+export const creditCards = [
   'blank',
   'amex',
   'cirrus',
@@ -83,7 +83,7 @@ class Input extends Component {
   }
 
   componentWillReceiveProps = ({ icon }) => {
-    if (icon && creditcards.includes(icon)) {
+    if (icon && creditCards.includes(icon)) {
       import(`../images/creditcards/${icon}.png`).then((image) => {
         this.setState({ icon: image })
       });
@@ -143,7 +143,7 @@ Input.propTypes = {
   /** Which type of credit card icon should be displayed, or false if none */
   icon: PropTypes.oneOf([
     '',
-    ...creditcards
+    ...creditCards
   ]),
   /** Placeholder text */
   placeholder: PropTypes.string,
