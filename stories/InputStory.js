@@ -5,9 +5,11 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 
+import { creditCards as iconOptions } from '../utils';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
-import { creditCards as iconOptions } from '../utils';
+import Checkbox from '../components/Checkbox';
+
 const imageUrl = '../images/creditcards';
 
 const InputStory = storiesOf('Input', module)
@@ -59,14 +61,18 @@ const InputStory = storiesOf('Input', module)
     if (rows <= 1 || rows === undefined) rows = 1;
 
     return (
-      <Textarea
+      <Checkbox
         label={text('Label', 'Label')}
-        placeholder={text('Placeholder', 'Placeholder')}
-        message={message}
-        rows={rows}
-        resizable={boolean('Resizable', false)}
+        disabled={boolean('Disabled', false)}
+        defaultChecked={false}
       />
     );
-  });
+  })
+  .add('Checkbox with options', () => (
+    <Checkbox
+      label={text('Label', 'Label')}
+      disabled={boolean('Disabled', false)}
+    />
+  ));
 
 export default InputStory;

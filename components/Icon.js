@@ -10,6 +10,7 @@ export const iconOptions = [
   'bag',
   'browse',
   'calendar',
+  'check',
   'chevron_left',
   'chevron_right',
   'circle_minus',
@@ -41,11 +42,19 @@ export const iconOptions = [
   'user'
 ];
 
-const Image = styled(ReactSVG)`
-  width: ${({ scale }) => `${scale * 30}px`};
-  height: ${({ scale }) => `${scale * 30}px`};
-  g, use {
-    fill: ${({ color }) => colors()[color]};
+const Wrapper = styled.div`
+  .svg-icon-wrapper > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .svg-icon {
+    width: ${({ scale }) => `${scale * 30}px`};
+    height: ${({ scale }) => `${scale * 30}px`};
+    g, use {
+      fill: ${({ color }) => colors()[color]};
+    }
   }
 `;
 
@@ -93,13 +102,11 @@ class Icon extends Component {
           { icon } = this.state;
 
     let content = (
-      <Image
+      <ReactSVG
         path={icon}
         alt={iconName}
+        className="svg-icon"
         wrapperClassName="svg-icon-wrapper"
-        scale={scale}
-        color={colors()[color]}
-        {...props}
       />
     );
 
@@ -109,7 +116,15 @@ class Icon extends Component {
       );
     }
 
-    return content;
+    return (
+      <Wrapper
+        scale={scale}
+        color={colors()[color]}
+        {...props}
+      >
+        {content}
+      </Wrapper>
+    );
   }
 }
 
