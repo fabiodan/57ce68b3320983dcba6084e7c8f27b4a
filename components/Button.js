@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Spinner from './Spinner';
-import colors from '../utils';
+import { colors } from '../utils';
 
 const StyledButton = styled.button`
   border-radius: 4px;

@@ -8,11 +8,11 @@ import styled from 'styled-components';
 import Select from '../components/Select';
 
 const selectOptions = [
-  { value: 'one', label: 'One' },
+  { value: 'one', label: 'One', className: 'amex' },
   { value: 'two', label: 'Two' },
-  { value: 'three', label: 'Three' },
-  { value: 'four', label: 'Four' },
-  { value: 'five', label: 'Five' }
+  { value: 'three', label: 'Three',  },
+  { value: 'four', label: 'Four', className: 'mastercard' },
+  { value: 'five', label: 'Five', className: 'cirrus' }
 ];
 
 const SelectStory = storiesOf('Select', module)
@@ -21,8 +21,8 @@ const SelectStory = storiesOf('Select', module)
     <Select
       name="select-story"
       options={[
-        { value: 'one', label: 'One' },
-        { value: 'two', label: 'Two' },
+        { value: 'one', label: 'One', className: 'diners' },
+        { value: 'two', label: 'Two'  },
       ]}
     />
     ~~~
@@ -32,6 +32,7 @@ const SelectStory = storiesOf('Select', module)
         name="select-story"
         onChange={this.handleChange}
         options={selectOptions}
+        placeholder={text('Placeholder', 'Select a value')}
       />
     );
   }));

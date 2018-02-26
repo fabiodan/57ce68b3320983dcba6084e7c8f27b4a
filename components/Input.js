@@ -3,19 +3,7 @@ import PropTypes from 'prop-types';
 import uniqueId from 'lodash/uniqueId';
 import styled from 'styled-components';
 
-import colors from '../utils';
-
-export const creditCards = [
-  'blank',
-  'amex',
-  'cirrus',
-  'diners',
-  'discover',
-  'maestro',
-  'mastercard',
-  'plus',
-  'visa'
-];
+import { colors, creditCards } from '../utils';
 
 const Wrapper = styled.div`
   display: flex;

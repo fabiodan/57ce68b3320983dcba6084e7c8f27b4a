@@ -76,12 +76,71 @@ const StyledSelect = styled(ReactSelect)`
       background: rgba(0, 0, 0, 0.05);
     }
   }
+
+  .Select-value, .Select-option {
+    &.blank,
+    &.amex,
+    &.cirrus,
+    &.diners,
+    &.discover,
+    &.maestro,
+    &.mastercard,
+    &.plus,
+    &.visa {
+      padding-left: 55px !important;
+      background-repeat: no-repeat;
+      background-position: 15px 10px;
+    }
+
+    &.blank {
+      background-image: ${({ icons }) => (icons['blank'] ? `url('${icons['blank']}')` : 'none')};
+    }
+    &.amex {
+      background-image: ${({ icons }) => (icons['amex'] ? `url('${icons['amex']}')` : 'none')};
+    }
+    &.cirrus {
+      background-image: ${({ icons }) => (icons['cirrus'] ? `url('${icons['cirrus']}')` : 'none')};
+    }
+    &.diners {
+      background-image: ${({ icons }) => (icons['diners'] ? `url('${icons['diners']}')` : 'none')};
+    }
+    &.discover {
+      background-image: ${({ icons }) => (icons['discover'] ? `url('${icons['discover']}')` : 'none')};
+    }
+    &.maestro {
+      background-image: ${({ icons }) => (icons['maestro'] ? `url('${icons['maestro']}')` : 'none')};
+    }
+    &.mastercard {
+      background-image: ${({ icons }) => (icons['mastercard'] ? `url('${icons['mastercard']}')` : 'none')};
+    }
+    &.plus {
+      background-image: ${({ icons }) => (icons['plus'] ? `url('${icons['plus']}')` : 'none')};
+    }
+    &.visa {
+      background-image: ${({ icons }) => (icons['visa'] ? `url('${icons['visa']}')` : 'none')};
+    }
+  }
 `;
 
 class Select extends Component {
   constructor(props) {
      super(props);
-     this.state = { selectedOption: '' };
+     this.state = { selectedOption: '', icons: {} };
+  }
+
+  componentWillReceiveProps({ options }) {
+    options.forEach(({ className }) => {
+      if (className) {
+        import(`../images/creditcards/${className}.png`).then((image) => {
+          this.setState({
+            icons: {
+              ...this.state.icons,
+              [className]: image
+            }
+          });
+        });
+      }
+    });
   }
 
   handleChange = (selectedOption) => {
@@ -91,7 +150,7 @@ class Select extends Component {
 
   render() {
     const { placeholder, options } = this.props,
-          { selectedOption } = this.state,
+          { selectedOption, icons } = this.state,
           value = selectedOption && selectedOption.value;
 
     return (
@@ -101,6 +160,7 @@ class Select extends Component {
         onChange={this.handleChange}
         placeholder={placeholder}
         clearable={false}
+        icons={icons}
         options={options}
       />
     );

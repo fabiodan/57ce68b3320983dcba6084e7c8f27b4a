@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ReactSVG from 'react-svg';
 
-import colors from '../utils';
+import { colors } from '../utils';
 
 export const iconOptions = [
   'alert',

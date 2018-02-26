@@ -5,9 +5,9 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 
-import Input, { creditCards as iconOptions } from '../components/Input';
+import Input from '../components/Input';
 import Textarea from '../components/Textarea';
-
+import { creditCards as iconOptions } from '../utils';
 const imageUrl = '../images/creditcards';
 
 const InputStory = storiesOf('Input', module)
