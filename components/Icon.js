@@ -49,11 +49,11 @@ const Wrapper = styled.div`
     justify-content: center;
   }
 
-  .svg-icon {
+  svg {
     width: ${({ scale }) => `${scale * 30}px`};
     height: ${({ scale }) => `${scale * 30}px`};
     g, use {
-      fill: ${({ color }) => colors()[color]};
+      fill: ${({ color }) => color};
     }
   }
 `;
@@ -105,7 +105,6 @@ class Icon extends Component {
       <ReactSVG
         path={icon}
         alt={iconName}
-        className="svg-icon"
         wrapperClassName="svg-icon-wrapper"
       />
     );
@@ -119,8 +118,8 @@ class Icon extends Component {
     return (
       <Wrapper
         scale={scale}
-        color={colors()[color]}
         {...props}
+        color={colors()[color]}
       >
         {content}
       </Wrapper>
