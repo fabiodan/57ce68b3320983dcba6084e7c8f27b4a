@@ -19,7 +19,7 @@ const StyledSelect = styled(ReactSelect)`
   }
 
   &.is-focused:not(.is-open) > .Select-control {
-    border: 1px solid rgba(0, 0, 0, .3) !important;
+    border: 1px solid rgba(0, 0, 0, .4) !important;
     box-shadow: 0 0 8px rgba(0, 0, 0, .1) !important;
   }
 
@@ -50,9 +50,12 @@ const StyledSelect = styled(ReactSelect)`
 
   .Select-control {
     border: 1px solid rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: border .2s linear;
 
     &:hover {
       box-shadow: none;
+      border: 1px solid rgba(0, 0, 0, .3);
     }
 
     > *:last-child {
