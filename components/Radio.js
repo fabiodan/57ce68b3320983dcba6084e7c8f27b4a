@@ -25,7 +25,7 @@ const StyledRadio = styled.label`
   .indicator {
     width: 20px;
     height: 20px;
-    border-radius: 10px;
+    border-radius: 100%;
     margin-right: 10px;
     display: flex;
     justify-content: center;
