@@ -9,8 +9,16 @@ import { creditCards as iconOptions } from '../utils';
 import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import Checkbox from '../components/Checkbox';
+import RadioButtons from '../components/RadioButtons';
 
 const imageUrl = '../images/creditcards';
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
 
 const InputStory = storiesOf('Input', module)
   .add('Input with options', withInfo(`
@@ -73,6 +81,18 @@ const InputStory = storiesOf('Input', module)
       label={text('Label', 'Label')}
       disabled={boolean('Disabled', false)}
     />
-  ));
+  ))
+  .add('Radio with options', () => {
+    const radioOptions = [
+      { label: 'Option 1', value: 'option1' },
+      { label: 'Option 2', value: 'option2' },
+      { label: 'Option 3', value: 'option3', disabled: true },
+      { label: 'Option 4', value: 'option4' },
+    ];
+
+    return (
+      <RadioButtons options={radioOptions} inline={boolean('Inline', false)}/>
+    );
+  });
 
 export default InputStory;

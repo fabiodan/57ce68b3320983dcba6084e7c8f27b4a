@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { colors } from '../utils';
 
 import Icon from './Icon';
 
-const StyledCheckbox = styled.label`
+const StyledRadio = styled.label`
   font-size: 14px;
   font-family: 'Source Sans Pro';
   display: flex;
@@ -25,7 +25,7 @@ const StyledCheckbox = styled.label`
   .indicator {
     width: 20px;
     height: 20px;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-right: 10px;
     display: flex;
     justify-content: center;
@@ -45,50 +45,38 @@ const StyledCheckbox = styled.label`
   }
 `;
 
-class Checkbox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { checked: props.defaultChecked };
-  }
+const Radio = ({ disabled, label, value, handleChange, checked }) => (
+  <StyledRadio checked={checked} disabled={disabled}>
+      <input
+        type="radio"
+        checked={checked}
+        onChange={handleChange}
+        value={value}
+      />
+      <div className="indicator">
+        <Icon
+          icon="check"
+          color="white"
+          scale={0.75}
+        />
+      </div>
+      <span>{label}</span>
+  </StyledRadio>
+);
 
-  onChange = () => {
-    this.setState({ checked: !this.state.checked });
-  }
-
-  render() {
-    const { disabled, label } = this.props,
-          { checked } = this.state;
-
-    return (
-      <StyledCheckbox checked={checked} disabled={disabled}>
-          <input
-            type="checkbox"
-            checked={checked}
-            onChange={this.onChange}
-          />
-          <div className="indicator">
-            <Icon
-              icon="check"
-              color="white"
-              scale={0.75}
-            />
-          </div>
-          <span>{label}</span>
-      </StyledCheckbox>
-    );
-  }
-}
-
-Checkbox.propTypes = {
-  defaultChecked: PropTypes.bool.isRequired,
+Radio.propTypes = {
+  checked: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  handleChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 };
 
-Checkbox.defaultProps = {
-  defaultChecked: false,
+Radio.defaultProps = {
+  checked: false,
   disabled: false,
-  label: ''
+  label: '',
+  value: ''
 };
 
-export default Checkbox;
+export default Radio;
