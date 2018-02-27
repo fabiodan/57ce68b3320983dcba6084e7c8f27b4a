@@ -47,7 +47,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -1px;
+    margin-left: ${({ icon }) => (icon === 'check' ? '-1px' : '0')};
   }
 
   svg {
@@ -76,6 +76,7 @@ const Circle = styled.button`
     &, div {
       width: ${({ scale }) => `${scale * 30}px`};
       height: ${({ scale }) => `${scale * 30}px`};
+      margin-left: 0;
     }
   }
 `;
@@ -121,6 +122,7 @@ class Icon extends Component {
         scale={scale}
         {...props}
         color={colors()[color]}
+        icon={iconName}
       >
         {content}
       </Wrapper>
