@@ -47,6 +47,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: -1px;
   }
 
   svg {
