@@ -13,6 +13,7 @@ const StyledCheckbox = styled.label`
   align-items: center;
   cursor: pointer;
   pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
+  color: ${({ disabled }) => (disabled ? '#767676' : '#3d3d3d')};
 
   input {
     opacity: 0;
