@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ReactSVG from 'react-svg';
@@ -53,6 +54,7 @@ const Wrapper = styled.div`
   svg {
     width: ${({ scale }) => `${scale * 30}px`};
     height: ${({ scale }) => `${scale * 30}px`};
+
     g, use {
       fill: ${({ color }) => color};
     }
@@ -90,41 +92,68 @@ class Icon extends Component {
   }
 
   componentWillReceiveProps = ({ icon }) => {
-    if (icon && iconOptions.includes(icon)) {
+    if (iconOptions.includes(icon)) {
       import(`../images/icons/${icon}.svg`).then((image) => {
+        this.svgDefs = null;
         this.setState({ icon: image })
       });
-    } else {
-      this.setState({ icon: '' });
+    }
+  }
+
+  componentWillUpdate = ({ icon: iconName, scale, circle, overlay, circleColor }, { icon }) => {
+    if (icon && !this.svgDefs) {
+      this.content = (
+        <ReactSVG
+          path={icon}
+          alt={iconName}
+          wrapperClassName="svg-icon-wrapper"
+          evalScripts="always"
+          {...overlay && { callback: this.ensurePortalTarget }}
+        />
+      );
+
+      if (circle) {
+        this.content = (
+          <Circle scale={scale} circleColor={circleColor}>{this.content}</Circle>
+        );
+      }
+    }
+  }
+
+  ensurePortalTarget = (svg) => {
+    const svgDefs = svg.getElementsByTagName('defs')[0];
+
+    if (svgDefs) {
+      this.svgDefs = svgDefs;
+      svg.setAttribute('filter', 'url(#icon-dropshadow)');
+      this.forceUpdate();
     }
   }
 
   render() {
-    const { icon: iconName, scale, circle, color, circleColor, ...props } = this.props,
-          { icon } = this.state;
-
-    let content = (
-      <ReactSVG
-        path={icon}
-        alt={iconName}
-        wrapperClassName="svg-icon-wrapper"
-      />
-    );
-
-    if (circle) {
-      content = (
-        <Circle scale={scale} circleColor={circleColor}>{content}</Circle>
-      );
-    }
-
+    const { icon, scale, color, overlay, ...props } = this.props;
     return (
       <Wrapper
         scale={scale}
         {...props}
         color={colors()[color]}
-        icon={iconName}
+        icon={icon}
       >
-        {content}
+        {this.content}
+        {this.svgDefs && overlay && ReactDOM.createPortal(
+           <filter id="icon-dropshadow" height="130%">
+             <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+             <feOffset dx="0" dy="1" result="offsetblur"/>
+             <feComponentTransfer>
+               <feFuncA type="linear" slope="0.3"/>
+             </feComponentTransfer>
+             <feMerge>
+               <feMergeNode/>
+               <feMergeNode in="SourceGraphic"/>
+             </feMerge>
+           </filter>,
+           this.svgDefs
+        )}
       </Wrapper>
     );
   }
@@ -135,14 +164,16 @@ Icon.propTypes = {
   color: PropTypes.string,
   circle: PropTypes.bool,
   circleColor: PropTypes.string,
-  scale: PropTypes.number
+  scale: PropTypes.number,
+  overlay: PropTypes.bool
 };
 
 Icon.defaultProps = {
   color: 'green',
   circle: false,
   circleColor: '#eee',
-  scale: 1
+  scale: 1,
+  overlay: false
 };
 
 export default Icon;

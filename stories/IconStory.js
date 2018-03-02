@@ -38,6 +38,7 @@ const IconStory = storiesOf('Icon', module)
           circle={circle}
           circleColor={circleColor}
           scale={number('Scale', 1)}
+          overlay={boolean('Overlay', false)}
         />
       );
     }));
