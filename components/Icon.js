@@ -141,11 +141,11 @@ class Icon extends Component {
       >
         {this.content}
         {this.svgDefs && overlay && ReactDOM.createPortal(
-           <filter id="icon-dropshadow" height="130%">
-             <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-             <feOffset dx="0" dy="1" result="offsetblur"/>
+           <filter id="icon-dropshadow" height="150%">
+             <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+             <feOffset dx="0" dy="0" result="offsetblur"/>
              <feComponentTransfer>
-               <feFuncA type="linear" slope="0.3"/>
+               <feFuncA type="linear" slope="0.4"/>
              </feComponentTransfer>
              <feMerge>
                <feMergeNode/>
