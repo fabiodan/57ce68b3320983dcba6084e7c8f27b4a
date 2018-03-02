@@ -69,10 +69,12 @@ const InputStory = storiesOf('Input', module)
     if (rows <= 1 || rows === undefined) rows = 1;
 
     return (
-      <Checkbox
+      <Textarea
         label={text('Label', 'Label')}
-        disabled={boolean('Disabled', false)}
-        defaultChecked={false}
+        placeholder={text('Placeholder', 'Placeholder')}
+        message={message}
+        rows={rows}
+        resizable={boolean('Resizable', false)}
       />
     );
   })
