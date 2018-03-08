@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Tabs from '../components/Tabs';
 
 const Content = styled.img`
-  margin-top: 20px;
+  margin-top: 30px;
   height: 200px;
   width: auto;
 `;

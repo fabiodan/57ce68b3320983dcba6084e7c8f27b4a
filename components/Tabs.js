@@ -41,6 +41,7 @@ const Tab = styled.li`
     position: absolute;
     left: 0;
     bottom: 0;
+
     ${({ tabsLength, index, selected }) => {
       return selected ? `transform: translateX(${100 * index}%)` : '';
     }}
@@ -54,6 +55,22 @@ const Underline = styled.hr`
   background: ${colors()['green']};
   border: none;
   transition: .3s ease-in-out;
+`;
+
+const ContentWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+`;
+
+const ContentItem = styled.div`
+  position: absolute;
+  transition: .3s ease-in-out;
+  pointer-events: ${({ selected }) => (selected ? 'auto': 'none')};
+  opacity: ${({ selected }) => (selected ? 1: 0)};
+  transform: ${({ transform }) => transform};
 `;
 
 class Tabs extends Component {
@@ -70,10 +87,16 @@ class Tabs extends Component {
 
     let selectedContent;
 
-    const tabs = options.map(({ title, content }, index) => {
+    const tabsData = options.reduce((map, { title, content }, index) => {
       const selected = selectedTab === index;
       if (selected) selectedContent = content;
-      return (
+
+      const transform = () => {
+        if (selected) return 'translateX(0)';
+        return `translateX(${index < selectedTab ? '-' : ''}30px)`;
+      };
+
+      map.tabs.push(
         <Tab
           selected={selected}
           index={index}
@@ -84,15 +107,26 @@ class Tabs extends Component {
           {title}
         </Tab>
       );
-    });
+      map.content.push(
+        <ContentItem
+          selected={selected}
+          transform={transform()}
+        >
+          {content}
+        </ContentItem>
+      );
+      return map;
+    }, { tabs: [], content: [] });
 
     return (
       <Wrapper>
         <TabsList>
-          {tabs}
+          {tabsData.tabs}
           <Underline tabsLength={options.length}/>
         </TabsList>
-        {selectedContent}
+        <ContentWrapper>
+        {tabsData.content}
+        </ContentWrapper>
       </Wrapper>
     );
   }
