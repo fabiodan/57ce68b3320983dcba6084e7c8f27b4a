@@ -21,13 +21,39 @@ const TabsList = styled.ul`
   color: #3D3D3D;
   font-weight: 700;
   text-align: center;
+  position: relative;
 `;
 
 const Tab = styled.li`
   list-style: none;
   cursor: pointer;
-  padding: ${({ selected }) => `20px 35px ${selected ? '17px' : '20px'}`};
-  border-bottom: ${({ selected }) => (selected ? `4px solid ${colors()['green']}` : '1px solid #eee')};
+  width: ${({ tabsLength }) => `${100 / tabsLength}%`};
+  min-width: 150px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    width: 33.34%;
+  }
+
+  ~ hr {
+    flex: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    ${({ tabsLength, index, selected }) => {
+      return selected ? `transform: translateX(${100 * index}%)` : '';
+    }}
+  }
+`;
+
+const Underline = styled.hr`
+  height: 4px;
+  width: ${({ tabsLength }) => `${100 / tabsLength}%`};
+  margin: 0;
+  background: ${colors()['green']};
+  border: none;
+  transition: .3s ease-in-out;
 `;
 
 class Tabs extends Component {
@@ -50,6 +76,8 @@ class Tabs extends Component {
       return (
         <Tab
           selected={selected}
+          index={index}
+          tabsLength={options.length}
           key={`${title}-${index}`}
           onClick={() => this.selectTab(index)}
         >
@@ -60,7 +88,10 @@ class Tabs extends Component {
 
     return (
       <Wrapper>
-        <TabsList>{tabs}</TabsList>
+        <TabsList>
+          {tabs}
+          <Underline tabsLength={options.length}/>
+        </TabsList>
         {selectedContent}
       </Wrapper>
     );
