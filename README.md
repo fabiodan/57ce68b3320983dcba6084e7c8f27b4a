@@ -29,7 +29,7 @@ You can see access these via the **Design Library** tab in the **Actions Panel**
 
 ### Deployment
 
-Currently, the StyleGuide™ is deployed to [Github Pages](chandlervdw.com/asda-styleguide) using [storybook-deployer](https://github.com/storybooks/storybook-deployer).
+Currently, the StyleGuide™ is deployed to [Github Pages](https://gecgithub01.walmart.com/pages/c0v0039/asda-styleguide/) using [storybook-deployer](https://github.com/storybooks/storybook-deployer).
 ```
 npm run deploy-storybook
 ```
