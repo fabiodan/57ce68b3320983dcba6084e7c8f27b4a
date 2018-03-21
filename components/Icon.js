@@ -14,6 +14,8 @@ export const iconOptions = [
   'check',
   'chevron_left',
   'chevron_right',
+  'chevron_up',
+  'chevron_down',
   'circle_minus',
   'circle_plus',
   'click_&_collect',

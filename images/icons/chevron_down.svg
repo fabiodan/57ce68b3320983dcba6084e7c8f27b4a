@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Chevron Down</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.5,10 L10,12.5 L-1.77635684e-14,2.5 L2.5,2.29150032e-13 L10,7.5 L17.5,-4.4408921e-16 L20,2.5 L12.5,10 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons-/-Chevron-Down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(5.000000, 9.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#68A51C" xlink:href="#path-1"></use>
+            <g id="UI/Color/Flat/ASDA-Green" mask="url(#mask-2)" fill="#68A51C">
+                <g transform="translate(-5.000000, -10.000000)" id="Base">
+                    <rect x="0" y="0" width="30" height="30"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
