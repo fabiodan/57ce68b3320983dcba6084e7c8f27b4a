@@ -21,27 +21,39 @@ const StyledRadio = styled.label`
     z-index: -1;
     width: 20px;
     height: 20px;
+    cursor: pointer;
   }
 
   .indicator {
-    width: 20px;
-    height: 20px;
+    width: ${({ checked }) => (checked ? '16px' : '18px')};
+    height: ${({ checked }) => (checked ? '16px' : '18px')};
     border-radius: 100%;
     margin-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background .2s linear;
-    border: ${({ disabled }) => `1px solid ${disabled ? '#ccc' : colors()['blue']}`};
-    background: ${({ disabled, checked }) => {
-      if (checked) {
-        return disabled ? '#ccc' : colors()['blue'];
-      }
-      return 'white';
+    border: ${({ disabled, checked }) => {
+      return `${checked ? '2' : '1'}px solid ${disabled ? '#ccc' : colors()['green']}`;
     }};
+    background: white;
+    cursor: pointer;
 
-    svg {
-      display: ${({ checked }) => (checked ? 'block' : 'none')};
+    &:after {
+      display: block;
+      opacity: ${({ checked }) => (checked ? '1' : '0')};
+      content: '';
+      position: relative;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      transition: opacity .2s linear;
+      cursor: pointer;
+      background: ${({ disabled, checked }) => {
+        if (checked) {
+          return disabled ? '#ccc' : colors()['green'];
+        }
+        return 'white';
+      }};
     }
   }
 `;
@@ -54,13 +66,7 @@ const Radio = ({ disabled, label, value, handleChange, checked }) => (
         onChange={handleChange}
         value={value}
       />
-      <div className="indicator">
-        <Icon
-          icon="check"
-          color="white"
-          scale={0.75}
-        />
-      </div>
+      <div className="indicator"/>
       <span>{label}</span>
   </StyledRadio>
 );

@@ -13,7 +13,7 @@ const StyledCheckbox = styled.label`
   align-items: center;
   cursor: pointer;
   pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
-  color: ${({ disabled }) => (disabled ? '#767676' : '#3d3d3d')};
+  color: ${({ disabled }) => (disabled ? '#767676' : colors()['green'])};
 
   input {
     opacity: 0;
@@ -32,10 +32,10 @@ const StyledCheckbox = styled.label`
     justify-content: center;
     align-items: center;
     transition: background .2s linear;
-    border: ${({ disabled }) => `1px solid ${disabled ? '#ccc' : colors()['blue']}`};
+    border: ${({ disabled }) => `1px solid ${disabled ? '#ccc' : colors()['green']}`};
     background: ${({ disabled, checked }) => {
       if (checked) {
-        return disabled ? '#ccc' : colors()['blue'];
+        return disabled ? '#ccc' : colors()['green'];
       }
       return 'white';
     }};
