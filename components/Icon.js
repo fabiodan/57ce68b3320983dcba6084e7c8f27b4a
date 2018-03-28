@@ -34,6 +34,7 @@ export const iconOptions = [
   'mail',
   'orders',
   'printer',
+  'rollback',
   'search',
   'settings',
   'star',
