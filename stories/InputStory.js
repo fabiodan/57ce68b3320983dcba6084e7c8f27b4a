@@ -10,6 +10,7 @@ import Input from '../components/Input';
 import Textarea from '../components/Textarea';
 import Checkbox from '../components/Checkbox';
 import RadioButtons from '../components/RadioButtons';
+import Toggle from '../components/Toggle';
 
 const imageUrl = '../images/creditcards';
 
@@ -95,6 +96,12 @@ const InputStory = storiesOf('Input', module)
     return (
       <RadioButtons options={radioOptions} inline={boolean('Inline', false)}/>
     );
-  });
+  })
+  .add('Toggle with options', () => (
+    <Toggle
+      label={text('Label', 'Label')}
+      disabled={boolean('Disabled', false)}
+    />
+  ));
 
 export default InputStory;
