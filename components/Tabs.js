@@ -18,14 +18,15 @@ const TabsList = styled.ul`
   justify-content: center;
   align-items: center;
   font-family: 'Source Sans Pro';
-  color: #3D3D3D;
   font-weight: 700;
   text-align: center;
   position: relative;
   border-bottom: 1px solid #eee;
+  -webkit-font-smoothing: antialiased;
 `;
 
 const Tab = styled.li`
+  color: ${({ selected }) => (selected ? '#3D3D3D' : '#666666')};
   list-style: none;
   cursor: pointer;
   padding: 20px 40px;
