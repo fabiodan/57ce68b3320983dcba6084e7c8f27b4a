@@ -22,39 +22,48 @@ const TabsList = styled.ul`
   font-weight: 700;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #eee;
 `;
 
 const Tab = styled.li`
   list-style: none;
   cursor: pointer;
-  width: ${({ tabsLength }) => `${100 / tabsLength}%`};
-  min-width: 150px;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  padding: 20px 40px;
+  transition: all .2s linear;
+  white-space: nowrap;
+  margin-right: 20px;
 
-  &:last-child {
-    width: 33.34%;
+  &:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 
   ~ hr {
     flex: none;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
 
     ${({ tabsLength, index, selected }) => {
-      return selected ? `transform: translateX(${100 * index}%)` : '';
+      return selected ? `transform: translateX()` : '';
     }}
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
   }
 `;
 
 const Underline = styled.hr`
   height: 4px;
-  width: ${({ tabsLength }) => `${100 / tabsLength}%`};
   margin: 0;
   background: ${colors()['green']};
   border: none;
   transition: .3s ease-in-out;
+  transform: ${({ offsetLeft }) => `translateX(${offsetLeft}px)`};
 `;
 
 const ContentWrapper = styled.div`
@@ -76,14 +85,25 @@ const ContentItem = styled.div`
 class Tabs extends Component {
   constructor(props) {
     super(props);
-    this.state = { selectedTab: props.defaultTab };
+    this.state = {
+      selectedTab: props.defaultTab,
+      width: 0,
+      offsetLeft: 0
+    };
   }
 
-  selectTab = (selectedTab) => this.setState({ selectedTab });
+  componentDidMount() {
+    this.selectTab(this.selectedTab, this.props.defaultTab);
+  }
+
+  selectTab = (target, selectedTab) => {
+    const { offsetWidth: width, offsetLeft } = target;
+    this.setState({ selectedTab, width, offsetLeft });
+  }
 
   render() {
     const { options } = this.props,
-          { selectedTab } = this.state;
+          { selectedTab, width, offsetLeft } = this.state;
 
     let selectedContent;
 
@@ -98,11 +118,12 @@ class Tabs extends Component {
 
       map.tabs.push(
         <Tab
+          {...selected && { innerRef: (comp) => this.selectedTab = comp }}
           selected={selected}
           index={index}
           tabsLength={options.length}
           key={`${title}-${index}`}
-          onClick={() => this.selectTab(index)}
+          onClick={({ target }) => this.selectTab(target, index)}
         >
           {title}
         </Tab>
@@ -122,7 +143,7 @@ class Tabs extends Component {
       <Wrapper>
         <TabsList>
           {tabsData.tabs}
-          <Underline tabsLength={options.length}/>
+          {width && <Underline width={width} offsetLeft={offsetLeft}/>}
         </TabsList>
         <ContentWrapper>
         {tabsData.content}
