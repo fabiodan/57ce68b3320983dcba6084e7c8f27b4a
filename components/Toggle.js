@@ -51,6 +51,7 @@ const StyledToggle = styled.label`
       font-size: 12px;
       font-weight: 600;
       display: block;
+      line-height: 0px;
 
       &.on {
         margin-right: 10px;
