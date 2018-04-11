@@ -4,6 +4,7 @@ import { text, select, number, boolean } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Icon, { iconOptions } from '../components/Icon';
+import Logo from '../components/Logo';
 import Spinner from '../components/Spinner';
 
 const colorOptions = [
@@ -41,6 +42,17 @@ const IconStory = storiesOf('Icon', module)
           overlay={boolean('Overlay', false)}
         />
       );
-    }));
+    }))
+    .add('Logo',
+      withInfo(`
+        ~~~js
+        <Logo scale={1} color="green" />
+        ~~~
+      `)
+      (() => (
+        <Logo
+          scale={number('Scale', 1)}
+        />
+      )));
 
 export default IconStory;

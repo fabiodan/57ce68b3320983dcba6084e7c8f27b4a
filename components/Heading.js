@@ -1,13 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-export const colors = (percentage = '1') => ({
-  green: `rgba(104, 165, 28, ${percentage})`,
-  blue: `rgba(53, 148, 178, ${percentage})`,
-  red: `rgba(242, 87, 87, ${percentage})`,
-  gray: `#3D3D3D`
-});
+import { colors } from '../utils';
 
 const styleElement = (size) => styled[size]`
   font-family: 'Source Sans Pro', sans-serif;

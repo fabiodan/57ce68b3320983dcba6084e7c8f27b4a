@@ -8,6 +8,15 @@ export const colors = (percentage = 1) => ({
   white: '#fff'
 });
 
+export const grays = (darkness = 1) => ([
+  '#000',
+  '#3D3D3D',
+  '#666',
+  '#767676',
+  '#CCC',
+  '#EEE'
+][darkness]);
+
 export const creditCards = [
   'blank',
   'amex',

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { grays } from '../utils';
 
 const StyledCopy = styled.p`
   font-family: 'Source Sans Pro';
@@ -21,9 +22,9 @@ const StyledCopy = styled.p`
   }};
   color: ${({ type }) => {
     switch(type) {
-      case 'primary':return '#3D3D3D';
+      case 'primary': return grays();
       case 'secondary':
-      case 'tertiary': return '#767676';
+      case 'tertiary': return grays(3);
     }
   }};
   letter-spacing: ${({ type }) => (type === 'tertiary' ? '0.3px' : 0)};
