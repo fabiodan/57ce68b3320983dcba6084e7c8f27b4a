@@ -4,8 +4,10 @@ import { text, boolean, select } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
+import { PortalWithState } from 'react-portal';
 
 import Button from '../components/Button';
+import RecipeModal from '../components/RecipeModal';
 
 const BGImage = styled.div`
   border-radius: 8px;
@@ -37,6 +39,10 @@ const buttonOptions = [
   'blue',
   'red'
 ];
+
+const showModal = () => (
+  <RecipeModal />
+);
 
 const textColorOptions = [...buttonOptions, 'gray'];
 
@@ -76,28 +82,41 @@ const ButtonStory = storiesOf('Button', module)
         buttonOptions.includes('white') && buttonOptions.pop();
       }
 
-      const button = (
-        <Button
-          color={color}
-          textColor={textColor}
-          secondary={boolean('Secondary Style', false)}
-          small={boolean('Small Size', false)}
-          disabled={boolean('Disabled', false)}
-          loading={boolean('Loading', false)}
-          onClick={action('clicked')}
-          overlay={overlay}
-        >
-          {text('Button Text', 'Add meal to trolley')}
-        </Button>
+      return (
+        <PortalWithState closeOnOutsideClick closeOnEsc>
+          {({ openPortal, closePortal, isOpen, portal }) => {
+            let button = (
+              <Button
+                color={color}
+                textColor={textColor}
+                secondary={boolean('Secondary Style', false)}
+                small={boolean('Small Size', false)}
+                disabled={boolean('Disabled', false)}
+                loading={boolean('Loading', false)}
+                onClick={openPortal}
+                overlay={overlay}
+              >
+                {text('Button Text', 'Add meal to trolley')}
+              </Button>
+            );
+
+            if (overlay) {
+              button = (
+                <BGImage>{button}</BGImage>
+              );
+            }
+
+            return (
+              <React.Fragment>
+                {button}
+                {portal(
+                  <RecipeModal close={closePortal} isOpen={isOpen} />
+                )}
+              </React.Fragment>
+            );
+          }}
+        </PortalWithState>
       );
-
-      if (overlay) {
-        return (
-          <BGImage>{button}</BGImage>
-        );
-      }
-
-      return button;
     }));
 
 export default ButtonStory;
