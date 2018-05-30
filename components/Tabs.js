@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import { colors } from '../utils';
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  width: 100%;
 `;
 
 const TabsList = styled.ul`
@@ -15,31 +12,32 @@ const TabsList = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   font-family: 'Source Sans Pro';
-  font-weight: 700;
   text-align: center;
   position: relative;
   border-bottom: 1px solid #eee;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
 `;
 
 const Tab = styled.li`
   color: ${({ selected }) => (selected ? '#3D3D3D' : '#666666')};
+  font-weight: ${({ selected }) => (selected ? 700 : 500)};
   list-style: none;
   cursor: pointer;
-  padding: 20px 40px;
-  transition: all .2s linear;
+  padding: 20px 0;
+  flex: 1;
+  transition: transform .2s linear, background .2s linear;
   white-space: nowrap;
-  margin-right: 20px;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.03);
-  }
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  &:hover {
+    background: rgba(0,0,0,.02);
   }
 
   ~ hr {
@@ -52,10 +50,6 @@ const Tab = styled.li`
       return selected ? `transform: translateX()` : '';
     }}
   }
-
-  @media (max-width: 768px) {
-    margin-right: 0;
-  }
 `;
 
 const Underline = styled.hr`
@@ -63,24 +57,21 @@ const Underline = styled.hr`
   margin: 0;
   background: ${colors()['green']};
   border: none;
-  transition: .3s ease-in-out;
+  transition: transform .3s cubic-bezier(0,0.5,0.5,1);
   transform: ${({ offsetLeft }) => `translateX(${offsetLeft}px)`};
 `;
 
 const ContentWrapper = styled.div`
   position: relative;
-  width: 100%;
-  align-self: flex-start;
+  width: ${({ length }) => `${length * 100}%`};
   display: flex;
-  justify-content: center;
+  transform: ${({ transform }) => transform};
+  transition: transform .3s cubic-bezier(0,0.75,0.75,1);
 `;
 
 const ContentItem = styled.div`
-  position: absolute;
-  transition: .3s ease-in-out;
   pointer-events: ${({ selected }) => (selected ? 'auto': 'none')};
-  opacity: ${({ selected }) => (selected ? 1: 0)};
-  transform: ${({ transform }) => transform};
+  width: 100%;
 `;
 
 class Tabs extends Component {
@@ -106,16 +97,8 @@ class Tabs extends Component {
     const { options } = this.props,
           { selectedTab, width, offsetLeft } = this.state;
 
-    let selectedContent;
-
     const tabsData = options.reduce((map, { title, content }, index) => {
       const selected = selectedTab === index;
-      if (selected) selectedContent = content;
-
-      const transform = () => {
-        if (selected) return 'translateX(0)';
-        return `translateX(${index < selectedTab ? '-' : ''}30px)`;
-      };
 
       map.tabs.push(
         <Tab
@@ -132,7 +115,7 @@ class Tabs extends Component {
       map.content.push(
         <ContentItem
           selected={selected}
-          transform={transform()}
+          key={`${title}-${index}`}
         >
           {content}
         </ContentItem>
@@ -140,14 +123,22 @@ class Tabs extends Component {
       return map;
     }, { tabs: [], content: [] });
 
+
+    const transform = (selectedTab) => {
+      return `translateX(-${(100 / options.length) * selectedTab}%)`;
+    };
+
     return (
       <Wrapper>
         <TabsList>
           {tabsData.tabs}
           {width && <Underline width={width} offsetLeft={offsetLeft}/>}
         </TabsList>
-        <ContentWrapper>
-        {tabsData.content}
+        <ContentWrapper
+          length={options.length}
+          transform={transform(selectedTab)}
+        >
+          {tabsData.content}
         </ContentWrapper>
       </Wrapper>
     );
@@ -155,7 +146,8 @@ class Tabs extends Component {
 };
 
 Tabs.propTypes = {
-  defaultTab: PropTypes.number
+  defaultTab: PropTypes.number,
+  options: PropTypes.array
 };
 
 Tabs.defaultProps = {

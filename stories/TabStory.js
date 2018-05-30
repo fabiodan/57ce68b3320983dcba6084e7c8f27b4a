@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 import Tabs from '../components/Tabs';
 
-const Content = styled.img`
+export const Content = styled.img`
   margin-top: 30px;
   height: 200px;
   width: auto;

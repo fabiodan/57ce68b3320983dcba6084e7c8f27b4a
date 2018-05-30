@@ -40,10 +40,6 @@ const buttonOptions = [
   'red'
 ];
 
-const showModal = () => (
-  <RecipeModal />
-);
-
 const textColorOptions = [...buttonOptions, 'gray'];
 
 const ButtonStory = storiesOf('Button', module)
@@ -110,7 +106,7 @@ const ButtonStory = storiesOf('Button', module)
               <React.Fragment>
                 {button}
                 {portal(
-                  <RecipeModal close={closePortal} isOpen={isOpen} />
+                  <RecipeModal close={closePortal} />
                 )}
               </React.Fragment>
             );
