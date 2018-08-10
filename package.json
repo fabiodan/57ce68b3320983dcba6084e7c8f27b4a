@@ -4,6 +4,7 @@
   "description": "ASDA StyleGuide",
   "main": "index.js",
   "dependencies": {
+    "classnames": "^2.2.6",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
@@ -22,8 +23,12 @@
     "@storybook/storybook-deployer": "^2.3.0",
     "babel-core": "^6.26.3",
     "brandai-storybook": "^1.0.2",
+    "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
     "react-storybook-addon-props-combinations": "^1.0.1",
-    "storybook-addon-docgen": "^4.0.0"
+    "sass-loader": "^7.1.0",
+    "storybook-addon-docgen": "^4.0.0",
+    "style-loader": "^0.21.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
