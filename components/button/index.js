@@ -15,12 +15,6 @@ import Spinner from '../spinner/'
 // Style
 import './_style.scss'
 
-const ButtonIcon = props => (
-  <span className={`${BLOCK}__icon`}>
-    {props.children}
-  </span>
-)
-
 const ButtonSpinner = props => {
   if (!props.loading) return null
 

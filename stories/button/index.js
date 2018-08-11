@@ -9,16 +9,6 @@ import Button from '../../components/button/'
 // Style
 import './_style.scss'
 
-storiesOf('MyComponent', module)
-  .addDecorator(story => (
-    <div style={{textAlign: 'center'}}>
-      {story()}
-    </div>
-  ))
-  .add('without props', () => <MyComponent />)
-  .add('with some props', () => <MyComponent text="The Comp"/>);
-
-
 const NewButtonStory = storiesOf('NewButton', module)
   .addDecorator(story => (
     <article className="story-button">
