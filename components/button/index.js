@@ -15,25 +15,18 @@ import Spinner from '../spinner/'
 // Style
 import './_style.scss'
 
-const ButtonSpinner = props => {
-  if (!props.loading) return null
-
-  return (
-    <Spinner className={`${BLOCK}__spinner`} size="small" />
-  )
-}
-
 const Button = props => {
-  const mixes = props.className
+  const spinner = props.loading
+    && <Spinner className={`${BLOCK}__spinner`} size="small" />
 
   return (
     <button
+      aria-disabled={props.disabled}
       className={getClasses(BLOCK, MODIFIERS, props)}
-      disabled={props.disabled}
       onClick={props.onClick}
       type={props.type}
     >
-      <ButtonSpinner loading={props.loading} />
+      {spinner}
       {props.children}
     </button>
   )

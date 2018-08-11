@@ -10,10 +10,11 @@ $button-horizontal-padding: 16px;
 $button-border-radius: 4px;
 $button-border-width: 1px;
 $button-hover-border-width: 2px;
-$button-black: #000000;
-$button-green: #68A51C;
-$button-blue: #0073B1;
-$button-red: #D43030;
+$white: #FFFFFF;
+$black: #000000;
+$green: #68A51C;
+$blue: #0073B1;
+$red: #D43030;
 
 // Block
 .button {
@@ -24,7 +25,7 @@ $button-red: #D43030;
   height: $button-height;
   padding: 0 $button-horizontal-padding;
   background-color: transparent;
-  color: $button-green;
+  color: $green;
   border: none;
   border-radius: $button-border-radius;
   text-align: center;
@@ -50,7 +51,7 @@ $button-red: #D43030;
     opacity: 0;
     pointer-events: none;
     content: "";
-    background-color: $button-black;
+    background-color: $black;
     z-index: 0;
   }
 
@@ -72,7 +73,8 @@ $button-red: #D43030;
     transition: opacity 150ms linear;
   }
 
-  &:active::after {
+  &.button--active:not(.button--disabled),
+  &:active:not(.button--disabled)::after {
     transition-duration: 75ms;
     opacity: 0.16;
   }
@@ -87,11 +89,11 @@ $button-red: #D43030;
 
 // Modifiers
 .button--primary {
-  background-color: $button-black;
+  background-color: $black;
   color: #FFFFFF;
   &::before,
   &::after {
-    background-color: white;
+    background-color: $white;
   }
 
   &::after {
@@ -102,8 +104,8 @@ $button-red: #D43030;
     opacity: 0.08;
   }
 
-  &.button--active::after,
-  &:active::after {
+  &.button--active:not(.button--disabled)::after,
+  &:active:not(.button--disabled)::after {
     transition-duration: 75ms;
     opacity: 0.32;
   }
@@ -113,13 +115,13 @@ $button-red: #D43030;
     opacity: 0.24;
   }
 
-  &:focus,
-  &:hover {
+  &:focus:not(.button--disabled),
+  &:hover:not(.button--disabled) {
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.20);
   }
-  
+
   .button__spinner ::before {
-    background-color: white;
+    background-color: $white;
   }
 }
 
@@ -128,78 +130,92 @@ $button-red: #D43030;
 }
 
 .button--blue {
-  background-color: $button-blue;
+  background-color: $blue;
 }
 
 .button--red {
-  background-color: $button-red;
+  background-color: $red;
 }
 
 .button--green {
-  background-color: $button-green;
+  background-color: $green;
 }
 
 .button--disabled,
 .button:disabled {
-  background: #cccccc;
-  color: #767676;
   pointer-events: none;
   cursor: default;
+  &::before {
+    opacity: 0.5;
+  }
 }
 
 .button--secondary {
   background-color: transparent;
-  color: $button-black;
-  border: solid $button-border-width $button-black;
+  color: $black;
+  border: solid $button-border-width $black;
   padding: 0 ($button-horizontal-padding - $button-border-width);
   height: $button-height;
   line-height: rem($button-height - ($button-border-width * 2));
 
   .button__spinner ::before {
-    background-color: $button-black;
+    background-color: $black;
   }
 
-  &.button--blue:not(.button--disabled) {
-    color: $button-blue;
-    border-color: $button-blue;
+  &.button--blue {
+    color: $blue;
+    border-color: $blue;
     &::before,
     &::after {
-      background-color: $button-blue;
+      background-color: $blue;
+    }
+    &.button--disabled,
+    &:disabled {
+      border-color: rgba($blue, 0.5);
     }
     .button__spinner ::before {
-      background-color: $button-blue;
-    }
-  }
-
-  &.button--red:not(.button--disabled) {
-    color: $button-red;
-    border-color: $button-red;
-    &::before,
-    &::after {
-      background-color: $button-red;
-    }
-    .button__spinner ::before {
-      background-color: $button-red;
+      background-color: $blue;
     }
   }
 
-  &.button--green:not(.button--disabled) {
-    color: $button-green;
-    border-color: $button-green;
+  &.button--red {
+    color: $red;
+    border-color: $red;
     &::before,
     &::after {
-      background-color: $button-green;
+      background-color: $red;
+    }
+    &.button--disabled,
+    &:disabled {
+      border-color: rgba($red, 0.5);
     }
     .button__spinner ::before {
-      background-color: $button-green;
+      background-color: $red;
+    }
+  }
+
+  &.button--green {
+    color: $green;
+    border-color: $green;
+    &::before,
+    &::after {
+      background-color: $green;
+    }
+    &.button--disabled,
+    &:disabled {
+      border-color: rgba($green, 0.5);
+    }
+    .button__spinner ::before {
+      background-color: $green;
     }
   }
 
   &.button--disabled,
   &:disabled {
-    background: rgba(0,0,0,.10);
-    border-color: rgba(0,0,0,.20);
-    color: #767676;
+    &::before {
+      background-color: $white;
+      opacity: 0.5;
+    }
   }
 
   &:focus,
@@ -207,11 +223,5 @@ $button-red: #D43030;
     border-width: $button-hover-border-width;
     padding: 0 ($button-horizontal-padding - $button-hover-border-width);
     line-height: rem($button-height - ($button-hover-border-width * 2));
-  }
-}
-
-.button--disabled {
-  .button__spinner ::before {
-    background-color: #767676;
   }
 }

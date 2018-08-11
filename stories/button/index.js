@@ -15,7 +15,7 @@ const NewButtonStory = storiesOf('NewButton', module)
       {story()}
     </article>
   ))
-  .add('Default', () => (
+  .add('Standard', () => (
     <section className="story-button__container">
       <Button
         category={select('Category', ['primary', 'secondary'], 'primary')}
