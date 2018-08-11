@@ -1,0 +1,227 @@
+/* Button Component */
+
+// Dependencies
+@import "../typography/mixins";
+@import "../typography/functions";
+
+// Variables
+$button-height: 44px;
+$button-horizontal-padding: 16px;
+$button-border-radius: 4px;
+$button-border-width: 1px;
+$button-black: #000000;
+$button-green: #68A51C;
+$button-blue: #0073B1;
+$button-red: #D43030;
+
+// Block
+.button {
+  @include typography(button);
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  height: $button-height;
+  padding: 0 $button-horizontal-padding;
+  background-color: transparent;
+  color: $button-green;
+  border: none;
+  border-radius: $button-border-radius;
+  text-align: center;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
+    background-color: $button-black;
+    z-index: 0;
+  }
+
+  &::before {
+    z-index: 1;
+    transition: opacity 15ms linear;
+  }
+
+  &:hover::before {
+    opacity: 0.04;
+  }
+
+  &:focus::before {
+    transition-duration: 75ms;
+    opacity: 0.12;
+  }
+
+  &::after {
+    transition: opacity 150ms linear;
+  }
+
+  &:active::after {
+    transition-duration: 75ms;
+    opacity: 0.16;
+  }
+}
+
+// Elements
+.button__icon {
+
+  // Remove that after import asda icons
+  font-family: 'Material Icons';
+  font-weight: normal;
+  // Remove that after import asda icons
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: inherit;
+  vertical-align: sub;
+  letter-spacing: normal;
+}
+
+.button__spinner {
+  margin-right: 8px;
+  line-height: inherit;
+  vertical-align: sub;
+}
+
+// Modifiers
+.button--primary {
+  background-color: $button-black;
+  color: #FFFFFF;
+  &::before,
+  &::after {
+    background-color: white;
+  }
+
+  &::after {
+    transition: opacity 150ms linear;
+  }
+
+  &:hover::before {
+    opacity: 0.08;
+  }
+
+  &.button--active::after,
+  &:active::after {
+    transition-duration: 75ms;
+    opacity: 0.32;
+  }
+
+  &:focus::before {
+    transition-duration: 75ms;
+    opacity: 0.24;
+  }
+
+  .button__spinner ::before {
+    background-color: white;
+  }
+}
+
+.button--fluid {
+  width: 100%;
+}
+
+.button--blue {
+  background-color: $button-blue;
+}
+
+.button--red {
+  background-color: $button-red;
+}
+
+.button--green {
+  background-color: $button-green;
+}
+
+.button--disabled,
+.button:disabled {
+  background: #cccccc;
+  color: #767676;
+  pointer-events: none;
+  cursor: default;
+}
+
+.button--secondary {
+  background-color: transparent;
+  color: $button-black;
+  border: solid $button-border-width $button-black;
+  padding: 0 ($button-horizontal-padding - $button-border-width);
+  height: $button-height;
+  line-height: rem($button-height - ($button-border-width * 2));
+
+  .button__spinner ::before {
+    background-color: $button-black;
+  }
+
+  &.button--blue:not(.button--disabled) {
+    color: $button-blue;
+    border-color: $button-blue;
+    &::before,
+    &::after {
+      background-color: $button-blue;
+    }
+    .button__spinner ::before {
+      background-color: $button-blue;
+    }
+  }
+
+  &.button--red:not(.button--disabled) {
+    color: $button-red;
+    border-color: $button-red;
+    &::before,
+    &::after {
+      background-color: $button-red;
+    }
+    .button__spinner ::before {
+      background-color: $button-red;
+    }
+  }
+
+  &.button--green:not(.button--disabled) {
+    color: $button-green;
+    border-color: $button-green;
+    &::before,
+    &::after {
+      background-color: $button-green;
+    }
+    .button__spinner ::before {
+      background-color: $button-green;
+    }
+  }
+
+  &.button--disabled,
+  &:disabled {
+    background: rgba(0,0,0,.10);
+    border-color: rgba(0,0,0,.20);
+    color: #767676;
+  }
+}
+
+.button--loading {
+  .button__icon {
+    display: none;
+  }
+}
+
+.button--disabled {
+  .button__spinner ::before {
+    background-color: #767676;
+  }
+}

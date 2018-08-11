@@ -1,0 +1,13 @@
+$spinner-deg: 30;
+$spinner-sec: -1.1;
+$spinner-size: 40px; // default size
+$spinner-small-size: 20px;
+$spinner-medium-size: 40px;
+$spinner-large-size: 60px;
+$spinner-small-half-size: (($spinner-small-size / 2px) * -1px);
+$spinner-medium-half-size: (($spinner-medium-size / 2px) * -1px);
+$spinner-large-half-size: (($spinner-large-size / 2px) * -1px);
+
+// TODO: move colors to Theme module
+$spinner-color: #68A51C;
+$spinner-overlay-bg-color: rgba(255, 255, 255, .5);

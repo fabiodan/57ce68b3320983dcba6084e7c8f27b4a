@@ -1,0 +1,98 @@
+/**
+ * Spinner component
+ */
+
+// Dependencies
+@import "./variables";
+
+// Block
+.spinner {
+  display: inline-block;
+}
+
+// Elements
+.spinner__container {
+  width: $spinner-size;
+  height: $spinner-size;
+  position: relative;
+}
+
+.spinner__circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.spinner__circle:before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  background-color: $spinner-color;
+  border-radius: 100%;
+  animation: spinner__circleFadeDelay 1.2s infinite ease-in-out both;
+}
+
+.spinner__overlay {
+  background: $spinner-overlay-bg-color;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+// Component modifiers
+.spinner--small {
+  .spinner__container {
+    width: $spinner-small-size;
+    height: $spinner-small-size;
+  }
+  &.spinner--center {
+    margin: $spinner-small-half-size 0 0 $spinner-small-half-size;
+  }
+}
+
+.spinner--large {
+  .spinner__container {
+    width: $spinner-large-size;
+    height: $spinner-large-size;
+  }
+  &.spinner--center {
+    margin: $spinner-large-half-size 0 0 $spinner-large-half-size;
+  }
+}
+
+.spinner--center {
+
+  // Reminder: To have the Spinner correctly aligned, please set one of
+  // the parent elements as "position: relative"
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: $spinner-medium-half-size 0 0 $spinner-medium-half-size;
+}
+
+@while $spinner-deg <= 330 {
+  .spinner--rotate-#{$spinner-deg}deg {
+    transform: rotate(#{$spinner-deg}deg);
+
+    &:before {
+      animation-delay: #{$spinner-sec}s;
+    }
+  }
+
+  $spinner-deg: $spinner-deg + 30;
+  $spinner-sec: $spinner-sec + 0.1;
+}
+
+// Animation
+@keyframes spinner__circleFadeDelay {
+  0%, 39%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}

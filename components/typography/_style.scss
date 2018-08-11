@@ -1,0 +1,20 @@
+/* Typography Foundational Module */
+
+// Dependencies
+@import "./functions";
+@import "./variables";
+@import "./mixins";
+
+.typography {
+  @include typography-base;
+}
+
+@each $style in map-keys($typography-styles) {
+  .typography--#{$style} {
+    @include typography($style);
+  }
+
+  .typography--adjust-margin.typography--#{$style} {
+    @include typography-adjust-margin($style);
+  }
+}

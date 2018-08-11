@@ -1,0 +1,37 @@
+
+// Dependencies
+@import "./functions";
+@import "./variables";
+
+@mixin typography-base {
+  font-family: $typography-font-family;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin typography($style) {
+  $style-props: map-get($typography-styles, $style);
+
+  @if not map-has-key($typography-styles, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($typography-styles)}";
+  }
+
+  @include typography-base;
+
+  $style-props: map-remove($style-props, margin);
+
+  @each $key, $value in $style-props {
+    #{$key}: $value;
+  }
+}
+
+@mixin typography-adjust-margin($style) {
+  margin: map-get(map-get($typography-styles, $style), margin);
+}
+
+// Element must be `display: block` or `display: inline-block` for this to work.
+@mixin typography-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
