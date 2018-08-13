@@ -9,7 +9,7 @@ import Button from '../../components/button/'
 // Style
 import './_style.scss'
 
-const NewButtonStory = storiesOf('NewButton', module)
+const ButtonStory = storiesOf('Button', module)
   .addDecorator(story => (
     <article className="story-button">
       {story()}
@@ -79,4 +79,4 @@ const NewButtonStory = storiesOf('NewButton', module)
 
 
 
-export default NewButtonStory
+export default ButtonStory
