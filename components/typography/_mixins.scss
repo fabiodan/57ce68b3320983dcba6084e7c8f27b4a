@@ -1,8 +1,40 @@
+// Typography
 
-// Dependencies
-@import "./functions";
-@import "./variables";
+// Functions
+@function rem($pixels, $context: 16) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
 
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+// Variables
+$typography-font-family: "Source Sans Pro", sans-serif !default;
+
+$typography-font-weight-values: (
+  regular: 400,
+  semi-bold: 600,
+  bold: 700
+) !default;
+
+$typography-styles: (
+  button: (
+    font-size: rem(18px),
+    line-height: rem(44px),
+    font-weight: map-get($typography-font-weight-values, bold),
+    letter-spacing: rem(0.26px),
+    margin: inherit,
+    text-decoration: none,
+    text-transform: none
+  )
+) !default;
+
+// Mixins
 @mixin typography-base {
   font-family: $typography-font-family;
   -moz-osx-font-smoothing: grayscale;
@@ -12,26 +44,9 @@
 @mixin typography($style) {
   $style-props: map-get($typography-styles, $style);
 
-  @if not map-has-key($typography-styles, $style) {
-    @error "Invalid style specified! Choose one of #{map-keys($typography-styles)}";
-  }
-
   @include typography-base;
-
-  $style-props: map-remove($style-props, margin);
 
   @each $key, $value in $style-props {
     #{$key}: $value;
   }
-}
-
-@mixin typography-adjust-margin($style) {
-  margin: map-get(map-get($typography-styles, $style), margin);
-}
-
-// Element must be `display: block` or `display: inline-block` for this to work.
-@mixin typography-overflow-ellipsis {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }

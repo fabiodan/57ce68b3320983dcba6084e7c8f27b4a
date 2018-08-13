@@ -2,6 +2,7 @@
 
 // Libs
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Utils
 import getClasses from '../base'
@@ -30,6 +31,16 @@ const Button = props => {
       {props.children}
     </button>
   )
+}
+
+Button.propTypes = {
+  category: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  color: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
 }
 
 export default Button

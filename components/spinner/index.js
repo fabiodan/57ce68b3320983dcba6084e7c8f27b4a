@@ -33,16 +33,4 @@ const SpinnerCircle = props => (
   <div className={`${BLOCK}__circle ${BLOCK}--rotate-${props.deg}deg`} />
 )
 
-const SpinnerOverlay = (props) => {
-  if (props.showOverlay) {
-    return (
-      <div className={`${BLOCK}__overlay`}>
-        <Spinner {...props} />
-      </div>
-    )
-  }
-
-  return <Spinner {...props} />
-}
-
-export default SpinnerOverlay
+export default Spinner
