@@ -27,20 +27,28 @@ const Button = props => {
       onClick={props.onClick}
       type={props.type}
     >
-      {spinner}
-      {props.children}
+      <span className="button__content">
+        {spinner}
+        {props.children}
+      </span>
     </button>
   )
 }
 
 Button.propTypes = {
-  category: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  color: PropTypes.string.isRequired,
+  category: PropTypes.string,
+  color: PropTypes.string,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   onClick: PropTypes.func,
   type: PropTypes.string,
+}
+
+Button.defaultProps = {
+  category: 'primary',
+  color: 'green',
+  type: 'button',
 }
 
 export default Button
