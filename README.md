@@ -9,7 +9,7 @@ Firstly, you'll need [yarn](https://yarnpkg.com/lang/en/docs/install/) installed
 
 1. Clone this repo
 2. `yarn install` from this repo's directory
-3. `npm run storybook` to spin up the webpack server
+3. `yarn run storybook` to spin up the webpack server
 4. Storybook should be running on port `9001`. Visit `localhost:9001` to view the application.
 5. Toggle the **Actions Panel** with `⌘⇧C`.
 
@@ -31,5 +31,5 @@ You can see access these via the **Design Library** tab in the **Actions Panel**
 
 Currently, the StyleGuide™ is deployed to [Github Pages](https://gecgithub01.walmart.com/pages/c0v0039/asda-styleguide/) using [storybook-deployer](https://github.com/storybooks/storybook-deployer).
 ```
-npm run deploy-storybook
+yarn run deploy-storybook
 ```
