@@ -32,6 +32,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn run storybook",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages"
   },
