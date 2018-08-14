@@ -18,8 +18,8 @@ const ButtonStory = storiesOf('Button', module)
   .add('Standard', () => (
     <section className="story-button__container">
       <Button
-        category={select('Category', ['primary', 'secondary'], 'primary')}
-        color={select('Color', ['green', 'blue', 'red'], 'green')}
+        category={select('Category', ['primary', 'secondary'])}
+        color={select('Color', ['green', 'blue', 'red'])}
         fluid={boolean('Fluid', false)}
         disabled={boolean('Disabled', false)}
         loading={boolean('Loading', false)}>
@@ -29,31 +29,31 @@ const ButtonStory = storiesOf('Button', module)
   ))
   .add('Variations', () => (
     <section className="story-button__grid">
-      <Button category="primary" color="green">
+      <Button>
         Button Text
       </Button>
-      <Button category="primary" color="green" loading>
+      <Button loading>
         Button Text
       </Button>
-      <Button category="primary" color="green" disabled>
+      <Button disabled>
         Button Text
       </Button>
-      <Button category="secondary" color="green">
+      <Button category="secondary">
         Button Text
       </Button>
-      <Button category="secondary" color="green" loading>
+      <Button category="secondary" loading>
         Button Text
       </Button>
-      <Button category="secondary" color="green" disabled>
+      <Button category="secondary" disabled>
         Button Text
       </Button>
-      <Button category="primary" color="blue">
+      <Button color="blue">
         Button Text
       </Button>
-      <Button category="primary" color="blue" loading>
+      <Button color="blue" loading>
         Button Text
       </Button>
-      <Button category="primary" color="blue" disabled>
+      <Button color="blue" disabled>
         Button Text
       </Button>
       <Button category="secondary" color="blue">
@@ -76,7 +76,5 @@ const ButtonStory = storiesOf('Button', module)
       </Button>
     </section>
   ))
-
-
 
 export default ButtonStory
