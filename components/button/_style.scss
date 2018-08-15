@@ -61,7 +61,6 @@ $red: #D43030;
     transition: opacity 15ms linear;
   }
 
-  // ::before handles hover/focus state
   &:hover::before,
   &:focus::before {
     transition-duration: 75ms;
@@ -72,7 +71,7 @@ $red: #D43030;
     transition: opacity 150ms linear;
   }
 
-  // ::after handles active state
+  &.button--active:not(.button--disabled),
   &:active:not(.button--disabled)::after {
     transition-duration: 75ms;
     opacity: 0.16;
@@ -80,11 +79,6 @@ $red: #D43030;
 }
 
 // Elements
-.button__content {
-  position: relative;
-  z-index: 3;
-}
-
 .button__spinner {
   margin-right: 8px;
   line-height: inherit;
@@ -94,10 +88,29 @@ $red: #D43030;
 // Modifiers
 .button--primary {
   background-color: $green;
-  color: #FFFFFF;
+  color: $white;
+  &::before,
+  &::after {
+    background-color: $white;
+  }
 
   &::after {
     transition: opacity 150ms linear;
+  }
+
+  &:hover::before {
+    opacity: 0.08;
+  }
+
+  &.button--active:not(.button--disabled)::after,
+  &:active:not(.button--disabled)::after {
+    transition-duration: 75ms;
+    opacity: 0.32;
+  }
+
+  &:focus::before {
+    transition-duration: 75ms;
+    opacity: 0.24;
   }
 
   &:focus,
@@ -131,11 +144,7 @@ $red: #D43030;
   pointer-events: none;
   cursor: default;
   &::before {
-    background-color: $white;
     opacity: 0.5;
-  }
-  .button__content {
-    z-index: 0;
   }
 }
 
