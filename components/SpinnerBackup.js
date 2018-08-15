@@ -50,8 +50,8 @@ const SVG = styled.svg`
   }
 `;
 
-/** Spinner component */
-const Spinner = ({ color, scale: scaleProp, small }) => {
+/** SpinnerBackup component */
+const SpinnerBackup = ({ color, scale: scaleProp, small }) => {
   let scale = scaleProp;
   if (small) scale = 0.2;
 
@@ -81,7 +81,7 @@ const Spinner = ({ color, scale: scaleProp, small }) => {
   );
 };
 
-Spinner.propTypes = {
+SpinnerBackup.propTypes = {
   /** The color of the spinner as a string */
   color: PropTypes.string,
   /** The scale of the spinner as a decimal percentage */
@@ -90,10 +90,10 @@ Spinner.propTypes = {
   small: PropTypes.bool,
 };
 
-Spinner.defaultProps = {
+SpinnerBackup.defaultProps = {
   color: 'white',
   scale: 0.25,
   small: false
 };
 
-export default Spinner;
+export default SpinnerBackup;

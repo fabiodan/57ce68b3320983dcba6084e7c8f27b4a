@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Icon, { iconOptions } from '../components/Icon';
 import Logo from '../components/Logo';
-import Spinner from '../components/Spinner';
+import SpinnerBackup from '../components/SpinnerBackup';
 
 const colorOptions = [
   'gray',

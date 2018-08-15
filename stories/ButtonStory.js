@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import styled from 'styled-components';
 import { PortalWithState } from 'react-portal';
 
-import Button from '../components/Button';
+import ButtonBackup from '../components/ButtonBackup';
 import RecipeModal from '../components/RecipeModal';
 
 const BGImage = styled.div`
@@ -42,20 +42,20 @@ const buttonOptions = [
 
 const textColorOptions = [...buttonOptions, 'gray'];
 
-const ButtonStory = storiesOf('Button', module)
+const ButtonStory = storiesOf('ButtonBackup', module)
   .add('with options',
     withInfo(`
       ~~~js
-      <Button
+      <ButtonBackup
         color="green"
         secondary={false}
         small={false}
         disabled={false}
         loading={false}
-        onClick={() => console.log('Button clicked!')}
+        onClick={() => console.log('ButtonBackup clicked!')}
       >
         Add meal to trolley
-      </Button>
+      </ButtonBackup>
       ~~~
     `)
     (() => {
@@ -82,7 +82,7 @@ const ButtonStory = storiesOf('Button', module)
         <PortalWithState closeOnOutsideClick closeOnEsc>
           {({ openPortal, closePortal, isOpen, portal }) => {
             let button = (
-              <Button
+              <ButtonBackup
                 color={color}
                 textColor={textColor}
                 secondary={boolean('Secondary Style', false)}
@@ -92,8 +92,8 @@ const ButtonStory = storiesOf('Button', module)
                 onClick={openPortal}
                 overlay={overlay}
               >
-                {text('Button Text', 'Add meal to trolley')}
-              </Button>
+                {text('ButtonBackup Text', 'Add meal to trolley')}
+              </ButtonBackup>
             );
 
             if (overlay) {

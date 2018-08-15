@@ -4,7 +4,7 @@
 import React from 'react'
 
 // Utils
-import getClasses from '../base'
+import getClasses from '@asda/base'
 
 // Config
 import { BLOCK, MODIFIERS } from './constants'
@@ -12,7 +12,7 @@ import { BLOCK, MODIFIERS } from './constants'
 // Styles
 import './_style.scss'
 
-const Spinner = (props) => {
+const Spinner = props => {
   const circles = []
 
   for (let deg = 30; deg <= 330; deg += 30) {

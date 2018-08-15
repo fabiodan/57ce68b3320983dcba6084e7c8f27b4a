@@ -5,13 +5,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Utils
-import getClasses from '../base'
+import getClasses from '@asda/base'
 
 // Config
 import { BLOCK, MODIFIERS } from './constants'
 
 // Components
-import Spinner from '../spinner/'
+import Spinner from '@asda/spinner'
 
 // Style
 import './_style.scss'

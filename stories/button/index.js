@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { boolean, select, text } from '@storybook/addon-knobs/react'
 
 // Components
-import Button from '../../components/button/'
+import Button from '@asda/button'
 
 // Style
 import './_style.scss'

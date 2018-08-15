@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Spinner from './Spinner';
+import SpinnerBackup from './SpinnerBackup';
 import { colors } from '../utils';
 
 const StyledButton = styled.button`
@@ -87,7 +87,7 @@ const Loading = styled.div`
   justify-content: center;
 `;
 
-const Button = ({
+const ButtonBackup = ({
   children,
   secondary,
   color,
@@ -110,7 +110,7 @@ const Button = ({
 
     content = (
       <Loading>
-        <Spinner color={spinnerColor} small={small} scale={small ? 0.2 : 0.25} />
+        <SpinnerBackup color={spinnerColor} small={small} scale={small ? 0.2 : 0.25} />
         {content}
       </Loading>
     );
@@ -144,8 +144,8 @@ const Button = ({
   );
 };
 
-Button.propTypes = {
-  /** Button text */
+ButtonBackup.propTypes = {
+  /** ButtonBackup text */
   children: PropTypes.string.isRequired,
   /** Color of the button as a string */
   onClick: PropTypes.func.isRequired,
@@ -169,14 +169,14 @@ Button.propTypes = {
   overlay: PropTypes.bool
 };
 
-Button.defaultProps = {
+ButtonBackup.defaultProps = {
   secondary: false,
   small: false,
   loading: false,
   disabled: false,
   color: 'green',
-  onClick: () => console.log('Button clicked'),
+  onClick: () => console.log('ButtonBackup clicked'),
   overlay: false
 };
 
-export default Button;
+export default ButtonBackup;
