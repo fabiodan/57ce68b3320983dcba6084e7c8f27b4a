@@ -54,21 +54,17 @@ $red: #D43030;
     content: "";
     background-color: $black;
     z-index: 0;
+    transition: opacity 0 linear;
   }
 
   &::before {
     z-index: 1;
-    transition: opacity 15ms linear;
   }
 
   &:hover::before,
   &:focus::before {
     transition-duration: 75ms;
     opacity: 0.12;
-  }
-
-  &::after {
-    transition: opacity 150ms linear;
   }
 
   &.button--active:not(.button--disabled),
@@ -79,6 +75,13 @@ $red: #D43030;
 }
 
 // Elements
+.button:not(.button--disabled) {
+  .button__content {
+    position: relative;
+    z-index: 3;
+  }
+}
+
 .button__spinner {
   margin-right: 8px;
   line-height: inherit;
@@ -91,31 +94,17 @@ $red: #D43030;
   color: $white;
   &::before,
   &::after {
-    background-color: $white;
-  }
-
-  &::after {
-    transition: opacity 150ms linear;
-  }
-
-  &:hover::before {
-    opacity: 0.08;
-  }
-
-  &.button--active:not(.button--disabled)::after,
-  &:active:not(.button--disabled)::after {
-    transition-duration: 75ms;
-    opacity: 0.32;
-  }
-
-  &:focus::before {
-    transition-duration: 75ms;
-    opacity: 0.24;
+    background-color: $black;
   }
 
   &:focus,
   &:hover:not(.button--disabled) {
     box-shadow: 0 2px 10px 0 rgba($black, 0.20);
+  }
+
+  &.button--disabled:focus::before,
+  &:disabled:focus::before {
+    opacity: 0.24;
   }
 
   .button__spinner ::before {
@@ -144,6 +133,7 @@ $red: #D43030;
   pointer-events: none;
   cursor: default;
   &::before {
+    background-color: $white;
     opacity: 0.5;
   }
 }
@@ -210,8 +200,6 @@ $red: #D43030;
 
   &.button--disabled,
   &:disabled {
-    border-color: rgba($green, 0.5);
-
     &::before {
       background-color: $white;
       opacity: 0.5;
