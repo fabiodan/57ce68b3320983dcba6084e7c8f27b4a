@@ -23,12 +23,91 @@ $typography-font-weight-values: (
 ) !default;
 
 $typography-styles: (
+  heading1: (
+    font-size: rem(32px),
+    line-height: rem(30px),
+    font-weight: map-get($typography-font-weight-values, bold),
+    letter-spacing: rem(0.8px),
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  heading2: (
+    font-size: rem(24px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, bold),
+    letter-spacing: rem(0.3px),
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  heading3: (
+    font-size: rem(18px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, semi-bold),
+    letter-spacing: rem(0.26px),
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  heading4: (
+    font-size: rem(16px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, semi-bold),
+    letter-spacing: rem(0.23px),
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  heading5: (
+    font-size: rem(12px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, semi-bold),
+    letter-spacing: rem(0.3px),
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  heading6: (
+    font-size: rem(10px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, semi-bold),
+    letter-spacing: rem(0.3px),
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  caption: ( // caption, label, secondary details
+    font-size: rem(12px),
+    line-height: rem(15px),
+    font-weight: map-get($typography-font-weight-values, regular),
+    letter-spacing: normal,
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  input: (
+    font-size: rem(16px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, regular),
+    letter-spacing: normal,
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  main: ( // Main copy
+    font-size: rem(14px),
+    line-height: rem(20px),
+    font-weight: map-get($typography-font-weight-values, regular),
+    letter-spacing: normal,
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
+  secondary: ( // Secondary copy
+    font-size: rem(13px),
+    line-height: rem(15px),
+    font-weight: map-get($typography-font-weight-values, regular),
+    letter-spacing: normal,
+    text-decoration: inherit,
+    text-transform: inherit
+  ),
   button: (
     font-size: rem(18px),
     line-height: rem(44px),
     font-weight: map-get($typography-font-weight-values, bold),
     letter-spacing: rem(0.26px),
-    margin: inherit,
     text-decoration: none,
     text-transform: none
   )

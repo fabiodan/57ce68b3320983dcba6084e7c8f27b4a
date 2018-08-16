@@ -1,0 +1,20 @@
+/* Button Story */
+
+// Block
+.story-button {
+  min-width: 320px;
+  min-height: 400px;
+  padding: 10px;
+}
+
+// Elements
+.story-button__container {
+  text-align: center;
+}
+
+.story-button__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
