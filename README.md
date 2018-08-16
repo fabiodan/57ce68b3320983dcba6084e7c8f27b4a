@@ -98,5 +98,5 @@ it’s ok to have the case below:
 Currently, the StyleGuide™ is deployed to [Github Pages](https://gecgithub01.walmart.com/pages/c0v0039/asda-styleguide/) using [storybook-deployer](https://github.com/storybooks/storybook-deployer).
 
 ```bash
-yarn run deploy-storybook
+yarn build
 ```
