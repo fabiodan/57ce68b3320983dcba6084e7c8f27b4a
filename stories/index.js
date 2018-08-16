@@ -4,4 +4,6 @@ import InputStory from './InputStory';
 import IconStory from './IconStory';
 import SelectStory from './SelectStory';
 import TabStory from './TabStory';
-import Boilerplate from './boilerplate';
+
+// Uncomment for development purposes only.
+// import Boilerplate from './boilerplate';
