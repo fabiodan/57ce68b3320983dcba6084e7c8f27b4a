@@ -1,7 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
 import { setDefaults } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs/react';
-import centered from '@storybook/addon-centered';
 
 setDefaults({
   header: true, // Toggles display of header with component name and description
@@ -9,7 +8,6 @@ setDefaults({
   source: false, // Displays the source of story Component
 });
 
-addDecorator(centered);
 addDecorator(withKnobs);
 
 function loadStories() {

@@ -1,0 +1,38 @@
+/* Boilerplate */
+
+// Dependencies
+@import "@asda/typography/mixins";
+
+// Variables
+$boilerplate-height: 200px !default;
+$boilerplate-width: 150px !default;
+$boilerplate-head-background-color: #F98866 !default;
+
+// Block
+.boilerplate {
+
+  // Encapsulates a standalone entity that is meaningful on its own.
+  // While blocks can be nested and interact with each other, semantically
+  // they remain equal; there is no precedence or hierarchy.
+  background: #EEE;
+}
+
+// Elements
+.boilerplate__header {
+
+  // Parts of a block and have no standalone meaning.
+  // Any element is semantically tied to its block.
+  @include typography(heading2);
+  height: 40px;
+  padding: 20px;
+  background: #DDD;
+}
+
+// Modifiers
+.boilerplate--small {
+
+  // Flags on blocks or elements. Use them to change
+  // appearance, behavior or state.
+  height: $boilerplate-height / 2;
+  width: $boilerplate-width / 2;
+}

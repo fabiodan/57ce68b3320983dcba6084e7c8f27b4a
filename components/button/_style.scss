@@ -4,18 +4,18 @@
 @import "@asda/typography/mixins";
 
 // Variables
-$button-height: 44px;
-$button-horizontal-padding: 16px;
-$button-border-radius: 4px;
-$button-border-width: 1px;
-$button-hover-border-width: 2px;
+$button-height: 44px !default;
+$button-horizontal-padding: 16px !default;
+$button-border-radius: 4px !default;
+$button-border-width: 1px !default;
+$button-hover-border-width: 2px !default;
 
 // TODO: move colors to Theme module
-$black: #000000;
-$white: #FFFFFF;
-$green: #68A51C;
-$blue: #0073B1;
-$red: #D43030;
+$black: #000000 !default;
+$white: #FFFFFF !default;
+$green: #68A51C !default;
+$blue: #0073B1 !default;
+$red: #D43030 !default;
 
 // Block
 .button {

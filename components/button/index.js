@@ -27,7 +27,7 @@ const Button = props => {
       onClick={props.onClick}
       type={props.type}
     >
-      <span className="button__content">
+      <span className={`${BLOCK}__content`}>
         {spinner}
         {props.children}
       </span>
