@@ -40,7 +40,10 @@ $typography-styles: (
     text-transform: inherit
   ),
   heading3: (
-    font-size: rem(18px),
+
+    // 18.66px (14pt) for level AA conformance
+    // https://webaim.org/resources/contrastchecker/?fcolor=68A51C&bcolor=FFFFFF&api.
+    font-size: rem(18.66px),
     line-height: rem(20px),
     font-weight: map-get($typography-font-weight-values, semi-bold),
     letter-spacing: rem(0.26px),
@@ -104,7 +107,10 @@ $typography-styles: (
     text-transform: inherit
   ),
   button: (
-    font-size: rem(18px),
+
+    // 18.66px (14pt) for level AA conformance
+    // https://webaim.org/resources/contrastchecker/?fcolor=68A51C&bcolor=FFFFFF&api.
+    font-size: rem(18.66px),
     line-height: rem(44px),
     font-weight: map-get($typography-font-weight-values, bold),
     letter-spacing: rem(0.26px),
