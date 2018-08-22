@@ -1,6 +1,6 @@
 import ButtonStory from './button';
 import TypographyStory from './typography';
-// import InputStory from './InputStory';
+import InputStory from './input';
 // import IconStory from './IconStory';
 // import SelectStory from './SelectStory';
 // import TabStory from './TabStory';

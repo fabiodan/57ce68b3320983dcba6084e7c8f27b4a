@@ -18,6 +18,7 @@ export const grays = (darkness = 1) => ([
 ][darkness]);
 
 export const creditCards = [
+  '',
   'blank',
   'amex',
   'cirrus',

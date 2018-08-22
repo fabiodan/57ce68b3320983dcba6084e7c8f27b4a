@@ -1,0 +1,93 @@
+/* Button */
+
+// Dependencies
+@import "../typography/mixins";
+
+// Variables
+$input-height: 44px;
+$input-horizontal-padding: 16px;
+$input-border-radius: 4px;
+$input-border-width: 1px;
+$input-border-color: rgba(0,0,0,.07);
+$input-border-hover-color: rgba(0,0,0,.14);
+
+// TODO: move colors to Theme module
+$gray: #3d3d3d;
+$lightgray: #767676;
+$white: #FFFFFF;
+$green: #68A51C;
+$blue: #0073B1;
+$red: #D43030;
+
+
+// Block
+.input {
+  @include typography(input);
+  border-radius: $input-border-radius;
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  height: $input-height;
+  color: $gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border .2s linear, background 0s linear;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  background: $white;
+  border-style: solid;
+  min-width: 300px;
+  padding: 0 13px;
+
+  &::placeholder {
+    color: $lightgray;
+  }
+
+  &:focus, &:active {
+    outline: none;
+    border-color: $input-border-hover-color;
+    box-shadow: 0 0 8px $input-border-color;
+  }
+
+  &:hover {
+    border-color: $input-border-hover-color;
+  }
+}
+
+
+// Elements
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.input__label {
+  @include typography(label);
+  color: $lightgray;
+}
+
+.input__message {
+  @include typography(label);
+  margin-top: 8px;
+  color: $lightgray;
+
+  &--error {
+    color: $red;
+  }
+
+  &--success {
+    color: $green;
+  }
+}
+
+
+// Modifiers
+.input--icon {
+  min-width: 263px;
+  padding: 0 13px 0 50px;
+}

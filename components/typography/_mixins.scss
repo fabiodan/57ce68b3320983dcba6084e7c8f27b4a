@@ -116,6 +116,11 @@ $typography-styles: (
     letter-spacing: rem(0.26px),
     text-decoration: none,
     text-transform: none
+  ),
+  label: (
+    font-size: rem(12px),
+    line-height: rem(12px),
+    margin-bottom: 8px
   )
 ) !default;
 
