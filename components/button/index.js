@@ -5,10 +5,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Utils
-import getClasses from '@asda/base'
-
-// Config
-import { BLOCK, MODIFIERS } from './constants'
+import classNames from 'classnames'
 
 // Components
 import Spinner from '@asda/spinner'
@@ -17,17 +14,32 @@ import Spinner from '@asda/spinner'
 import './_style.scss'
 
 const Button = props => {
+
+const classes = classNames('button', props.className, [
+  { 'button--primary': props.category === 'primary' },
+  { 'button--secondary': props.category === 'secondary' },
+  { 'button--tertiary': props.category === 'tertiary' },
+  { 'button--green': props.color === 'green' },
+  { 'button--blue': props.color === 'blue' },
+  { 'button--red': props.color === 'red' },
+  { 'button--hidden': props.hidden },
+  { 'button--fluid': props.fluid },
+  { 'button--active': props.active },
+  { 'button--disabled': props.disabled },
+  { 'button--loading': props.loading },
+])
+
   const spinner = props.loading
-    && <Spinner className={`${BLOCK}__spinner`} size="small" />
+    && <Spinner className="button__spinner" size="small" />
 
   return (
     <button
       aria-disabled={props.disabled}
-      className={getClasses(BLOCK, MODIFIERS, props)}
+      className={classes}
       onClick={props.onClick}
       type={props.type}
     >
-      <span className={`${BLOCK}__content`}>
+      <span className={`button__content`}>
         {spinner}
         {props.children}
       </span>
