@@ -1,6 +1,7 @@
 /* Button */
 
 // Dependencies
+@import "@asda/theme/mixins";
 @import "@asda/typography/mixins";
 
 // Variables
@@ -9,13 +10,6 @@ $button-horizontal-padding: 16px !default;
 $button-border-radius: 4px !default;
 $button-border-width: 1px !default;
 $button-hover-border-width: 2px !default;
-
-// TODO: move colors to Theme module
-$black: #000000 !default;
-$white: #FFFFFF !default;
-$green: #68A51C !default;
-$blue: #0073B1 !default;
-$red: #D43030 !default;
 
 // Block
 .button {
@@ -26,7 +20,7 @@ $red: #D43030 !default;
   height: $button-height;
   padding: 0 $button-horizontal-padding;
   background-color: transparent;
-  color: $green;
+  color: $theme-primary;
   border: none;
   border-radius: $button-border-radius;
   text-align: center;
@@ -52,7 +46,7 @@ $red: #D43030 !default;
     opacity: 0;
     pointer-events: none;
     content: "";
-    background-color: $black;
+    background-color: black;
     z-index: 0;
     transition: opacity 0 linear;
   }
@@ -64,7 +58,7 @@ $red: #D43030 !default;
   &:hover::before,
   &:focus::before {
     transition-duration: 75ms;
-    opacity: 0.12;
+    opacity: 0.14;
   }
 
   &.button--active:not(.button--disabled),
@@ -90,16 +84,16 @@ $red: #D43030 !default;
 
 // Modifiers
 .button--primary {
-  background-color: $green;
-  color: $white;
+  background-color: $theme-primary;
+  color: white;
   &::before,
   &::after {
-    background-color: $black;
+    background-color: black;
   }
 
   &:focus,
   &:hover:not(.button--disabled) {
-    box-shadow: 0 2px 10px 0 rgba($black, 0.20);
+    box-shadow: 0 2px 10px 0 rgba(black, 0.20);
   }
 
   &.button--disabled:focus::before,
@@ -108,7 +102,7 @@ $red: #D43030 !default;
   }
 
   .button__spinner ::before {
-    background-color: $white;
+    background-color: white;
   }
 }
 
@@ -117,15 +111,15 @@ $red: #D43030 !default;
 }
 
 .button--blue {
-  background-color: $blue;
+  background-color: $theme-secondary;
 }
 
 .button--red {
-  background-color: $red;
+  background-color: $theme-error;
 }
 
 .button--green {
-  background-color: $green;
+  background-color: $theme-primary;
 }
 
 .button--disabled,
@@ -133,75 +127,75 @@ $red: #D43030 !default;
   pointer-events: none;
   cursor: default;
   &::before {
-    background-color: $white;
+    background-color: white;
     opacity: 0.5;
   }
 }
 
 .button--secondary {
   background-color: transparent;
-  color: $green;
-  border: solid $button-border-width $green;
+  color: $theme-primary;
+  border: solid $button-border-width $theme-primary;
   padding: 0 ($button-horizontal-padding - $button-border-width);
   height: $button-height;
   line-height: rem($button-height - ($button-border-width * 2));
 
   .button__spinner ::before {
-    background-color: $green;
+    background-color: $theme-primary;
   }
 
   &.button--blue {
-    color: $blue;
-    border-color: $blue;
+    color: $theme-secondary;
+    border-color: $theme-secondary;
     &::before,
     &::after {
-      background-color: $blue;
+      background-color: $theme-secondary;
     }
     &.button--disabled,
     &:disabled {
-      border-color: rgba($blue, 0.5);
+      border-color: rgba($theme-secondary, 0.5);
     }
     .button__spinner ::before {
-      background-color: $blue;
+      background-color: $theme-secondary;
     }
   }
 
   &.button--red {
-    color: $red;
-    border-color: $red;
+    color: $theme-error;
+    border-color: $theme-error;
     &::before,
     &::after {
-      background-color: $red;
+      background-color: $theme-error;
     }
     &.button--disabled,
     &:disabled {
-      border-color: rgba($red, 0.5);
+      border-color: rgba($theme-error, 0.5);
     }
     .button__spinner ::before {
-      background-color: $red;
+      background-color: $theme-error;
     }
   }
 
   &.button--green {
-    color: $green;
-    border-color: $green;
+    color: $theme-primary;
+    border-color: $theme-primary;
     &::before,
     &::after {
-      background-color: $green;
+      background-color: $theme-primary;
     }
     &.button--disabled,
     &:disabled {
-      border-color: rgba($green, 0.5);
+      border-color: rgba($theme-primary, 0.5);
     }
     .button__spinner ::before {
-      background-color: $green;
+      background-color: $theme-primary;
     }
   }
 
   &.button--disabled,
   &:disabled {
     &::before {
-      background-color: $white;
+      background-color: white;
       opacity: 0.5;
     }
   }
