@@ -17,7 +17,7 @@ class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.defaultValue || '',
+      value: props.defaultValue,
       id: uniqueId('input'),
       icon: ''
     }
@@ -47,9 +47,9 @@ class Input extends Component {
        ...props
     } = this.props
 
-    const background = icon ? `url(${icon}) white no-repeat 10px` : 'white',
-          classes = classNames('input', this.props.className, [
-                      { 'input--icon': this.props.icon.length }
+    const classes = classNames('input__field', this.props.className, [
+                      { 'input__field--icon': this.props.icon.length },
+                      { 'input__field--disabled': this.props.disabled },
                     ])
 
     let color = 'gray'
@@ -62,7 +62,7 @@ class Input extends Component {
     }
 
     return (
-      <div className="input__wrapper">
+      <div className="input">
         {label && label.length &&
           <label
             className="input__label"
@@ -72,13 +72,13 @@ class Input extends Component {
           </label>
         }
         <input
-          aria-disabled={props.disabled}
+          aria-disabled={this.props.disabled}
           className={classes}
           id={id}
           defaultValue={value}
           onChange={this.updateInput}
           placeholder={placeholder}
-          style={{ background }}
+          style={{ backgroundUrl: `url(${icon})` }}
         />
         {message && message.type &&
           <span

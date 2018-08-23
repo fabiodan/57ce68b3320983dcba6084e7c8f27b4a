@@ -22,6 +22,20 @@ $red: #D43030;
 
 // Block
 .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// Elements
+.input__label {
+  @include typography(label);
+  color: $lightgray;
+  margin-bottom: 8px;
+}
+
+.input__field {
   @include typography(input);
   border-radius: $input-border-radius;
   border-width: $input-border-width;
@@ -32,12 +46,13 @@ $red: #D43030;
   justify-content: center;
   align-items: center;
   transition: border .2s linear, background 0s linear;
-  -webkit-font-smoothing: antialiased;
   position: relative;
   cursor: pointer;
   position: relative;
   z-index: 2;
-  background: $white;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: 10px;
   border-style: solid;
   min-width: 300px;
   padding: 0 13px;
@@ -55,20 +70,16 @@ $red: #D43030;
   &:hover {
     border-color: $input-border-hover-color;
   }
-}
 
+  &--icon {
+    min-width: 263px;
+    padding: 0 13px 0 50px;
+  }
 
-// Elements
-.input__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.input__label {
-  @include typography(label);
-  color: $lightgray;
+  &--disabled {
+    background: rgba(0,0,0,0.05);
+    pointer-events: none;
+  }
 }
 
 .input__message {
@@ -83,11 +94,4 @@ $red: #D43030;
   &--success {
     color: $green;
   }
-}
-
-
-// Modifiers
-.input--icon {
-  min-width: 263px;
-  padding: 0 13px 0 50px;
 }

@@ -6,9 +6,9 @@ import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 
 // Components
-import Input from '../../components/input/'
+import Input from '@asda/input/index.js'
 
-import { creditCards as iconOptions } from '../../utils';
+import { creditCards as iconOptions } from '@asda/../utils';
 // import Input from '../components/Input';
 // import Textarea from '../../components/Textarea';
 // import Checkbox from '../../components/Checkbox';
@@ -50,6 +50,7 @@ const InputStory = storiesOf('Input', module)
         icon={select('with icon', iconOptions, '')}
         label={text('Label', 'Label')}
         placeholder={text('Placeholder', 'Placeholder')}
+        disabled={boolean('Disabled', false)}
         message={message}
       />
     );
