@@ -18,14 +18,15 @@ class Input extends Component {
     super(props);
     this.state = {
       value: props.defaultValue,
-      id: uniqueId('input')
     }
   }
 
   updateInput = ({ target: { value } }) => this.setState({ value })
 
   render() {
-    const { value, id } = this.state
+    const { value } = this.state,
+          id = uniqueId('input')
+
     const {
        label,
        placeholder,
@@ -73,8 +74,8 @@ class Input extends Component {
             icon={icon}
             small
             style={{
-              top: '50%',
-              left: '15px',
+              top: '34px',
+              left: '14px',
               position: 'absolute',
               zIndex: 2
             }}
