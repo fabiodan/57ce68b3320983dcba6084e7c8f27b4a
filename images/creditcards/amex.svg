@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="40px" viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Credit Cards / Large / Amex</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ASDA-Pattern-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12---Credit-Cards" transform="translate(-600.000000, -446.000000)">
+            <g id="Content" transform="translate(600.000000, 227.000000)">
+                <g id="Amex" transform="translate(0.000000, 149.000000)">
+                    <g id="Atoms-/-Icons-/-Credit-Cards-/-Large-/-Amex" transform="translate(0.000000, 70.000000)">
+                        <g id="Amex">
+                            <rect id="Background-11" fill="#007ECD" x="0" y="0" width="60" height="40" rx="2"></rect>
+                            <path d="M18.4416638,26 L15.9370984,26 L14.9414948,23.2742156 L10.3834968,23.2742156 L9.44234021,26 L7,26 L11.4413257,14 L13.8758877,14 L18.4416638,26 Z M14.2025702,21.2523874 L12.6313832,16.7994543 L11.0913088,21.2523874 L14.2025702,21.2523874 Z M19.6317213,26 L19.6317213,14 L23.0774434,14 L25.1464322,22.1855389 L27.1920866,14 L30.6455867,14 L30.6455867,26 L28.5065945,26 L28.5065945,16.5538881 L26.2431518,26 L24.0263781,26 L21.7707136,16.5538881 L21.7707136,26 L19.6317213,26 Z M32.9323639,26 L32.9323639,14 L41.3872168,14 L41.3872168,16.0300136 L35.2346973,16.0300136 L35.2346973,18.6903138 L40.9594183,18.6903138 L40.9594183,20.7121419 L35.2346973,20.7121419 L35.2346973,23.9781719 L41.6050051,23.9781719 L41.6050051,26 L32.9323639,26 Z M42.3983767,26 L46.2952317,19.7380628 L42.7639499,14 L45.4551911,14 L47.7419682,17.8553888 L49.9820764,14 L52.6499831,14 L49.1031451,19.8281037 L53,26 L50.2231992,26 L47.6952993,21.8499318 L45.1596212,26 L42.3983767,26 Z" id="AMEX" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

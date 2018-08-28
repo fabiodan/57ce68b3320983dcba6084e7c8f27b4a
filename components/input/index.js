@@ -6,11 +6,11 @@ import PropTypes from 'prop-types'
 import uniqueId from 'lodash/uniqueId'
 import classNames from 'classnames'
 
-// Utils
-import { creditCards } from '../../utils'
-
 // Style
 import './_style.scss'
+
+// components
+import CreditCard from '@asda/creditcard'
 
 
 class Input extends Component {
@@ -18,32 +18,21 @@ class Input extends Component {
     super(props);
     this.state = {
       value: props.defaultValue,
-      id: uniqueId('input'),
-      icon: ''
-    }
-  }
-
-  componentWillReceiveProps = ({ icon }) => {
-    if (icon && creditCards.includes(icon)) {
-      import(`../../images/creditcards/${icon}.png`).then((image) => {
-        this.setState({ icon: image })
-      })
-    } else {
-      this.setState({ icon: '' })
+      id: uniqueId('input')
     }
   }
 
   updateInput = ({ target: { value } }) => this.setState({ value })
 
   render() {
-    const { value, id, icon } = this.state
+    const { value, id } = this.state
     const {
        label,
        placeholder,
        message,
        status,
        type,
-       icon: unusedIcon,
+       icon,
        ...props
     } = this.props
 
@@ -78,8 +67,19 @@ class Input extends Component {
           defaultValue={value}
           onChange={this.updateInput}
           placeholder={placeholder}
-          style={{ backgroundUrl: `url(${icon})` }}
         />
+        {icon &&
+          <CreditCard
+            icon={icon}
+            small
+            style={{
+              top: '50%',
+              left: '15px',
+              position: 'absolute',
+              zIndex: 2
+            }}
+          />
+        }
         {message && message.type &&
           <span
             className={classNames('input__message', [
@@ -97,10 +97,7 @@ class Input extends Component {
 
 Input.propTypes = {
   /** Which type of credit card icon should be displayed, or false if none */
-  icon: PropTypes.oneOf([
-    '',
-    ...creditCards
-  ]),
+  icon: PropTypes.string,
   /** Placeholder text */
   placeholder: PropTypes.string,
   /** Label text */

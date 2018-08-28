@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="40px" viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Credit Cards / Large / Mastercard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ASDA-Pattern-Library" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="12---Credit-Cards" transform="translate(-1000.000000, -286.000000)">
+            <g id="Content" transform="translate(600.000000, 227.000000)">
+                <g id="Mastercard" transform="translate(400.000000, 0.000000)">
+                    <g id="Atoms-/-Icons-/-Credit-Cards-/-Large-/-Mastercard" transform="translate(0.000000, 59.000000)">
+                        <g id="Mastercard">
+                            <rect id="Background-2" fill="#353A48" x="0" y="0" width="60" height="40" rx="2"></rect>
+                            <circle id="Oval-1" fill="#ED0006" cx="22" cy="20" r="12"></circle>
+                            <circle id="Oval-2" fill="#F9A000" cx="40" cy="20" r="12"></circle>
+                            <path d="M31,12 C32.9707115,14.0331196 34.193397,16.8662937 34.193397,20 C34.193397,23.1337063 32.9707115,25.9668804 31,28 C29.0292885,25.9668804 27.806603,23.1337063 27.806603,20 C27.806603,16.8662937 29.0292885,14.0331196 31,12 Z" id="Oval-4" fill="#FF8150"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

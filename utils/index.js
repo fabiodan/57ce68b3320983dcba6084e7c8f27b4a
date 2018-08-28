@@ -16,16 +16,3 @@ export const grays = (darkness = 1) => ([
   '#CCC',
   '#EEE'
 ][darkness]);
-
-export const creditCards = [
-  '',
-  'blank',
-  'amex',
-  'cirrus',
-  'diners',
-  'discover',
-  'maestro',
-  'mastercard',
-  'plus',
-  'visa'
-];
