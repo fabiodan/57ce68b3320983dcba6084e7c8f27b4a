@@ -9,7 +9,7 @@ import classNames from 'classnames'
 // Style
 import './_style.scss'
 
-// components
+// Components
 import CreditCard from '@asda/creditcard'
 
 

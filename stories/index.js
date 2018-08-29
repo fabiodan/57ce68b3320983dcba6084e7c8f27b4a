@@ -1,7 +1,7 @@
 import ButtonStory from './button';
 import TypographyStory from './typography';
 import InputStory from './input';
-// import IconStory from './IconStory';
+import IconStory from './icon';
 // import SelectStory from './SelectStory';
 // import TabStory from './TabStory';
 
