@@ -4,6 +4,7 @@ import { text, select, number, boolean } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import Icon, { iconOptions } from '@asda/icon/index.js';
+import Logo from '@asda/icon/logo';
 
 
 const colorOptions = [
@@ -34,16 +35,16 @@ const IconStory = storiesOf('Icon', module)
         overlay={boolean('Overlay', false)}
       />
     )))
-    // .add('Logo',
-    //   withInfo(`
-    //     ~~~js
-    //     <Logo scale={1} color="green" />
-    //     ~~~
-    //   `)
-    //   (() => (
-    //     <Logo
-    //       scale={number('Scale', 1)}
-    //     />
-    //   )));
+    .add('Logo',
+      withInfo(`
+        ~~~js
+        <Logo scale={1} color="green" />
+        ~~~
+      `)
+      (() => (
+        <Logo
+          scale={number('Scale', 1)}
+        />
+      )));
 
 export default IconStory;

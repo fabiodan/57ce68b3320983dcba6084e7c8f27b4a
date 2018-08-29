@@ -10,7 +10,7 @@ import classNames from 'classnames'
 import './_style.scss'
 
 // Components
-import CreditCard from '@asda/creditcard'
+import CreditCard from '@asda/icon/creditcard'
 
 
 class Input extends Component {
