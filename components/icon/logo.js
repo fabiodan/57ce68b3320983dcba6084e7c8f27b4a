@@ -23,7 +23,7 @@ class Logo extends Component {
       <ReactSVG
         path={image}
         alt="ASDA"
-        wrapperClassName="icon-wrapper"
+        className="icon-wrapper"
         evalScripts="always"
         svgStyle={{
           width: `${scale * 113}px`,
