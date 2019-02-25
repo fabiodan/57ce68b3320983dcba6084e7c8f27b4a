@@ -1,0 +1,217 @@
+/* Button Component */
+
+// Dependencies
+@import "@asda/typography/base";
+@import "./variables";
+
+// Block
+.apl-button {
+  // @include typography(button);
+  line-height: rem($apl-button-height);
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  height: $apl-button-height;
+  padding: 0 $apl-button-horizontal-padding;
+  background-color: transparent;
+  color: $apl-button-green;
+  border: none;
+  border-radius: $apl-button-border-radius;
+  text-align: center;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
+    background-color: $apl-button-black;
+  }
+
+  &::before {
+    z-index: 1;
+    transition: opacity 15ms linear;
+  }
+
+  &:hover::before {
+    opacity: 0.04;
+  }
+
+  &:focus::before {
+    transition-duration: 75ms;
+    opacity: 0.12;
+  }
+
+  &::after {
+    transition: opacity 150ms linear;
+  }
+
+  &:active::after {
+    transition-duration: 75ms;
+    opacity: 0.16;
+  }
+}
+
+// Elements
+.apl-button__icon {
+
+  // Remove that after import asda icons
+  font-family: 'Material Icons';
+  font-weight: normal;
+  // Remove that after import asda icons
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: inherit;
+  vertical-align: sub;
+  letter-spacing: normal;
+}
+
+.apl-button__spinner {
+  margin-right: 8px;
+  line-height: inherit;
+  vertical-align: sub;
+}
+
+// Modifiers
+.apl-button--primary {
+  background-color: $apl-button-black;
+  color: #FFFFFF;
+  &::before,
+  &::after {
+    background-color: white;
+  }
+
+  &::after {
+    transition: opacity 150ms linear;
+  }
+
+  &:hover::before {
+    opacity: 0.08;
+  }
+
+  &.apl-button--active::after,
+  &:active::after {
+    transition-duration: 75ms;
+    opacity: 0.32;
+  }
+
+  &:focus::before {
+    transition-duration: 75ms;
+    opacity: 0.24;
+  }
+
+  .apl-button__spinner ::before {
+    background-color: white;
+  }
+}
+
+.apl-button--fluid {
+  width: 100%;
+}
+
+.apl-button--blue {
+  background-color: $apl-button-blue;
+}
+
+.apl-button--red {
+  background-color: $apl-button-red;
+}
+
+.apl-button--green {
+  background-color: $apl-button-green;
+}
+
+.apl-button--disabled,
+.apl-button:disabled {
+  background: #cccccc;
+  color: #767676;
+  pointer-events: none;
+  cursor: default;
+}
+
+.apl-button--secondary {
+  background-color: transparent;
+  color: $apl-button-black;
+  border: solid $apl-button-border-width $apl-button-black;
+  padding: 0 ($apl-button-horizontal-padding - $apl-button-border-width);
+  height: $apl-button-height;
+  line-height: rem($apl-button-height - ($apl-button-border-width * 2));
+
+  .apl-button__spinner ::before {
+    background-color: $apl-button-black;
+  }
+
+  &.apl-button--blue:not(.apl-button--disabled) {
+    color: $apl-button-blue;
+    border-color: $apl-button-blue;
+    &::before,
+    &::after {
+      background-color: $apl-button-blue;
+    }
+    .apl-button__spinner ::before {
+      background-color: $apl-button-blue;
+    }
+  }
+
+  &.apl-button--red:not(.apl-button--disabled) {
+    color: $apl-button-red;
+    border-color: $apl-button-red;
+    &::before,
+    &::after {
+      background-color: $apl-button-red;
+    }
+    .apl-button__spinner ::before {
+      background-color: $apl-button-red;
+    }
+  }
+
+  &.apl-button--green:not(.apl-button--disabled) {
+    color: $apl-button-green;
+    border-color: $apl-button-green;
+    &::before,
+    &::after {
+      background-color: $apl-button-green;
+    }
+    .apl-button__spinner ::before {
+      background-color: $apl-button-green;
+    }
+  }
+
+  &.apl-button--disabled,
+  &:disabled {
+    background: rgba(0,0,0,.10);
+    border-color: rgba(0,0,0,.20);
+    color: #767676;
+  }
+}
+
+.apl-button--loading {
+  .apl-button__icon {
+    display: none;
+  }
+}
+
+.apl-button--disabled {
+  .apl-button__spinner ::before {
+    background-color: #767676;
+  }
+}

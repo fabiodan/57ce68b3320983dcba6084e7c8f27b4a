@@ -1,0 +1,14 @@
+/* Typography Foundational Module */
+
+// Dependencies
+@import "./base";
+
+.typography {
+  @include typography-base;
+}
+
+@each $style in map-keys($typography-styles) {
+  .typography--#{$style} {
+    @include typography($style);
+  }
+}

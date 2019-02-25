@@ -1,0 +1,13 @@
+$apl-spinner-deg: 30;
+$apl-spinner-sec: -1.1;
+$apl-spinner-size: 40px; // default size
+$apl-spinner-small-size: 20px;
+$apl-spinner-medium-size: 40px;
+$apl-spinner-large-size: 60px;
+$apl-spinner-small-half-size: (($apl-spinner-small-size / 2px) * -1px);
+$apl-spinner-medium-half-size: (($apl-spinner-medium-size / 2px) * -1px);
+$apl-spinner-large-half-size: (($apl-spinner-large-size / 2px) * -1px);
+
+// TODO: move colors to Theme module
+$apl-spinner-color: #68A51C;
+$apl-spinner-overlay-bg-color: rgba(255, 255, 255, .5);

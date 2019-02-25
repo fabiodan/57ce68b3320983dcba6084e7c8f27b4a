@@ -1,0 +1,15 @@
+@import "@asda/typography/style";
+
+html {
+  @include typography-base;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
