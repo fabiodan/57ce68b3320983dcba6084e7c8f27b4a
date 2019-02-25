@@ -1,2 +1,1 @@
-# ASDA Pattern Library
-WIP...
+# ASDA Design System
