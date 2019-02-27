@@ -1,5 +1,7 @@
 @import "@asda/typography/base";
 
+$layout__aside-width: 250px;
+
 .layout {
   min-width: 320px;
   display: flex;
@@ -65,7 +67,7 @@
 }
 
 .layout__aside {
-  width: 200px;
+  width: $layout__aside-width;
   height: 100%;
   position: fixed;
   top: 0;
@@ -124,7 +126,7 @@
     box-shadow: none;
   }
   .layout__main {
-    width: calc(100% - 200px);
+    width: calc(100% - $layout__aside-width);
     padding: 0 40px 40px 40px;
   }
   .layout__heading,
