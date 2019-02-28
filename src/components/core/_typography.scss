@@ -20,7 +20,7 @@ $typography-font-weight-values: (
   bold: 700
 ) !default;
 
-$typography-styles: (
+$typography-sizes: (
 
   xxxl: (
     font-size: rem(36px),
@@ -68,10 +68,10 @@ $typography-styles: (
 }
 
 @mixin typography($style) {
-  $style-props: map-get($typography-styles, $style);
+  $style-props: map-get($typography-sizes, $style);
 
-  @if not map-has-key($typography-styles, $style) {
-    @error "Invalid style specified! Choose one of #{map-keys($typography-styles)}";
+  @if not map-has-key($typography-sizes, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($typography-sizes)}";
   }
 
   @each $key, $value in $style-props {
@@ -80,7 +80,7 @@ $typography-styles: (
 }
 
 @mixin typography-selectors {
-  @each $style in map-keys($typography-styles) {
+  @each $style in map-keys($typography-sizes) {
     .typography--#{$style} {
       @include typography($style);
     }
@@ -94,6 +94,8 @@ $typography-styles: (
   overflow: hidden;
 }
 
+
+// TODO: Generate the at-rule based on the font-face data map
 @mixin font-face {
   $fontsPath: './assets/fonts';
 
@@ -103,8 +105,8 @@ $typography-styles: (
     font-style: normal;
     font-stretch: normal;
     src: local("SourceSansPro-Regular"), // PostScript name
-         url("#{$fontsPath}/woff2/ttf/source-sans-pro-regular.ttf.woff2") format("woff2"),
-         url("#{$fontsPath}/woff/otf/source-sans-pro-regular.otf.woff") format("woff"),
+         url("#{$fontsPath}/woff2/source-sans-pro-regular.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/source-sans-pro-regular.otf.woff") format("woff"),
          url("#{$fontsPath}/otf/source-sans-pro-regular.otf") format("opentype"),
          url("#{$fontsPath}/ttf/source-sans-pro-regular.ttf") format("truetype");
   }
@@ -115,8 +117,8 @@ $typography-styles: (
     font-style: italic;
     font-stretch: normal;
          src: local("SourceSansPro-It"), // PostScript name
-         url("#{$fontsPath}/woff2/ttf/source-sans-pro-italic.ttf.woff2") format("woff2"),
-         url("#{$fontsPath}/woff/otf/source-sans-pro-italic.otf.woff") format("woff"),
+         url("#{$fontsPath}/woff2/source-sans-pro-italic.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/source-sans-pro-italic.otf.woff") format("woff"),
          url("#{$fontsPath}/otf/source-sans-pro-italic.otf") format("opentype"),
          url("#{$fontsPath}/ttf/source-sans-pro-italic.ttf") format("truetype");
   }
@@ -127,8 +129,8 @@ $typography-styles: (
     font-style: normal;
     font-stretch: normal;
     src: local("SourceSansPro-Semibold"), // PostScript name
-         url("#{$fontsPath}/woff2/ttf/source-sans-pro-semi-bold.ttf.woff2") format("woff2"),
-         url("#{$fontsPath}/woff/otf/source-sans-pro-semi-bold.otf.woff") format("woff"),
+         url("#{$fontsPath}/woff2/source-sans-pro-semi-bold.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/source-sans-pro-semi-bold.otf.woff") format("woff"),
          url("#{$fontsPath}/otf/source-sans-pro-semi-bold.otf") format("opentype"),
          url("#{$fontsPath}/ttf/source-sans-pro-semi-bold.ttf") format("truetype");
   }
@@ -139,8 +141,8 @@ $typography-styles: (
     font-style: italic;
     font-stretch: normal;
     src: local("SourceSansPro-SemiboldIt"), // PostScript name
-         url("#{$fontsPath}/woff2/ttf/source-sans-pro-semi-bold-italic.ttf.woff2") format("woff2"),
-         url("#{$fontsPath}/woff/otf/source-sans-pro-semi-bold-italic.otf.woff") format("woff"),
+         url("#{$fontsPath}/woff2/source-sans-pro-semi-bold-italic.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/source-sans-pro-semi-bold-italic.otf.woff") format("woff"),
          url("#{$fontsPath}/otf/source-sans-pro-semi-bold-italic.otf") format("opentype"),
          url("#{$fontsPath}/ttf/source-sans-pro-semi-bold-italic.ttf") format("truetype");
   }
@@ -151,8 +153,8 @@ $typography-styles: (
     font-style: normal;
     font-stretch: normal;
     src: local("SourceSansPro-Bold"), // PostScript name
-         url("#{$fontsPath}/woff2/ttf/source-sans-pro-bold.ttf.woff2") format("woff2"),
-         url("#{$fontsPath}/woff/otf/source-sans-pro-bold.otf.woff") format("woff"),
+         url("#{$fontsPath}/woff2/source-sans-pro-bold.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/source-sans-pro-bold.otf.woff") format("woff"),
          url("#{$fontsPath}/otf/source-sans-pro-bold.otf") format("opentype"),
          url("#{$fontsPath}/ttf/source-sans-pro-bold.ttf") format("truetype");
   }
@@ -163,8 +165,8 @@ $typography-styles: (
     font-style: italic;
     font-stretch: normal;
     src: local("SourceSansPro-BoldIt"), // PostScript name
-         url("#{$fontsPath}/woff2/ttf/source-sans-pro-bold-italic.ttf.woff2") format("woff2"),
-         url("#{$fontsPath}/woff/otf/source-sans-pro-bold-italic.otf.woff") format("woff"),
+         url("#{$fontsPath}/woff2/source-sans-pro-bold-italic.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/source-sans-pro-bold-italic.otf.woff") format("woff"),
          url("#{$fontsPath}/otf/source-sans-pro-bold-italic.otf") format("opentype"),
          url("#{$fontsPath}/ttf/source-sans-pro-bold-italic.ttf") format("truetype");
   }
