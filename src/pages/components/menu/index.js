@@ -9,10 +9,10 @@ import './_style.scss'
 
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
-    { name: 'Overview', url: '/overview' },
+    { name: 'Overview (WIP)', url: '/overview' },
     { name: 'Typography', url: '/typography' },
-    { name: 'Color Scheme', url: '/color-scheme' },
-    // { name: 'Buttons', url: '/buttons' },
+    { name: 'Color Scheme (WIP)', url: '/color-scheme' },
+    { name: 'Buttons (WIP)', url: '/buttons' },
   ]
 
   return (

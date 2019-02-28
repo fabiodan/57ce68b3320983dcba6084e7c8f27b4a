@@ -1,11 +1,11 @@
 // Libs
-import React, { Fragment } from 'react'
+import React from 'react'
 
 // Components (from atomic to composite)
 import { Heading, Paragraph, Section } from '../components/layout'
 
 const OverviewPage = () => (
-  <Fragment>
+  <article className="overview-page">
     <Heading>Overview</Heading>
     <Section>
       <Paragraph>
@@ -15,7 +15,7 @@ const OverviewPage = () => (
         recusandae ea corrupti.
       </Paragraph>
     </Section>
-  </Fragment>
+  </article>
 )
 
 export default OverviewPage

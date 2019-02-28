@@ -1,21 +1,48 @@
 // Libs
-import React, { Fragment } from 'react'
+import React from 'react'
 
 // Components (from atomic to composite)
-import { Heading, Paragraph, Section } from '../components/layout'
+import { Heading, Subheading, Paragraph, Section } from '../components/layout'
+
+// Assets
+import './_style.scss'
 
 const ColorSchemePage = () => (
-  <Fragment>
+  <article className="color-page">
     <Heading>Color Scheme</Heading>
     <Section>
+      <Subheading>Colors</Subheading>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-        cumque, libero iusto quia perferendis ullam iste, voluptatem ea odio
-        temporibus facilis eos expedita aperiam. Mollitia, fuga maiores
-        recusandae ea corrupti.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+        facilis doloremque ea placeat veritatis porro libero expedita sint
+        commodi et culpa voluptas cumque repudiandae eveniet aut, eaque cum,
+        provident repellendus!
       </Paragraph>
+      <ul className="color-page__color-list">
+        <li className="color-page__color-item color-page--brand-green" />
+        <li className="color-page__color-item color-page--green" />
+        <li className="color-page__color-item color-page--red" />
+        <li className="color-page__color-item color-page--blue" />
+        <li className="color-page__color-item color-page--yellow" />
+      </ul>
     </Section>
-  </Fragment>
+    <Section>
+      <Subheading>Blacks & Greys</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+        facilis doloremque ea placeat veritatis porro libero expedita sint
+        commodi et culpa voluptas cumque repudiandae eveniet aut, eaque cum,
+        provident repellendus!
+      </Paragraph>
+      <ul className="color-page__color-list">
+        <li className="color-page__color-item color-page--charcoal" />
+        <li className="color-page__color-item color-page--dark-gray" />
+        <li className="color-page__color-item color-page--medium-gray" />
+        <li className="color-page__color-item color-page--light-gray" />
+        <li className="color-page__color-item color-page--background-gray" />
+      </ul>
+    </Section>
+  </article>
 )
 
 export default ColorSchemePage

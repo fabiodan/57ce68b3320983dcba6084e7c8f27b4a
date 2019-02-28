@@ -19,9 +19,9 @@ import { Header, Aside, Main } from './pages/components/layout'
 
 // Pages
 import OverviewPage from './pages/overview'
-// import ButtonsPage from './pages/buttons'
 import TypographyPage from './pages/typography'
 import ColorSchemePage from './pages/color-scheme'
+import ButtonsPage from './pages/buttons'
 
 class Page extends Component {
   constructor(props) {
@@ -86,7 +86,7 @@ ReactDOM.render(
         <Route path="/overview" component={OverviewPage} />
         <Route path="/typography" component={TypographyPage} />
         <Route path="/color-scheme" component={ColorSchemePage} />
-        {/* <Route path="/buttons" component={ButtonsPage} /> */}
+        <Route path="/buttons" component={ButtonsPage} />
       </Page>
     </Router>
   ), document.querySelector('.layout'),

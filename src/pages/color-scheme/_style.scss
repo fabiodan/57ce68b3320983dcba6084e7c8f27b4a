@@ -1,0 +1,56 @@
+// Dependencies
+@import "@asda/core/style";
+
+.color-page__color-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.color-page__color-item {
+  width: 160px;
+  height: 100px;
+}
+
+.color-page--brand-green {
+  background: $color-brand-green;
+}
+
+.color-page--green {
+  background: $color-green;
+}
+
+.color-page--red {
+  background: $color-red;
+}
+
+.color-page--blue {
+  background: $color-blue;
+}
+
+.color-page--yellow {
+  background: $color-yellow;
+}
+
+.color-page--charcoal {
+  background: $color-charcoal;
+}
+
+.color-page--dark-gray {
+  background: $color-dark-gray;
+}
+
+.color-page--medium-gray {
+  background: $color-medium-gray;
+}
+
+.color-page--light-gray {
+  background: $color-light-gray;
+}
+
+.color-page--background-gray {
+  background: $color-background-gray;
+}
