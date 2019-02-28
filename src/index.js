@@ -8,8 +8,12 @@ import {
   Redirect,
 } from 'react-router-dom'
 
+// Assets
+import MenuSvgSource from './assets/images/asda-menu.svg'
+import './_style.scss'
+
 // Components (from atomic to composite)
-import Logo from '@asda/logo'
+import Logo from './pages/components/logo'
 import Menu from './pages/components/menu'
 import { Header, Aside, Main } from './pages/components/layout'
 
@@ -17,11 +21,7 @@ import { Header, Aside, Main } from './pages/components/layout'
 import OverviewPage from './pages/overview'
 // import ButtonsPage from './pages/buttons'
 import TypographyPage from './pages/typography'
-
-// Assets
-import MenuSvgSource from './assets/svg/asda-menu.svg'
-
-import './_style.scss'
+import ColorSchemePage from './pages/color-scheme'
 
 class Page extends Component {
   constructor(props) {
@@ -85,6 +85,7 @@ ReactDOM.render(
         />
         <Route path="/overview" component={OverviewPage} />
         <Route path="/typography" component={TypographyPage} />
+        <Route path="/color-scheme" component={ColorSchemePage} />
         {/* <Route path="/buttons" component={ButtonsPage} /> */}
       </Page>
     </Router>

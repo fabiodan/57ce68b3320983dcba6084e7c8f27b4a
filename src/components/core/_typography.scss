@@ -1,0 +1,171 @@
+// Functions
+@function rem($pixels, $context: 16) { // Convert px to rem
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+// Variables
+$typography-font-family: "Source Sans Pro", sans-serif !default;
+
+$typography-font-weight-values: (
+  regular: 400,
+  semi-bold: 600,
+  bold: 700
+) !default;
+
+$typography-styles: (
+
+  xxxl: (
+    font-size: rem(36px),
+    letter-spacing: rem(0.6px),
+    line-height: rem(48px)
+  ),
+  xxl: (
+    font-size: rem(28px),
+    letter-spacing: rem(0.3px),
+    line-height: rem(36px)
+  ),
+  xl: (
+    font-size: rem(22px),
+    letter-spacing: rem(0.3px),
+    line-height: rem(28px)
+  ),
+  l: (
+    font-size: rem(18px),
+    letter-spacing: rem(0.2px),
+    line-height: rem(24px)
+  ),
+  m: (
+    font-size: rem(16px),
+    letter-spacing: rem(0.2px),
+    line-height: rem(20px)
+  ),
+  s: (
+    font-size: rem(14px),
+    letter-spacing: rem(0.2px),
+    line-height: rem(16px)
+  ),
+  xs: (
+    font-size: rem(12px),
+    letter-spacing: rem(0.1px),
+    line-height: rem(16px)
+  )
+
+) !default;
+
+// Mixins
+@mixin typography-base {
+  font-family: $typography-font-family;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin typography($style) {
+  $style-props: map-get($typography-styles, $style);
+
+  @if not map-has-key($typography-styles, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($typography-styles)}";
+  }
+
+  @each $key, $value in $style-props {
+    #{$key}: $value;
+  }
+}
+
+@mixin typography-selectors {
+  @each $style in map-keys($typography-styles) {
+    .typography--#{$style} {
+      @include typography($style);
+    }
+  }
+}
+
+// Element must be `display: block` or `display: inline-block` for this to work.
+@mixin typography-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin font-face {
+  $fontsPath: './assets/fonts';
+
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: local("SourceSansPro-Regular"), // PostScript name
+         url("#{$fontsPath}/woff2/ttf/source-sans-pro-regular.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/otf/source-sans-pro-regular.otf.woff") format("woff"),
+         url("#{$fontsPath}/otf/source-sans-pro-regular.otf") format("opentype"),
+         url("#{$fontsPath}/ttf/source-sans-pro-regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+         src: local("SourceSansPro-It"), // PostScript name
+         url("#{$fontsPath}/woff2/ttf/source-sans-pro-italic.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/otf/source-sans-pro-italic.otf.woff") format("woff"),
+         url("#{$fontsPath}/otf/source-sans-pro-italic.otf") format("opentype"),
+         url("#{$fontsPath}/ttf/source-sans-pro-italic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: local("SourceSansPro-Semibold"), // PostScript name
+         url("#{$fontsPath}/woff2/ttf/source-sans-pro-semi-bold.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/otf/source-sans-pro-semi-bold.otf.woff") format("woff"),
+         url("#{$fontsPath}/otf/source-sans-pro-semi-bold.otf") format("opentype"),
+         url("#{$fontsPath}/ttf/source-sans-pro-semi-bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    src: local("SourceSansPro-SemiboldIt"), // PostScript name
+         url("#{$fontsPath}/woff2/ttf/source-sans-pro-semi-bold-italic.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/otf/source-sans-pro-semi-bold-italic.otf.woff") format("woff"),
+         url("#{$fontsPath}/otf/source-sans-pro-semi-bold-italic.otf") format("opentype"),
+         url("#{$fontsPath}/ttf/source-sans-pro-semi-bold-italic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: local("SourceSansPro-Bold"), // PostScript name
+         url("#{$fontsPath}/woff2/ttf/source-sans-pro-bold.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/otf/source-sans-pro-bold.otf.woff") format("woff"),
+         url("#{$fontsPath}/otf/source-sans-pro-bold.otf") format("opentype"),
+         url("#{$fontsPath}/ttf/source-sans-pro-bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: local("SourceSansPro-BoldIt"), // PostScript name
+         url("#{$fontsPath}/woff2/ttf/source-sans-pro-bold-italic.ttf.woff2") format("woff2"),
+         url("#{$fontsPath}/woff/otf/source-sans-pro-bold-italic.otf.woff") format("woff"),
+         url("#{$fontsPath}/otf/source-sans-pro-bold-italic.otf") format("opentype"),
+         url("#{$fontsPath}/ttf/source-sans-pro-bold-italic.ttf") format("truetype");
+  }
+}

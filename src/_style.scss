@@ -1,4 +1,7 @@
-@import "@asda/typography/style";
+// Dependencies
+@import "@asda/core/style";
+
+@include font-face;
 
 html {
   @include typography-base;
@@ -13,3 +16,6 @@ body {
   margin: 0;
   overscroll-behavior: none;
 }
+
+// Generate typography selectors (e.g., .typography--s, .typography--m, etc.)
+@include typography-selectors;

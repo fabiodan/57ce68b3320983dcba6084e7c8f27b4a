@@ -14,9 +14,16 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            name: '/pages/ukgr/asda-design-system/assets/svg/[hash].[ext]',
+            name: './assets/images/[name].[ext]',
           },
         }],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          name: './assets/fonts/[name].[ext]',
+        },
       },
       {
         test: /\.scss$/,

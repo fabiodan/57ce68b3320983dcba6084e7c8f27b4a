@@ -1,4 +1,5 @@
-@import "@asda/typography/base";
+// Dependencies
+@import "@asda/core/style";
 
 $layout__aside-width: 250px;
 
@@ -6,6 +7,7 @@ $layout__aside-width: 250px;
   min-width: 320px;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 }
 
 .layout__container {
@@ -108,12 +110,18 @@ $layout__aside-width: 250px;
 }
 
 @media (min-width: 768px) {
+  .layout {
+    padding-bottom: 80px;
+  }
+
   .layout__header {
     height: 64px;
   }
+
   .layout__header__logo {
     height: auto;
   }
+
   .layout__header__content {
     justify-content: flex-start;
   }
@@ -125,10 +133,12 @@ $layout__aside-width: 250px;
     z-index: auto;
     box-shadow: none;
   }
+
   .layout__main {
-    width: calc(100% - $layout__aside-width);
+    width: calc(100% - #{$layout__aside-width});
     padding: 0 40px 40px 40px;
   }
+
   .layout__heading,
   .layout__section {
     padding: 80px 0;

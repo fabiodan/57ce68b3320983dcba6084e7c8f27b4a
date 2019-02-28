@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 
 // Assets
-import CloseSvgSource from '../../../assets/svg/asda-close.svg'
+import CloseSvgSource from '../../../assets/images/asda-close.svg'
 import './_style.scss'
 
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
     { name: 'Overview', url: '/overview' },
     { name: 'Typography', url: '/typography' },
+    { name: 'Color Scheme', url: '/color-scheme' },
     // { name: 'Buttons', url: '/buttons' },
   ]
 
