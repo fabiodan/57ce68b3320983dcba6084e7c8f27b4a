@@ -1,14 +1,19 @@
+// Color core module
+
+$color-black: rgba(0, 0, 0, 1); // #000000
+$color-white: rgba(255, 255, 255, 1); // #FFFFFF
+$color-transparent: rgba(255, 255, 255, 0); // transparent
+
 // Colors
-$color-brand-green: rgba(104, 165, 28, 1);
-$color-green: rgba(83, 121, 22, 1);
-$color-red: rgba(212, 48, 48, 1);
-$color-blue: rgba(0, 115, 177, 1);
-$color-yellow: rgba(247, 204, 0, 1);
-$color-white: rgba(255, 255, 255, 1);
+$color-green: rgba(104, 165, 28, 1); // #68A51C
+$color-dark-green: rgba(83, 121, 22, 1); // #538316
+$color-red: rgba(212, 48, 48, 1); // #D43030
+$color-blue: rgba(0, 115, 177, 1); // #0073B1
+$color-yellow: rgba(247, 204, 0, 1); // #F7CC00
 
 // Five Shades of Grey
-$color-charcoal: rgba(61, 61, 61, 1);
-$color-dark-gray: rgba(118, 118, 118, 1);
-$color-medium-gray: rgba(204, 204, 204, 1);
-$color-light-gray: rgba(238, 238, 238, 1);
-$color-background-gray: rgba(246, 246 ,246, 1);
+$color-charcoal: rgba(61, 61, 61, 1);  // #3D3D3D
+$color-dark-gray: rgba(118, 118, 118, 1); // #767676
+$color-medium-gray: rgba(204, 204, 204, 1); // #CCCCCC
+$color-light-gray: rgba(238, 238, 238, 1); // #EEEEEE
+$color-background-gray: rgba(246, 246 ,246, 1); // #F6F6F6

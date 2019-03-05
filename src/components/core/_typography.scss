@@ -1,3 +1,5 @@
+// Typography core module
+
 // Functions
 @function rem($pixels, $context: 16) { // Convert px to rem
   @if (unitless($pixels)) {
@@ -20,7 +22,7 @@ $typography-font-weight-values: (
   bold: 700
 ) !default;
 
-$typography-sizes: (
+$typography-scales: (
 
   xxxl: (
     font-size: rem(36px),
@@ -68,10 +70,10 @@ $typography-sizes: (
 }
 
 @mixin typography($style) {
-  $style-props: map-get($typography-sizes, $style);
+  $style-props: map-get($typography-scales, $style);
 
-  @if not map-has-key($typography-sizes, $style) {
-    @error "Invalid style specified! Choose one of #{map-keys($typography-sizes)}";
+  @if not map-has-key($typography-scales, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($typography-scales)}";
   }
 
   @each $key, $value in $style-props {
@@ -80,7 +82,7 @@ $typography-sizes: (
 }
 
 @mixin typography-selectors {
-  @each $style in map-keys($typography-sizes) {
+  @each $style in map-keys($typography-scales) {
     .typography--#{$style} {
       @include typography($style);
     }

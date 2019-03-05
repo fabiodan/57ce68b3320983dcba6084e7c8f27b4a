@@ -19,8 +19,8 @@ const ColorSchemePage = () => (
         provident repellendus!
       </Paragraph>
       <ul className="color-page__color-list">
-        <li className="color-page__color-item color-page--brand-green" />
         <li className="color-page__color-item color-page--green" />
+        <li className="color-page__color-item color-page--dark-green" />
         <li className="color-page__color-item color-page--red" />
         <li className="color-page__color-item color-page--blue" />
         <li className="color-page__color-item color-page--yellow" />

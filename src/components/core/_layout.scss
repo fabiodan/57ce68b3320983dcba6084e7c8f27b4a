@@ -1,0 +1,37 @@
+// Layout core module
+
+$spacing-sizes: (
+  xxxl: 80px,
+  xxl: 40px,
+  xl: 32px,
+  l: 24px,
+  m: 16px,
+  s: 12px,
+  xs: 8px,
+  xxs: 4px
+) !default;
+
+$spacing-xxxl: map-get($spacing-sizes, xxxl);
+$spacing-xxl: map-get($spacing-sizes, xxl);
+$spacing-xl: map-get($spacing-sizes, xl);
+$spacing-l: map-get($spacing-sizes, l);
+$spacing-m: map-get($spacing-sizes, m);
+$spacing-s: map-get($spacing-sizes, s);
+$spacing-xs: map-get($spacing-sizes, xs);
+$spacing-xxs: map-get($spacing-sizes, xxs);
+
+@mixin margin($size) {
+  @if not map-has-key($spacing-sizes, $size) {
+    @error "Invalid size specified! Choose one of #{map-keys($spacing-sizes)}";
+  }
+
+  margin: map-get($spacing-sizes, $size);
+}
+
+@mixin padding($size) {
+  @if not map-has-key($spacing-sizes, $size) {
+    @error "Invalid size specified! Choose one of #{map-keys($spacing-sizes)}";
+  }
+
+  padding: map-get($spacing-sizes, $size);
+}
