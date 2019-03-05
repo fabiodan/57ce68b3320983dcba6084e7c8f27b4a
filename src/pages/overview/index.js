@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Heading, Paragraph, Section } from '../components/layout'
+import { Heading, Paragraph, Section } from '../components/sg-layout'
 
 const OverviewPage = () => (
   <article className="overview-page">

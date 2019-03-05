@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 
 // Components (from atomic to composite)
-import { Heading, Subheading, Paragraph, Section } from '../components/layout'
+import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'

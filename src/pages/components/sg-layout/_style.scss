@@ -1,34 +1,34 @@
 // Dependencies
 @import "@asda/core/style";
 
-$layout__aside-width: 250px;
+$sg-layout__aside-width: 250px;
 
-.layout {
+.sg-layout {
   min-width: 320px;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: $spacing-xxl;
 }
 
-.layout__container {
+.sg-layout__container {
   display: flex;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.layout__main {
+.sg-layout__main {
   width: 100%;
   padding: 0 $spacing-l $spacing-l $spacing-l;
   margin: 0 auto;
 }
 
-.layout__section {
+.sg-layout__section {
   padding: $spacing-xxl 0;
   border-bottom: solid 1px #CCC;
 }
 
-.layout__header {
+.sg-layout__header {
   position: sticky;
   width: 100%;
   height: 48px;
@@ -41,11 +41,11 @@ $layout__aside-width: 250px;
   z-index: 200;
 }
 
-.layout__header__logo {
+.sg-layout__header__logo {
   height: 24px;
 }
 
-.layout__header__content {
+.sg-layout__header__content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +54,7 @@ $layout__aside-width: 250px;
   margin: 0 auto;
 }
 
-.layout__header__menu-button {
+.sg-layout__header__menu-button {
   position: absolute;
   left: 20px;
   height: 30px;
@@ -68,8 +68,8 @@ $layout__aside-width: 250px;
   cursor: pointer;
 }
 
-.layout__aside {
-  width: $layout__aside-width;
+.sg-layout__aside {
+  width: $sg-layout__aside-width;
   height: 100%;
   position: fixed;
   top: 0;
@@ -82,12 +82,12 @@ $layout__aside-width: 250px;
               0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
-.layout__aside--visible {
+.sg-layout__aside--visible {
   transform: translateX(0);
   transition: transform 250ms cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
-.layout__heading {
+.sg-layout__heading {
   font-size: 3rem;
   font-weight: normal;
   margin: 0;
@@ -95,7 +95,7 @@ $layout__aside-width: 250px;
   border-bottom: solid 1px #CCC;
 }
 
-.layout__paragraph {
+.sg-layout__paragraph {
   @include typography(l);
   margin: 0 0 $spacing-xxl 0;
   overflow-wrap: break-word;
@@ -104,29 +104,29 @@ $layout__aside-width: 250px;
   }
 }
 
-.layout__subheading {
+.sg-layout__subheading {
   @include typography(xxxl);
   margin: 0 0 $spacing-m 0;
 }
 
 @media (min-width: 768px) {
-  .layout {
+  .sg-layout {
     padding-bottom: $spacing-xxxl;
   }
 
-  .layout__header {
+  .sg-layout__header {
     height: 64px;
   }
 
-  .layout__header__logo {
+  .sg-layout__header__logo {
     height: auto;
   }
 
-  .layout__header__content {
+  .sg-layout__header__content {
     justify-content: flex-start;
   }
 
-  .layout__aside {
+  .sg-layout__aside {
     height: auto;
     position: static;
     transform: none;
@@ -134,13 +134,13 @@ $layout__aside-width: 250px;
     box-shadow: none;
   }
 
-  .layout__main {
-    width: calc(100% - #{$layout__aside-width});
+  .sg-layout__main {
+    width: calc(100% - #{$sg-layout__aside-width});
     padding: 0 $spacing-xxl $spacing-xxl $spacing-xxl;
   }
 
-  .layout__heading,
-  .layout__section {
+  .sg-layout__heading,
+  .sg-layout__section {
     padding: $spacing-xxxl 0;
   }
 }

@@ -16,6 +16,7 @@ const Button = ({
   loading,
   hiddenText,
   disabled,
+  fluid,
 }) => {
   const modifiers = [
     !!category && `button--${category}`,
@@ -24,6 +25,7 @@ const Button = ({
     loading && 'button--loading',
     hiddenText && 'button--hidden-text',
     disabled && 'button--disabled',
+    fluid && 'button--fluid',
   ]
   const classNames = joinClassNames('button', className, modifiers)
 
@@ -41,6 +43,7 @@ Button.defaultProps = {
   category: 'primary',
   color: 'green',
   disabled: null,
+  fluid: false,
 }
 
 export default Button

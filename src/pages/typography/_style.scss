@@ -1,5 +1,6 @@
 // Dependencies
 @import "@asda/core/style";
+@import "../components/sg-core/style";
 
 // Block
 .typography-page {
@@ -13,12 +14,7 @@
 
 .typography-page__weight-definition,
 .typography-page__specs {
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 0.625rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #B6B6B6;
+  @include sg-typography(xs);
 }
 
 .typography-page__attribute {

@@ -2,23 +2,23 @@
 @import "@asda/core/style";
 
 // Block
-.menu {
+.sg-menu {
   padding: $spacing-xxl 0;
 }
 
 // Elements/Mixes
-.menu__list {
+.sg-menu__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.menu__item {
+.sg-menu__item {
   height: 36px;
   padding-right: $spacing-m;
 }
 
-.menu__anchor {
+.sg-menu__anchor {
   @include typography(m);
   vertical-align: middle;
   padding: 0 $spacing-s 0 $spacing-l;
@@ -33,7 +33,7 @@
   }
 }
 
-.menu__close-button {
+.sg-menu__close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -49,13 +49,13 @@
 }
 
 // Modifiers
-.menu--active {
+.sg-menu--active {
   font-weight: 600;
   background: #F6F6F6;
 }
 
 @media (min-width: 768px) {
-  .menu {
+  .sg-menu {
     position: sticky;
     left: 0;
     top: 64px;

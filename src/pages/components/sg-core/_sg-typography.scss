@@ -1,0 +1,27 @@
+// Typography core module
+
+// Variables
+$sg-typography-scales: (
+  xs: (
+    font-family: Helvetica,
+    font-weight: bold,
+    font-size: 0.625rem,
+    letter-spacing: 1px,
+    text-transform: uppercase,
+    color: #B6B6B6
+  )
+
+) !default;
+
+// Mixins
+@mixin sg-typography($style) {
+  $style-props: map-get($sg-typography-scales, $style);
+
+  @if not map-has-key($sg-typography-scales, $style) {
+    @error "Invalid style specified! Choose one of #{map-keys($sg-typography-scales)}";
+  }
+
+  @each $key, $value in $style-props {
+    #{$key}: $value;
+  }
+}

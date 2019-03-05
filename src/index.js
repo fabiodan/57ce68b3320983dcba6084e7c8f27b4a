@@ -13,9 +13,9 @@ import MenuSvgSource from './assets/images/asda-menu.svg'
 import './_style.scss'
 
 // Components (from atomic to composite)
-import Logo from './pages/components/logo'
-import Menu from './pages/components/menu'
-import { Header, Aside, Main } from './pages/components/layout'
+import Logo from './pages/components/sg-logo'
+import Menu from './pages/components/sg-menu'
+import { Header, Aside, Main } from './pages/components/sg-layout'
 
 // Pages
 import OverviewPage from './pages/overview'
@@ -40,19 +40,19 @@ class Page extends Component {
 
   render() {
     const { children } = this.props
-    const asideModifier = this.state.menuVisible ? 'layout__aside--visible' : ''
+    const asideModifier = this.state.menuVisible ? 'sg-layout__aside--visible' : ''
 
     return (
       <Fragment>
         <Header>
           <MediaQuery query="(max-width: 767px)">
-            <button className="layout__header__menu-button" onClick={this.toggleMenu}>
+            <button className="sg-layout__header__menu-button" onClick={this.toggleMenu}>
               <img src={MenuSvgSource} alt="Menu" />
             </button>
           </MediaQuery>
-          <Logo className="layout__header__logo" />
+          <Logo className="sg-layout__header__logo" />
         </Header>
-        <div className="layout__container">
+        <div className="sg-layout__container">
           <Aside className={asideModifier}>
             <Menu toggleMenu={this.toggleMenu} />
           </Aside>
@@ -89,5 +89,5 @@ ReactDOM.render(
         <Route path="/buttons" component={ButtonsPage} />
       </Page>
     </Router>
-  ), document.querySelector('.layout'),
+  ), document.querySelector('.sg-layout'),
 )

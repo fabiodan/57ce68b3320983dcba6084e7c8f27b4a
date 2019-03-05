@@ -39,13 +39,13 @@ const ItemsList = (props) => {
   ))
 
   return (
-    <nav className="menu">
+    <nav className="sg-menu">
       <MediaQuery query="(max-width: 767px)">
-        <button className="menu__close-button" onClick={toggleMenu}>
+        <button className="sg-menu__close-button" onClick={toggleMenu}>
           <img src={CloseSvgSource} alt="Close" />
         </button>
       </MediaQuery>
-      <ul className="menu__list">{items}</ul>
+      <ul className="sg-menu__list">{items}</ul>
     </nav>
   )
 }
@@ -53,12 +53,12 @@ const ItemsList = (props) => {
 const Item = (props) => {
   const { toggleMenu } = props
   return (
-    <li className="menu__item">
+    <li className="sg-menu__item">
       <NavLink
-        className="menu__anchor"
+        className="sg-menu__anchor"
         to={props.url}
         onClick={toggleMenu}
-        activeClassName="menu--active"
+        activeClassName="sg-menu--active"
       >
         {props.name}
       </NavLink>

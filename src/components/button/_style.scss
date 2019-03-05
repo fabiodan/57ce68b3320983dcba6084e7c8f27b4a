@@ -28,6 +28,8 @@ $button-secondary-border-width-hover: 2px;
   border: 0;
   border-radius: 4px;
   outline: none;
+  overflow: hidden;
+
   &::-moz-focus-inner {
     border: 0;
   }
@@ -63,6 +65,8 @@ $button-secondary-border-width-hover: 2px;
 // Elements
 .button__text {
   position: relative;
+  height: 100%;
+  line-height: $button-height;
   z-index: 1;
 }
 
@@ -104,6 +108,13 @@ $button-secondary-border-width-hover: 2px;
   &:hover {
     border: solid $button-secondary-border-width-hover currentColor;
     padding: 0 ($spacing-m - $button-secondary-border-width-hover);
+    .button__text {
+      line-height: $button-height - $button-secondary-border-width-hover;
+    }
+  }
+
+  .button__text {
+    line-height: $button-height - $button-secondary-border-width;
   }
 }
 
@@ -114,4 +125,8 @@ $button-secondary-border-width-hover: 2px;
     background-color: $color-white;
     opacity: 0.5;
   }
+}
+
+.button--fluid {
+  width: 100%;
 }
