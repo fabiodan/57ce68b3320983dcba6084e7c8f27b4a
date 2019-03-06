@@ -1,0 +1,37 @@
+/* Spinner Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+$spinner-size: 20px;
+
+// Block
+.spinner {
+  border: 2px solid rgba($color-white, 0.4);
+  border-left-color: $color-white;
+  border-radius: 50%;
+  width: $spinner-size;
+  height: $spinner-size;
+  animation: spin 1s linear infinite;
+}
+
+// Modifiers
+.spinner--green {
+  border: 2px solid rgba($color-green, 0.4);
+  border-left-color: $color-green;
+}
+
+.spinner--blue {
+  border: 2px solid rgba($color-blue, 0.4);
+  border-left-color: $color-blue;
+}
+
+// Animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

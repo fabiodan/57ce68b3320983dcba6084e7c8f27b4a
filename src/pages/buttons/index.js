@@ -24,6 +24,15 @@ const ButtonsPage = () => (
         available based on the significance of the actions. For high emphasis
         use the solid green filled primary buttons and for other use the
         skeletal button.
+
+{/* DEBUG
+<Button category="primary" >Button Text</Button>
+<Button category="secondary" >Button Text</Button>
+<br/>
+<Button category="secondary" >Button Text</Button>
+<Button category="primary" >Button Text</Button>
+*/}
+
       </Paragraph>
       <ul className="buttons-page__list">
         <li className="buttons-page__item">
@@ -35,15 +44,15 @@ const ButtonsPage = () => (
           <Description>Primary Button Disabled </Description>
         </li>
         <li className="buttons-page__item">
-          <Button hover fluid>Button Text</Button>
-          <Description>Primary Button Hover </Description>
+          <Button hover fluid hover>Button Text</Button>
+          <Description>Primary Button Hover/Focus </Description>
         </li>
         <li className="buttons-page__item">
-          <Button loading fluid>Button Text</Button>
+          <Button loading fluid hiddenText>Button Text</Button>
           <Description>Primary Button Loading</Description>
         </li>
         <li className="buttons-page__item">
-          <Button loading hiddenText fluid>Button Text</Button>
+          <Button loading fluid>Button Text</Button>
           <Description>Primary Button Loading with text</Description>
         </li>
       </ul>
@@ -58,14 +67,14 @@ const ButtonsPage = () => (
         </li>
         <li className="buttons-page__item">
           <Button category="secondary" hover fluid>Button Text</Button>
-          <Description>Secondary Button Hover</Description>
+          <Description>Secondary Button Hover/Focus</Description>
         </li>
         <li className="buttons-page__item">
-          <Button category="secondary" loading fluid>Button Text</Button>
+          <Button category="secondary" loading fluid hiddenText>Button Text</Button>
           <Description>Secondary Button Loading</Description>
         </li>
         <li className="buttons-page__item">
-          <Button category="secondary" loading hiddenText fluid>Button Text</Button>
+          <Button category="secondary" loading fluid>Button Text</Button>
           <Description>Secondary Button Loading with Text</Description>
         </li>
       </ul>
@@ -88,14 +97,14 @@ const ButtonsPage = () => (
         </li>
         <li className="buttons-page__item">
           <Button color="blue" hover fluid>Button Text</Button>
-          <Description>Primary Button Hover</Description>
+          <Description>Primary Button Hover/Focus</Description>
         </li>
         <li className="buttons-page__item">
-          <Button color="blue" loading fluid>Button Text</Button>
+          <Button color="blue" loading fluid hiddenText>Button Text</Button>
           <Description>Primary Button Loading</Description>
         </li>
         <li className="buttons-page__item">
-          <Button color="blue" loading hiddenText fluid>Button Text</Button>
+          <Button color="blue" loading fluid>Button Text</Button>
           <Description>Primary Button Loading with text</Description>
         </li>
       </ul>
@@ -110,14 +119,14 @@ const ButtonsPage = () => (
         </li>
         <li className="buttons-page__item">
           <Button color="blue" category="secondary" hover fluid>Button Text</Button>
-          <Description>Secondary Button Hover</Description>
+          <Description>Secondary Button Hover/Focus</Description>
         </li>
         <li className="buttons-page__item">
-          <Button color="blue" category="secondary" loading fluid>Button Text</Button>
+          <Button color="blue" category="secondary" loading fluid hiddenText>Button Text</Button>
           <Description>Secondary Button Loading</Description>
         </li>
         <li className="buttons-page__item">
-          <Button color="blue" category="secondary" loading hiddenText fluid>Button Text</Button>
+          <Button color="blue" category="secondary" loading fluid>Button Text</Button>
           <Description>Secondary Button Loading with Text</Description>
         </li>
       </ul>

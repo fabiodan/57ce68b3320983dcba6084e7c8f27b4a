@@ -7,7 +7,8 @@ $button-height: 40px;
 $button-secondary-border-width: 1px;
 $button-secondary-border-width-hover: 2px;
 
-@mixin button-base {
+// Block
+.button {
   -moz-appearance: none;
   -webkit-appearance: none;
 
@@ -16,13 +17,16 @@ $button-secondary-border-width-hover: 2px;
   font-weight: 600;
 
   display: inline-flex;
+  vertical-align: middle;
   justify-content: center;
   align-items: center;
   height: $button-height;
+  min-width: 64px;
   padding: 0 $spacing-m;
   position: relative;
   z-index: 0;
   user-select: none;
+  line-height: $button-height;
 
   background-color: $color-transparent;
   border: 0;
@@ -55,18 +59,26 @@ $button-secondary-border-width-hover: 2px;
     cursor: pointer;
     box-shadow: $shadow--lv2;
   }
-}
 
-// Block
-.button {
-  @include button-base;
+  &:active {
+    &::before {
+      background-color: $color-black;
+      opacity: 0.1;
+      z-index: 0;
+    }
+  }
 }
 
 // Elements
 .button__text {
+  height: $button-height;
   position: relative;
-  height: 100%;
-  line-height: $button-height;
+  z-index: 1;
+}
+
+.button__icon {
+  margin-right: $spacing-xs;
+  position: relative;
   z-index: 1;
 }
 
@@ -94,7 +106,8 @@ $button-secondary-border-width-hover: 2px;
 .button--secondary {
   background-color: $color-white;
   border: solid $button-secondary-border-width $color-medium-gray;
-  padding: 0 ($spacing-m - $button-secondary-border-width);
+  padding: 0 $spacing-m - $button-secondary-border-width;
+  line-height: $button-height - ($button-secondary-border-width * 2);
 
   &.button--green {
     color: $color-green;
@@ -108,13 +121,20 @@ $button-secondary-border-width-hover: 2px;
   &:hover {
     border: solid $button-secondary-border-width-hover currentColor;
     padding: 0 ($spacing-m - $button-secondary-border-width-hover);
+    line-height: $button-height - ($button-secondary-border-width-hover * 2);
+
+    &::after {
+      background-color: currentColor;
+      opacity: 0.1;
+    }
     .button__text {
-      line-height: $button-height - $button-secondary-border-width-hover;
+      height: $button-height - ($button-secondary-border-width-hover);
     }
   }
-
-  .button__text {
-    line-height: $button-height - $button-secondary-border-width;
+  &:active {
+    &::before {
+      background-color: currentColor;
+    }
   }
 }
 
@@ -129,4 +149,13 @@ $button-secondary-border-width-hover: 2px;
 
 .button--fluid {
   width: 100%;
+}
+
+.button--hidden-text {
+  .button__icon {
+    margin-right: 0;
+  }
+  .button__text {
+    display: none; // TODO: use visuallyHidden instead of display: none
+  }
 }
