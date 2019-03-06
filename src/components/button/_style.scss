@@ -54,6 +54,7 @@ $button-secondary-border-width-hover: 2px;
     z-index: 2;
   }
 
+  &.button--hover,
   &:focus,
   &:hover {
     cursor: pointer;
@@ -87,7 +88,8 @@ $button-secondary-border-width-hover: 2px;
   color: $color-white;
 
   &:focus,
-  &:hover {
+  &:hover,
+  &.button--hover {
     &::after {
       background-color: $color-black;
       opacity: 0.1;
@@ -118,7 +120,8 @@ $button-secondary-border-width-hover: 2px;
   }
 
   &:focus,
-  &:hover {
+  &:hover,
+  &.button--hover {
     border: solid $button-secondary-border-width-hover currentColor;
     padding: 0 ($spacing-m - $button-secondary-border-width-hover);
     line-height: $button-height - ($button-secondary-border-width-hover * 2);
