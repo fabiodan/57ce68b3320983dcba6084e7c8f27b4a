@@ -25,7 +25,7 @@ const ButtonsPage = () => (
         use the solid green filled primary buttons and for other use the
         skeletal button.
 
-{/* DEBUG
+        {/* DEBUG
 <Button category="primary" >Button Text</Button>
 <Button category="secondary" >Button Text</Button>
 <br/>
@@ -44,7 +44,7 @@ const ButtonsPage = () => (
           <Description>Primary Button Disabled </Description>
         </li>
         <li className="buttons-page__item">
-          <Button hover fluid hover>Button Text</Button>
+          <Button fluid hover>Button Text</Button>
           <Description>Primary Button Hover/Focus </Description>
         </li>
         <li className="buttons-page__item">

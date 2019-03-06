@@ -14,7 +14,7 @@ const Spinner = ({ className, color }) => {
   const classNames = joinClassNames('spinner', className, modifiers)
 
   return (
-    <div className={classNames}/>
+    <div className={classNames} />
   )
 }
 

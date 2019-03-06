@@ -10,11 +10,9 @@ import Spinner from '@asda/spinner'
 // Assets
 import './_style.scss'
 
-const ButtonIcon = ({ children }) => {
-  return (
-    <span className="button__icon">{children}</span>
-  )
-}
+const ButtonIcon = ({ children }) => (
+  <span className="button__icon">{children}</span>
+)
 
 const Button = ({
   children,
@@ -41,7 +39,7 @@ const Button = ({
   return (
     <button className={classNames} aria-disabled={disabled}>
 
-      { loading && <ButtonIcon><Spinner color={spinnerColor}/></ButtonIcon> }
+      { loading && <ButtonIcon><Spinner color={spinnerColor} /></ButtonIcon> }
 
       <span className="button__text">{children}</span>
     </button>
