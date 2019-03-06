@@ -14,6 +14,8 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
+            // TODO: figure out a way to handle relative path
+            // name: '/pages/ukgr/asda-design-system/assets/images/[name].[ext]',
             name: './assets/images/[name].[ext]',
           },
         }],

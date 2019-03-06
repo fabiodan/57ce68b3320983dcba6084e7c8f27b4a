@@ -5,6 +5,7 @@
 
 html {
   @include typography-base;
+  color: $color-charcoal;
   box-sizing: border-box;
 }
 

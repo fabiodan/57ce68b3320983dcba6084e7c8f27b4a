@@ -25,14 +25,6 @@ const ButtonsPage = () => (
         use the solid green filled primary buttons and for other use the
         skeletal button.
 
-        {/* DEBUG
-<Button category="primary" >Button Text</Button>
-<Button category="secondary" >Button Text</Button>
-<br/>
-<Button category="secondary" >Button Text</Button>
-<Button category="primary" >Button Text</Button>
-*/}
-
       </Paragraph>
       <ul className="buttons-page__list">
         <li className="buttons-page__item">

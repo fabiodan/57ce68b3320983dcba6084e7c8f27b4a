@@ -54,9 +54,9 @@ $button-secondary-border-width-hover: 2px;
     z-index: 2;
   }
 
-  &.button--hover,
-  &:focus,
-  &:hover {
+  &:focus:not(.button--disabled),
+  &:hover:not(.button--disabled),
+  &.button--hover:not(.button--disabled) { // For demostrantion purposes only
     cursor: pointer;
     box-shadow: $shadow--lv2;
   }
@@ -87,9 +87,9 @@ $button-secondary-border-width-hover: 2px;
 .button--primary {
   color: $color-white;
 
-  &:focus,
-  &:hover,
-  &.button--hover {
+  &:focus:not(.button--disabled),
+  &:hover:not(.button--disabled),
+  &.button--hover:not(.button--disabled) { // For demostrantion purposes only
     &::after {
       background-color: $color-black;
       opacity: 0.1;
@@ -119,9 +119,9 @@ $button-secondary-border-width-hover: 2px;
     color: $color-blue;
   }
 
-  &:focus,
-  &:hover,
-  &.button--hover {
+  &:focus:not(.button--disabled),
+  &:hover:not(.button--disabled),
+  &.button--hover:not(.button--disabled) { // For demostrantion purposes only
     border: solid $button-secondary-border-width-hover currentColor;
     padding: 0 ($spacing-m - $button-secondary-border-width-hover);
     line-height: $button-height - ($button-secondary-border-width-hover * 2);

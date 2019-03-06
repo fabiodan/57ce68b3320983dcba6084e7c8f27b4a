@@ -19,7 +19,7 @@ const Button = ({
   className,
   category,
   color,
-  hover,
+  hover, // For demo purposes only
   loading,
   hiddenText,
   disabled,
@@ -28,7 +28,7 @@ const Button = ({
   const modifiers = [
     !!category && `button--${category}`,
     !!color && `button--${color}`,
-    hover && 'button--hover',
+    hover && 'button--hover', // For demo purposes only
     hiddenText && 'button--hidden-text',
     disabled && 'button--disabled',
     fluid && 'button--fluid',
