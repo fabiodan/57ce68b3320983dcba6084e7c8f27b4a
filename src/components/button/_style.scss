@@ -95,6 +95,14 @@ $button-secondary-border-width-hover: 2px;
       opacity: 0.1;
     }
   }
+  &.button--disabled {
+    &.button--green {
+      background-color: $color-green-disabled;
+    }
+    &.button--blue {
+      background-color: $color-blue-disabled;
+    }
+  }
 }
 
 .button--green {
@@ -139,15 +147,18 @@ $button-secondary-border-width-hover: 2px;
       background-color: currentColor;
     }
   }
+  &.button--disabled {
+    &.button--green {
+      color: $color-green-disabled;
+    }
+    &.button--blue {
+      color: $color-blue-disabled;
+    }
+  }
 }
 
 .button--disabled {
   pointer-events: none;
-
-  &::before {
-    background-color: $color-white;
-    opacity: 0.5;
-  }
 }
 
 .button--fluid {
