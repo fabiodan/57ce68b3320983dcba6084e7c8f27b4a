@@ -7,40 +7,143 @@ import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout
 // Assets
 import './_style.scss'
 
+const ColorList = ({ children }) => (
+  <ul className="color-page__color-list">{children}</ul>
+)
+
+const ColorItem = ({ children }) => (
+  <li className="color-page__color-item">{children}</li>
+)
+
+const ColorSample = ({
+  color, name, hex, rgb, rgba,
+}) => (
+  <div className={`color-page__color-sample ${!!color && `color-page--${color}`}`}>
+    <h3 className="color-page__color-name">{name}</h3>
+    <div className="color-page__color-hex">#{hex}</div>
+    <div className="color-page__color-rgb">
+      {rgb ? (`rgb(${rgb})`) : (`rgba(${rgba})`)}
+    </div>
+  </div>
+)
+
+const ColorDescription = ({ children }) => (
+  <p className="color-page__description">{children}</p>
+)
+
 const ColorSchemePage = () => (
   <article className="color-page">
     <Heading>Color Scheme</Heading>
+
     <Section>
-      <Subheading>Colors</Subheading>
+      <Subheading>Asda Green</Subheading>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-        facilis doloremque ea placeat veritatis porro libero expedita sint
-        commodi et culpa voluptas cumque repudiandae eveniet aut, eaque cum,
-        provident repellendus!
+        Green is our primary color and should be used for elements that must
+        reflect Asda’s brand. For compliance to accessibility standards, we use
+        two different greens, Asda green is used with font size size 18px and
+        above, while in situations requiring a smaller font size, emerald green
+        is deployed.
       </Paragraph>
-      <ul className="color-page__color-list">
-        <li className="color-page__color-item color-page--green" />
-        <li className="color-page__color-item color-page--dark-green" />
-        <li className="color-page__color-item color-page--red" />
-        <li className="color-page__color-item color-page--blue" />
-        <li className="color-page__color-item color-page--yellow" />
-      </ul>
+      <ColorList>
+        <ColorItem>
+          <ColorSample color="green" name="Asda Green" hex="68A51C" rgb="83, 121, 22" />
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="dark-green" name="Emerald Green" hex="538316" rgb="104, 165, 28" />
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="green-disabled" name="Asda Green (Disabled)" hex="B4D28E" rgb="180, 210, 142" />
+        </ColorItem>
+      </ColorList>
     </Section>
+
     <Section>
-      <Subheading>Blacks & Greys</Subheading>
+      <Subheading>Secondary Colors</Subheading>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-        facilis doloremque ea placeat veritatis porro libero expedita sint
-        commodi et culpa voluptas cumque repudiandae eveniet aut, eaque cum,
-        provident repellendus!
+        Use these colors for elements peripheral to core user journey.
       </Paragraph>
-      <ul className="color-page__color-list">
-        <li className="color-page__color-item color-page--charcoal" />
-        <li className="color-page__color-item color-page--dark-gray" />
-        <li className="color-page__color-item color-page--medium-gray" />
-        <li className="color-page__color-item color-page--light-gray" />
-        <li className="color-page__color-item color-page--background-gray" />
-      </ul>
+      <ColorList>
+        <ColorItem>
+          <ColorSample color="blue" name="Cobalt Blue" hex="0073B1" rgb="0, 115, 177" />
+          <ColorDescription>
+            Used for secondary actions like checkout, sign-in, sign-up,
+            registering, hints and value toolkit
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="blue-disabled" name="Cobalt Blue (Disabled)" hex="68A51C" rgb="127, 185, 216" />
+          <ColorDescription>
+            Used for disabled secondary buttons
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="red" name="Crimson Red" hex="D43030" rgb="212, 48, 48" />
+          <ColorDescription>
+            Used for errors, warnings, promotions & value toolkit
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="yellow" name="California Gold" hex="F7CC00" rgb="83, 121, 22" />
+          <ColorDescription>
+            Used for warnings, out of stock or unavailable labels
+          </ColorDescription>
+        </ColorItem>
+      </ColorList>
+    </Section>
+
+    <Section>
+      <Subheading>Blacks & Grays</Subheading>
+      <Paragraph>
+        Blacks and grays are used for text, lines, borders, backgrounds, icons
+        etc. The first two dark shades are accessibile friendly and can be used
+        with white type.
+      </Paragraph>
+      <ColorList>
+        <ColorItem>
+          <ColorSample color="charcoal" name="Charcoal" hex="3D3D3D" rgb="61, 61, 61" />
+          <ColorDescription>
+            Used for active/hover clickable icons, main texts, input texts,
+            headings
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="dark-gray" name="Dark Gray" hex="767676" rgb="118, 118, 118" />
+          <ColorDescription>
+            Used for default clickable icons, secondary texts, placeholder
+            texts, input Labels
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="medium-gray" name="Medium Gray" hex="CCCCCC" rgb="204, 204, 204" />
+          <ColorDescription>
+            Used for informative non-clickable icons, empty review stars
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="light-gray" name="Light Gray" hex="EEEEEE" rgb="238, 238, 238" />
+          <ColorDescription>
+            Used for cell headers, tags
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="background-gray" name="Background Gray" hex="F6F6F6" rgb="246, 246, 246" />
+          <ColorDescription>
+            Used for backgrounds
+          </ColorDescription>
+        </ColorItem>
+      </ColorList>
+    </Section>
+
+    <Section>
+      <Subheading>Transparent Background</Subheading>
+      <Paragraph>
+        Use charcoal with 50% opacity for overlays below modals, popups, etc.
+      </Paragraph>
+      <ColorList>
+        <ColorItem>
+          <ColorSample color="transparent-charcoal" name="Charcoal (50%)" hex="3D3D3D" rgba="61, 61, 61, 0.5" />
+        </ColorItem>
+      </ColorList>
     </Section>
   </article>
 )

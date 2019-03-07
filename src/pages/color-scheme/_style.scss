@@ -1,20 +1,51 @@
 // Dependencies
 @import "@asda/core/style";
+@import "../components/sg-core/style";
 
+$color-sample-padding: $spacing-m;
+
+// Elements/Mixes
 .color-page__color-list {
   list-style: none;
   padding: 0;
+  margin: $spacing-xxl 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+}
+
+.color-page__color-sample {
+  position: relative;
+  height: 120px;
+  padding: $color-sample-padding;
+  border-radius: 4px;
+}
+
+.color-page__color-name {
+  @include sg-typography(xs); // TODO: Remove color from this font-style
+  color: $color-white;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
-  margin: $spacing-xxl 0;
 }
 
-.color-page__color-item {
-  width: 160px;
-  height: 100px;
+.color-page__color-hex {
+  @include typography(xl);
+  font-weight: 600;
+  color: $color-white;
 }
 
+.color-page__color-rgb {
+  @include typography(xs);
+  color: $color-white;
+  position: absolute;
+  bottom: $color-sample-padding;
+  left: $color-sample-padding;
+}
+
+.color-page__description {
+  @include typography(s);
+}
+
+// Modifiers
 .color-page--green {
   background: $color-green;
 }
@@ -23,12 +54,20 @@
   background: $color-dark-green;
 }
 
+.color-page--green-disabled {
+  background: $color-green-disabled;
+}
+
 .color-page--red {
   background: $color-red;
 }
 
 .color-page--blue {
   background: $color-blue;
+}
+
+.color-page--blue-disabled {
+  background: $color-blue-disabled;
 }
 
 .color-page--yellow {
@@ -53,4 +92,26 @@
 
 .color-page--background-gray {
   background: $color-background-gray;
+}
+
+.color-page--transparent-charcoal {
+  background: $color-transparent-charcoal;
+}
+
+.color-page--yellow,
+.color-page--medium-gray,
+.color-page--light-gray,
+.color-page--background-gray,
+.color-page--transparent-charcoal {
+  .color-page__color-name,
+  .color-page__color-hex,
+  .color-page__color-rgb {
+    color: $color-charcoal;
+  }
+}
+
+@media (min-width: 480px) {
+  .color-page__color-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

@@ -11,7 +11,7 @@ const Menu = ({ toggleMenu }) => {
   const menuItems = [
     { name: 'Overview (WIP)', url: '/overview' },
     { name: 'Typography', url: '/typography' },
-    { name: 'Color Scheme (WIP)', url: '/color-scheme' },
+    { name: 'Color Scheme', url: '/color-scheme' },
     { name: 'Buttons', url: '/buttons' },
   ]
 
