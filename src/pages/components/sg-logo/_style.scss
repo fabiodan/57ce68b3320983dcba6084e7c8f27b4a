@@ -1,3 +1,37 @@
+// Dependencies
+@import "@asda/core/style";
+@import "../../components/sg-core/style";
+
 .sg-asda-logo {
+  margin: 0;
+  display: flex;
+}
+
+.sg-asda-logo__image {
   vertical-align: middle;
+  height: 24px;
+}
+
+.sg-asda-logo__text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sg-asda-logo {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  .sg-asda-logo__image {
+    height: 41px;
+  }
+
+  .sg-asda-logo__text {
+    display: block;
+    @include sg-typography(xs);
+    margin-top: $spacing-m;
+    font-size: 12px;
+    letter-spacing: 3.2px;
+  }
 }

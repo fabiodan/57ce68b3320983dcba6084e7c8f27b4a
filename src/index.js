@@ -44,16 +44,19 @@ class Page extends Component {
 
     return (
       <Fragment>
-        <Header>
-          <MediaQuery query="(max-width: 767px)">
+
+        <MediaQuery query="(max-width: 767px)">
+          <Header>
             <button className="sg-layout__header__menu-button" onClick={this.toggleMenu}>
               <img src={MenuSvgSource} alt="Menu" />
             </button>
-          </MediaQuery>
-          <Logo className="sg-layout__header__logo" />
-        </Header>
+            <Logo className="sg-layout__header__logo" />
+          </Header>
+        </MediaQuery>
+
         <div className="sg-layout__container">
           <Aside className={asideModifier}>
+            <Logo className="sg-layout__aside__logo" />
             <Menu toggleMenu={this.toggleMenu} />
           </Aside>
           <Main>

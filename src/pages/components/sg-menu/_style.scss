@@ -1,6 +1,8 @@
 // Dependencies
 @import "@asda/core/style";
 
+$sg-menu-item-height: 60px;
+
 // Block
 .sg-menu {
   padding: $spacing-xxl 0;
@@ -14,22 +16,21 @@
 }
 
 .sg-menu__item {
-  height: 36px;
-  padding-right: $spacing-m;
+  height: $sg-menu-item-height;
 }
 
 .sg-menu__anchor {
-  @include typography(m);
+  @include typography(l);
   vertical-align: middle;
   padding: 0 $spacing-s 0 $spacing-l;
-  line-height: 36px;
+  line-height: $sg-menu-item-height;
   height: 100%;
   display: inline-block;
   width: 100%;
-  color: #3d3d3d;
+  color: $color-charcoal;
   text-decoration: none;
   &:hover {
-    background: #F6F6F6;
+    background: $color-background-gray;
   }
 }
 
@@ -41,7 +42,7 @@
   width: 30px;
   overflow: hidden;
   padding: 0;
-  background-color: transparent;
+  background-color: $color-transparent;
   border: none;
   user-select: none;
   -webkit-appearance: none;
@@ -50,15 +51,15 @@
 
 // Modifiers
 .sg-menu--active {
-  font-weight: 600;
-  background: #F6F6F6;
+  font-weight: bold;
+  background: $color-background-gray;
 }
 
 @media (min-width: 768px) {
   .sg-menu {
     position: sticky;
     left: 0;
-    top: 64px;
-    padding: $spacing-m 0;
+    top: 325px;
+    padding: 0;
   }
 }

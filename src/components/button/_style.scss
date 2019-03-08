@@ -27,11 +27,9 @@ $button-secondary-border-width-hover: 2px;
   z-index: 0;
   user-select: none;
   line-height: $button-height;
-
   background-color: $color-transparent;
   border: 0;
   border-radius: 4px;
-  outline: none;
   overflow: hidden;
 
   &::-moz-focus-inner {
