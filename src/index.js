@@ -56,7 +56,9 @@ class Page extends Component {
 
         <div className="sg-layout__container">
           <Aside className={asideModifier}>
-            <Logo className="sg-layout__aside__logo" />
+            <MediaQuery query="(min-width: 768px)">
+              <Logo className="sg-layout__aside__logo" />
+            </MediaQuery>
             <Menu toggleMenu={this.toggleMenu} />
           </Aside>
           <Main>

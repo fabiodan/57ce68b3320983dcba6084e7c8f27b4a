@@ -7,6 +7,7 @@ html {
   @include typography-base;
   color: $color-charcoal;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *::after, *::before {
@@ -16,6 +17,7 @@ html {
 body {
   margin: 0;
   overscroll-behavior: none;
+  height: 100%;  
 }
 
 // Generate typography selectors (e.g., .typography--s, .typography--m, etc.)
