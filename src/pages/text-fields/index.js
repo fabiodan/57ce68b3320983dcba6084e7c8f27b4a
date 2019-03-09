@@ -23,7 +23,7 @@ const TextFieldsPage = () => (
         generally used for single entry and should aim to be clear and
         efficient.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -32,7 +32,7 @@ const TextFieldsPage = () => (
         Input fields with leading icons provide users with more visual
         information about the input required.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -41,7 +41,7 @@ const TextFieldsPage = () => (
         Input fields with leading icons provide users with more visual
         information about the input required.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -58,7 +58,7 @@ const TextFieldsPage = () => (
         text/error) and wraps the text four times. For more wraps, the height
         should be increased in increments of 20px to maintain consistency.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -68,7 +68,7 @@ const TextFieldsPage = () => (
         the optional text field for the outlier input requirement and default
         input fields for the required one.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -78,7 +78,7 @@ const TextFieldsPage = () => (
         text fields. Helper text, errors, success messages, character counters
         are some examples of assistive elements.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -87,12 +87,12 @@ const TextFieldsPage = () => (
         When text fields have both helper text and error/success state, swap
         the helper text to error or success message.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
       <Paragraph>
         When text input is longer than the given text area, the height of the
         container should increase by 20px.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
       <Paragraph>
         Consistent padding between input fields is necessary to reduce the
         pushing down of elements when the text area increases or an error,
@@ -108,7 +108,7 @@ const TextFieldsPage = () => (
         The principle is to enhance the visibility of the search field. Its
         usage patterns are similar to other text fields.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
   </article>

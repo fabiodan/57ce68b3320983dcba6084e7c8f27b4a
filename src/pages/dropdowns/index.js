@@ -22,7 +22,7 @@ const DropdownPage = () => (
         Input fields let users enter and edit text. Each input field is
         generally used for single entry and should aim to be clear and efficient.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -31,7 +31,7 @@ const DropdownPage = () => (
         Input fields let users enter and edit text. Each input field is
         generally used for single entry and should aim to be clear and efficient.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -41,12 +41,12 @@ const DropdownPage = () => (
         appear next to where a user taps, and their actions can vary based on
         the tap target.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
       <Paragraph>
         Width of contextual menu should be decided based upon the length of
         list item and the grid.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
   </article>

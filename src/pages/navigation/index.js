@@ -23,14 +23,14 @@ const NavigationPage = () => (
         determined by the number of tabs divided by the screen width. These
         tabs dont scroll to reveal more tabs.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
       <Paragraph>
         Tab labels should apear in a single row clearly and succinctly
         describing the content of the tab. A second line can be used in special
         cases with atypical font size and line height. For labels longer than
         the tab width, the text should be truncated.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -49,12 +49,12 @@ const NavigationPage = () => (
         switching states, to provide user with more control. Decide between the
         darker and the lighter version based on the content.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
       <Paragraph>
         White pagination control have transparency and background blur filters
         built in, making them more versatile for usage on images.
       </Paragraph>
-      <Component>Components Here</Component>
+      <Component>Examples Here</Component>
     </Section>
 
   </article>
