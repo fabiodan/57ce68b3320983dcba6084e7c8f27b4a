@@ -23,6 +23,10 @@ $sg-layout__aside-width: 300px;
 
 .sg-layout__section {
   padding: $spacing-xxl 0;
+  border-bottom: solid 1px $color-medium-gray;
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .sg-layout__header {
