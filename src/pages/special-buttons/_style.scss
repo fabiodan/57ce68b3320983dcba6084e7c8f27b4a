@@ -1,7 +1,15 @@
+/* Special Buttons Page */
+
 // Dependencies
 @import "@asda/core/style";
 @import "../components/sg-core/style";
 
+// Block
+.special-buttons-page {
+
+}
+
+// Elements/Mixes
 .special-buttons-page__list {
   list-style: none;
   padding: 0;
@@ -21,6 +29,7 @@
   margin-top: $spacing-xxs;
 }
 
+// Breakpoints
 @media (min-width: 480px) {
   .special-buttons-page__list {
     grid-template-columns: 1fr 1fr 1fr;

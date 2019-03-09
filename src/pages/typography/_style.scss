@@ -1,3 +1,5 @@
+/* Typography Page */
+
 // Dependencies
 @import "@asda/core/style";
 @import "../components/sg-core/style";
@@ -56,6 +58,7 @@
   letter-spacing: rem(0.6px);
 }
 
+// Breakpoints
 @media (min-width: 480px) {
   .typography-page__attribute {
     display: inline;

@@ -18,6 +18,7 @@ import Menu from './pages/components/sg-menu'
 import { Header, Aside, Main } from './pages/components/sg-layout'
 
 // Pages
+import SamplePage from './pages/_sample'
 import OverviewPage from './pages/overview'
 import TypographyPage from './pages/typography'
 import ColorSchemePage from './pages/color-scheme'
@@ -88,6 +89,7 @@ ReactDOM.render(
             <Redirect to="/overview" />
         }
         />
+        <Route path="/sample" component={SamplePage} />
         <Route path="/overview" component={OverviewPage} />
         <Route path="/typography" component={TypographyPage} />
         <Route path="/color-scheme" component={ColorSchemePage} />

@@ -1,5 +1,6 @@
 // Layout Core Module
 
+// Variables
 $spacing-sizes: (
   xxxl: 80px,
   xxl: 40px,
@@ -20,6 +21,7 @@ $spacing-s: map-get($spacing-sizes, s);
 $spacing-xs: map-get($spacing-sizes, xs);
 $spacing-xxs: map-get($spacing-sizes, xxs);
 
+// Mixins
 @mixin margin($size) {
   @if not map-has-key($spacing-sizes, $size) {
     @error "Invalid size specified! Choose one of #{map-keys($spacing-sizes)}";

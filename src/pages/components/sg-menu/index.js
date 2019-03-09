@@ -9,6 +9,7 @@ import './_style.scss'
 
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
+    { name: 'Sample', url: '/sample' },
     { name: 'Overview (WIP)', url: '/overview' },
     { name: 'Typography', url: '/typography' },
     { name: 'Color Scheme', url: '/color-scheme' },

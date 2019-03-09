@@ -106,9 +106,6 @@ $sg-layout__aside-width: 300px;
   @include typography(l);
   margin: 0 0 $spacing-xxl 0;
   overflow-wrap: break-word;
-  &:last-of-type {
-    margin: 0;
-  }
 }
 
 .sg-layout__subheading {

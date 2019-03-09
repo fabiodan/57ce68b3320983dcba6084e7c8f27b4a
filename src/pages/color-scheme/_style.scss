@@ -1,7 +1,10 @@
+/* Color Scheme Page */
+
 // Dependencies
 @import "@asda/core/style";
 @import "../components/sg-core/style";
 
+// Variables
 $color-sample-padding: $spacing-m;
 
 // Elements/Mixes
@@ -110,6 +113,7 @@ $color-sample-padding: $spacing-m;
   }
 }
 
+// Breakpoints
 @media (min-width: 480px) {
   .color-page__color-list {
     grid-template-columns: 1fr 1fr 1fr;
