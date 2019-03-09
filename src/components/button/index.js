@@ -16,6 +16,7 @@ const ButtonIcon = ({ children }) => (
 
 const Button = ({
   children,
+  iconSrc,
   className,
   category,
   color,
@@ -40,6 +41,7 @@ const Button = ({
     <button className={classNames} aria-disabled={disabled}>
 
       { loading && <ButtonIcon><Spinner color={spinnerColor} /></ButtonIcon> }
+      { iconSrc && <ButtonIcon><img src={iconSrc} alt="" /></ButtonIcon> }
 
       <span className="button__text">{children}</span>
     </button>
@@ -53,4 +55,7 @@ Button.defaultProps = {
   fluid: false,
 }
 
-export default Button
+export {
+  Button as default,
+  ButtonIcon,
+}

@@ -1,0 +1,92 @@
+/* Add Button Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Elements
+.add-button__button {
+  width: 126px;
+}
+
+.add-button__minus,
+.add-button__plus {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 4px 0 0 4px;
+  border-radius: 0;
+}
+
+.add-button__plus {
+  border-radius: 0 4px 4px 0;
+  border-radius: 0;
+}
+
+.add-button__input {
+  @include typography-base;
+  @include typography(xl);
+  font-weight: 600;
+  height: 38px;
+  width: 50px;
+  vertical-align: middle;
+  border: none;
+  border-radius: 2px;
+  color: $color-green;
+  text-align: center;
+  outline: none;
+}
+
+.add-button__quantity {
+  color: $color-green;
+  display: inline-block;
+  border-radius: 4px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+
+.add-button__unit-selector {
+  display: inline-block;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 1px;
+    z-index: 1;
+    height: 36px;
+    border-radius: 1px;
+    background: $color-white;
+  }
+}
+
+.add-button__unit-selector__select {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 0;
+  @include typography(l);
+  color: $color-white;
+  font-weight: 600;
+  background-color: $color-transparent;
+  height: 38px;
+  width: 46px;
+  position: relative;
+  padding-left: 5px;
+}
+
+// Modifiers
+.add-button__quantity--both {
+  .add-button__minus,
+  .add-button__plus {
+    width: 30px;
+  }
+  .add-button__plus {
+    border-radius: 0;
+  }
+  .add-button__input {
+    width: 54px;
+  }
+}

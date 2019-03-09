@@ -13,6 +13,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Typography', url: '/typography' },
     { name: 'Color Scheme', url: '/color-scheme' },
     { name: 'Buttons', url: '/buttons' },
+    { name: 'Special Buttons', url: '/special-buttons' },
   ]
 
   return (

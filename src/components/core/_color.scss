@@ -25,3 +25,16 @@ $color-background-gray: rgba(246, 246 ,246, 1); // #F6F6F6
 // Transparents
 $color-transparent: rgba(255, 255, 255, 0); // transparent
 $color-charcoal-transparent: rgba($color-charcoal, 0.5); // #3D3D3D (50%)
+
+// Mixins
+@mixin color-base {
+  ::-moz-selection {
+    color: $color-white;
+    background: $color-green;
+  }
+
+  ::selection {
+    color: $color-white;
+    background: $color-green;
+  }
+}

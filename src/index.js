@@ -22,6 +22,7 @@ import OverviewPage from './pages/overview'
 import TypographyPage from './pages/typography'
 import ColorSchemePage from './pages/color-scheme'
 import ButtonsPage from './pages/buttons'
+import SpecialButtonsPage from './pages/special-buttons'
 
 class Page extends Component {
   constructor(props) {
@@ -44,7 +45,6 @@ class Page extends Component {
 
     return (
       <Fragment>
-
         <MediaQuery query="(max-width: 767px)">
           <Header>
             <button className="sg-layout__header__menu-button" onClick={this.toggleMenu}>
@@ -92,6 +92,7 @@ ReactDOM.render(
         <Route path="/typography" component={TypographyPage} />
         <Route path="/color-scheme" component={ColorSchemePage} />
         <Route path="/buttons" component={ButtonsPage} />
+        <Route path="/special-buttons" component={SpecialButtonsPage} />
       </Page>
     </Router>
   ), document.querySelector('.sg-layout'),
