@@ -1,5 +1,3 @@
-/* Sample Component */
-
 // Libs
 import React from 'react'
 import joinClassNames from 'classnames'

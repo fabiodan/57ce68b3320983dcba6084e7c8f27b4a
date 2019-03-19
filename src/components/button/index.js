@@ -1,10 +1,9 @@
-/* Button Component */
-
 // Libs
 import React from 'react'
 import joinClassNames from 'classnames'
 
 // Components
+import Icon from '@asda/icon'
 import Spinner from '@asda/spinner'
 
 // Assets
@@ -16,7 +15,7 @@ const ButtonIcon = ({ children }) => (
 
 const Button = ({
   children,
-  iconSrc,
+  iconName,
   className,
   category,
   color,
@@ -35,13 +34,13 @@ const Button = ({
     fluid && 'button--fluid',
   ]
   const classNames = joinClassNames('button', className, modifiers)
-  const spinnerColor = category === 'primary' ? 'white' : color
+  const iconColor = category === 'primary' ? 'white' : color
 
   return (
     <button className={classNames} aria-disabled={disabled}>
 
-      { loading && <ButtonIcon><Spinner color={spinnerColor} /></ButtonIcon> }
-      { iconSrc && <ButtonIcon><img src={iconSrc} alt="" /></ButtonIcon> }
+      { loading && <ButtonIcon><Spinner color={iconColor} /></ButtonIcon> }
+      { iconName && <Icon name={iconName} color={iconColor} /> }
 
       <span className="button__text">{children}</span>
     </button>

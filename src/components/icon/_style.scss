@@ -1,0 +1,92 @@
+/* Icon Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; // Keep inline elements vertically aligned
+  fill: $color-charcoal;
+}
+
+// Modifiers
+.icon--large {
+  .icon__svg {
+    width: 40px;
+  }
+}
+
+.icon--medium {
+  .icon__svg {
+    width: 32px;
+  }
+}
+
+.icon--small {
+  .icon__svg {
+    width: 28px;
+  }
+}
+
+.icon--x-small {
+  .icon__svg {
+    width: 24px;
+  }
+}
+
+.icon--xx-small {
+  .icon__svg {
+    width: 16px;
+  }
+}
+
+.icon--white {
+  fill: $color-white;
+}
+
+.icon--green {
+  fill: $color-green;
+}
+
+.icon--dark-green {
+  fill: $color-dark-green;
+}
+
+.icon--green-disabled {
+  fill: $color-green-disabled;
+}
+
+.icon--red {
+  fill: $color-red;
+}
+
+.icon--blue {
+  fill: $color-blue;
+}
+
+.icon--blue-disabled {
+  fill: $color-blue-disabled;
+}
+
+.icon--yellow {
+  fill: $color-yellow;
+}
+
+.icon--charcoal {
+  fill: $color-charcoal;
+}
+
+.icon--dark-gray {
+  fill: $color-dark-gray;
+}
+
+.icon--medium-gray {
+  fill: $color-medium-gray;
+}
+
+.icon--light-gray {
+  fill: $color-light-gray;
+}

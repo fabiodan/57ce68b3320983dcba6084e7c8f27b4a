@@ -8,18 +8,28 @@
   width: 126px;
 }
 
+.add-button__quantity {
+  display: inline-block;
+}
+
+.add-button__quantity__container {
+  color: $color-green;
+  display: inline-block;
+  border-radius: 4px;
+  border: solid 1px currentColor;
+  background-color: currentColor;
+}
+
 .add-button__minus,
 .add-button__plus {
-  width: 38px;
+  width: 35px; // -1px border quantity container
   height: 38px;
   padding: 0;
   border-radius: 4px 0 0 4px;
-  border-radius: 0;
 }
 
 .add-button__plus {
   border-radius: 0 4px 4px 0;
-  border-radius: 0;
 }
 
 .add-button__input {
@@ -27,21 +37,13 @@
   @include typography(xl);
   font-weight: 600;
   height: 38px;
-  width: 50px;
+  width: 54px;
   vertical-align: middle;
   border: none;
   border-radius: 2px;
   color: $color-green;
   text-align: center;
   outline: none;
-}
-
-.add-button__quantity {
-  color: $color-green;
-  display: inline-block;
-  border-radius: 4px;
-  border: solid 1px currentColor;
-  background-color: currentColor;
 }
 
 .add-button__unit-selector {
@@ -66,27 +68,53 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  border-radius: 0;
+  border-radius: 0 4px 4px 0;
+  font-family: $typography-font-family;
   @include typography(l);
   color: $color-white;
   font-weight: 600;
   background-color: $color-transparent;
   height: 38px;
-  width: 46px;
+  width: 42px;
   position: relative;
+  z-index: 1;
   padding-left: 5px;
+  cursor: pointer;
+}
+
+.add-button__unit-selector__option {
+  background: $color-green;
+}
+
+.add-button__unit-selector__icon {
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  top: $spacing-s;
+}
+
+.add-button__weight {
+  display: inline-block;
+  @include typography(xl);
+  color: $color-green;
+  font-weight: 600;
+  padding: $spacing-xxs;
+  vertical-align: middle;
+  width: 32px;
+  overflow: hidden;
 }
 
 // Modifiers
+.add-button__quantity--weighted,
 .add-button__quantity--both {
   .add-button__minus,
   .add-button__plus {
-    width: 30px;
+    width: 28px;
   }
+}
+
+.add-button__quantity--both {
   .add-button__plus {
     border-radius: 0;
-  }
-  .add-button__input {
-    width: 54px;
   }
 }
