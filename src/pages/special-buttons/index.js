@@ -22,7 +22,9 @@ const SpecialButtonsPage = () => (
       </Paragraph>
 
       <div>
-        <AddButton />
+        <AddButton unit="count" />
+        <AddButton unit="both" />
+        <AddButton unit="weighted" />
       </div>
 
     </Section>

@@ -24,6 +24,7 @@ const Button = ({
   hiddenText,
   disabled,
   fluid,
+  onClick,
 }) => {
   const modifiers = [
     !!category && `button--${category}`,
@@ -37,10 +38,10 @@ const Button = ({
   const iconColor = category === 'primary' ? 'white' : color
 
   return (
-    <button className={classNames} aria-disabled={disabled}>
+    <button className={classNames} aria-disabled={disabled} onClick={onClick}>
 
       { loading && <ButtonIcon><Spinner color={iconColor} /></ButtonIcon> }
-      { iconName && <Icon name={iconName} color={iconColor} /> }
+      { iconName && <Icon className="button__icon" name={iconName} color={iconColor} /> }
 
       <span className="button__text">{children}</span>
     </button>
@@ -52,9 +53,7 @@ Button.defaultProps = {
   color: 'green',
   disabled: null,
   fluid: false,
+  onClick(){},
 }
 
-export {
-  Button as default,
-  ButtonIcon,
-}
+export default Button
