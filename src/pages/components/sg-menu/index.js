@@ -15,7 +15,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Color Scheme', url: '/color-scheme' },
     { name: 'Buttons', url: '/buttons' },
     { name: 'Special Buttons (WIP)', url: '/special-buttons' },
-    { name: 'Layout (WIP)', url: '/layout' },
+    { name: 'Layout', url: '/layout' },
     { name: 'Spacing (WIP)', url: '/spacing' },
     { name: 'Text Fields (WIP)', url: '/text-fields' },
     { name: 'Dropdowns (WIP)', url: '/dropdowns' },

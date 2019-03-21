@@ -1,5 +1,6 @@
 // Libs
 import React from 'react'
+import joinClassNames from 'classnames'
 
 import './_style.scss'
 
@@ -32,12 +33,26 @@ const Heading = ({ children, className = '' }) => (
   <h2 className={`sg-layout__heading ${className}`}>{children}</h2>
 )
 
-const Paragraph = ({ children, className = '' }) => (
-  <p className={`sg-layout__paragraph ${className}`}>{children}</p>
-)
+const Paragraph = ({ children, className, keepMargin }) => {
+  const modifiers = [
+    // Keeps the bottom margin for the last paragraph on each section
+    keepMargin && 'sg-layout__paragraph--keep-margin',
+  ]
+  const classNames = joinClassNames('sg-layout__paragraph', className, modifiers)
+
+  return (
+    <p className={classNames}>{children}</p>
+  )
+}
 
 const Subheading = ({ children, className = '' }) => (
   <h3 className={`sg-layout__subheading ${className}`}>{children}</h3>
+)
+
+const Figure = ({ src, alt, className = '' }) => (
+  <figure className={`sg-layout__figure ${className}`}>
+    <img className="sg-layout__figure__img" src={src} alt={alt} />
+  </figure>
 )
 
 export {
@@ -49,4 +64,5 @@ export {
   Heading,
   Subheading,
   Paragraph,
+  Figure,
 }
