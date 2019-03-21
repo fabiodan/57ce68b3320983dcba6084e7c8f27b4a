@@ -3,9 +3,10 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Sample from '@asda/_sample'
-import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
+import sampleSVGSource from './images/sample.svg'
 import './_style.scss'
 
 const Component = ({ children }) => (
@@ -25,18 +26,24 @@ const SamplePage = () => (
         quo quidem blanditiis unde omnis eum fugiat dicta impedit doloremque
         quas voluptatem perferendis fugit!
       </Paragraph>
+
+      <Component><Sample /></Component>
+
       <Paragraph>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Paragraph>
-      <Component><Sample /></Component>
     </Section>
 
     <Section>
       <Subheading>Subheading 2</Subheading>
-      <Paragraph>
+      <Paragraph keepMargin>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Paragraph>
+
       <Component>Vero, necessitatibus quaerat animi!</Component>
+
+      <Figure maxWidth="815px" src={sampleSVGSource} />
+
     </Section>
 
   </article>

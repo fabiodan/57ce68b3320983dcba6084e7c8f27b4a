@@ -16,11 +16,6 @@
   padding: $spacing-m 0;
 }
 
-.buttons-page__description {
-  @include sg-typography(xs);
-  margin-top: $spacing-xxs;
-}
-
 @media (min-width: 480px) {
   .buttons-page__list {
     grid-template-columns: 1fr 1fr 1fr;

@@ -61,6 +61,13 @@ const Figure = ({
   )
 }
 
+const Caption = ({ children, className }) => (
+  <caption className={`sg-layout__caption ${className}`}>
+    { children }
+  </caption>
+)
+
+
 export {
   Layout as default,
   Aside,
@@ -71,4 +78,5 @@ export {
   Subheading,
   Paragraph,
   Figure,
+  Caption,
 }

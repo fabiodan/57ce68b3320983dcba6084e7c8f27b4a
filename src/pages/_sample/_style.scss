@@ -14,12 +14,8 @@ $sample-page-mix-border-color: $color-medium-gray;
 }
 
 // Elements/Mixes
-.sample-page__element {
-
-}
-
-.sample-page__mix {
-
+.sample-page__component {
+  margin-bottom: $spacing-xxl; 
 }
 
 // Modifiers

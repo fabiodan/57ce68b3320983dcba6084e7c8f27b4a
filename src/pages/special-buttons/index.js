@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import AddButton from '@asda/add-button'
-import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
+import { Caption, Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -13,16 +13,29 @@ const SpecialButtonsPage = () => (
     <Heading>Special Buttons</Heading>
     <Section>
       <Subheading>Product Module Buttons</Subheading>
-      <Paragraph>
+      <Paragraph keepMargin>
         Product modules are the bread and butter of Asda.com. The buttons follow
         similar standads to rest of the website with few special cases.
       </Paragraph>
 
-      <div>
-        <AddButton unit="count" />
-        <AddButton unit="both" />
-        <AddButton unit="weighted" />
-      </div>
+      <ul className="special-buttons-page__list">
+        <li className="special-buttons-page__item">
+          <AddButton unit="count" quantity={0} />
+          <Caption>Add Button Default <br/>Center Aligned to PM</Caption>
+        </li>
+        <li className="special-buttons-page__item">
+          <AddButton unit="count" quantity={1} />
+          <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
+        </li>
+        <li className="special-buttons-page__item">
+          <AddButton unit="weighted" quantity={2} />
+          <Caption>Weighted Product Added <br/>Center Aligned to PM</Caption>
+        </li>
+        <li className="special-buttons-page__item">
+          <AddButton unit="both" quantity={1} />
+          <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
+        </li>
+      </ul>
 
     </Section>
     <Section>

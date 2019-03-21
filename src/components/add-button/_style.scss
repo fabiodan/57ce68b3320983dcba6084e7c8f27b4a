@@ -15,12 +15,13 @@
 }
 
 .add-button__quantity {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
 
 .add-button__quantity__container {
   color: $color-green;
-  display: inline-block;
+  display: inline-flex;
   border-radius: 4px;
   border: solid 1px currentColor;
   background-color: currentColor;
@@ -122,12 +123,10 @@
 }
 
 .add-button__weight {
-  display: inline-block;
   @include typography(xl);
   color: $color-green;
   font-weight: 600;
   padding: $spacing-xxs;
-  vertical-align: middle;
   width: 32px;
   overflow: hidden;
 }

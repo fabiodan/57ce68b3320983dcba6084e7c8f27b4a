@@ -79,7 +79,7 @@ class AddButton extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      quantity: 0,
+      // quantity: 0,
       isDecimal: false,
       inputFocused: false,
     }
@@ -96,12 +96,11 @@ class AddButton extends Component {
     }
   }
 
-  increment() {
-    console.log(typeof this.state.quantity)
+  increment(quantity) {
     this.setState({ quantity: this.state.quantity += 1 })
   }
 
-  decrement() {
+  decrement(quantity) {
     this.setState({ quantity: this.state.quantity -= 1 })
   }
 
@@ -126,9 +125,9 @@ class AddButton extends Component {
   }
 
   render() {
-    const { children, className, unit } = this.props
-    const { quantity, isDecimal, inputFocused } = this.state
-    const kgPerUnit = 0.25
+    const { children, className, unit, quantity } = this.props
+    const { isDecimal, inputFocused } = this.state
+    const kgPerUnit = 6.25
     const value = isDecimal ? (quantity * kgPerUnit).toFixed(2) : quantity
 
     return (

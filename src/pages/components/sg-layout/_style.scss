@@ -1,5 +1,6 @@
 // Dependencies
 @import "@asda/core/style";
+@import "../../components/sg-core/style";
 
 $sg-layout__aside-width: 300px;
 
@@ -130,6 +131,13 @@ $sg-layout__aside-width: 300px;
 .sg-layout__subheading {
   @include typography(xxxl);
   margin: 0 0 $spacing-m 0;
+}
+
+.sg-layout__caption {
+  display: block;
+  @include sg-typography(xs);
+  margin-top: $spacing-xxs;
+  text-align: left;
 }
 
 // Modifiers

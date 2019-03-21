@@ -26,7 +26,7 @@ const Sample = ({
   return (
     <div className={classNames}>
       <Button>Click Here</Button>
-      <Component>Some text</Component>
+      <Component>Lorem Ipsum</Component>
     </div>
   )
 }
