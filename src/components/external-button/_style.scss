@@ -1,0 +1,26 @@
+/* External Button Component */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@asda/button/mixins";
+
+.external-button {
+  @include button_base;
+  @include button_secondary_base;
+  color: $color-charcoal;
+  border: solid 1px $color-medium-gray;
+
+  &:hover:not(.button--disabled),
+  &:focus:not(.button--disabled) {
+    border: solid $button-secondary-border-width-hover $color-medium-gray;
+
+    &::after {
+      background-color: $color-transparent;
+    }
+  }
+  &:active {
+    &::before {
+      background-color: $color-transparent;
+    }
+  }
+}

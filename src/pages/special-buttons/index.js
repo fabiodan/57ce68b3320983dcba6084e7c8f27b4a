@@ -2,6 +2,12 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import {
+  AppleWalletButton,
+  GooglePayButton,
+  AppStoreButton,
+  GooglePlayButton,
+} from '@asda/external-button'
 import AddButton from '@asda/add-button'
 import { Caption, Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
 
@@ -11,6 +17,7 @@ import './_style.scss'
 const SpecialButtonsPage = () => (
   <article className="special-buttons-page">
     <Heading>Special Buttons</Heading>
+
     <Section>
       <Subheading>Product Module Buttons</Subheading>
       <Paragraph keepMargin>
@@ -36,8 +43,8 @@ const SpecialButtonsPage = () => (
           <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
         </li>
       </ul>
-
     </Section>
+
     <Section>
       <Subheading>Recipes Buttons</Subheading>
       <Paragraph>
@@ -45,6 +52,16 @@ const SpecialButtonsPage = () => (
         voluptate adipisci rerum iure, omnis dolor quasi saepe vero accusamus,
         tempore corrupti fugit vel nostrum voluptatem nobis cupiditate, natus
         illo asperiores?
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Subheading>External Buttons</Subheading>
+      <Paragraph>
+        <AppleWalletButton />
+        <GooglePayButton />
+        <AppStoreButton />
+        <GooglePlayButton />
       </Paragraph>
     </Section>
   </article>

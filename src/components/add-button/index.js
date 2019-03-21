@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import joinClassNames from 'classnames'
 
-// Components
+// Components (from atomic to composite)
 import Icon from '@asda/icon'
 import Button from '@asda/button'
 

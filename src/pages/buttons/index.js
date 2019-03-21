@@ -94,28 +94,6 @@ const ButtonsPage = () => (
           <Caption>Primary Button Loading with text</Caption>
         </li>
       </ul>
-      {/* <ul className="buttons-page__list">
-        <li className="buttons-page__item">
-          <Button color="blue" category="secondary" fluid>Button Text</Button>
-          <Caption>Secondary Button Default</Caption>
-        </li>
-        <li className="buttons-page__item">
-          <Button color="blue" category="secondary" disabled fluid>Button Text</Button>
-          <Caption>Secondary Button Disabled</Caption>
-        </li>
-        <li className="buttons-page__item">
-          <Button color="blue" category="secondary" hover fluid>Button Text</Button>
-          <Caption>Secondary Button Hover/Focus</Caption>
-        </li>
-        <li className="buttons-page__item">
-          <Button color="blue" category="secondary" loading fluid hiddenText>Button Text</Button>
-          <Caption>Secondary Button Loading</Caption>
-        </li>
-        <li className="buttons-page__item">
-          <Button color="blue" category="secondary" loading fluid>Button Text</Button>
-          <Caption>Secondary Button Loading with Text</Caption>
-        </li>
-      </ul> */}
     </Section>
   </article>
 )

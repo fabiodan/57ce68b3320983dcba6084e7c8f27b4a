@@ -134,10 +134,8 @@ $sg-layout__aside-width: 300px;
 }
 
 .sg-layout__caption {
-  display: block;
   @include sg-typography(xs);
   margin-top: $spacing-xxs;
-  text-align: left;
 }
 
 // Modifiers

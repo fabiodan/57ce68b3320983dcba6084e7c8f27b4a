@@ -2,7 +2,7 @@
 import React from 'react'
 import joinClassNames from 'classnames'
 
-// Components
+// Components (from atomic to composite)
 import Icon from '@asda/icon'
 import Spinner from '@asda/spinner'
 

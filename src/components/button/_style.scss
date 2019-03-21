@@ -2,64 +2,11 @@
 
 // Dependencies
 @import "@asda/core/style";
-
-// Variables
-$button-height: 40px;
-$button-secondary-border-width: 1px;
-$button-secondary-border-width-hover: 2px;
+@import "mixins";
 
 // Block
 .button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-
-  font-family: $typography-font-family;
-  @include typography(l);
-  font-weight: 600;
-
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle; // Needed to align buttons horizontally
-  height: $button-height;
-  padding: 0 $spacing-m;
-  position: relative;
-  user-select: none;
-  line-height: $button-height;
-  background-color: $color-transparent;
-  border: 0;
-  border-radius: 4px;
-  overflow: hidden;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-transparent;
-    opacity: 1;
-  }
-
-  &:focus:not(.button--disabled),
-  &:hover:not(.button--disabled),
-  &.button--hover:not(.button--disabled) { // For demostrantion purposes only
-    cursor: pointer;
-    box-shadow: $shadow;
-
-    &:active {
-      box-shadow: none;
-    }
-  }
-
-  &:active {
-    &::before {
-      background-color: $color-black;
-      opacity: 0.1;
-    }
-  }
+  @include button_base;
 }
 
 // Elements/Mixes
@@ -77,16 +24,8 @@ $button-secondary-border-width-hover: 2px;
 
 // Modifiers
 .button--primary {
-  color: $color-white;
+  @include button_primary_base;
 
-  &:focus:not(.button--disabled),
-  &:hover:not(.button--disabled),
-  &.button--hover:not(.button--disabled) { // For demostrantion purposes only
-    &::after {
-      background-color: $color-black;
-      opacity: 0.1;
-    }
-  }
   &.button--disabled {
     &.button--green {
       background-color: $color-green-disabled;
@@ -106,10 +45,7 @@ $button-secondary-border-width-hover: 2px;
 }
 
 .button--secondary {
-  background-color: $color-white;
-  border: solid $button-secondary-border-width currentColor;
-  padding: 0 $spacing-m - $button-secondary-border-width;
-  line-height: $button-height - ($button-secondary-border-width * 2);
+  @include button_secondary_base;
 
   &.button--green {
     color: $color-green;
@@ -119,26 +55,6 @@ $button-secondary-border-width-hover: 2px;
     color: $color-blue;
   }
 
-  &:focus:not(.button--disabled),
-  &:hover:not(.button--disabled),
-  &.button--hover:not(.button--disabled) { // For demostrantion purposes only
-    border: solid $button-secondary-border-width-hover currentColor;
-    padding: 0 ($spacing-m - $button-secondary-border-width-hover);
-    line-height: $button-height - ($button-secondary-border-width-hover * 2);
-
-    &::after {
-      background-color: currentColor;
-      opacity: 0.1;
-    }
-    .button__text {
-      height: $button-height - ($button-secondary-border-width-hover);
-    }
-  }
-  &:active {
-    &::before {
-      background-color: currentColor;
-    }
-  }
   &.button--disabled {
     &.button--green {
       color: $color-green-disabled;

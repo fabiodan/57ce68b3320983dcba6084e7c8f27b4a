@@ -62,11 +62,10 @@ const Figure = ({
 }
 
 const Caption = ({ children, className }) => (
-  <caption className={`sg-layout__caption ${className}`}>
+  <div className={`sg-layout__caption ${className}`}>
     { children }
-  </caption>
+  </div>
 )
-
 
 export {
   Layout as default,
