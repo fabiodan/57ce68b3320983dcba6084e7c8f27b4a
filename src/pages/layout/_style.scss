@@ -10,10 +10,6 @@
 }
 
 // Elements/Mixes
-.layout-page__grid-figure {
-  max-width: 768px;
-}
-
 .layout-page__table {
   @include typography(m);
   width: 100%;

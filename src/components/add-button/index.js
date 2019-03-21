@@ -4,17 +4,20 @@ import joinClassNames from 'classnames'
 
 // Components
 import Icon from '@asda/icon'
-import Button, { ButtonIcon } from '@asda/button'
+import Button from '@asda/button'
 
 // Assets
 import './_style.scss'
 
 const UnitSelector = ({ onUnitChange }) => {
   const onChange = (e) => {
-    const target = e.target
-    const isWeighted = target[target.selectedIndex].value === 'kg'
+    const isWeighted = e.target[e.target.selectedIndex].value === 'kg'
 
-    isWeighted ? onUnitChange('weighted') : onUnitChange('both')
+    if (isWeighted) {
+      onUnitChange('weighted')
+    } else {
+      onUnitChange('both')
+    }
   }
   return (
     <div className="add-button__unit-selector">
@@ -32,7 +35,6 @@ const Weight = () => (
 )
 
 const Quantity = ({
-  chilren,
   className,
   unit,
   quantity,
@@ -56,7 +58,7 @@ const Quantity = ({
   return (
     <div className={classNames}>
       <div className="add-button__quantity__container">
-        <Button iconName="minus" className="add-button__minus" onClick={onDecrement} hiddenText/>
+        <Button iconName="minus" className="add-button__minus" onClick={onDecrement} hiddenText />
         <input
           className="add-button__input"
           type="number"
@@ -65,7 +67,7 @@ const Quantity = ({
           onFocus={setFocus}
           onBlur={setFocus}
         />
-        <Button iconName="plus" className="add-button__plus" onClick={onIncrement} hiddenText/>
+        <Button iconName="plus" className="add-button__plus" onClick={onIncrement} hiddenText />
         {unit === 'both' && <UnitSelector onUnitChange={onUnitChange} />}
       </div>
       {unit === 'weighted' && <Weight />}
@@ -81,11 +83,11 @@ class AddButton extends Component {
       isDecimal: false,
       inputFocused: false,
     }
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-    this.changeUnit = this.changeUnit.bind(this);
-    this.setQuantity = this.setQuantity.bind(this);
-    this.setInputFocus = this.setInputFocus.bind(this);
+    this.increment = this.increment.bind(this)
+    this.decrement = this.decrement.bind(this)
+    this.changeUnit = this.changeUnit.bind(this)
+    this.setQuantity = this.setQuantity.bind(this)
+    this.setInputFocus = this.setInputFocus.bind(this)
   }
 
   componentDidMount() {
@@ -119,14 +121,14 @@ class AddButton extends Component {
 
   setInputFocus(isFocused) {
     this.setState({
-      inputFocused: isFocused
+      inputFocused: isFocused,
     })
   }
 
   render() {
     const { children, className, unit } = this.props
     const { quantity, isDecimal, inputFocused } = this.state
-    const kgPerUnit = 0.25;
+    const kgPerUnit = 0.25
     const value = isDecimal ? (quantity * kgPerUnit).toFixed(2) : quantity
 
     return (

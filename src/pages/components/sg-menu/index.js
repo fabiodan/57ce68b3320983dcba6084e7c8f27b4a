@@ -16,7 +16,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Buttons', url: '/buttons' },
     { name: 'Special Buttons (WIP)', url: '/special-buttons' },
     { name: 'Layout', url: '/layout' },
-    { name: 'Spacing (WIP)', url: '/spacing' },
+    { name: 'Spacing', url: '/spacing' },
     { name: 'Text Fields (WIP)', url: '/text-fields' },
     { name: 'Dropdowns (WIP)', url: '/dropdowns' },
     { name: 'Navigation (WIP)', url: '/navigation' },

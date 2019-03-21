@@ -2,11 +2,8 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Button from '@asda/button'
-import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
-
-// Components
 import AddButton from '@asda/add-button'
+import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'

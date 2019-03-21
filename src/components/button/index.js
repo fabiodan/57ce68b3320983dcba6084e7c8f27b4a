@@ -53,7 +53,7 @@ Button.defaultProps = {
   color: 'green',
   disabled: null,
   fluid: false,
-  onClick(){},
+  onClick() {},
 }
 
 export default Button

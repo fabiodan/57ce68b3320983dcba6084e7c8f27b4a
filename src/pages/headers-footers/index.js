@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Paragraph, Subheading, Section, Heading, Figure } from '../components/sg-layout'
+import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
 import gridSVGSource from './images/responsive-layout-grid.svg'
@@ -21,7 +21,7 @@ const LayoutPage = () => (
         Asda grid is made up of three elements: coloumns, gutters & margins.
       </Paragraph>
 
-      <Figure className="layout-page__grid-figure" src={gridSVGSource} />
+      <Figure maxWidth="768px" src={gridSVGSource} />
 
       <Subheading>Columns</Subheading>
       <Paragraph>

@@ -49,11 +49,17 @@ const Subheading = ({ children, className = '' }) => (
   <h3 className={`sg-layout__subheading ${className}`}>{children}</h3>
 )
 
-const Figure = ({ src, alt, className = '' }) => (
-  <figure className={`sg-layout__figure ${className}`}>
-    <img className="sg-layout__figure__img" src={src} alt={alt} />
-  </figure>
-)
+const Figure = ({
+  src, alt, className = '', maxWidth = 'none',
+}) => {
+  const style = { maxWidth }
+
+  return (
+    <figure className={`sg-layout__figure ${className}`} style={style}>
+      <img className="sg-layout__figure__img" src={src} alt={alt} />
+    </figure>
+  )
+}
 
 export {
   Layout as default,

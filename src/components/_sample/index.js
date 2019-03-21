@@ -13,7 +13,6 @@ const Component = ({ children }) => (
 )
 
 const Sample = ({
-  children,
   className,
   color,
   hidden,
@@ -25,7 +24,7 @@ const Sample = ({
   const classNames = joinClassNames('sample', className, modifiers)
 
   return (
-    <div className="sample">
+    <div className={classNames}>
       <Button>Click Here</Button>
       <Component>Some text</Component>
     </div>
