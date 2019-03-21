@@ -48,6 +48,10 @@ $button-secondary-border-width-hover: 2px;
   &.button--hover:not(.button--disabled) { // For demostrantion purposes only
     cursor: pointer;
     box-shadow: $shadow;
+
+    &:active {
+      box-shadow: none;
+    }
   }
 
   &:active {
@@ -103,7 +107,7 @@ $button-secondary-border-width-hover: 2px;
 
 .button--secondary {
   background-color: $color-white;
-  border: solid $button-secondary-border-width $color-medium-gray;
+  border: solid $button-secondary-border-width currentColor;
   padding: 0 $spacing-m - $button-secondary-border-width;
   line-height: $button-height - ($button-secondary-border-width * 2);
 
