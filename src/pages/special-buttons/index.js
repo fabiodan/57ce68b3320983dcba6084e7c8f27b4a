@@ -14,6 +14,14 @@ import { Caption, Heading, Subheading, Paragraph, Section } from '../components/
 // Assets
 import './_style.scss'
 
+const Grid = ({ children }) => (
+  <ul className="special-buttons-page__grid">{children}</ul>
+)
+
+const GridItem = ({ children }) => (
+  <li className="special-buttons-page__grid-item">{children}</li>
+)
+
 const SpecialButtonsPage = () => (
   <article className="special-buttons-page">
     <Heading>Special Buttons</Heading>
@@ -25,24 +33,24 @@ const SpecialButtonsPage = () => (
         similar standads to rest of the website with few special cases.
       </Paragraph>
 
-      <ul className="special-buttons-page__list">
-        <li className="special-buttons-page__item">
+      <Grid>
+        <GridItem>
           <AddButton unit="count" quantity={0} />
           <Caption>Add Button Default <br/>Center Aligned to PM</Caption>
-        </li>
-        <li className="special-buttons-page__item">
+        </GridItem>
+        <GridItem>
           <AddButton unit="count" quantity={1} />
           <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
-        </li>
-        <li className="special-buttons-page__item">
+        </GridItem>
+        <GridItem>
           <AddButton unit="weighted" quantity={2} />
           <Caption>Weighted Product Added <br/>Center Aligned to PM</Caption>
-        </li>
-        <li className="special-buttons-page__item">
+        </GridItem>
+        <GridItem>
           <AddButton unit="both" quantity={1} />
           <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
-        </li>
-      </ul>
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>
@@ -58,11 +66,24 @@ const SpecialButtonsPage = () => (
     <Section>
       <Subheading>External Buttons</Subheading>
       <Paragraph>
-        <AppleWalletButton />
-        <GooglePayButton />
-        <AppStoreButton />
-        <GooglePlayButton />
+        For buttons which take the user to external links, like downloading the
+        app, the following styles can be used.
       </Paragraph>
+
+        <Grid>
+          <GridItem>
+            <AppleWalletButton  />
+          </GridItem>
+          <GridItem>
+            <GooglePayButton  />
+          </GridItem>
+          <GridItem>
+            <AppStoreButton  />
+          </GridItem>
+          <GridItem>
+            <GooglePlayButton />
+          </GridItem>
+        </Grid>
     </Section>
   </article>
 )

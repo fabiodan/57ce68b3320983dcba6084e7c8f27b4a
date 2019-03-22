@@ -10,7 +10,7 @@
 }
 
 // Elements/Mixes
-.button__text {
+.button__content {
   height: $button-height;
   position: relative;
   z-index: 1;
@@ -77,7 +77,7 @@
   .button__icon {
     margin-right: 0;
   }
-  .button__text {
+  .button__content {
     display: none; // TODO: use visuallyHidden instead of display: none
   }
 }

@@ -4,6 +4,7 @@
 @import "@asda/core/style";
 @import "@asda/button/mixins";
 
+// Block
 .external-button {
   @include button_base;
   @include button_secondary_base;
@@ -18,9 +19,31 @@
       background-color: $color-transparent;
     }
   }
-  &:active {
+  &:active:not(.button--disabled) {
     &::before {
       background-color: $color-transparent;
     }
   }
+}
+
+// Elements/Mixes
+.external-button__image-apple {
+  position: relative;
+  bottom: 2px;
+}
+
+// Modifiers
+.external-button__image--start {
+  // (Exception) The margin 6px goes off the spacing system,
+  // because 4px is not balanced for that scenario.
+  margin-right: 6px;
+}
+
+.external-button__image--middle {
+  margin-left: $spacing-xxs;
+  margin-right: $spacing-xxs;
+}
+
+.button--fluid {
+  width: 100%;
 }

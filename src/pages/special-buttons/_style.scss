@@ -10,7 +10,7 @@
 }
 
 // Elements/Mixes
-.special-buttons-page__list {
+.special-buttons-page__grid {
   max-width: 480px;
   list-style: none;
   padding: 0;
@@ -20,13 +20,13 @@
   grid-gap: 0 $spacing-xs;
 }
 
-.special-buttons-page__item {
+.special-buttons-page__grid-item {
   padding: $spacing-m 0;
 }
 
 // Breakpoints
 @media (min-width: 480px) {
-  .special-buttons-page__list {
+  .special-buttons-page__grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0 $spacing-m;

@@ -43,7 +43,7 @@ const Button = ({
       { loading && <ButtonIcon><Spinner color={iconColor} /></ButtonIcon> }
       { iconName && <Icon className="button__icon" name={iconName} color={iconColor} /> }
 
-      <span className="button__text">{children}</span>
+      <span className="button__content">{children}</span>
     </button>
   )
 }
