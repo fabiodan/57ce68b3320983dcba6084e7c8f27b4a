@@ -1,0 +1,22 @@
+/* Links Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "../components/sg-core/style";
+
+// Block
+.links-page {
+
+}
+
+// Elements/Mixes
+.links-page__paragraph-example {
+  @include typography(m);
+}
+// Modifiers
+
+.links-page__link--border {
+  border: dashed 1px $color-medium-gray;
+  border-radius: 4px;
+  box-sizing: content-box;
+}

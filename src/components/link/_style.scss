@@ -1,0 +1,48 @@
+/* Link Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.link {
+  // From https://necolareds.github.io/normalize.css/7.0.0/normalize.css
+  // 1. Remove the gray background on active links in IE 10.
+  // 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+  text-decoration: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 600;
+  color: $color-blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+// Modifiers
+.link--button {
+  font-family: $typography-font-family;
+  @include typography(l);
+  height: 40px;
+  padding: 0 12px;
+  text-decoration: none;
+  margin: 1px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.link--left {
+  padding: 0 16px 0 8px;
+  text-align: left;
+}
+
+.link--right {
+  padding: 0 8px 0 16px;
+  text-align: right;
+}

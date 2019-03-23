@@ -23,6 +23,7 @@ import OverviewPage from './pages/overview'
 import TypographyPage from './pages/typography'
 import ColorSchemePage from './pages/color-scheme'
 import ButtonsPage from './pages/buttons'
+import LinksPage from './pages/links'
 import SpecialButtonsPage from './pages/special-buttons'
 import LayoutPage from './pages/layout'
 import SpacingPage from './pages/spacing'
@@ -105,6 +106,7 @@ ReactDOM.render(
         <Route path="/typography" component={TypographyPage} />
         <Route path="/color-scheme" component={ColorSchemePage} />
         <Route path="/buttons" component={ButtonsPage} />
+        <Route path="/links" component={LinksPage} />
         <Route path="/special-buttons" component={SpecialButtonsPage} />
         <Route path="/layout" component={LayoutPage} />
         <Route path="/spacing" component={SpacingPage} />

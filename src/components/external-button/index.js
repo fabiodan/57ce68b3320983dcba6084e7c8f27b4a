@@ -4,7 +4,6 @@ import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Image from '@asda/image'
-import Button from '@asda/button'
 
 // Assets
 import appleSVGSource from '../../assets/images/apple.svg'

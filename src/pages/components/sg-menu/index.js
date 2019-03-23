@@ -14,6 +14,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Typography', url: '/typography' },
     { name: 'Color Scheme', url: '/color-scheme' },
     { name: 'Buttons', url: '/buttons' },
+    { name: 'Links (WIP)', url: '/links' },    
     { name: 'Special Buttons (WIP)', url: '/special-buttons' },
     { name: 'Layout', url: '/layout' },
     { name: 'Spacing', url: '/spacing' },
