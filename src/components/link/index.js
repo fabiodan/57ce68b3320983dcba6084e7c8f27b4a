@@ -1,11 +1,13 @@
 // Libs
-import React, { Fragment } from 'react'
+import React from 'react'
 import joinClassNames from 'classnames'
 
 // Assets
 import './_style.scss'
 
-const LinkText = ({ children, className, href, target, color}) => {
+const LinkText = ({
+  children, className, href, target, color,
+}) => {
   const modifiers = [
 
     // Use that modifier to make a text link to

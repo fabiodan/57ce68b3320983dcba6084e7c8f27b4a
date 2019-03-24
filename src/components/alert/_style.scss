@@ -8,6 +8,7 @@ $alert-border-width: 2px;
 
 // Block
 .alert {
+  width: 100%;
   position: static;
   background: $color-yellow-transparent;
   border: solid 2px $color-yellow;

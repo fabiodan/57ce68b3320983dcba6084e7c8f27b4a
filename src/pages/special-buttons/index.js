@@ -36,24 +36,24 @@ const SpecialButtonsPage = () => (
       <Grid>
         <GridItem>
           <AddButton unit="count" quantity={0} />
-          <Caption>Add Button Default <br/>Center Aligned to PM</Caption>
+          <Caption>Add Button Default <br />Center Aligned to PM</Caption>
         </GridItem>
         <GridItem>
           <AddButton unit="count" quantity={1} />
-          <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
+          <Caption>Product Added Default <br />Center Aligned to PM</Caption>
         </GridItem>
         <GridItem>
           <AddButton unit="weighted" quantity={2} />
-          <Caption>Weighted Product Added <br/>Center Aligned to PM</Caption>
+          <Caption>Weighted Product Added <br />Center Aligned to PM</Caption>
         </GridItem>
         <GridItem>
           <AddButton unit="both" quantity={1} />
-          <Caption>Product Added Default <br/>Center Aligned to PM</Caption>
+          <Caption>Product Added Default <br />Center Aligned to PM</Caption>
         </GridItem>
       </Grid>
     </Section>
 
-    <Section>
+    {/* <Section>
       <Subheading>Recipes Buttons</Subheading>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
@@ -61,7 +61,7 @@ const SpecialButtonsPage = () => (
         tempore corrupti fugit vel nostrum voluptatem nobis cupiditate, natus
         illo asperiores?
       </Paragraph>
-    </Section>
+    </Section> */}
 
     <Section>
       <Subheading>External Buttons</Subheading>
@@ -70,20 +70,20 @@ const SpecialButtonsPage = () => (
         app, the following styles can be used.
       </Paragraph>
 
-        <Grid>
-          <GridItem>
-            <AppleWalletButton  />
-          </GridItem>
-          <GridItem>
-            <GooglePayButton  />
-          </GridItem>
-          <GridItem>
-            <AppStoreButton  />
-          </GridItem>
-          <GridItem>
-            <GooglePlayButton />
-          </GridItem>
-        </Grid>
+      <Grid>
+        <GridItem>
+          <AppleWalletButton />
+        </GridItem>
+        <GridItem>
+          <GooglePayButton />
+        </GridItem>
+        <GridItem>
+          <AppStoreButton />
+        </GridItem>
+        <GridItem>
+          <GooglePlayButton />
+        </GridItem>
+      </Grid>
     </Section>
   </article>
 )

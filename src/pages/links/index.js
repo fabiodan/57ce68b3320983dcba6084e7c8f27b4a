@@ -4,7 +4,7 @@ import React from 'react'
 // Components (from atomic to composite)
 import { LinkStandalone, LinkText } from '@asda/link'
 import Alert from '@asda/alert'
-import { Caption, Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -75,39 +75,28 @@ const LinksPage = () => (
       <Paragraph keepMargin>
         Links within alerts and other alerts should follow the standard
         text style for that component along with an underline and a heavier
-        weight (semi-bold in most cases)
+        weight (semi-bold in most cases).
       </Paragraph>
-
-    <Alert>
-      Delays to delivery due to severe weather.
-      Check
-      your <LinkText color="inherit" href="#">order status</LinkText> for
-      latest udpates.
-    </Alert>
-
-    <Alert iconName="alert">
-      Delays to delivery due to severe weather.
-      Check
-      your <LinkText color="inherit" href="#">order status</LinkText> for
-      latest udpates.
-    </Alert>
-
-    <Alert type="temporary">
-      Delays to delivery due to severe weather.
-      Check
-      your <LinkText color="inherit" href="#">order status</LinkText> for
-      latest udpates.
-    </Alert>
-
-    <Alert iconName="alert" type="temporary">
-      Delays to delivery due to severe weather.
-      Check
-      your <LinkText color="inherit" href="#">order status</LinkText> for
-      latest udpates.
-    </Alert>
-
+      <ul className="links-page__alert-grid">
+        <li className="links-page__alert-grid-item">
+          <Caption className="links-page__alert-caption">Inline temporary Alert with a clickable link</Caption>
+          <Alert type="temporary">
+          This is an alert message with
+          a <LinkText color="inherit" href="#">clickable link</LinkText>.
+          </Alert>
+        </li>
+        <li className="links-page__alert-grid-item">
+          <Caption className="links-page__alert-caption">Inline temporary Alert with an icon</Caption>
+          <Alert iconName="alert" type="temporary">
+          Delays to delivery due to severe weather.
+          Check
+          your <LinkText color="inherit" href="#">order status</LinkText> for
+          latest udpates.
+          </Alert>
+        </li>
+      </ul>
+      <Paragraph>Link text should be descriptive to what it is linking too.</Paragraph>
     </Section>
-
   </article>
 )
 

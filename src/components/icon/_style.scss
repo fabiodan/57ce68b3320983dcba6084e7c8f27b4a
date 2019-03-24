@@ -2,6 +2,7 @@
 
 // Dependencies
 @import "@asda/core/style";
+@import "@asda/button/mixins";
 
 // Block
 .icon {
@@ -10,6 +11,27 @@
   justify-content: center;
   vertical-align: middle; // Keep inline elements vertically aligned
   fill: $color-charcoal;
+}
+
+// Elements/Mixes
+.icon__button {
+  @include button_base;
+  padding: 0;
+  height: auto;
+  width: auto;
+
+  &:focus:not(.button--disabled),
+  &:hover:not(.button--disabled) {
+    box-shadow: none;
+    &::after {
+      background-color: $color-black;
+      opacity: 0.1;
+    }
+  }
+}
+
+.icon__svg {
+  vertical-align: middle; // Correct image alignment
 }
 
 // Modifiers

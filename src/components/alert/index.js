@@ -3,7 +3,7 @@ import React from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
-import Icon from '@asda/icon'
+import Icon, { IconButton } from '@asda/icon'
 
 // Assets
 import './_style.scss'
@@ -15,12 +15,11 @@ const Alert = ({
   hidden,
   type,
   iconName,
-  open,
 }) => {
   const modifiers = [
     !!color && `alert--${color}`,
     !!type && `alert--${type}`,
-    !!iconName && `alert--with-icon`,
+    !!iconName && 'alert--with-icon',
     hidden && 'alert--hidden',
   ]
   const classNames = joinClassNames('alert', className, modifiers)
@@ -29,10 +28,12 @@ const Alert = ({
     <dialog className={classNames} open>
       <div className="alert__container">
         { iconName &&
-        <Icon className="alert__icon" size="x-small" name={iconName}/> }
+        <Icon className="alert__icon" size="x-small" name={iconName} /> }
+
         { children }
+
         { type === 'temporary' &&
-        <Icon className="alert__icon-close" size="x-small" name="close"/> }
+        <IconButton className="alert__icon-close" size="x-small" name="close" /> }
       </div>
     </dialog>
   )

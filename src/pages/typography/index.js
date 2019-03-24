@@ -61,7 +61,7 @@ const TypographyPage = () => (
       </Paragraph>
 
       {/* <Paragraph> */}
-        {/* <a href="https://github.com/adobe-fonts/source-sans-pro/archive/release.zip">Download</a> */}
+      {/* <a href="https://github.com/adobe-fonts/source-sans-pro/archive/release.zip">Download</a> */}
       {/* </Paragraph> */}
     </Section>
 

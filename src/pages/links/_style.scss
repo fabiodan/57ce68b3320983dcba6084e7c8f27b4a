@@ -14,7 +14,8 @@
   @include typography(m);
 }
 
-.links-page__grid {
+.links-page__grid,
+.links-page__alert-grid {
   max-width: 480px;
   list-style: none;
   padding: 0;
@@ -24,11 +25,22 @@
   grid-gap: 0 $spacing-xs;
 }
 
-.links-page__grid-item {
+.links-page__alert-grid {
+  grid-template-rows: 1fr 1fr;
+}
+
+.links-page__grid-item,
+.links-page__alert-grid-item {
   padding: $spacing-m 0;
+}
+
+.links-page__grid-item {
   max-width: 160px;
 }
 
+.links-page__alert-caption {
+  margin-bottom: $spacing-m;
+}
 // Modifiers
 .links-page__link--border {
   border: dashed 1px $color-medium-gray;

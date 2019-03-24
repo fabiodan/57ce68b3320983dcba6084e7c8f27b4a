@@ -10,14 +10,13 @@ import './_style.scss'
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
-    { name: 'Overview (WIP)', url: '/overview' },
-    { name: 'Typography', url: '/typography' },
     { name: 'Color Scheme', url: '/color-scheme' },
-    { name: 'Buttons', url: '/buttons' },
-    { name: 'Links (WIP)', url: '/links' },    
-    { name: 'Special Buttons (WIP)', url: '/special-buttons' },
+    { name: 'Typography', url: '/typography' },
     { name: 'Layout', url: '/layout' },
     { name: 'Spacing', url: '/spacing' },
+    { name: 'Buttons', url: '/buttons' },
+    { name: 'Links', url: '/links' },
+    { name: 'Special Buttons', url: '/special-buttons' },
     { name: 'Text Fields (WIP)', url: '/text-fields' },
     { name: 'Dropdowns (WIP)', url: '/dropdowns' },
     { name: 'Navigation (WIP)', url: '/navigation' },
@@ -26,7 +25,6 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Miscellaneous (WIP)', url: '/miscellaneous' },
     { name: 'Modals (WIP)', url: '/modals' },
     { name: 'Accordians (WIP)', url: '/accordians' },
-    { name: 'Headers & Footers (WIP)', url: '/headers-footers' },
   ]
 
   return (
