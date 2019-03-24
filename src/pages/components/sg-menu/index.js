@@ -3,8 +3,10 @@ import React, { Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 
+// Components (from atomic to composite)
+import { IconButton } from '@asda/icon'
+
 // Assets
-import CloseSvgSource from '../../../assets/images/asda-close.svg'
 import './_style.scss'
 
 const Menu = ({ toggleMenu }) => {
@@ -53,9 +55,7 @@ const ItemsList = (props) => {
   return (
     <nav className="sg-menu">
       <MediaQuery query="(max-width: 767px)">
-        <button className="sg-menu__close-button" onClick={toggleMenu}>
-          <img src={CloseSvgSource} alt="Close" />
-        </button>
+        <IconButton name="close" className="sg-menu__close-button" onClick={toggleMenu} />
       </MediaQuery>
       <ul className="sg-menu__list">{items}</ul>
     </nav>

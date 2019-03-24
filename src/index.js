@@ -9,10 +9,10 @@ import {
 } from 'react-router-dom'
 
 // Assets
-import MenuSvgSource from './assets/images/asda-menu.svg'
 import './_style.scss'
 
 // Components (from atomic to composite)
+import { IconButton } from '@asda/icon'
 import Logo from './pages/components/sg-logo'
 import Menu from './pages/components/sg-menu'
 import { Header, Aside, Main } from './pages/components/sg-layout'
@@ -58,9 +58,11 @@ class Page extends Component {
       <Fragment>
         <MediaQuery query="(max-width: 767px)">
           <Header>
-            <button className="sg-layout__header__menu-button" onClick={this.toggleMenu}>
-              <img src={MenuSvgSource} alt="Menu" />
-            </button>
+            <IconButton
+              className="sg-layout__header__menu-button"
+              name="menu"
+              onClick={this.toggleMenu}
+            />
             <Logo className="sg-layout__header__logo" />
           </Header>
         </MediaQuery>

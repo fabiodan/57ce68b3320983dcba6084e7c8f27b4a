@@ -7,9 +7,13 @@
   display: flex;
 }
 
-.sg-asda-logo__image {
+.sg-asda-logo__svg {
   vertical-align: middle;
   height: 24px;
+}
+
+.sg-asda-logo__path {
+  fill: #78be20
 }
 
 .sg-asda-logo__text {
@@ -17,7 +21,7 @@
 }
 
 @media (min-width: 768px) {
-  .sg-asda-logo__image {
+  .sg-asda-logo__svg {
     height: 41px;
   }
 
