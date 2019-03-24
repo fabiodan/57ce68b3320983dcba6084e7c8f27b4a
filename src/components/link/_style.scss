@@ -27,9 +27,8 @@
   font-family: $typography-font-family;
   @include typography(l);
   height: 40px;
-  padding: 0 12px;
+  padding: 0 $spacing-s;
   text-decoration: none;
-  margin: 1px;
 
   &:hover {
     text-decoration: underline;
@@ -38,11 +37,17 @@
 }
 
 .link--left {
-  padding: 0 16px 0 8px;
+  padding: 0 $spacing-m 0 $spacing-xs;
   text-align: left;
 }
 
 .link--right {
-  padding: 0 8px 0 16px;
+  padding: 0 $spacing-xs 0 $spacing-m;
   text-align: right;
+}
+
+// Use that modifier to make a text link to
+// inherit the color from the current text.
+.link--inherit {
+  color: inherit;
 }

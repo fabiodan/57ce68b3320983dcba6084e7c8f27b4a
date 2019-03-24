@@ -18,8 +18,8 @@ const Sample = ({
   hidden,
 }) => {
   const modifiers = [
-    !!color && `button--${color}`,
-    hidden && 'button--hidden',
+    !!color && `sample--${color}`,
+    hidden && 'sample--hidden',
   ]
   const classNames = joinClassNames('sample', className, modifiers)
 

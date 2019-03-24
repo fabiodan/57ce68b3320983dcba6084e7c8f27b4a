@@ -23,7 +23,7 @@ $sg-layout__aside-width: 300px;
 }
 
 .sg-layout__section {
-  padding: $spacing-xxl 0;
+  padding: $spacing-xxxl 0;
   border-bottom: solid 1px $color-medium-gray;
   &:last-of-type {
     border-bottom: none;
@@ -103,13 +103,13 @@ $sg-layout__aside-width: 300px;
   font-size: 3rem;
   font-weight: normal;
   margin: 0;
-  padding: $spacing-xxl 0;
+  padding: $spacing-xxxl 0;
   border-bottom: solid 1px $color-medium-gray;
 }
 
 .sg-layout__paragraph {
   @include typography(l);
-  margin: 0 0 $spacing-xxl 0;
+  margin: 0 0 $spacing-xxxl 0;
   overflow-wrap: break-word;
 
   // Remove bottom margin for the last paragraph on each section.
@@ -121,7 +121,7 @@ $sg-layout__aside-width: 300px;
 }
 
 .sg-layout__figure {
-  margin: 0 0 $spacing-xxl 0;
+  margin: 0 0 $spacing-xxxl 0;
 }
 
 .sg-layout__figure__img {
@@ -143,7 +143,7 @@ $sg-layout__aside-width: 300px;
 // Keeps the bottom margin for the last paragraph on each section
 .sg-layout__paragraph--keep-margin {
   &:last-of-type {
-    margin: 0 0 $spacing-xxl 0;
+    margin: 0 0 $spacing-xxxl 0;
   }
 }
 
@@ -175,11 +175,11 @@ $sg-layout__aside-width: 300px;
 
   .sg-layout__main {
     width: calc(100% - #{$sg-layout__aside-width});
-    padding: 0 $spacing-xxl $spacing-xxl $spacing-xxl;
+    padding: 0 $spacing-xxxl $spacing-xxxl $spacing-xxxl;
   }
 
   .sg-layout__heading,
   .sg-layout__section {
-    padding: $spacing-xxxl 0;
+    padding: 80px 0;
   }
 }

@@ -11,7 +11,7 @@
 
 // Elements/Mixes
 .typography-page__typescale {
-  margin-top: $spacing-xxl;
+  margin-top: $spacing-xxxl;
 }
 
 .typography-page__weight-definition,
@@ -34,7 +34,7 @@
 
 .typography-page__weight-list {
   max-width: 580px;
-  margin: $spacing-xxl auto $spacing-l auto;
+  margin: $spacing-xxxl auto $spacing-l auto;
   padding: 0;
   display: flex;
   list-style: none;
@@ -71,7 +71,7 @@
   }
 
   .typography-page__weight-list {
-    margin: $spacing-xxxl auto $spacing-xxl auto;
+    margin: 80px auto $spacing-xxxl auto;
   }
 
   .typography-page__weight-example {

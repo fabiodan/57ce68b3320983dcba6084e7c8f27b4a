@@ -1,0 +1,55 @@
+/* Alert Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Variables
+$alert-border-width: 2px;
+
+// Block
+.alert {
+  position: static;
+  background: $color-yellow-transparent;
+  border: solid 2px $color-yellow;
+  border-radius: 4px;
+
+  // Some components do have internal padding which is not
+  // standard to maintain the height of the component itself.
+  padding: ($spacing-s - $alert-border-width) 0;
+}
+
+// Elements/Mixes
+.alert__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 $spacing-m;
+}
+
+.alert__icon,
+.alert__icon-close {
+  position: absolute;
+
+  // Some components do have internal padding which is not
+  // standard to maintain the height of the component itself.
+  top: -($alert-border-width);
+  left: $spacing-xs;
+}
+
+.alert__icon-close {
+  left: auto;
+  right: $spacing-xs;
+}
+
+// Modifiers
+.alert--temporary {
+  .alert__container {
+    padding-right: $spacing-xxl;
+  }
+}
+
+.alert--with-icon {
+  .alert__container {
+    padding-left: $spacing-xxl;
+  }
+}

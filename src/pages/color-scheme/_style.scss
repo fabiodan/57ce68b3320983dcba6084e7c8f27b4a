@@ -11,7 +11,7 @@ $color-sample-padding: $spacing-m;
 .color-page__color-list {
   list-style: none;
   padding: 0;
-  margin: $spacing-xxl 0 0 0;
+  margin: $spacing-xxxl 0 0 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: $spacing-m;
@@ -97,15 +97,20 @@ $color-sample-padding: $spacing-m;
   background: $color-background-gray;
 }
 
-.color-page--transparent-charcoal {
+.color-page--charcoal-transparent {
   background: $color-charcoal-transparent;
+}
+
+.color-page--yellow-transparent {
+  background: $color-yellow-transparent;
 }
 
 .color-page--yellow,
 .color-page--medium-gray,
 .color-page--light-gray,
 .color-page--background-gray,
-.color-page--transparent-charcoal {
+.color-page--charcoal-transparent,
+.color-page--yellow-transparent {
   .color-page__color-name,
   .color-page__color-hex,
   .color-page__color-rgb {

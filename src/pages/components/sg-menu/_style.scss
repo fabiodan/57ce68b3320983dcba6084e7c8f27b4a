@@ -36,8 +36,8 @@ $sg-menu-item-height: 60px;
 
 .sg-menu__close-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: $spacing-xs;
+  right: $spacing-xs;
   height: 30px;
   width: 30px;
   overflow: hidden;

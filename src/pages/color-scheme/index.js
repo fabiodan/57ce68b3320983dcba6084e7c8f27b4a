@@ -136,12 +136,18 @@ const ColorSchemePage = () => (
 
     <Section>
       <Subheading>Transparent Background</Subheading>
-      <Paragraph>
-        Use charcoal with 50% opacity for overlays below modals, popups, etc.
-      </Paragraph>
       <ColorList>
         <ColorItem>
-          <ColorSample color="transparent-charcoal" name="Charcoal (50%)" hex="3D3D3D" rgba="61, 61, 61, 0.5" />
+          <ColorSample color="charcoal-transparent" name="Charcoal (50%)" hex="3D3D3D" rgba="61, 61, 61, 0.5" />
+          <ColorDescription>
+            Use charcoal with 50% opacity for overlays below modals, popups, etc.
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="yellow-transparent" name="Carlifornia Gold (20%)" hex="F7CC00" rgba="247, 204, 0, 0.2" />
+          <ColorDescription>
+            Use California Gold with 20% opacity for alerts.
+          </ColorDescription>
         </ColorItem>
       </ColorList>
     </Section>

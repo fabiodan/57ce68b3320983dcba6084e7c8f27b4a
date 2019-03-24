@@ -2,7 +2,8 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { LinkButton, LinkAnchor } from '@asda/link'
+import { LinkStandalone, LinkText } from '@asda/link'
+import Alert from '@asda/alert'
 import { Caption, Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -30,25 +31,25 @@ const LinksPage = () => (
       </Paragraph>
       <Grid>
         <GridItem>
-          <LinkButton align="left">link button</LinkButton>
+          <LinkStandalone align="left">link button</LinkStandalone>
           <Caption>Standalone button Left aligned Default</Caption>
         </GridItem>
         <GridItem>
-          <LinkButton>link button</LinkButton>
+          <LinkStandalone>link button</LinkStandalone>
           <Caption>standalone button Center aligned Default</Caption>
         </GridItem>
         <GridItem>
-          <LinkButton align="right">link button</LinkButton>
+          <LinkStandalone align="right">link button</LinkStandalone>
           <Caption>standalone button Right aligned Hover</Caption>
         </GridItem>
         <GridItem>
-          <LinkButton className="links-page__link--border" align="left">link button</LinkButton>
+          <LinkStandalone className="links-page__link--border" align="left">link button</LinkStandalone>
         </GridItem>
         <GridItem>
-          <LinkButton className="links-page__link--border">link button</LinkButton>
+          <LinkStandalone className="links-page__link--border">link button</LinkStandalone>
         </GridItem>
         <GridItem>
-          <LinkButton className="links-page__link--border" align="right">link button</LinkButton>
+          <LinkStandalone className="links-page__link--border" align="right">link button</LinkStandalone>
         </GridItem>
       </Grid>
       <Paragraph>
@@ -61,21 +62,49 @@ const LinksPage = () => (
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat <LinkAnchor href="https://www.asda.com">link text</LinkAnchor>.
+        commodo consequat <LinkText href="https://www.asda.com">link text</LinkText>.
         Duis aute irure
         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
         nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum <LinkAnchor href="https://www.asda.com">link text</LinkAnchor>.
+        culpa qui officia deserunt mollit anim id est laborum <LinkText href="https://www.asda.com">link text</LinkText>.
       </Paragraph>
     </Section>
 
     <Section>
-      <Subheading>Links in alerts & notifications</Subheading>
+      <Subheading>Links in alerts & alerts</Subheading>
       <Paragraph keepMargin>
-        Links within alerts and other notifications should follow the standard
+        Links within alerts and other alerts should follow the standard
         text style for that component along with an underline and a heavier
         weight (semi-bold in most cases)
       </Paragraph>
+
+    <Alert>
+      Delays to delivery due to severe weather.
+      Check
+      your <LinkText color="inherit" href="#">order status</LinkText> for
+      latest udpates.
+    </Alert>
+
+    <Alert iconName="alert">
+      Delays to delivery due to severe weather.
+      Check
+      your <LinkText color="inherit" href="#">order status</LinkText> for
+      latest udpates.
+    </Alert>
+
+    <Alert type="temporary">
+      Delays to delivery due to severe weather.
+      Check
+      your <LinkText color="inherit" href="#">order status</LinkText> for
+      latest udpates.
+    </Alert>
+
+    <Alert iconName="alert" type="temporary">
+      Delays to delivery due to severe weather.
+      Check
+      your <LinkText color="inherit" href="#">order status</LinkText> for
+      latest udpates.
+    </Alert>
 
     </Section>
 

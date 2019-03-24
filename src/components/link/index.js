@@ -5,8 +5,13 @@ import joinClassNames from 'classnames'
 // Assets
 import './_style.scss'
 
-const LinkAnchor = ({ children, className, href, target}) => {
-  const modifiers = []
+const LinkText = ({ children, className, href, target, color}) => {
+  const modifiers = [
+
+    // Use that modifier to make a text link to
+    // inherit the color from the current text.
+    color && `link--${color}`,
+  ]
   const classNames = joinClassNames('link', className, modifiers)
 
   return (
@@ -14,11 +19,10 @@ const LinkAnchor = ({ children, className, href, target}) => {
   )
 }
 
-
-const LinkButton = ({ children, className, align }) => {
+const LinkStandalone = ({ children, className, align }) => {
   const modifiers = [
     'link--button',
-    align && `link--${align}`,
+    !!align && `link--${align}`,
   ]
 
   const classNames = joinClassNames('link', className, modifiers)
@@ -28,8 +32,7 @@ const LinkButton = ({ children, className, align }) => {
   )
 }
 
-
 export {
-  LinkAnchor,
-  LinkButton,
+  LinkText,
+  LinkStandalone,
 }
