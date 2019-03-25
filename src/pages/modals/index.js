@@ -2,9 +2,18 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
+import dialogSVGSource from '../../assets/images/modals-page-dialog.svg'
+import infoModal768SVGSource from '../../assets/images/modals-page-info-modal-768.svg'
+import infoModal360SVGSource from '../../assets/images/modals-page-info-modal-360.svg'
+import infoModal360WithIconSVGSource from '../../assets/images/modals-page-info-modal-360-with-icon.svg'
+import scrollableModal768SVGSource from '../../assets/images/modals-page-scrollable-modal-768.svg'
+import scrollableModal360SVGSource from '../../assets/images/modals-page-scrollable-modal-360.svg'
+import avoidLinksSVGSource from '../../assets/images/modals-page-avoid-links.svg'
+import paddingModal768SVGSource from '../../assets/images/modals-page-padding-modal-768.svg'
+import paddingModal360SVGSource from '../../assets/images/modals-page-padding-modal-360.svg'
 import './_style.scss'
 
 const Component = ({ children }) => (
@@ -24,7 +33,7 @@ const ModalsPage = () => (
         a child window in front of it. Users must interact with the modal window
         before they can return to the parent application.
       </Paragraph>
-      <Paragraph>
+      <Paragraph noMargin>
         Modals are purposefully interruptive and should be used sparingly.
       </Paragraph>
     </Section>
@@ -35,7 +44,12 @@ const ModalsPage = () => (
         A dialog is a type of modal window that provides critical information or
         asks for a decision before user can continue with the journey.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Figure
+        maxWidth="772px"
+        src={dialogSVGSource}
+        caption="Slot reserved Dialog (768PX)"
+        noMargin
+      />
     </Section>
 
     <Section>
@@ -51,7 +65,46 @@ const ModalsPage = () => (
         Ideally, the content should be short and digestible, avoid long content
         as the modal will interupt the user journey.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Figure
+        maxWidth="768px"
+        src={infoModal768SVGSource}
+        caption="Informational Modal (768px)"
+      />
+      <div className="modals-page__img-container">
+        <Figure
+          className="modals-page__figure"
+          maxWidth="360px"
+          src={infoModal360SVGSource}
+          caption="Informational Modal (360px)"
+        />
+        <Figure
+          maxWidth="360px"
+          src={infoModal360WithIconSVGSource}
+          caption="Informational Modal with icon (360px)"
+          noMargin
+        />
+      </div>
+    </Section>
+
+    <Section>
+      <Subheading>Scrollable Modal</Subheading>
+      <Paragraph>
+        Modals where the content is more than the height of the screen, use
+        scrollable version. Maintain substantial padding around the modal to
+        remind the user that he is a modal, while giving him enough space to
+        perform the tasks.
+      </Paragraph>
+      <Figure
+        maxWidth="768px"
+        src={scrollableModal768SVGSource}
+        caption="Scrollable Modal (768px)"
+      />
+      <Figure
+        maxWidth="768px"
+        src={scrollableModal360SVGSource}
+        caption="Scrollable Modal (360px)"
+        noMargin
+      />
     </Section>
 
     <Section>
@@ -64,7 +117,12 @@ const ModalsPage = () => (
         In situations when links are neccessary, open a new tab in the
         background while leaving the modal and the user on the current screen.
       </Paragraph>
-      <Component>Examples Here</Component>
+
+      <Figure
+        maxWidth="768px"
+        src={avoidLinksSVGSource}
+        noMargin
+      />
     </Section>
 
     <Section>
@@ -74,7 +132,17 @@ const ModalsPage = () => (
         For smaller size, 24px all around margin should be maintained, for case
         with limited space, the side margins can be reduced to 16px.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Figure
+        maxWidth="798px"
+        src={paddingModal768SVGSource}
+        caption="Informational Modal (768px)"
+      />
+      <Figure
+        maxWidth="387px"
+        src={paddingModal360SVGSource}
+        caption="Informational Modal (360px)"
+        noMargin
+      />
     </Section>
   </article>
 )

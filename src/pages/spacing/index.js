@@ -16,7 +16,7 @@ const SpacingPage = () => (
 
     <Section>
       <Subheading>Structure</Subheading>
-      <Paragraph keepMargin>
+      <Paragraph>
         To achieve good visual balance, most measurements align to a 4px scale,
         with 8px being the preffered standard scale.
       </Paragraph>
@@ -32,7 +32,7 @@ const SpacingPage = () => (
         method along with keylines, measured in increments of 8dp
         (or 4dp in certain cases).
       </Paragraph>
-      <Paragraph keepMargin>
+      <Paragraph>
         Padding should be used in combination with the responsive layout grid to
         place elements consistently across a design.
       </Paragraph>

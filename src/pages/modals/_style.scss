@@ -8,3 +8,20 @@
 .modals-page {
 
 }
+
+// Elements/Mixes
+.modals-page__img-container {
+  display: inline-block;
+}
+
+// Breakpoints
+@media (min-width: 1024px) {
+  .modals-page__img-container {
+    max-width: 772px;
+    display: flex;
+    justify-content: space-between;
+    .modals-page__figure {
+      margin-right: $spacing-m;
+    }
+  }
+}

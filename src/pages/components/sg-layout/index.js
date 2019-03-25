@@ -33,10 +33,9 @@ const Heading = ({ children, className = '' }) => (
   <h2 className={`sg-layout__heading ${className}`}>{children}</h2>
 )
 
-const Paragraph = ({ children, className, keepMargin }) => {
+const Paragraph = ({ children, className, noMargin }) => {
   const modifiers = [
-    // Keeps the bottom margin for the last paragraph on each section
-    keepMargin && 'sg-layout__paragraph--keep-margin',
+    noMargin && 'sg-layout__paragraph--no-margin',
   ]
   const classNames = joinClassNames('sg-layout__paragraph', className, modifiers)
 
@@ -50,12 +49,17 @@ const Subheading = ({ children, className = '' }) => (
 )
 
 const Figure = ({
-  src, alt, className = '', maxWidth = 'none',
+  src, alt, className = '', maxWidth = 'none', caption = null, noMargin
 }) => {
+  const modifiers = [
+    noMargin && 'sg-layout__figure--no-margin',
+  ]
+  const classNames = joinClassNames('sg-layout__figure', className, modifiers)
   const style = { maxWidth }
 
   return (
-    <figure className={`sg-layout__figure ${className}`} style={style}>
+    <figure className={classNames} style={style}>
+      { caption && <figcaption className="sg-layout__figure__caption">{caption}</figcaption> }
       <img className="sg-layout__figure__img" src={src} alt={alt} />
     </figure>
   )

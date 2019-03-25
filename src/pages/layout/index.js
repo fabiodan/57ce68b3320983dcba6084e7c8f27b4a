@@ -35,7 +35,7 @@ const LayoutPage = () => (
       </Paragraph>
 
       <Subheading>Gutters and Margins</Subheading>
-      <Paragraph>
+      <Paragraph noMargin>
         Gutters are the spaces between columns, while margins are the spaces
         between the columns and the left and right edge of the screen. Unlike
         columns, to better adapt to different screens and maintain consistency,
@@ -50,7 +50,7 @@ const LayoutPage = () => (
         column structures. Layouts using 4-column, 8-column, and 12-column grids
         are available for use across different screens, devices, and orientations.
       </Paragraph>
-      <Paragraph keepMargin>
+      <Paragraph>
         Each breakpoint range determines the number of columns, and recommended
         margins and gutters, for each display size.
       </Paragraph>

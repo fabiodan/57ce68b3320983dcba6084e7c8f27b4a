@@ -58,7 +58,7 @@ const LinksPage = () => (
         alignment.
       </Paragraph>
 
-      <Paragraph className="links-page__paragraph-example">
+      <Paragraph className="links-page__paragraph-example" noMargin>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -72,7 +72,7 @@ const LinksPage = () => (
 
     <Section>
       <Subheading>Links in alerts & alerts</Subheading>
-      <Paragraph keepMargin>
+      <Paragraph>
         Links within alerts and other alerts should follow the standard
         text style for that component along with an underline and a heavier
         weight (semi-bold in most cases).

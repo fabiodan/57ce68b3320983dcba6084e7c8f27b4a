@@ -36,7 +36,7 @@ const SamplePage = () => (
 
     <Section>
       <Subheading>Subheading 2</Subheading>
-      <Paragraph keepMargin>
+      <Paragraph>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Paragraph>
 

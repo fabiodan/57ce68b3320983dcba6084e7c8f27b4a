@@ -91,14 +91,14 @@ ReactDOM.render(
           exact
           path="/"
           render={() =>
-            <Redirect to="/overview" />
+            <Redirect to="/color-scheme" />
         }
         />
         <Route
           exact
           path="/pages/ukgr/asda-design-system/"
           render={() =>
-            <Redirect to="/overview" />
+            <Redirect to="/color-scheme" />
         }
         />
         <Route path="/sample" component={SamplePage} />

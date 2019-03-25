@@ -28,7 +28,7 @@ const SpecialButtonsPage = () => (
 
     <Section>
       <Subheading>Product Module Buttons</Subheading>
-      <Paragraph keepMargin>
+      <Paragraph>
         Product modules are the bread and butter of Asda.com. The buttons follow
         similar standads to rest of the website with few special cases.
       </Paragraph>
