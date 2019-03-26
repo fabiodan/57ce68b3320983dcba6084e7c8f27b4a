@@ -34,6 +34,7 @@ import InputControlsPage from './pages/input-controls'
 import MiscellaneousPage from './pages/miscellaneous'
 import ModalsPage from './pages/modals'
 import AccordiansPage from './pages/accordians'
+import IconsPage from './pages/icons'
 
 class Page extends Component {
   constructor(props) {
@@ -117,6 +118,7 @@ ReactDOM.render(
         <Route path="/miscellaneous" component={MiscellaneousPage} />
         <Route path="/modals" component={ModalsPage} />
         <Route path="/accordians" component={AccordiansPage} />
+        <Route path="/icons" component={IconsPage} />
       </Page>
     </Router>
   ), document.querySelector('.sg-layout'),
