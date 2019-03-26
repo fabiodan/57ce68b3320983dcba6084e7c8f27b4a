@@ -70,7 +70,7 @@ const IconsPage = () => (
     <Section>
       <Subheading>System</Subheading>
       <Grid>
-        {/* <GridItem><Icon name="add-to-list" /><Caption>Add to List</Caption></GridItem> */}
+        <GridItem><Icon name="add-to-list" /><Caption>Add to List</Caption></GridItem>
         {/* <GridItem><Icon name="address" /><Caption>Address</Caption></GridItem> */}
         {/* <GridItem><Icon name="alert" /><Caption>Alert</Caption></GridItem> */}
         {/* <GridItem><Icon name="bag" /><Caption>Bag</Caption></GridItem> */}

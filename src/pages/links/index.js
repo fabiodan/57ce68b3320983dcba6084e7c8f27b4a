@@ -31,25 +31,25 @@ const LinksPage = () => (
       </Paragraph>
       <Grid>
         <GridItem>
-          <LinkStandalone align="left">link button</LinkStandalone>
+          <LinkStandalone align="left">Link button</LinkStandalone>
           <Caption>Standalone button Left aligned Default</Caption>
         </GridItem>
         <GridItem>
-          <LinkStandalone>link button</LinkStandalone>
+          <LinkStandalone>Link button</LinkStandalone>
           <Caption>standalone button Center aligned Default</Caption>
         </GridItem>
         <GridItem>
-          <LinkStandalone align="right">link button</LinkStandalone>
+          <LinkStandalone align="right">Link button</LinkStandalone>
           <Caption>standalone button Right aligned Hover</Caption>
         </GridItem>
         <GridItem>
-          <LinkStandalone className="links-page__link--border" align="left">link button</LinkStandalone>
+          <LinkStandalone className="links-page__link--border" align="left">Link button</LinkStandalone>
         </GridItem>
         <GridItem>
-          <LinkStandalone className="links-page__link--border">link button</LinkStandalone>
+          <LinkStandalone className="links-page__link--border">Link button</LinkStandalone>
         </GridItem>
         <GridItem>
-          <LinkStandalone className="links-page__link--border" align="right">link button</LinkStandalone>
+          <LinkStandalone className="links-page__link--border" align="right">Link button</LinkStandalone>
         </GridItem>
       </Grid>
       <Paragraph>

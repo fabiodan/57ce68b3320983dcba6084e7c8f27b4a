@@ -25,7 +25,8 @@ const TextFieldsPage = () => (
         efficient.
       </Paragraph>
 
-      <Input placeholder="Default" required validate pattern="Input Text"/>
+      <Input placeholder="Default" pattern="Input Text"/>
+      <Input placeholder="Default" required pattern="Input Text"/>
       <Input placeholder="Default" value="Input Text" validate pattern="Input Text" />
       <Input placeholder="Default" value="Input Text" validate pattern="Input Text Error" />
 
