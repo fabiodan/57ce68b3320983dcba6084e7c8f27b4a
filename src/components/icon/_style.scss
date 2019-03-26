@@ -32,6 +32,7 @@
 
 .icon__svg {
   vertical-align: middle; // Correct image alignment
+  fill: currentColor;
 }
 
 // Modifiers
@@ -66,49 +67,49 @@
 }
 
 .icon--white {
-  fill: $color-white;
+  color: $color-white;
 }
 
 .icon--green {
-  fill: $color-green;
+  color: $color-green;
 }
 
 .icon--dark-green {
-  fill: $color-dark-green;
+  color: $color-dark-green;
 }
 
 .icon--green-disabled {
-  fill: $color-green-disabled;
+  color: $color-green-disabled;
 }
 
 .icon--red {
-  fill: $color-red;
+  color: $color-red;
 }
 
 .icon--blue {
-  fill: $color-blue;
+  color: $color-blue;
 }
 
 .icon--blue-disabled {
-  fill: $color-blue-disabled;
+  color: $color-blue-disabled;
 }
 
 .icon--yellow {
-  fill: $color-yellow;
+  color: $color-yellow;
 }
 
 .icon--charcoal {
-  fill: $color-charcoal;
+  color: $color-charcoal;
 }
 
 .icon--dark-gray {
-  fill: $color-dark-gray;
+  color: $color-dark-gray;
 }
 
 .icon--medium-gray {
-  fill: $color-medium-gray;
+  color: $color-medium-gray;
 }
 
 .icon--light-gray {
-  fill: $color-light-gray;
+  color: $color-light-gray;
 }

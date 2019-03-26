@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import Form, { Input } from '@asda/form'
 import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -23,7 +24,11 @@ const TextFieldsPage = () => (
         generally used for single entry and should aim to be clear and
         efficient.
       </Paragraph>
-      <Component>Examples Here</Component>
+
+      <Input placeholder="Default" required validate pattern="Input Text"/>
+      <Input placeholder="Default" value="Input Text" validate pattern="Input Text" />
+      <Input placeholder="Default" value="Input Text" validate pattern="Input Text Error" />
+
     </Section>
 
     <Section>
