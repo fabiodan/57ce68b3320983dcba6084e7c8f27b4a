@@ -27,36 +27,36 @@ const IconsPage = () => (
         <GridItem><Icon name="browse" /><Caption>Browse</Caption></GridItem>
         <GridItem><Icon name="check" /><Caption>Check</Caption></GridItem>
         <GridItem><Icon name="chevron-down" /><Caption>Chevron Down</Caption></GridItem>
-        {/* <GridItem><Icon name="chevron-left" /><Caption>Chevron Left</Caption></GridItem> */}
-        {/* <GridItem><Icon name="chevron-right" /><Caption>Chevron Right</Caption></GridItem> */}
+        <GridItem><Icon name="chevron-left" /><Caption>Chevron Left</Caption></GridItem>
+        <GridItem><Icon name="chevron-right" /><Caption>Chevron Right</Caption></GridItem>
         {/* <GridItem><Icon name="chevron-up" /><Caption>Chevron Up</Caption></GridItem> */}
         <GridItem><Icon name="swap" /><Caption>Swap</Caption></GridItem>
         <GridItem><Icon name="close" /><Caption>Close</Caption></GridItem>
-        {/* <GridItem><Icon name="change" /><Caption>Change</Caption></GridItem> */}
+        <GridItem><Icon name="change" /><Caption>Change</Caption></GridItem>
         {/* <GridItem><Icon name="filter" /><Caption>Filter</Caption></GridItem> */}
         <GridItem><Icon name="menu" /><Caption>Menu</Caption></GridItem>
         <GridItem><Icon name="minus" /><Caption>Minus</Caption></GridItem>
         {/* <GridItem><Icon name="more-actions" /><Caption>More Actions</Caption></GridItem> */}
         <GridItem><Icon name="plus" /><Caption>Plus</Caption></GridItem>
         {/* <GridItem><Icon name="zoom" /><Caption>Zoom</Caption></GridItem> */}
-        {/* <GridItem><Icon name="search" /><Caption>Search</Caption></GridItem> */}
+        <GridItem><Icon name="search" /><Caption>Search</Caption></GridItem>
         {/* <GridItem><Icon name="sort" /><Caption>Sort</Caption></GridItem> */}
         {/* <GridItem><Icon name="caret-down" /><Caption>Caret Down</Caption></GridItem> */}
         {/* <GridItem><Icon name="caret-up" /><Caption>Caret Up</Caption></GridItem> */}
         <GridItem><Icon name="alert" /><Caption>Alert</Caption></GridItem>
+        <GridItem><Icon name="quick-view" /><Caption>Quick View</Caption></GridItem>
       </Grid>
     </Section>
 
     <Section>
       <Subheading>Circular</Subheading>
       <Grid>
-        {/* <GridItem><Icon name="circle-minus" /><Caption>Circle Minus</Caption></GridItem> */}
-        {/* <GridItem><Icon name="circle-plus" /><Caption>Circle Plus</Caption></GridItem> */}
-        {/* <GridItem><Icon name="clock" /><Caption>Clock</Caption></GridItem> */}
-        {/* <GridItem><Icon name="facebook" /><Caption>Facebook</Caption></GridItem> */}
-        {/* <GridItem><Icon name="help" /><Caption>Help</Caption></GridItem> */}
-        {/* <GridItem><Icon name="information" /><Caption>Information</Caption></GridItem> */}
-        {/* <GridItem><Icon name="loading" /><Caption>Loading</Caption></GridItem> */}
+        <GridItem><Icon name="circle-minus" /><Caption>Circle Minus</Caption></GridItem>
+        <GridItem><Icon name="circle-plus" /><Caption>Circle Plus</Caption></GridItem>
+        <GridItem><Icon name="clock" /><Caption>Clock</Caption></GridItem>
+        <GridItem><Icon name="facebook" /><Caption>Facebook</Caption></GridItem>
+        <GridItem><Icon name="help" /><Caption>Help</Caption></GridItem>
+        <GridItem><Icon name="info" /><Caption>Info</Caption></GridItem>
         {/* <GridItem><Icon name="offer" /><Caption>Offer</Caption></GridItem> */}
         {/* <GridItem><Icon name="price" /><Caption>Price</Caption></GridItem> */}
         {/* <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem> */}
