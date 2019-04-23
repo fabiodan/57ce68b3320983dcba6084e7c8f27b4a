@@ -2,14 +2,22 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Form, { Input } from '@asda/form'
-import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import Form, { Input, Label } from '@asda/form'
+import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
 
 const Component = ({ children }) => (
   <div className="text-fields-page__component">{ children }</div>
+)
+
+const Grid = ({ children }) => (
+  <ul className="special-buttons-page__grid">{children}</ul>
+)
+
+const GridItem = ({ children }) => (
+  <li className="special-buttons-page__grid-item">{children}</li>
 )
 
 const TextFieldsPage = () => (
@@ -25,10 +33,38 @@ const TextFieldsPage = () => (
         efficient.
       </Paragraph>
 
-      <Input placeholder="Default" pattern="Input Text"/>
-      <Input placeholder="Default" required pattern="Input Text"/>
-      <Input placeholder="Default" value="Input Text" validate pattern="Input Text" />
-      <Input placeholder="Default" value="Input Text" validate pattern="Input Text Error" />
+      <Grid>
+        <GridItem>
+          <Label>Label</Label>
+          <Input placeholder="Default" pattern="Input Text"/>
+          <Label required>Label</Label>
+          <Input placeholder="Default" required pattern="Input Text"/>
+          <Input placeholder="Default" value="Input Text" validate pattern="Input Text" />
+          <Input placeholder="Default" value="Input Text" validate pattern="Input Text Error" />
+          <Caption>Default</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Required</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Hover</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Focus</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Filled</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Helper Text</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Success</Caption>
+        </GridItem>
+        <GridItem>
+          <Caption>Error</Caption>
+        </GridItem>
+      </Grid>
 
     </Section>
 

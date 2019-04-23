@@ -3,6 +3,7 @@ import React from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
+import Label from './label'
 import Input from './input'
 
 // Assets
@@ -22,5 +23,6 @@ const Form = ({
 
 export {
   Form as default,
+  Label,
   Input,
 }

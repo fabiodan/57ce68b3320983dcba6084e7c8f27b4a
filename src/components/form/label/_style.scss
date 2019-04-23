@@ -1,0 +1,16 @@
+/* Input Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.label {
+  @include typography(s);
+  display: inline-block;
+    margin-bottom: $spacing-xxs;
+}
+
+// Modifiers
+.label--required::after {
+  content: "\b*";
+}

@@ -6,4 +6,7 @@
 // Block
 .image {
   vertical-align: middle; // Keep image correctly aligned
+  * {
+    font-family: $typography-font-family;
+  }
 }

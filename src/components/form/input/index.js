@@ -38,7 +38,7 @@ class Input extends Component {
           className="input__element"
           type={type}
           defaultValue={value}
-          placeholder={`${placeholder} ${required ? '*' : ''}`}
+          placeholder={`${placeholder} ${required ? '*' : ''}`.trim()}
           pattern={pattern}
           onChange={onChange}
           ref={this.input}

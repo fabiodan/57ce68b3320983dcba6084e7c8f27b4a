@@ -19,7 +19,7 @@ const GridItem = ({ children }) => (
 const IconsPage = () => (
   <article className="icons-page">
 
-    <Heading>InputControlsPage</Heading>
+    <Heading>Icons</Heading>
 
     <Section>
       <Subheading>Basic Icons</Subheading>
