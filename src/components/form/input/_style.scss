@@ -68,23 +68,74 @@
   top: $spacing-xs;
 }
 
+.input__helper-text,
+.input__success-message,
+.input__error-message {
+  display: block;
+  @include typography(xs);
+  color: $color-dark-gray;
+  margin-top: $spacing-xxs;
+}
+
+.input__success-message {
+  color: $color-green;
+}
+
+.input__error-message {
+  color: $color-red;
+}
+
 // Modifiers
 .input--validate {
-  .input__element:valid {
-    border: solid 2px $color-green;
+  .input__element {
+    padding-right: $spacing-xxl;
 
-    & ~ .input__icon-check {
-      display: inline-flex; // Default Icon display value
+    &:valid {
+      border: solid 2px $color-green;
+
+      & ~ {
+        .input__icon-check {
+          display: inline-flex; // Default Icon display value
+        }
+        .input__error-message,
+        .input__helper-text {
+          display: none;
+        }
+      }
+    }
+
+    &:invalid {
+      border: solid 2px $color-red;
+
+      &::-moz-selection {
+        background: $color-red;
+      }
+
+      &::selection {
+        background: $color-red;
+      }
+
+      & ~ {
+        .input__icon-alert {
+          display: inline-flex; // Default Icon display value
+        }
+        .input__success-message,
+        .input__helper-text {
+          display: none;
+        }
+      }
     }
   }
 }
 
-.input--validate {
-  .input__element:invalid {
-    border: solid 2px $color-red;
+.input--hover { // For demonstration purposes only
+  .input__element {
+    box-shadow: $shadow;
+  }
+}
 
-    & ~ .input__icon-alert {
-      display: inline-flex; // Default Icon display value
-    }
+.input--focus {
+  .input__element { // For demonstration purposes only
+    border-color: $color-dark-gray;
   }
 }

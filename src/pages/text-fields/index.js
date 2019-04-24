@@ -13,11 +13,11 @@ const Component = ({ children }) => (
 )
 
 const Grid = ({ children }) => (
-  <ul className="special-buttons-page__grid">{children}</ul>
+  <ul className="text-fields-page__grid">{children}</ul>
 )
 
 const GridItem = ({ children }) => (
-  <li className="special-buttons-page__grid-item">{children}</li>
+  <li className="text-fields-page__grid-item">{children}</li>
 )
 
 const TextFieldsPage = () => (
@@ -35,34 +35,61 @@ const TextFieldsPage = () => (
 
       <Grid>
         <GridItem>
+          <Caption position="top">Default</Caption>
           <Label>Label</Label>
-          <Input placeholder="Default" pattern="Input Text"/>
+          <Input placeholder="Default"/>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Required</Caption>
           <Label required>Label</Label>
-          <Input placeholder="Default" required pattern="Input Text"/>
-          <Input placeholder="Default" value="Input Text" validate pattern="Input Text" />
-          <Input placeholder="Default" value="Input Text" validate pattern="Input Text Error" />
-          <Caption>Default</Caption>
+          <Input placeholder="Required" required/>
         </GridItem>
         <GridItem>
-          <Caption>Required</Caption>
+          <Caption position="top">Hover</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Hover" hover/>
         </GridItem>
         <GridItem>
-          <Caption>Hover</Caption>
+          <Caption position="top">Focus</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Focus" focus/>
         </GridItem>
         <GridItem>
-          <Caption>Focus</Caption>
+          <Caption position="top">Filled</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Placeholder" value="Filled"/>
         </GridItem>
         <GridItem>
-          <Caption>Filled</Caption>
+          <Caption position="top">Helper Text</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Placeholder" helperText="Helper text"/>
         </GridItem>
         <GridItem>
-          <Caption>Helper Text</Caption>
+          <Caption position="top">Success</Caption>
+          <Label>Label</Label>
+          <Input
+            placeholder="Default"
+            value="Input Text"
+            pattern="Input Text"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+
         </GridItem>
         <GridItem>
-          <Caption>Success</Caption>
-        </GridItem>
-        <GridItem>
-          <Caption>Error</Caption>
+          <Caption position="top">Error</Caption>
+          <Label>Label</Label>
+          <Input
+            placeholder="Default"
+            value="Input Text"
+            pattern="Input Text Error"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
         </GridItem>
       </Grid>
 

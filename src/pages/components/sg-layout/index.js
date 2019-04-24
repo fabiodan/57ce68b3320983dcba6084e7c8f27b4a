@@ -65,11 +65,18 @@ const Figure = ({
   )
 }
 
-const Caption = ({ children, className }) => (
-  <div className={`sg-layout__caption ${className}`}>
-    { children }
-  </div>
-)
+const Caption = ({ children, className, position = 'bottom' }) => {
+  const modifiers = [
+    position && `sg-layout__caption--position-${position}`,
+  ]
+  const classNames = joinClassNames('sg-layout__caption', className, modifiers)
+
+  return (
+    <div className={classNames}>
+      { children }
+    </div>
+  )
+}
 
 export {
   Layout as default,

@@ -24,10 +24,21 @@ class Input extends Component {
       validate,
       onChange,
       required,
+      helperText,
+      successMessage,
+      errorMessage,
+
+      // For demonstration purposes only
+      hover,
+      focus,
     } = this.props
 
     const modifiers = [
-      validate && `input--validate`,
+      validate && 'input--validate',
+
+      // For demonstration purposes only
+      hover && 'input--hover',
+      focus && 'input--focus',
     ]
 
     const classNames = joinClassNames('input', className, modifiers)
@@ -46,6 +57,15 @@ class Input extends Component {
         />
         <Icon className="input__icon-check" name="check" size="x-small" color="green" />
         <Icon className="input__icon-alert" name="alert" size="x-small" color="red" />
+        {helperText &&
+          <small className="input__helper-text">{helperText}</small>
+        }
+        {successMessage &&
+          <small className="input__success-message">{successMessage}</small>
+        }
+        {errorMessage &&
+          <small className="input__error-message">{errorMessage}</small>
+        }
       </div>
     )
   }
