@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import MediaQuery from 'react-responsive'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
 } from 'react-router-dom'
@@ -86,7 +86,7 @@ class Page extends Component {
 
 ReactDOM.render(
   (
-    <Router>
+    <Router basename={window.location.pathname}>
       <Page>
         <Route
           exact
