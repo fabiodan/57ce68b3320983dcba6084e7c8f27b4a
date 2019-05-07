@@ -86,7 +86,7 @@ class Page extends Component {
 
 ReactDOM.render(
   (
-    <Router basename={window.location.pathname}>
+    <Router>
       <Page>
         <Route
           exact

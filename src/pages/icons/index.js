@@ -39,6 +39,7 @@ const IconsPage = () => (
         <GridItem><Icon name="minus" /><Caption>Minus</Caption></GridItem>
         <GridItem><Icon name="more-actions" /><Caption>More Actions</Caption></GridItem>
         <GridItem><Icon name="plus" /><Caption>Plus</Caption></GridItem>
+        <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem>        
         <GridItem><Icon name="search" /><Caption>Search</Caption></GridItem>
         <GridItem><Icon name="sort" /><Caption>Sort</Caption></GridItem>
         <GridItem><Icon name="swap" /><Caption>Swap</Caption></GridItem>
@@ -57,9 +58,7 @@ const IconsPage = () => (
         <GridItem><Icon name="info" /><Caption>Info</Caption></GridItem>
         <GridItem><Icon name="offer" /><Caption>Offer</Caption></GridItem>
         <GridItem><Icon name="price" /><Caption>Price</Caption></GridItem>
-        <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem>
         <GridItem><Icon name="user" /><Caption>User</Caption></GridItem>
-        <GridItem><Icon name="settings" /><Caption>Settings</Caption></GridItem>
         <GridItem><Icon name="twitter" /><Caption>Twitter</Caption></GridItem>
         <GridItem><Icon name="unavailable" /><Caption>Unavailable</Caption></GridItem>
       </Grid>
@@ -93,6 +92,7 @@ const IconsPage = () => (
         <GridItem><Icon name="preferences" /><Caption>Preferences</Caption></GridItem>
         <GridItem><Icon name="printer" /><Caption>Printer</Caption></GridItem>
         <GridItem><Icon name="recipes" /><Caption>Recipes</Caption></GridItem>
+        <GridItem><Icon name="settings" /><Caption>Settings</Caption></GridItem>
         <GridItem><Icon name="star-outlined" /><Caption>Star Outlined</Caption></GridItem>
         <GridItem><Icon name="star-filled" /><Caption>Star Filled</Caption></GridItem>
         <GridItem><Icon name="show" /><Caption>Show</Caption></GridItem>
