@@ -27,7 +27,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Miscellaneous (WIP)', url: '/miscellaneous' },
     { name: 'Modals', url: '/modals' },
     { name: 'Accordians (WIP)', url: '/accordians' },
-    { name: 'Icons (WIP)', url: '/icons' },
+    { name: 'Icons', url: '/icons' },
   ]
 
   return (
