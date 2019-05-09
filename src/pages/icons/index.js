@@ -150,30 +150,35 @@ const IconsPage = () => (
           <Figure
             src={keylinePNGSource}
             caption="Keyline (400% scale)"
+            noMargin
           />
         </GridItem>
         <GridItem>
           <Figure
             src={squarePNGSource}
             caption="Square (400% scale)"
+            noMargin
           />
         </GridItem>
         <GridItem>
           <Figure
             src={circlePNGSource}
             caption="Circle (400% scale)"
+            noMargin
           />
         </GridItem>
         <GridItem>
           <Figure
             src={verticalRectanglePNGSource}
             caption="Vertical Rectangle (400% scale)"
+            noMargin
           />
         </GridItem>
         <GridItem>
           <Figure
             src={horizontalRectanglePNGSource}
             caption="Horizontal Rectangle (400% scale)"
+            noMargin
           />
         </GridItem>
       </Grid>
@@ -193,7 +198,7 @@ const IconsPage = () => (
 
       <Grid className="icons-page__grid-icon-stroke">
         <GridItem>
-          <Figure src={strokeRadiiAddPNGSource} />
+          <Figure src={strokeRadiiAddPNGSource} noMargin />
         </GridItem>
         <GridItem>
           <Figure src={strokeRadiiHeadphonePNGSource} noMargin />

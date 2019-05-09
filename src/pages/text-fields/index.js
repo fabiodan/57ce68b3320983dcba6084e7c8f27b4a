@@ -76,7 +76,6 @@ const TextFieldsPage = () => (
             errorMessage="Error message"
             validate
           />
-
         </GridItem>
         <GridItem>
           <Caption position="top">Error</Caption>
@@ -101,7 +100,64 @@ const TextFieldsPage = () => (
         Input fields with leading icons provide users with more visual
         information about the input required.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Grid>
+        <GridItem>
+          <Caption position="top">Default</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Default" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Required</Caption>
+          <Label required>Label</Label>
+          <Input placeholder="Required" required />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Hover</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Hover" hover />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Focus</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Focus" focus />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Filled</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Placeholder" value="Filled" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Helper Text</Caption>
+          <Label>Label</Label>
+          <Input placeholder="Placeholder" helperText="Helper text" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Success</Caption>
+          <Label>Label</Label>
+          <Input
+            placeholder="Default"
+            value="Input Text"
+            pattern="Input Text"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Error</Caption>
+          <Label>Label</Label>
+          <Input
+            placeholder="Default"
+            value="Input Text"
+            pattern="Input Text Error"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>
@@ -110,7 +166,56 @@ const TextFieldsPage = () => (
         Input fields with leading icons provide users with more visual
         information about the input required.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Grid>
+        <GridItem>
+          <Caption position="top">No Label Default</Caption>
+          <Input placeholder="Default" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Required</Caption>
+          <Input placeholder="Required" required />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Hover</Caption>
+          <Input placeholder="Hover" hover />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Focus</Caption>
+          <Input placeholder="Focus" focus />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Filled</Caption>
+          <Input placeholder="Placeholder" value="Filled" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Helper Text</Caption>
+          <Input placeholder="Placeholder" helperText="Helper text" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Success</Caption>
+          <Input
+            placeholder="Default"
+            value="Input Text"
+            pattern="Input Text"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Error</Caption>
+          <Input
+            placeholder="Default"
+            value="Input Text"
+            pattern="Input Text Error"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>
