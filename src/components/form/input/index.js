@@ -11,7 +11,7 @@ import './_style.scss'
 class Input extends Component {
   constructor(props) {
     super(props)
-    this.input = React.createRef();
+    this.input = React.createRef()
   }
 
   render() {

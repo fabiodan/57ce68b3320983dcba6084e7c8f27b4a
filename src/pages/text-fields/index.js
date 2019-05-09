@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Form, { Input, Label } from '@asda/form'
+import { Input, Label } from '@asda/form'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -37,32 +37,32 @@ const TextFieldsPage = () => (
         <GridItem>
           <Caption position="top">Default</Caption>
           <Label>Label</Label>
-          <Input placeholder="Default"/>
+          <Input placeholder="Default" />
         </GridItem>
         <GridItem>
           <Caption position="top">Required</Caption>
           <Label required>Label</Label>
-          <Input placeholder="Required" required/>
+          <Input placeholder="Required" required />
         </GridItem>
         <GridItem>
           <Caption position="top">Hover</Caption>
           <Label>Label</Label>
-          <Input placeholder="Hover" hover/>
+          <Input placeholder="Hover" hover />
         </GridItem>
         <GridItem>
           <Caption position="top">Focus</Caption>
           <Label>Label</Label>
-          <Input placeholder="Focus" focus/>
+          <Input placeholder="Focus" focus />
         </GridItem>
         <GridItem>
           <Caption position="top">Filled</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" value="Filled"/>
+          <Input placeholder="Placeholder" value="Filled" />
         </GridItem>
         <GridItem>
           <Caption position="top">Helper Text</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" helperText="Helper text"/>
+          <Input placeholder="Placeholder" helperText="Helper text" />
         </GridItem>
         <GridItem>
           <Caption position="top">Success</Caption>

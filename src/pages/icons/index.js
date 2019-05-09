@@ -6,10 +6,20 @@ import Icon from '@asda/icon'
 import { Caption, Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
+import metrics32x32PNGSource from './images/metrics-32x32.png'
+import iconLayoutPNGSource from './images/icon-layout.png'
+import strokeRadiiAddPNGSource from './images/stroke-radii-add.png'
+import strokeRadiiHeadphonePNGSource from './images/stroke-radii-headphone.png'
+import keylinePNGSource from './images/keyline.png'
+import squarePNGSource from './images/square.png'
+import circlePNGSource from './images/circle.png'
+import verticalRectanglePNGSource from './images/vertical-rectangle.png'
+import horizontalRectanglePNGSource from './images/horizontal-rectangle.png'
+
 import './_style.scss'
 
-const Grid = ({ children }) => (
-  <ul className="icons-page__grid">{children}</ul>
+const Grid = ({ children, className }) => (
+  <ul className={`icons-page__grid ${className}`}>{children}</ul>
 )
 
 const GridItem = ({ children }) => (
@@ -39,7 +49,7 @@ const IconsPage = () => (
         <GridItem><Icon name="minus" /><Caption>Minus</Caption></GridItem>
         <GridItem><Icon name="more-actions" /><Caption>More Actions</Caption></GridItem>
         <GridItem><Icon name="plus" /><Caption>Plus</Caption></GridItem>
-        <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem>        
+        <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem>
         <GridItem><Icon name="search" /><Caption>Search</Caption></GridItem>
         <GridItem><Icon name="sort" /><Caption>Sort</Caption></GridItem>
         <GridItem><Icon name="swap" /><Caption>Swap</Caption></GridItem>
@@ -110,6 +120,86 @@ const IconsPage = () => (
       </Grid>
     </Section>
 
+    <Section>
+      <Subheading>Icon size and layout</Subheading>
+      <Paragraph>
+        Icons are created on a 32px by 32px grid. Create icons for viewing at
+        100% scale for pixel perfect accuracy. The icons can be scaled to smaller
+        and larger sizes based on the context and usage.
+      </Paragraph>
+      <Figure
+        src={metrics32x32PNGSource}
+        caption="32 x 32 (100% Scale)"
+      />
+      <Figure
+        src={iconLayoutPNGSource}
+        caption="Icon layout (400% scale)"
+        noMargin
+      />
+    </Section>
+
+    <Section>
+      <Subheading>Keyline and basic shapes</Subheading>
+      <Paragraph>
+        Specific keylines are present for certain shapes: circle, square,
+        rectangle, orthogonals, and diagonals. These basic shapes help in
+        creating consistent icons and regulate their placement on the icon grid.
+      </Paragraph>
+      <Grid className="icons-page__grid-basic-shapes">
+        <GridItem>
+          <Figure
+            src={keylinePNGSource}
+            caption="Keyline (400% scale)"
+          />
+        </GridItem>
+        <GridItem>
+          <Figure
+            src={squarePNGSource}
+            caption="Square (400% scale)"
+          />
+        </GridItem>
+        <GridItem>
+          <Figure
+            src={circlePNGSource}
+            caption="Circle (400% scale)"
+          />
+        </GridItem>
+        <GridItem>
+          <Figure
+            src={verticalRectanglePNGSource}
+            caption="Vertical Rectangle (400% scale)"
+          />
+        </GridItem>
+        <GridItem>
+          <Figure
+            src={horizontalRectanglePNGSource}
+            caption="Horizontal Rectangle (400% scale)"
+          />
+        </GridItem>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Subheading>Icon stroke and radii</Subheading>
+      <Paragraph>
+        Icons use a consistent stroke width of 2px, including curves, angles,
+        and both interior and exterior strokes. The radii for outer edges is 2px
+        and 0.5px for inner edges.
+      </Paragraph>
+      <Paragraph>
+        For icons where outer radii of 2px is not appropriate, apply 0.5px on
+        the outer edge while leaving the inner edge without radii.
+      </Paragraph>
+
+      <Grid className="icons-page__grid-icon-stroke">
+        <GridItem>
+          <Figure src={strokeRadiiAddPNGSource} />
+        </GridItem>
+        <GridItem>
+          <Figure src={strokeRadiiHeadphonePNGSource} noMargin />
+        </GridItem>
+      </Grid>
+    </Section>
   </article>
 )
 

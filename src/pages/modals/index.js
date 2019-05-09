@@ -16,10 +16,6 @@ import paddingModal768SVGSource from '../../assets/images/modals-page-padding-mo
 import paddingModal360SVGSource from '../../assets/images/modals-page-padding-modal-360.svg'
 import './_style.scss'
 
-const Component = ({ children }) => (
-  <div className="modals-page__component">{ children }</div>
-)
-
 const ModalsPage = () => (
   <article className="modals-page">
 

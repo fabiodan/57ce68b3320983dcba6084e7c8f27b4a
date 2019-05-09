@@ -49,7 +49,7 @@ const Subheading = ({ children, className = '' }) => (
 )
 
 const Figure = ({
-  src, alt, className = '', maxWidth = 'none', caption = null, noMargin
+  src, alt, className = '', maxWidth = 'none', caption = null, noMargin,
 }) => {
   const modifiers = [
     noMargin && 'sg-layout__figure--no-margin',

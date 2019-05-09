@@ -117,14 +117,6 @@ $sg-layout__aside-width: 300px;
   margin: 0 0 $spacing-xxxl 0;
 }
 
-.sg-layout__figure__img {
-  width: 100%;
-}
-
-.sg-layout__figure--no-margin {
-  margin: 0;
-}
-
 .sg-layout__subheading {
   @include typography(xxxl);
   margin: 0 0 $spacing-m 0;
@@ -152,6 +144,15 @@ $sg-layout__aside-width: 300px;
   margin-top: $spacing-xs;
 }
 
+.sg-layout__figure--fluid {
+  .sg-layout__figure__img {
+    width: 100%
+  }
+}
+
+.sg-layout__figure--no-margin {
+  margin: 0;
+}
 
 @media (min-width: 768px) {
   .sg-layout {
