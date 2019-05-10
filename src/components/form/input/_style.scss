@@ -3,6 +3,9 @@
 // Dependencies
 @import "@asda/core/style";
 
+// Variables
+$input-with-icon-padding-left: $spacing-xxl;
+
 @mixin input_normalize {
   /**
   * 1. Change the font styles in all browsers.
@@ -60,6 +63,12 @@
   width: 100%;
 }
 
+.input__icon {
+  position: absolute;
+  left: $spacing-xs;
+  top: $spacing-xs;
+}
+
 .input__icon-check,
 .input__icon-alert {
   display: none;
@@ -86,6 +95,61 @@
 }
 
 // Modifiers
+.input--with-icon {
+  .input__element {
+    padding-left: $input-with-icon-padding-left;
+  }
+}
+
+// TODO Loop through sizes to build the extra padding styles
+.input--extra-padding-left-xxxl {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-xxxl;
+  }
+}
+
+.input--extra-padding-left-xxl {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-xxl;
+  }
+}
+
+.input--extra-padding-left-xl {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-xl;
+  }
+}
+
+.input--extra-padding-left-l {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-l;
+  }
+}
+
+.input--extra-padding-left-m {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-m;
+  }
+}
+
+.input--extra-padding-left-s {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-s;
+  }
+}
+
+.input--extra-padding-left-xs {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-xs;
+  }
+}
+
+.input--extra-padding-left-xxs {
+  .input__element {
+    padding-left: $input-with-icon-padding-left + $spacing-xxs;
+  }
+}
+
 .input--validate {
   .input__element {
     padding-right: $spacing-xxl;

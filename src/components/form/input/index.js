@@ -16,6 +16,7 @@ class Input extends Component {
 
   render() {
     const {
+      children,
       type,
       className,
       value,
@@ -27,6 +28,7 @@ class Input extends Component {
       helperText,
       successMessage,
       errorMessage,
+      extraPaddingLeft,
 
       // For demonstration purposes only
       hover,
@@ -35,6 +37,8 @@ class Input extends Component {
 
     const modifiers = [
       validate && 'input--validate',
+      children && 'input--with-icon',
+      !!extraPaddingLeft && `input--extra-padding-left-${extraPaddingLeft}`,
 
       // For demonstration purposes only
       hover && 'input--hover',
@@ -45,6 +49,9 @@ class Input extends Component {
 
     return (
       <div className={classNames}>
+        {children &&
+          <span className="input__icon">{children}</span>
+        }
         <input
           className="input__element"
           type={type}
