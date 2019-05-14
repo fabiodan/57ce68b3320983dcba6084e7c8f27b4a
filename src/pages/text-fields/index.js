@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import CreditCard from '@asda/credit-card'
 import { Input, Label } from '@asda/form'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
@@ -104,7 +105,9 @@ const TextFieldsPage = () => (
         <GridItem>
           <Caption position="top">Default</Caption>
           <Label>Label</Label>
-          <Input placeholder="Default" />
+          <Input placeholder="Default" extraPaddingLeft="m">
+            <Icon name="browse" size="x-small" color="red" />
+          </Input>
         </GridItem>
         <GridItem>
           <Caption position="top">Required</Caption>
