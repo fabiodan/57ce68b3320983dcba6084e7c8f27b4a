@@ -277,10 +277,6 @@ class ModalsPage extends Component {
                       aperiam, eaque ipsa quae ab illo inventore veritatis et
                       quasi architecto beatae vitae dicta sunt explicabo.
                     </ModalsPageParagraph>
-
-                    <ModalsPageParagraph noMargin>
-                      Click here to view <LinkText href="#/modals">terms and conditions.</LinkText>
-                    </ModalsPageParagraph>
                   </ModalContent>
                   <ModalActionBar>
                     <ModalButton category="secondary" onClick={this.toggleModal2}>Cancel</ModalButton>
