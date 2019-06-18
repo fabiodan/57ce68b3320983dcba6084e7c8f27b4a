@@ -2,7 +2,8 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import CreditCard from '@asda/credit-card'
+import CreditCardIcon from '@asda/credit-card-icon'
+import Icon from '@asda/icon'
 import { Input, Label } from '@asda/form'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
@@ -103,62 +104,77 @@ const TextFieldsPage = () => (
       </Paragraph>
       <Grid>
         <GridItem>
-          <Caption position="top">Default</Caption>
+          <Caption position="top">Default + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Default" extraPaddingLeft="m">
-            <Icon name="browse" size="x-small" color="red" />
+          <Input placeholder="Default" extraPaddingLeft="medium">
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
           </Input>
         </GridItem>
         <GridItem>
-          <Caption position="top">Required</Caption>
+          <Caption position="top">Required + Icon</Caption>
           <Label required>Label</Label>
-          <Input placeholder="Required" required />
+          <Input placeholder="Required" required extraPaddingLeft="medium">
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
+          </Input>
         </GridItem>
         <GridItem>
-          <Caption position="top">Hover</Caption>
+          <Caption position="top">Hover + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Hover" hover />
+          <Input placeholder="Hover" hover extraPaddingLeft="medium">
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
+          </Input>
         </GridItem>
         <GridItem>
-          <Caption position="top">Focus</Caption>
+          <Caption position="top">Focus + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Focus" focus />
+          <Input placeholder="Focus" value="4111 1111 1111 1111" focus extraPaddingLeft="medium">
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+          </Input>
         </GridItem>
         <GridItem>
-          <Caption position="top">Filled</Caption>
+          <Caption position="top">Filled + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" value="Filled" />
+          <Input placeholder="Placeholder" value="4111 1111 1111 1111" extraPaddingLeft="medium">
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+          </Input>
         </GridItem>
         <GridItem>
-          <Caption position="top">Helper Text</Caption>
+          <Caption position="top">Helper Text + Icon</Caption>
           <Label>Label</Label>
           <Input placeholder="Placeholder" helperText="Helper text" />
         </GridItem>
         <GridItem>
-          <Caption position="top">Success</Caption>
+          <Caption position="top">Success + Icon</Caption>
           <Label>Label</Label>
           <Input
             placeholder="Default"
-            value="Input Text"
-            pattern="Input Text"
+            value="4111 1111 1111 1111"
+            pattern="4111 1111 1111 1111"
             helperText="Helper text"
             successMessage="Success message"
             errorMessage="Error message"
             validate
-          />
+            extraPaddingLeft="medium"
+          >
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+          </Input>
         </GridItem>
         <GridItem>
-          <Caption position="top">Error</Caption>
+          <Caption position="top">Error + Icon</Caption>
           <Label>Label</Label>
           <Input
             placeholder="Default"
-            value="Input Text"
-            pattern="Input Text Error"
+            value="4111 1111 1111 1110"
+            pattern="4111 1111 1111 1111"
             helperText="Helper text"
             successMessage="Success message"
             errorMessage="Error message"
             validate
-          />
+            extraPaddingLeft="medium"
+          >
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+          </Input>
+
         </GridItem>
       </Grid>
     </Section>

@@ -24,6 +24,10 @@
   padding: $spacing-m 0;
 }
 
+.text-fields-page__credit-card-icon {
+  padding-left: $spacing-xxs;
+}
+
 // Breakpoints
 @media (min-width: 480px) {
   .text-fields-page__grid {

@@ -5,6 +5,7 @@
 
 // Variables
 $input-with-icon-padding-left: $spacing-xxl;
+$input-height: 40px;
 
 @mixin input_normalize {
   /**
@@ -34,7 +35,7 @@ $input-with-icon-padding-left: $spacing-xxl;
   @include typography(m);
   border: solid 1px $color-medium-gray;
   border-radius: 4px;
-  height: 40px;
+  height: $input-height;
   padding: 0 $spacing-s;
 
   &::placeholder {
@@ -53,6 +54,7 @@ $input-with-icon-padding-left: $spacing-xxl;
 // Block
 .input {
   display: inline-block;
+  height: $input-height;
   width: 100%;
   position: relative;
 }
@@ -66,7 +68,8 @@ $input-with-icon-padding-left: $spacing-xxl;
 .input__icon {
   position: absolute;
   left: $spacing-xs;
-  top: $spacing-xs;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .input__icon-check,
@@ -74,7 +77,8 @@ $input-with-icon-padding-left: $spacing-xxl;
   display: none;
   position: absolute;
   right: $spacing-xs;
-  top: $spacing-xs;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .input__helper-text,
@@ -102,49 +106,49 @@ $input-with-icon-padding-left: $spacing-xxl;
 }
 
 // TODO Loop through sizes to build the extra padding styles
-.input--extra-padding-left-xxxl {
+.input--extra-padding-left-xxx-large {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-xxxl;
   }
 }
 
-.input--extra-padding-left-xxl {
+.input--extra-padding-left-xx-large {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-xxl;
   }
 }
 
-.input--extra-padding-left-xl {
+.input--extra-padding-left-x-large {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-xl;
   }
 }
 
-.input--extra-padding-left-l {
+.input--extra-padding-left-large {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-l;
   }
 }
 
-.input--extra-padding-left-m {
+.input--extra-padding-left-medium {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-m;
   }
 }
 
-.input--extra-padding-left-s {
+.input--extra-padding-left-small {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-s;
   }
 }
 
-.input--extra-padding-left-xs {
+.input--extra-padding-left-x-small {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-xs;
   }
 }
 
-.input--extra-padding-left-xxs {
+.input--extra-padding-left-xx-small {
   .input__element {
     padding-left: $input-with-icon-padding-left + $spacing-xxs;
   }

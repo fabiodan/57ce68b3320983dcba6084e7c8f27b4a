@@ -1,0 +1,48 @@
+/* CreditCardIcon Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.credit-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; // Keep inline elements vertically aligned
+}
+
+// Elements/Mixes
+.credit-card-icon__svg {
+  vertical-align: middle; // Correct image alignment
+}
+
+// Modifiers
+.credit-card-icon--large {
+  .credit-card-icon__svg {
+    width: 40px;
+  }
+}
+
+.credit-card-icon--medium {
+  .credit-card-icon__svg {
+    width: 32px;
+  }
+}
+
+.credit-card-icon--small {
+  .credit-card-icon__svg {
+    width: 28px;
+  }
+}
+
+.credit-card-icon--x-small {
+  .credit-card-icon__svg {
+    width: 24px;
+  }
+}
+
+.credit-card-icon--xx-small {
+  .credit-card-icon__svg {
+    width: 16px;
+  }
+}
