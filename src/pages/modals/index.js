@@ -283,7 +283,8 @@ class ModalsPage extends Component {
                     </ModalsPageParagraph>
                   </ModalContent>
                   <ModalActionBar>
-                    <ModalButton onClick={this.toggleModal2}>Continue shopping</ModalButton>
+                    <ModalButton category="secondary" onClick={this.toggleModal2}>Cancel</ModalButton>
+                    <ModalButton onClick={this.toggleModal2}>Continue</ModalButton>
                   </ModalActionBar>
                   <ModalCloseIcon onClick={this.toggleModal2} />
                 </ModalContainer>
