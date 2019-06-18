@@ -58,7 +58,12 @@ class Modal extends Component {
     const classNames = joinClassNames('modal', className, modifiers)
 
     return (
-      <div className={classNames} role="modal" aria-modal="true">
+      <div
+        className={classNames}
+        role="alertdialog"
+        aria-modal="true"
+        aria-describedby="modal__content"
+        aria-labelledby="modal__header">
         { children }
       </div>
     )
@@ -70,7 +75,7 @@ const ModalBackdrop = ({ children, className, onClick }) => {
   const classNames = joinClassNames('modal__backdrop', className, modifiers)
 
   return (
-    <div className={classNames} onClick={onClick}>
+    <div className={classNames} onClick={onClick} tabIndex="-1">
       { children }
     </div>
   )

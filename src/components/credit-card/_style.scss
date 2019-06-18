@@ -1,115 +1,115 @@
-/* Icon Component */
-
-// Dependencies
-@import "@asda/core/style";
-@import "@asda/button/mixins";
-
-// Block
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle; // Keep inline elements vertically aligned
-  fill: $color-charcoal;
-}
-
-// Elements/Mixes
-.icon__button {
-  @include button_base;
-  padding: 0;
-  height: auto;
-  width: auto;
-
-  &:focus:not(.button--disabled),
-  &:hover:not(.button--disabled) {
-    box-shadow: none;
-    &::after {
-      background-color: $color-black;
-      opacity: 0.1;
-    }
-  }
-}
-
-.icon__svg {
-  vertical-align: middle; // Correct image alignment
-  fill: currentColor;
-}
-
-// Modifiers
-.icon--large {
-  .icon__svg {
-    width: 40px;
-  }
-}
-
-.icon--medium {
-  .icon__svg {
-    width: 32px;
-  }
-}
-
-.icon--small {
-  .icon__svg {
-    width: 28px;
-  }
-}
-
-.icon--x-small {
-  .icon__svg {
-    width: 24px;
-  }
-}
-
-.icon--xx-small {
-  .icon__svg {
-    width: 16px;
-  }
-}
-
-.icon--white {
-  color: $color-white;
-}
-
-.icon--green {
-  color: $color-green;
-}
-
-.icon--dark-green {
-  color: $color-dark-green;
-}
-
-.icon--green-disabled {
-  color: $color-green-disabled;
-}
-
-.icon--red {
-  color: $color-red;
-}
-
-.icon--blue {
-  color: $color-blue;
-}
-
-.icon--blue-disabled {
-  color: $color-blue-disabled;
-}
-
-.icon--yellow {
-  color: $color-yellow;
-}
-
-.icon--charcoal {
-  color: $color-charcoal;
-}
-
-.icon--dark-gray {
-  color: $color-dark-gray;
-}
-
-.icon--medium-gray {
-  color: $color-medium-gray;
-}
-
-.icon--light-gray {
-  color: $color-light-gray;
-}
+// /* Icon Component */
+//
+// // Dependencies
+// @import "@asda/core/style";
+// @import "@asda/button/mixins";
+//
+// // Block
+// .icon {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   vertical-align: middle; // Keep inline elements vertically aligned
+//   fill: $color-charcoal;
+// }
+//
+// // Elements/Mixes
+// .icon__button {
+//   @include button_base;
+//   padding: 0;
+//   height: auto;
+//   width: auto;
+//
+//   &:focus:not(.button--disabled),
+//   &:hover:not(.button--disabled) {
+//     box-shadow: none;
+//     &::after {
+//       background-color: $color-black;
+//       opacity: 0.1;
+//     }
+//   }
+// }
+//
+// .icon__svg {
+//   vertical-align: middle; // Correct image alignment
+//   fill: currentColor;
+// }
+//
+// // Modifiers
+// .icon--large {
+//   .icon__svg {
+//     width: 40px;
+//   }
+// }
+//
+// .icon--medium {
+//   .icon__svg {
+//     width: 32px;
+//   }
+// }
+//
+// .icon--small {
+//   .icon__svg {
+//     width: 28px;
+//   }
+// }
+//
+// .icon--x-small {
+//   .icon__svg {
+//     width: 24px;
+//   }
+// }
+//
+// .icon--xx-small {
+//   .icon__svg {
+//     width: 16px;
+//   }
+// }
+//
+// .icon--white {
+//   color: $color-white;
+// }
+//
+// .icon--green {
+//   color: $color-green;
+// }
+//
+// .icon--dark-green {
+//   color: $color-dark-green;
+// }
+//
+// .icon--green-disabled {
+//   color: $color-green-disabled;
+// }
+//
+// .icon--red {
+//   color: $color-red;
+// }
+//
+// .icon--blue {
+//   color: $color-blue;
+// }
+//
+// .icon--blue-disabled {
+//   color: $color-blue-disabled;
+// }
+//
+// .icon--yellow {
+//   color: $color-yellow;
+// }
+//
+// .icon--charcoal {
+//   color: $color-charcoal;
+// }
+//
+// .icon--dark-gray {
+//   color: $color-dark-gray;
+// }
+//
+// .icon--medium-gray {
+//   color: $color-medium-gray;
+// }
+//
+// .icon--light-gray {
+//   color: $color-light-gray;
+// }

@@ -1,8 +1,10 @@
 // Libs
 import React, { Component } from 'react'
+import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import { IconButton } from '@asda/icon'
+import { LinkText } from '@asda/link'
 import Button from '@asda/button'
 import Modal, {
   ModalHeader,
@@ -17,29 +19,47 @@ import Modal, {
 import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
-import modalSVGSource from '../../assets/images/modals-page-modal.svg'
-import infoModal768SVGSource from '../../assets/images/modals-page-info-modal-768.svg'
-import infoModal360SVGSource from '../../assets/images/modals-page-info-modal-360.svg'
-import infoModal360WithIconSVGSource from '../../assets/images/modals-page-info-modal-360-with-icon.svg'
-import scrollableModal768SVGSource from '../../assets/images/modals-page-scrollable-modal-768.svg'
-import scrollableModal360SVGSource from '../../assets/images/modals-page-scrollable-modal-360.svg'
-import avoidLinksSVGSource from '../../assets/images/modals-page-avoid-links.svg'
-import paddingModal768SVGSource from '../../assets/images/modals-page-padding-modal-768.svg'
-import paddingModal360SVGSource from '../../assets/images/modals-page-padding-modal-360.svg'
+import modalPNGSource from '../../assets/images/modals-page-modal.png'
+import infoModal768PNGSource from '../../assets/images/modals-page-info-modal-768.png'
+import infoModal360PNGSource from '../../assets/images/modals-page-info-modal-360.png'
+import infoModal360WithIconPNGSource from '../../assets/images/modals-page-info-modal-360-with-icon.png'
+import scrollableModal768PNGSource from '../../assets/images/modals-page-scrollable-modal-768.png'
+import scrollableModal360PNGSource from '../../assets/images/modals-page-scrollable-modal-360.png'
+import avoidLinksPNGSource from '../../assets/images/modals-page-avoid-links.png'
+import paddingModal768PNGSource from '../../assets/images/modals-page-padding-modal-768.png'
+import paddingModal360PNGSource from '../../assets/images/modals-page-padding-modal-360.png'
 import './_style.scss'
+
+const ModalsPageParagraph = ({ className, children, noMargin, weight }) => {
+  const modifiers = [
+    noMargin && 'modals-page__paragraph--no-margin',
+    !!weight && `modals-page__paragraph--${weight}`,
+  ]
+  const classNames = joinClassNames('modals-page__paragraph', className, modifiers)
+
+  return (
+    <p className={ classNames }>{ children }</p>
+  )
+}
 
 class ModalsPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showModal: true,
+      showModal1: false,
+      showModal2: false,
     }
 
-    this.closeModal = this.closeModal.bind(this)
+    this.toggleModal1 = this.toggleModal1.bind(this)
+    this.toggleModal2 = this.toggleModal2.bind(this)
   }
 
-  closeModal() {
-    this.setState({ showModal: false })
+  toggleModal1() {
+    this.setState({ showModal1: !this.state.showModal1 })
+  }
+
+  toggleModal2() {
+    this.setState({ showModal2: !this.state.showModal2 })
   }
 
   render() {
@@ -60,45 +80,6 @@ class ModalsPage extends Component {
             Modals are purposefully interruptive and should be used sparingly.
           </Paragraph>
 
-          {this.state.showModal &&
-            <Modal onEscKeydown={this.closeModal}>
-              <ModalContainer>
-                <ModalHeader>
-                  Header
-                </ModalHeader>
-                <ModalContent>
-                  <a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus velit quibusdam nulla sint ea tenetur ex corporis, eaque rem, quaerat quo consectetur nostrum consequatur culpa aperiam distinctio non quae commodi!
-                </ModalContent>
-                <ModalActionBar>
-                  <ModalButton category="secondary" onClick={this.closeModal}>Cancel</ModalButton>
-                  <ModalButton onClick={this.closeModal}>Continue</ModalButton>
-                </ModalActionBar>
-                <ModalCloseIcon onClick={this.closeModal} />
-              </ModalContainer>
-              <ModalBackdrop onClick={this.closeModal} />
-            </Modal>
-          }
         </Section>
 
         <Section>
@@ -108,8 +89,9 @@ class ModalsPage extends Component {
             asks for a decision before user can continue with the journey.
           </Paragraph>
           <Figure
+            fluid
             maxWidth="772px"
-            src={modalSVGSource}
+            src={modalPNGSource}
             caption="Slot reserved Modal (768PX)"
             noMargin
           />
@@ -128,21 +110,71 @@ class ModalsPage extends Component {
             Ideally, the content should be short and digestible, avoid long content
             as the modal will interupt the user journey.
           </Paragraph>
+
+          <div>
+            <Button onClick={this.toggleModal1}>Show example</Button>
+            <br/><br/><br/>
+
+            {this.state.showModal1 &&
+              <Modal onEscKeydown={this.toggleModal1}>
+                <ModalContainer>
+                  <ModalHeader>
+                    Brief Title
+                  </ModalHeader>
+                  <ModalContent>
+                    <ModalsPageParagraph weight="semi-bold">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph>
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph noMargin>
+                      Click here to view <LinkText href="#/modals">terms and conditions.</LinkText>
+                    </ModalsPageParagraph>
+                  </ModalContent>
+                  <ModalActionBar>
+                    <ModalButton onClick={this.toggleModal1}>Continue shopping</ModalButton>
+                  </ModalActionBar>
+                  <ModalCloseIcon onClick={this.toggleModal1} />
+                </ModalContainer>
+                <ModalBackdrop onClick={this.toggleModal1} />
+              </Modal>
+            }
+          </div>
+
           <Figure
+            fluid
             maxWidth="768px"
-            src={infoModal768SVGSource}
+            src={infoModal768PNGSource}
             caption="Informational Modal (768px)"
           />
           <div className="modals-page__img-container">
             <Figure
+              fluid
               className="modals-page__figure"
               maxWidth="360px"
-              src={infoModal360SVGSource}
+              src={infoModal360PNGSource}
               caption="Informational Modal (360px)"
             />
             <Figure
+              fluid
               maxWidth="360px"
-              src={infoModal360WithIconSVGSource}
+              src={infoModal360WithIconPNGSource}
               caption="Informational Modal with icon (360px)"
               noMargin
             />
@@ -157,14 +189,119 @@ class ModalsPage extends Component {
             remind the user that he is a modal, while giving him enough space to
             perform the tasks.
           </Paragraph>
+
+          <div>
+            <Button onClick={this.toggleModal2}>Show example</Button>
+            <br/><br/><br/>
+
+            {this.state.showModal2 &&
+              <Modal onEscKeydown={this.toggleModal2} scrollable>
+                <ModalContainer>
+                  <ModalHeader>
+                    Brief Title
+                  </ModalHeader>
+                  <ModalContent>
+                    <ModalsPageParagraph weight="semi-bold">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph weight="semi-bold">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph>
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo.
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph weight="semi-bold">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Temporibus quod modi sunt, illum ratione quam quas
+                      incidunt inventore sequi reiciendis officia est maiores
+                      beatae ducimus voluptatum labore nulla unde voluptate.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph>
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                      occaecat cupidatat non proident, sunt in culpa qui officia
+                      deserunt mollit anim id est laborum.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph>
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo.
+                      Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt explicabo.
+                    </ModalsPageParagraph>
+
+                    <ModalsPageParagraph noMargin>
+                      Click here to view <LinkText href="#/modals">terms and conditions.</LinkText>
+                    </ModalsPageParagraph>
+                  </ModalContent>
+                  <ModalActionBar>
+                    <ModalButton onClick={this.toggleModal2}>Continue shopping</ModalButton>
+                  </ModalActionBar>
+                  <ModalCloseIcon onClick={this.toggleModal2} />
+                </ModalContainer>
+                <ModalBackdrop onClick={this.toggleModal2} />
+              </Modal>
+            }
+          </div>
+
           <Figure
+            fluid
             maxWidth="768px"
-            src={scrollableModal768SVGSource}
+            src={scrollableModal768PNGSource}
             caption="Scrollable Modal (768px)"
           />
           <Figure
-            maxWidth="768px"
-            src={scrollableModal360SVGSource}
+            fluid
+            maxWidth="360px"
+            src={scrollableModal360PNGSource}
             caption="Scrollable Modal (360px)"
             noMargin
           />
@@ -182,8 +319,9 @@ class ModalsPage extends Component {
           </Paragraph>
 
           <Figure
+            fluid
             maxWidth="768px"
-            src={avoidLinksSVGSource}
+            src={avoidLinksPNGSource}
             noMargin
           />
         </Section>
@@ -196,13 +334,15 @@ class ModalsPage extends Component {
             with limited space, the side margins can be reduced to 16px.
           </Paragraph>
           <Figure
+            fluid
             maxWidth="798px"
-            src={paddingModal768SVGSource}
+            src={paddingModal768PNGSource}
             caption="Informational Modal (768px)"
           />
           <Figure
+            fluid
             maxWidth="387px"
-            src={paddingModal360SVGSource}
+            src={paddingModal360PNGSource}
             caption="Informational Modal (360px)"
             noMargin
           />

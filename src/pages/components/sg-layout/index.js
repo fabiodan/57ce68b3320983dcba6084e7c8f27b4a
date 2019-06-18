@@ -49,10 +49,11 @@ const Subheading = ({ children, className = '' }) => (
 )
 
 const Figure = ({
-  src, alt, className = '', maxWidth = 'none', caption = null, noMargin,
+  src, alt, className = '', maxWidth = 'none', caption = null, noMargin, fluid,
 }) => {
   const modifiers = [
     noMargin && 'sg-layout__figure--no-margin',
+    fluid && 'sg-layout__figure--fluid',
   ]
   const classNames = joinClassNames('sg-layout__figure', className, modifiers)
   const style = { maxWidth }
