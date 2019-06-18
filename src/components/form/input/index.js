@@ -81,9 +81,9 @@ class Input extends Component {
 Input.defaultProps = {
   type: 'text',
   className: null,
-  placeholder: '',
+  placeholder: null,
   valid: null,
-  pattern: '',
+  pattern: null,
   required: false,
   onChange() {},
 }

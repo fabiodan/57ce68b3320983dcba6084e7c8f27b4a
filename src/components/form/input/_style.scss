@@ -192,6 +192,10 @@ $input-height: 40px;
           display: none;
         }
       }
+
+      &:not(:hover) {
+        box-shadow: none; // Reset default invalid box-shadow in FF
+      }
     }
   }
 }
