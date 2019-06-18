@@ -92,13 +92,11 @@ const ModalContainer = ({ children, className }) => {
   const classNames = joinClassNames('modal__container', className, modifiers)
 
   return (
-<FocusLock>
     // modal__outer-container is needed to fix scroll issues on IE11 :P
-    <div className="modal__outer-container">
+    <FocusLock className="modal__outer-container">
       <div className={classNames}>
         { children }
       </div>
-    </div>
     </FocusLock>
   )
 }
