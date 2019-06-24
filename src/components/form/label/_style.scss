@@ -1,4 +1,4 @@
-/* Input Component */
+/* Label Component */
 
 // Dependencies
 @import "@asda/core/style";
@@ -7,10 +7,16 @@
 .label {
   @include typography(s);
   display: inline-block;
-    margin-bottom: $spacing-xxs;
+  margin-bottom: $spacing-xxs;
 }
 
 // Modifiers
 .label--required::after {
   content: "\b*";
+}
+
+.label--optional::after {
+  content: " - Optional";
+  @include typography(xs);
+  color: $color-dark-gray;
 }

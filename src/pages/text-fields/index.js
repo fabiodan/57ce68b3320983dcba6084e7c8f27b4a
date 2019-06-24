@@ -259,27 +259,27 @@ const TextFieldsPage = () => (
       </Paragraph>
       <Grid>
         <GridItem>
-          <Caption position="top">No Label Default</Caption>
-          <Label>Label</Label>          
+          <Caption position="top">Default</Caption>
+          <Label>Label</Label>
           <TextField placeholder="Placeholder" rows={4} />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Required</Caption>
+          <Caption position="top">Required</Caption>
           <Label>Label</Label>
           <TextField placeholder="Required" required rows={4} />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Hover</Caption>
+          <Caption position="top">Hover</Caption>
           <Label>Label</Label>
           <TextField placeholder="Placeholder" hover rows={4} />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Focus</Caption>
+          <Caption position="top">Focus</Caption>
           <Label>Label</Label>
           <TextField value="Starting to input text" placeholder="Focus" focus rows={4} />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Filled</Caption>
+          <Caption position="top">Filled</Caption>
           <Label>Label</Label>
           <TextField
             placeholder="Placeholder"
@@ -288,12 +288,12 @@ const TextFieldsPage = () => (
           />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Helper Text</Caption>
+          <Caption position="top">Helper Text</Caption>
           <Label>Label</Label>
           <TextField placeholder="Placeholder" helperText="Helper text" rows={4} />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Success</Caption>
+          <Caption position="top">Success</Caption>
           <Label>Label</Label>
           <TextField
             placeholder="Default"
@@ -306,7 +306,7 @@ const TextFieldsPage = () => (
           />
         </GridItem>
         <GridItem>
-          <Caption position="top">No Label + Error</Caption>
+          <Caption position="top">Error</Caption>
           <Label required>Label</Label>
           <TextField
             placeholder="Error"
@@ -330,7 +330,18 @@ const TextFieldsPage = () => (
         the optional text field for the outlier input requirement and default
         input fields for the required one.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Grid>
+        <GridItem>
+          <Caption position="top">Default</Caption>
+          <Label optional>Label</Label>
+          <TextField placeholder="Placeholder" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Required</Caption>
+          <Label optional>Label</Label>
+          <TextField placeholder="Placeholder" rows={4} />
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>

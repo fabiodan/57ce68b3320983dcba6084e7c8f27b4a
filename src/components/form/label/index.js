@@ -9,9 +9,11 @@ const Label = ({
   children,
   className,
   required,
+  optional,
 }) => {
   const modifiers = [
     required && 'label--required',
+    optional && 'label--optional',
   ]
   const classNames = joinClassNames('label', className, modifiers)
 
