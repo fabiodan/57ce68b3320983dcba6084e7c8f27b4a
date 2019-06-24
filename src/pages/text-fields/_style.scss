@@ -25,7 +25,9 @@
 }
 
 .text-fields-page__credit-card-icon {
-  padding-left: $spacing-xxs;
+  position: absolute;
+  left: $spacing-s;
+  top: $spacing-xxs;
 }
 
 // Breakpoints

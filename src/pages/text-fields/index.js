@@ -4,7 +4,7 @@ import React from 'react'
 // Components (from atomic to composite)
 import CreditCardIcon from '@asda/credit-card-icon'
 import Icon from '@asda/icon'
-import { Input, Label } from '@asda/form'
+import { TextField, Label } from '@asda/form'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -39,37 +39,37 @@ const TextFieldsPage = () => (
         <GridItem>
           <Caption position="top">Default</Caption>
           <Label>Label</Label>
-          <Input placeholder="Default" />
+          <TextField placeholder="Default" />
         </GridItem>
         <GridItem>
           <Caption position="top">Required</Caption>
           <Label required>Label</Label>
-          <Input placeholder="Required" required />
+          <TextField placeholder="Required" required />
         </GridItem>
         <GridItem>
           <Caption position="top">Hover</Caption>
           <Label>Label</Label>
-          <Input placeholder="Hover" hover />
+          <TextField placeholder="Hover" hover />
         </GridItem>
         <GridItem>
           <Caption position="top">Focus</Caption>
           <Label>Label</Label>
-          <Input placeholder="Focus" focus />
+          <TextField placeholder="Focus" focus />
         </GridItem>
         <GridItem>
           <Caption position="top">Filled</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" value="Filled" />
+          <TextField placeholder="Placeholder" value="Filled" />
         </GridItem>
         <GridItem>
           <Caption position="top">Helper Text</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" helperText="Helper text" />
+          <TextField placeholder="Placeholder" helperText="Helper text" />
         </GridItem>
         <GridItem>
           <Caption position="top">Success</Caption>
           <Label>Label</Label>
-          <Input
+          <TextField
             placeholder="Default"
             value="Input Text"
             pattern="Input Text"
@@ -82,7 +82,7 @@ const TextFieldsPage = () => (
         <GridItem>
           <Caption position="top">Error</Caption>
           <Label>Label</Label>
-          <Input
+          <TextField
             placeholder="Default"
             value="Input Text"
             pattern="Input Text Error"
@@ -106,47 +106,51 @@ const TextFieldsPage = () => (
         <GridItem>
           <Caption position="top">Default + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Default" extraPaddingLeft="medium">
+          <TextField placeholder="Default" extraPaddingLeft="xxx-large">
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
-          </Input>
+          </TextField>
         </GridItem>
         <GridItem>
           <Caption position="top">Required + Icon</Caption>
           <Label required>Label</Label>
-          <Input placeholder="Required" required extraPaddingLeft="medium">
+          <TextField placeholder="Required" required extraPaddingLeft="medium">
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
-          </Input>
+          </TextField>
         </GridItem>
         <GridItem>
           <Caption position="top">Hover + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Hover" hover extraPaddingLeft="medium">
+          <TextField placeholder="Hover" hover extraPaddingLeft="medium">
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
-          </Input>
+          </TextField>
         </GridItem>
         <GridItem>
           <Caption position="top">Focus + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Focus" value="4111 1111 1111 1111" focus extraPaddingLeft="medium">
+          <TextField placeholder="Focus" value="4111 1111 1111 1111" focus extraPaddingLeft="medium">
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
-          </Input>
+          </TextField>
         </GridItem>
         <GridItem>
           <Caption position="top">Filled + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" value="4111 1111 1111 1111" extraPaddingLeft="medium">
+          <TextField placeholder="Placeholder" value="4111 1111 1111 1111" extraPaddingLeft="medium">
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
-          </Input>
+          </TextField>
         </GridItem>
         <GridItem>
           <Caption position="top">Helper Text + Icon</Caption>
           <Label>Label</Label>
-          <Input placeholder="Placeholder" helperText="Helper text" />
+          <TextField placeholder="Placeholder" helperText="Helper text" extraPaddingLeft="medium">
+            <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
+          </TextField>
+
+
         </GridItem>
         <GridItem>
           <Caption position="top">Success + Icon</Caption>
           <Label>Label</Label>
-          <Input
+          <TextField
             placeholder="Default"
             value="4111 1111 1111 1111"
             pattern="4111 1111 1111 1111"
@@ -157,12 +161,12 @@ const TextFieldsPage = () => (
             extraPaddingLeft="medium"
           >
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
-          </Input>
+          </TextField>
         </GridItem>
         <GridItem>
           <Caption position="top">Error + Icon</Caption>
           <Label>Label</Label>
-          <Input
+          <TextField
             placeholder="Default"
             value="4111 1111 1111 1110"
             pattern="4111 1111 1111 1111"
@@ -173,7 +177,7 @@ const TextFieldsPage = () => (
             extraPaddingLeft="medium"
           >
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
-          </Input>
+          </TextField>
 
         </GridItem>
       </Grid>
@@ -188,31 +192,31 @@ const TextFieldsPage = () => (
       <Grid>
         <GridItem>
           <Caption position="top">No Label Default</Caption>
-          <Input placeholder="Default" />
+          <TextField placeholder="Default" />
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Required</Caption>
-          <Input placeholder="Required" required />
+          <TextField placeholder="Required" required />
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Hover</Caption>
-          <Input placeholder="Hover" hover />
+          <TextField placeholder="Hover" hover />
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Focus</Caption>
-          <Input placeholder="Focus" focus />
+          <TextField placeholder="Focus" focus />
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Filled</Caption>
-          <Input placeholder="Placeholder" value="Filled" />
+          <TextField placeholder="Placeholder" value="Filled" />
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Helper Text</Caption>
-          <Input placeholder="Placeholder" helperText="Helper text" />
+          <TextField placeholder="Placeholder" helperText="Helper text" />
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Success</Caption>
-          <Input
+          <TextField
             placeholder="Default"
             value="Input Text"
             pattern="Input Text"
@@ -224,7 +228,7 @@ const TextFieldsPage = () => (
         </GridItem>
         <GridItem>
           <Caption position="top">No Label + Error</Caption>
-          <Input
+          <TextField
             placeholder="Default"
             value="Input Text"
             pattern="Input Text Error"
@@ -249,9 +253,74 @@ const TextFieldsPage = () => (
         To adjust for wrapping text, default height of the text area is 100px
         (120px for symbols with labels, 140px for symbols with labels and helper
         text/error) and wraps the text four times. For more wraps, the height
-        should be increased in increments of 20px to maintain consistency.
+        should be increased in increments of 20px to maintain consistency. A
+        maximum number of wraps can be defined by showing a scrollbar when text
+        overflows.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Grid>
+        <GridItem>
+          <Caption position="top">No Label Default</Caption>
+          <Label>Label</Label>          
+          <TextField placeholder="Placeholder" rows={4} />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Required</Caption>
+          <Label>Label</Label>
+          <TextField placeholder="Required" required rows={4} />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Hover</Caption>
+          <Label>Label</Label>
+          <TextField placeholder="Placeholder" hover rows={4} />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Focus</Caption>
+          <Label>Label</Label>
+          <TextField value="Starting to input text" placeholder="Focus" focus rows={4} />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Filled</Caption>
+          <Label>Label</Label>
+          <TextField
+            placeholder="Placeholder"
+            value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            rows={4}
+          />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Helper Text</Caption>
+          <Label>Label</Label>
+          <TextField placeholder="Placeholder" helperText="Helper text" rows={4} />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Success</Caption>
+          <Label>Label</Label>
+          <TextField
+            placeholder="Default"
+            value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+            rows={4}
+          />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">No Label + Error</Caption>
+          <Label required>Label</Label>
+          <TextField
+            placeholder="Error"
+            value=""
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+            error
+            rows={4}
+            required
+          />
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>

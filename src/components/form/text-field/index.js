@@ -1,0 +1,100 @@
+// Libs
+import React, { Component } from 'react'
+import joinClassNames from 'classnames'
+
+// Components (from atomic to composite)
+import Icon from '@asda/icon'
+import TextareaAutosize from 'react-autosize-textarea';
+
+// Assets
+import './_style.scss'
+
+const TextField = ({
+  children,
+  type,
+  className,
+  value,
+  placeholder,
+  pattern,
+  validate,
+  onChange,
+  required,
+  helperText,
+  successMessage,
+  errorMessage,
+  extraPaddingLeft,
+  error,
+  rows,
+  maxRows,
+
+  // For demonstration purposes only
+  hover,
+  focus,
+}) => {
+
+  const modifiers = [
+    validate && 'text-field--validate',
+    !!children && 'text-field--with-icon',
+    !!extraPaddingLeft && `text-field--extra-padding-left-${extraPaddingLeft}`,
+    rows && 'text-field--multiline',
+    error && 'text-field--error',
+
+    // For demonstration purposes only
+    hover && 'text-field--hover',
+    focus && 'text-field--focus',
+  ]
+
+  const classNames = joinClassNames('text-field', className, modifiers)
+
+  return (
+    <div className={classNames}>
+      {children}
+      {rows ?
+        <TextareaAutosize
+          className="text-field__element"
+          defaultValue={value}
+          placeholder={`${placeholder} ${required ? '*' : ''}`.trim()}
+          onChange={onChange}
+          rows={rows}
+          // Add 1 to keep consistency in the textarea size
+          maxRows={maxRows && maxRows + 1}
+          required={required}
+        /> :
+        <input
+          className="text-field__element"
+          type={type}
+          defaultValue={value}
+          placeholder={`${placeholder} ${required ? '*' : ''}`.trim()}
+          pattern={pattern}
+          onChange={onChange}
+          required={required}
+        />
+      }
+      <Icon className="text-field__icon-check" name="check" size="x-small" color="green" />
+      <Icon className="text-field__icon-alert" name="alert" size="x-small" color="red" />
+      {helperText &&
+        <small className="text-field__helper-text">{helperText}</small>
+      }
+      {successMessage &&
+        <small className="text-field__success-message">{successMessage}</small>
+      }
+      {errorMessage &&
+        <small className="text-field__error-message">{errorMessage}</small>
+      }
+    </div>
+  )
+}
+
+TextField.defaultProps = {
+  type: 'text',
+  className: null,
+  placeholder: null,
+  valid: null,
+  pattern: null,
+  required: false,
+  rows: null,
+  maxRows: 7,
+  onChange() {},
+}
+
+export default TextField

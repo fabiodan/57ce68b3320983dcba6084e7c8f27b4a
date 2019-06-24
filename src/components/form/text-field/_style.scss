@@ -1,0 +1,215 @@
+/* TextField Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Variables
+$text-field-with-icon-padding-left: $spacing-xxl;
+$text-field-border-witdh: 1px;
+$text-field-border-thick-witdh: 2px;
+$text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
+
+@mixin text-field_normalize {
+  /**
+  * 1. Change the font styles in all browsers.
+  * 2. Remove the margin in Firefox and Safari.
+  */
+  font-family: inherit; /* 1 */
+  margin: 0; /* 2 */
+
+  /**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+  overflow: visible;  /* 1 */
+}
+
+@mixin text-field_base {
+  @include text-field_normalize;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle; // Fix extra bottom space on when textarea elem is used.
+
+  &::-ms-clear { // Remove clear field "X" button from IE Edge
+    display: none;
+  }
+
+  @include typography(m);
+  border: solid $text-field-border-witdh $color-medium-gray;
+  border-radius: 4px;
+  padding: ($text-field-vertical-padding - $text-field-border-witdh) $spacing-s;
+
+  &::placeholder {
+    color: $color-dark-gray;
+  }
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
+  &:focus {
+    border-color: $color-dark-gray;
+  }
+}
+
+// Block
+.text-field {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+// Elements/Mixes
+.text-field__element {
+  @include text-field_base;
+  width: 100%;
+}
+
+.text-field__icon-check,
+.text-field__icon-alert {
+  display: none;
+  position: absolute;
+  right: $spacing-xs;
+  top: $spacing-xs;
+}
+
+.text-field__helper-text,
+.text-field__success-message,
+.text-field__error-message {
+  display: block;
+  @include typography(xs);
+  color: $color-dark-gray;
+  margin-top: $spacing-xxs;
+}
+
+.text-field__success-message {
+  color: $color-green;
+}
+
+.text-field__error-message {
+  color: $color-red;
+}
+
+// Modifiers
+.text-field--with-icon {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left;
+  }
+}
+
+.text-field--multiline {
+  .text-field__element {
+    height: auto;
+    resize: none;
+  }
+}
+
+// TODO Loop through sizes to build the extra padding styles
+.text-field--extra-padding-left-xxx-large {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-xxxl;
+  }
+}
+
+.text-field--extra-padding-left-xx-large {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-xxl;
+  }
+}
+
+.text-field--extra-padding-left-x-large {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-xl;
+  }
+}
+
+.text-field--extra-padding-left-large {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-l;
+  }
+}
+
+.text-field--extra-padding-left-medium {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-m;
+  }
+}
+
+.text-field--extra-padding-left-small {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-s;
+  }
+}
+
+.text-field--extra-padding-left-x-small {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-xs;
+  }
+}
+
+.text-field--extra-padding-left-xx-small {
+  .text-field__element {
+    padding-left: $text-field-with-icon-padding-left + $spacing-xxs;
+  }
+}
+
+.text-field--validate {
+  .text-field__element {
+    padding-right: $spacing-xxl;
+    padding-top: $text-field-vertical-padding - $text-field-border-thick-witdh;
+    padding-bottom: $text-field-vertical-padding - $text-field-border-thick-witdh;
+
+    &:valid {
+      border: solid $text-field-border-thick-witdh $color-green;
+
+      & ~ {
+        .text-field__icon-check {
+          display: inline-flex; // Default Icon display value
+        }
+        .text-field__error-message,
+        .text-field__helper-text {
+          display: none;
+        }
+      }
+    }
+
+    &:invalid {
+      border: solid 2px $color-red;
+
+      &::-moz-selection {
+        background: $color-red;
+      }
+
+      &::selection {
+        background: $color-red;
+      }
+
+      & ~ {
+        .text-field__icon-alert {
+          display: inline-flex; // Default Icon display value
+        }
+        .text-field__success-message,
+        .text-field__helper-text {
+          display: none;
+        }
+      }
+
+      &:not(:hover) {
+        box-shadow: none; // Reset default invalid box-shadow in FF
+      }
+    }
+  }
+}
+
+.text-field--hover { // For demonstration purposes only
+  .text-field__element {
+    box-shadow: $shadow;
+  }
+}
+
+.text-field--focus {
+  .text-field__element { // For demonstration purposes only
+    border-color: $color-dark-gray;
+  }
+}

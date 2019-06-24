@@ -4,7 +4,7 @@ import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Label from './label'
-import Input from './input'
+import TextField from './text-field'
 
 // Assets
 import './_style.scss'
@@ -24,5 +24,5 @@ const Form = ({
 export {
   Form as default,
   Label,
-  Input,
+  TextField,
 }
