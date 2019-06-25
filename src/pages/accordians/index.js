@@ -10,6 +10,7 @@ import Accordian, {
   AccordianHeader,
   AccordianContent,
 } from '@asda/accordian'
+import { TextField, Label } from '@asda/form'
 import { Caption, Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -153,11 +154,17 @@ class AccordiansPage extends Component {
                     </span>
                   </AccordianTitle>
                   <AccordianButton onClick={this.toggleAccordian3}>
-                    { openAccordian3 ? 'Cancel' : 'Change'}
+                    { openAccordian3 ? 'Close' : 'Change'}
                   </AccordianButton>
                 </AccordianHeader>
                 <AccordianContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
+                  <Label>Card number</Label>
+                  <TextField
+                    className="accordians-page__text-field__credit-card"
+                    extraPaddingLeft="medium"
+                  >
+                    <CreditCardIcon className="accordians-page__text-field__credit-card-icon" name="blank" />
+                  </TextField>
                 </AccordianContent>
               </Accordian>
             </GridItem>

@@ -63,6 +63,16 @@
   margin-right: $spacing-m;
 }
 
+.accordians-page__text-field__credit-card {
+  max-width: 400px;
+}
+
+.accordians-page__text-field__credit-card-icon {
+  position: absolute;
+  left: $spacing-s;
+  top: $spacing-xxs;
+}
+
 // Breakpoints
 @media (min-width: 480px) {
   .accordians-page__credit-card-icon {

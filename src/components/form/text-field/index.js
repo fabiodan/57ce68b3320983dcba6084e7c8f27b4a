@@ -122,7 +122,7 @@ class TextField extends Component {
 TextField.defaultProps = {
   type: 'text',
   className: null,
-  placeholder: null,
+  placeholder: '',
   valid: null,
   pattern: null,
   required: false,

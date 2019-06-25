@@ -6,7 +6,7 @@
 // Block
 .label {
   @include typography(s);
-  display: inline-block;
+  display: block;
   margin-bottom: $spacing-xxs;
 }
 
