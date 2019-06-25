@@ -78,12 +78,17 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
 }
 
 .text-field__helper-text,
+.text-field__char-counter,
 .text-field__success-message,
 .text-field__error-message {
-  display: block;
+  display: inline-block;
   @include typography(xs);
   color: $color-dark-gray;
   margin-top: $spacing-xxs;
+}
+
+.text-field__char-counter {
+  float: right;
 }
 
 .text-field__success-message {

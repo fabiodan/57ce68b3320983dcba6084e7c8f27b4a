@@ -332,12 +332,12 @@ const TextFieldsPage = () => (
       </Paragraph>
       <Grid>
         <GridItem>
-          <Caption position="top">Default</Caption>
+          <Caption position="top">Optional Input Field</Caption>
           <Label optional>Label</Label>
           <TextField placeholder="Placeholder" />
         </GridItem>
         <GridItem>
-          <Caption position="top">Required</Caption>
+          <Caption position="top">Optional Text Field</Caption>
           <Label optional>Label</Label>
           <TextField placeholder="Placeholder" rows={4} />
         </GridItem>
@@ -351,7 +351,44 @@ const TextFieldsPage = () => (
         text fields. Helper text, errors, success messages, character counters
         are some examples of assistive elements.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Grid>
+        <GridItem>
+          <Caption position="top">Success</Caption>
+          <Label>Label</Label>
+          <TextField
+            placeholder="Default"
+            value="Right Input"
+            pattern="Right Input"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Error</Caption>
+          <Label>Label</Label>
+          <TextField
+            placeholder="Error"
+            value="Wrong Input"
+            pattern="Right Input"
+            helperText="Helper text"
+            successMessage="Success message"
+            errorMessage="Error message"
+            validate
+          />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Helper Text</Caption>
+          <Label>Label</Label>
+          <TextField placeholder="Placeholder" helperText="Helper text" />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Character Counter</Caption>
+          <Label>Label</Label>
+          <TextField placeholder="Placeholder" maxLength={20} charCounter />
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>
