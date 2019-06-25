@@ -173,7 +173,7 @@ class AccordiansPage extends Component {
               <Accordian open={openAccordian4}>
                 <AccordianHeader onClick={this.toggleAccordian4}>
                   <AccordianTitle>Delivery Details</AccordianTitle>
-                  <AccordianButton onClick={this.toggleAccordian4}>
+                  <AccordianButton>
                     Change Slot
                   </AccordianButton>
                 </AccordianHeader>
