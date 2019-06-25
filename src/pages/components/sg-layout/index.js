@@ -40,7 +40,7 @@ const Paragraph = ({ children, className, noMargin }) => {
   const classNames = joinClassNames('sg-layout__paragraph', className, modifiers)
 
   return (
-    <p className={classNames}>{children}</p>
+    <div className={classNames}>{children}</div>
   )
 }
 

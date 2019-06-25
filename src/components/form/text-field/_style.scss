@@ -7,7 +7,9 @@
 $text-field-with-icon-padding-left: $spacing-xxl;
 $text-field-border-witdh: 1px;
 $text-field-border-thick-witdh: 2px;
-$text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
+$text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2);
+$text-field-horizontal-padding: $spacing-s;
+$text-field-search-button-width: 40px;
 
 @mixin text-field_normalize {
   /**
@@ -38,7 +40,7 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
   @include typography(m);
   border: solid $text-field-border-witdh $color-medium-gray;
   border-radius: 4px;
-  padding: ($text-field-vertical-padding - $text-field-border-witdh) $spacing-s;
+  padding: ($text-field-vertical-padding - $text-field-border-witdh) $text-field-horizontal-padding;
 
   &::placeholder {
     color: $color-dark-gray;
@@ -64,8 +66,10 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
 .text-field__element {
   @include text-field_base;
   width: 100%;
-  &:invalid:not(:hover) {
-    box-shadow: none; // Reset default invalid box-shadow in FF
+  &:invalid {
+    &:not(:hover) {
+      box-shadow: none; // Reset default invalid box-shadow in FF
+    }
   }
 }
 
@@ -81,10 +85,19 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
 .text-field__char-counter,
 .text-field__success-message,
 .text-field__error-message {
-  display: inline-block;
   @include typography(xs);
   color: $color-dark-gray;
   margin-top: $spacing-xxs;
+}
+
+.text-field__helper-text,
+.text-field__char-counter {
+  display: inline-block;
+}
+
+.text-field__success-message,
+.text-field__error-message {
+  display: none;
 }
 
 .text-field__char-counter {
@@ -97,6 +110,17 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
 
 .text-field__error-message {
   color: $color-red;
+}
+
+.text-field__search-button {
+  padding: 0;
+  width: $text-field-search-button-width;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 4px 4px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 // Modifiers
@@ -173,6 +197,7 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
       border: solid $text-field-border-thick-witdh $color-green;
 
       & ~ {
+        .text-field__success-message,
         .text-field__icon-check {
           display: inline-flex; // Default Icon display value
         }
@@ -195,6 +220,7 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
       }
 
       & ~ {
+        .text-field__error-message,
         .text-field__icon-alert {
           display: inline-flex; // Default Icon display value
         }
@@ -203,6 +229,11 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
           display: none;
         }
       }
+    }
+  }
+  &.text-field--search {
+    .text-field__element {
+      padding-right: $spacing-xl + $text-field-search-button-width;
     }
   }
 }
@@ -216,5 +247,18 @@ $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2); //
 .text-field--focus {
   .text-field__element { // For demonstration purposes only
     border-color: $color-dark-gray;
+  }
+}
+
+.text-field--search {
+  .text-field__element {
+    padding-right: $text-field-horizontal-padding + $text-field-search-button-width;
+    &::-webkit-search-cancel-button {
+      -webkit-appearance:none;
+    }
+  }
+  .text-field__icon-check,
+  .text-field__icon-alert {
+    right: $spacing-xs + $text-field-search-button-width;
   }
 }

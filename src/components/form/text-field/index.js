@@ -4,6 +4,7 @@ import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Icon from '@asda/icon'
+import Button from '@asda/button'
 import TextareaAutosize from 'react-autosize-textarea';
 
 // Assets
@@ -50,7 +51,7 @@ class TextField extends Component {
       !!children && 'text-field--with-icon',
       !!extraPaddingLeft && `text-field--extra-padding-left-${extraPaddingLeft}`,
       rows && 'text-field--multiline',
-      error && 'text-field--error',
+      type === 'search' && 'text-field--search',
 
       // For demonstration purposes only
       hover && 'text-field--hover',
@@ -98,17 +99,20 @@ class TextField extends Component {
         }
         <Icon className="text-field__icon-check" name="check" size="x-small" color="green" />
         <Icon className="text-field__icon-alert" name="alert" size="x-small" color="red" />
+        {helperText &&
+          <small className="text-field__helper-text">{helperText}</small>
+        }
         {successMessage &&
           <small className="text-field__success-message">{successMessage}</small>
         }
         {errorMessage &&
           <small className="text-field__error-message">{errorMessage}</small>
         }
-        {helperText &&
-          <small className="text-field__helper-text">{helperText}</small>
-        }
         {charCounter &&
           <small className="text-field__char-counter">{charCount}/{maxLength}</small>
+        }
+        {type === 'search' &&
+          <Button iconName="search" color="green" className="text-field__search-button" hiddenText>Search</Button>
         }
       </div>
     )

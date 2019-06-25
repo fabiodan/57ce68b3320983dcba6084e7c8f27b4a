@@ -5,9 +5,10 @@ import React from 'react'
 import CreditCardIcon from '@asda/credit-card-icon'
 import Icon from '@asda/icon'
 import { TextField, Label } from '@asda/form'
-import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
+import gridPNGSource from '../../assets/images/text-fields-page-grid.png'
 import './_style.scss'
 
 const Component = ({ children }) => (
@@ -396,19 +397,70 @@ const TextFieldsPage = () => (
       <Paragraph>
         When text fields have both helper text and error/success state, swap
         the helper text to error or success message.
+        <Grid>
+          <GridItem>
+            <Label>Username</Label>
+            <TextField
+              placeholder="Error"
+              value="Amelie Poulain"
+              helperText="Helper text"
+              errorMessage="Error message"
+              helperText="At least 8 characters"
+            />
+          </GridItem>
+          <GridItem>
+            <Label>Username</Label>
+            <TextField
+              placeholder="Error"
+              value="Amelie"
+              pattern="Amelie P(.*)"
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Error: At least 8 characters"
+              helperText="At least 8 characters"
+              validate
+            />
+          </GridItem>
+        </Grid>
       </Paragraph>
-      <Component>Examples Here</Component>
-      <Paragraph>
+
+      <Paragraph noMargin>
         When text input is longer than the given text area, the height of the
-        container should increase by 20px.
+        container should increase by 20px until it reaches the maximum number
+        of wraps.
+
+        <Grid>
+          <GridItem>
+            <Label>Label</Label>
+            <TextField
+              placeholder="Placeholder"
+              value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost"
+              rows={4}
+              maxRows={null}
+            />
+          </GridItem>
+          <GridItem>
+            <Label>Label</Label>
+            <TextField
+              placeholder="Placeholder"
+              value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              rows={4}
+              maxRows={null}
+            />
+          </GridItem>
+        </Grid>
       </Paragraph>
-      <Component>Examples Here</Component>
       <Paragraph>
         Consistent padding between input fields is necessary to reduce the
         pushing down of elements when the text area increases or an error,
         success message appears.
       </Paragraph>
-      <Component>Examples Here</Component>
+      <Figure
+        fluid
+        maxWidth="810px"
+        src={gridPNGSource}
+        noMargin
+      />
     </Section>
 
     <Section>
@@ -417,8 +469,30 @@ const TextFieldsPage = () => (
         Search is the only text field containing an icon with a background.
         The principle is to enhance the visibility of the search field. Its
         usage patterns are similar to other text fields.
+
+        <Grid>
+          <GridItem>
+            <Caption position="top">Default</Caption>
+            <Label>Label</Label>
+            <TextField type="search" placeholder="Default" />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Required</Caption>
+            <Label required>Label</Label>
+            <TextField type="search" placeholder="Required" required />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Hover</Caption>
+            <Label>Label</Label>
+            <TextField type="search" placeholder="Hover" hover />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Focus</Caption>
+            <Label>Label</Label>
+            <TextField type="search" placeholder="Focus" focus />
+          </GridItem>
+        </Grid>
       </Paragraph>
-      <Component>Examples Here</Component>
     </Section>
 
   </article>
