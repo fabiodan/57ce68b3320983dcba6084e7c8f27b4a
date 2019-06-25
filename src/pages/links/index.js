@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { LinkStandalone, LinkText } from '@asda/link'
+import { LinkButton, LinkText } from '@asda/link'
 import Alert from '@asda/alert'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
@@ -31,25 +31,25 @@ const LinksPage = () => (
       </Paragraph>
       <Grid>
         <GridItem>
-          <LinkStandalone align="left">Link button</LinkStandalone>
+          <LinkButton align="left">Link button</LinkButton>
           <Caption>Standalone button Left aligned Default</Caption>
         </GridItem>
         <GridItem>
-          <LinkStandalone>Link button</LinkStandalone>
+          <LinkButton>Link button</LinkButton>
           <Caption>standalone button Center aligned Default</Caption>
         </GridItem>
         <GridItem>
-          <LinkStandalone align="right">Link button</LinkStandalone>
+          <LinkButton align="right">Link button</LinkButton>
           <Caption>standalone button Right aligned Hover</Caption>
         </GridItem>
         <GridItem>
-          <LinkStandalone className="links-page__link--border" align="left">Link button</LinkStandalone>
+          <LinkButton className="links-page__link--border" align="left">Link button</LinkButton>
         </GridItem>
         <GridItem>
-          <LinkStandalone className="links-page__link--border">Link button</LinkStandalone>
+          <LinkButton className="links-page__link--border">Link button</LinkButton>
         </GridItem>
         <GridItem>
-          <LinkStandalone className="links-page__link--border" align="right">Link button</LinkStandalone>
+          <LinkButton className="links-page__link--border" align="right">Link button</LinkButton>
         </GridItem>
       </Grid>
       <Paragraph>

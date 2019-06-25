@@ -20,6 +20,7 @@
   color: $color-blue;
   text-decoration: underline;
   cursor: pointer;
+  user-select: none;
 }
 
 // Modifiers
@@ -30,7 +31,7 @@
   padding: 0 $spacing-s;
   text-decoration: none;
 
-  &:hover {
+  &:hover:not(.link--disabled) {
     text-decoration: underline;
   }
 
@@ -50,4 +51,9 @@
 // inherit the color from the current text.
 .link--inherit {
   color: inherit;
+}
+
+.link--disabled {
+  color: $color-dark-gray;
+  cursor: not-allowed;
 }

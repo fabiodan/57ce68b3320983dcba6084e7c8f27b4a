@@ -21,20 +21,33 @@ const LinkText = ({
   )
 }
 
-const LinkStandalone = ({ children, className, align }) => {
+const LinkButton = ({ children, className, align, onClick, disabled }) => {
   const modifiers = [
     'link--button',
     !!align && `link--${align}`,
+    disabled && `link--disabled`,
   ]
 
   const classNames = joinClassNames('link', className, modifiers)
+  const clickHandler = (e) => {
+    e.stopPropagation()
+
+    if (disabled) return
+    if (onClick) onClick()
+  }
 
   return (
-    <button className={classNames}>{children}</button>
+    <button className={classNames} onClick={clickHandler} aria-disabled={disabled}>
+      {children}
+    </button>
   )
+}
+
+LinkButton.defaultProps = {
+  onClick: null,
 }
 
 export {
   LinkText,
-  LinkStandalone,
+  LinkButton,
 }

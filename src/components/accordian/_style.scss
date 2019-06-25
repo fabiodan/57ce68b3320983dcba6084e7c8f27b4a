@@ -1,0 +1,65 @@
+/* Accordian Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Variables
+$accordian-element-height: 250px;
+$accordian-mix-border-color: $color-medium-gray;
+
+// Block
+.accordian {
+  border: solid 1px $color-medium-gray;
+  border-radius: 4px;
+  overflow: hidden;
+  max-height: 52px;
+  transition: max-height 250ms cubic-bezier(0.0, 0.0, 0.2, 1);
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+
+// Elements/Mixes
+.accordian__header {
+  background-color: $color-background-gray;
+  height: 52px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $spacing-m;
+  border-bottom: solid 1px $color-medium-gray;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.accordian__title {
+  margin: 0;
+  @include typography(l);
+  font-weight: 600;
+}
+
+.accordian__content {
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+  padding: $spacing-m;
+}
+
+// Modifiers
+.accordian--open {
+  max-height: 860px;
+  transition-duration: 500ms;
+
+  .accordian__content {
+    opacity: 1;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.accordian--hover:not(.accordian--open) {
+  box-shadow: $shadow;
+}
