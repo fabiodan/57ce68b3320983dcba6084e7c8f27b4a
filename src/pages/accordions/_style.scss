@@ -1,21 +1,21 @@
-/* Accordians Page */
+/* Accordions Page */
 
 // Dependencies
 @import "@asda/core/style";
 @import "../components/sg-core/style";
 
 // Block
-.accordians-page {
+.accordions-page {
 
 }
 
 // Elements/Mixes
-.accordians-page__padding-example {
+.accordions-page__padding-example {
   margin-bottom: $spacing-xxxl;
 }
 
 // Elements/Mixes
-.accordians-page__grid {
+.accordions-page__grid {
   max-width: 879px;
   list-style: none;
   padding: 0;
@@ -24,28 +24,33 @@
   grid-gap: 0 $spacing-xs;
 }
 
-.accordians-page__grid-item {
+.accordions-page__grid-item {
   padding: $spacing-m 0;
 }
 
-.accordians-page__credit-card-info {
+.accordions-page__credit-card-info {
   display: inline-flex;
-  vertical-align: middle;
   align-items: center;
   margin-left: $spacing-xs;
+  font-weight: 400;
 }
 
-.accordians-page__credit-card-icon {
-  display: none;
+.accordions-page__credit-card-icon {
+  // display: none;
   margin-right: $spacing-xs;
 }
 
-.accordians-page__delivery-details {
+.accordions-page__credit-card-title {
+  display: flex;
+  align-items: center;
+}
+
+.accordions-page__delivery-details {
   padding: 0;
   list-style: none;
 }
 
-.accordians-page__delivery-details__item {
+.accordions-page__delivery-details__item {
   display: flex;
   align-items: flex-start;
   &:nth-child(1) {
@@ -53,7 +58,7 @@
   }
 }
 
-.accordians-page__delivery-details__icon {
+.accordions-page__delivery-details__icon {
   background: $color-light-gray;
   border-radius: 50%;
   width: 40px;
@@ -63,11 +68,11 @@
   margin-right: $spacing-m;
 }
 
-.accordians-page__text-field__credit-card {
+.accordions-page__text-field__credit-card {
   max-width: 400px;
 }
 
-.accordians-page__text-field__credit-card-icon {
+.accordions-page__text-field__credit-card-icon {
   position: absolute;
   left: $spacing-s;
   top: $spacing-xxs;
@@ -75,7 +80,7 @@
 
 // Breakpoints
 @media (min-width: 480px) {
-  .accordians-page__credit-card-icon {
+  .accordions-page__credit-card-icon {
     display: inline-block;
   }
 }

@@ -1,14 +1,14 @@
-/* Accordian Component */
+/* Accordion Component */
 
 // Dependencies
 @import "@asda/core/style";
 
 // Variables
-$accordian-element-height: 250px;
-$accordian-mix-border-color: $color-medium-gray;
+$accordion-element-height: 250px;
+$accordion-mix-border-color: $color-medium-gray;
 
 // Block
-.accordian {
+.accordion {
   border: solid 1px $color-medium-gray;
   border-radius: 4px;
   overflow: hidden;
@@ -20,9 +20,9 @@ $accordian-mix-border-color: $color-medium-gray;
 }
 
 // Elements/Mixes
-.accordian__header {
+.accordion__header {
   background-color: $color-background-gray;
-  height: 52px;
+  height: 51px;
   border-radius: 4px 4px 0 0;
   display: flex;
   justify-content: space-between;
@@ -34,24 +34,24 @@ $accordian-mix-border-color: $color-medium-gray;
   }
 }
 
-.accordian__title {
+.accordion__title {
   margin: 0;
   @include typography(l);
   font-weight: 600;
 }
 
-.accordian__content {
+.accordion__content {
   opacity: 0;
   transition: opacity 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
   padding: $spacing-m;
 }
 
 // Modifiers
-.accordian--open {
+.accordion--open {
   max-height: 860px;
   transition-duration: 500ms;
 
-  .accordian__content {
+  .accordion__content {
     opacity: 1;
   }
 
@@ -60,6 +60,6 @@ $accordian-mix-border-color: $color-medium-gray;
   }
 }
 
-.accordian--hover:not(.accordian--open) {
+.accordion--hover:not(.accordion--open) {
   box-shadow: $shadow;
 }

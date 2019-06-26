@@ -33,7 +33,7 @@ import TooltipsPage from './pages/tooltips'
 import InputControlsPage from './pages/input-controls'
 import MiscellaneousPage from './pages/miscellaneous'
 import ModalsPage from './pages/modals'
-import AccordiansPage from './pages/accordians'
+import AccordionsPage from './pages/accordions'
 import IconsPage from './pages/icons'
 
 class Page extends Component {
@@ -117,7 +117,7 @@ ReactDOM.render(
         <Route path="/input-controls" component={InputControlsPage} />
         <Route path="/miscellaneous" component={MiscellaneousPage} />
         <Route path="/modals" component={ModalsPage} />
-        <Route path="/accordians" component={AccordiansPage} />
+        <Route path="/accordions" component={AccordionsPage} />
         <Route path="/icons" component={IconsPage} />
       </Page>
     </Router>

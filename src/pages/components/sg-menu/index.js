@@ -26,7 +26,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Input Controls (WIP)', url: '/input-controls' },
     { name: 'Miscellaneous (WIP)', url: '/miscellaneous' },
     { name: 'Modals', url: '/modals' },
-    { name: 'Accordians', url: '/accordians' },
+    { name: 'Accordions', url: '/accordions' },
     { name: 'Icons', url: '/icons' },
   ]
 
