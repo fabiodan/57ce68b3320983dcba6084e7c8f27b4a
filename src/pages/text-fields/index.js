@@ -310,7 +310,7 @@ const TextFieldsPage = () => (
           <Caption position="top">Error</Caption>
           <Label required>Label</Label>
           <TextField
-            placeholder="Error"
+            placeholder="Placeholder"
             value=""
             helperText="Helper text"
             successMessage="Success message"
@@ -473,22 +473,18 @@ const TextFieldsPage = () => (
         <Grid>
           <GridItem>
             <Caption position="top">Default</Caption>
-            <Label>Label</Label>
             <TextField type="search" placeholder="Default" />
           </GridItem>
           <GridItem>
             <Caption position="top">Required</Caption>
-            <Label required>Label</Label>
             <TextField type="search" placeholder="Required" required />
           </GridItem>
           <GridItem>
             <Caption position="top">Hover</Caption>
-            <Label>Label</Label>
             <TextField type="search" placeholder="Hover" hover />
           </GridItem>
           <GridItem>
             <Caption position="top">Focus</Caption>
-            <Label>Label</Label>
             <TextField type="search" placeholder="Focus" focus />
           </GridItem>
         </Grid>
