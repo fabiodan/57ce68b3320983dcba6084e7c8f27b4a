@@ -1,0 +1,46 @@
+/* Dropdown Component */
+
+// Dependencies
+@import "@asda/core/style";
+@import "../text-field/mixins";
+
+// Variables
+$dropdown-border-width: 1px;
+
+// Block
+.dropdown {
+  position: relative;
+}
+
+// Elements/Mixes
+.dropdown__element {
+  @include text-field__element__base;
+  cursor: pointer;
+}
+
+.dropdown__icon {
+  position: absolute;
+  right: $spacing-xs - $dropdown-border-width;
+  top: $spacing-xs;
+  z-index: -1;
+}
+
+// Modifiers
+.dropdown--placeholder {
+  .dropdown__element {
+    color: $color-dark-gray;
+    font-weight: 400;
+  }
+}
+
+.dropdown--hover { // For demonstration purposes only
+  .dropdown__element {
+    box-shadow: $shadow;
+  }
+}
+
+.dropdown--focus {
+  .dropdown__element { // For demonstration purposes only
+    border-color: $color-dark-gray;
+  }
+}

@@ -1,0 +1,62 @@
+// Variables
+$text-field-with-icon-padding-left: $spacing-xxl;
+$text-field-border-witdh: 1px;
+$text-field-border-thick-witdh: 2px;
+$text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2);
+$text-field-horizontal-padding: $spacing-s;
+$text-field-search-button-width: 40px;
+
+@mixin text-field_normalize {
+  /**
+  * 1. Change the font styles in all browsers.
+  * 2. Remove the margin in Firefox and Safari.
+  */
+  font-family: inherit; /* 1 */
+  margin: 0; /* 2 */
+
+  /**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+  overflow: visible;  /* 1 */
+}
+
+@mixin text-field__element__base {
+  @include text-field_normalize;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle; // Fix extra bottom space on when textarea elem is used.
+
+  &::-ms-clear { // Remove clear field "X" button from IE Edge
+    display: none;
+  }
+
+  width: 100%;
+
+  @include typography(m);
+  color: inherit;
+  background-color: $color-transparent;
+  border: solid $text-field-border-witdh $color-medium-gray;
+  border-radius: 4px;
+
+  padding: ($text-field-vertical-padding - $text-field-border-witdh) $text-field-horizontal-padding;
+
+  &::placeholder {
+    color: $color-dark-gray;
+  }
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
+  &:focus {
+    border-color: $color-dark-gray;
+  }
+
+  &:invalid {
+    &:not(:hover) {
+      box-shadow: none; // Reset default invalid box-shadow in FF
+    }
+  }
+}

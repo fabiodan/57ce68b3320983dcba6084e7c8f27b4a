@@ -5,6 +5,7 @@ import joinClassNames from 'classnames'
 // Components (from atomic to composite)
 import Label from './label'
 import TextField from './text-field'
+import Dropdown, { DropdownOption, DropdownSelect } from './dropdown'
 
 // Assets
 import './_style.scss'
@@ -25,4 +26,7 @@ export {
   Form as default,
   Label,
   TextField,
+  Dropdown,
+  DropdownSelect,
+  DropdownOption,
 }
