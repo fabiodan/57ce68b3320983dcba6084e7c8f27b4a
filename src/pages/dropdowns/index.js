@@ -145,7 +145,7 @@ const DropdownPage = () => {
           </GridItem>
           <GridItem>
             <Caption position="top">Hover</Caption>
-            <CreditCardDropdown />
+            <CreditCardDropdown hover />
           </GridItem>
           <GridItem>
             <Caption position="top">Focus</Caption>
