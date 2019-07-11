@@ -16,6 +16,9 @@
 
 .modals-page__paragraph {
   margin: 0 0 $spacing-l 0;
+  &:last-child {
+    margin: 0;
+  }
 }
 
 // Modifiers {
