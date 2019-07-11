@@ -4,6 +4,9 @@
 @import "@asda/core/style";
 @import "../components/sg-core/style";
 
+// Variables
+  $text-field-border-width: 1px;
+
 // Block
 .text-fields-page {
 
@@ -25,7 +28,7 @@
 
 .text-fields-page__credit-card-icon {
   position: absolute;
-  left: $spacing-s;
+  left: $spacing-s - $text-field-border-width;
   top: $spacing-xxs;
 }
 

@@ -107,7 +107,7 @@ const TextFieldsPage = () => (
         <GridItem>
           <Caption position="top">Default + Icon</Caption>
           <Label>Label</Label>
-          <TextField placeholder="Default" extraPaddingLeft="xxx-large">
+          <TextField placeholder="Default" extraPaddingLeft="medium">
             <CreditCardIcon className="text-fields-page__credit-card-icon" name="blank" />
           </TextField>
         </GridItem>
