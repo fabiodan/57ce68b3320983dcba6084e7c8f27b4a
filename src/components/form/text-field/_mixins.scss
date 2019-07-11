@@ -3,7 +3,7 @@ $text-field-with-icon-padding-left: $spacing-xxl;
 $text-field-border-witdh: 1px;
 $text-field-border-thick-witdh: 2px;
 $text-field-vertical-padding: $spacing-s - ($text-field-border-witdh * 2);
-$text-field-horizontal-padding: $spacing-s;
+$text-field-horizontal-padding: $spacing-s - $text-field-border-witdh;
 $text-field-search-button-width: 40px;
 
 @mixin text-field_normalize {

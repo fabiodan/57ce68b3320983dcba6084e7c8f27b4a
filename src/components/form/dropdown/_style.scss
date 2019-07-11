@@ -15,6 +15,7 @@ $dropdown-border-width: 1px;
 // Elements/Mixes
 .dropdown__element {
   @include text-field__element__base;
+  padding-right: $spacing-xxl;
   cursor: pointer;
 }
 
