@@ -54,6 +54,7 @@ $checkbox-border-radius: 2px;
   }
 
   &[disabled]:checked {
+    cursor: not-allowed;    
     border-color: $color-green-disabled;
 
     & ~ .checkbox__background {
