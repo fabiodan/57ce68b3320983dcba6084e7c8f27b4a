@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Icon from '@asda/icon'
-import { Checkbox, Label } from '@asda/form'
+import { Checkbox, Label, Radio } from '@asda/form'
 import { Paragraph, Caption, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -76,6 +76,34 @@ const InputControlsPage = () => (
         options can be collapsed, consider using a dropdown menu because it
         uses less space.
       </Paragraph>
+
+      <Grid>
+        <GridItem>
+          <Caption position="top">Default Active</Caption>
+          <Radio name="example" id="radio--default-active" />
+          <Label htmlFor="radio--default-active" inline>Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Hover Active</Caption>
+          <Radio name="example" hover id="radio--hover-active" />
+          <Label inline htmlFor="radio--hover-active">Default</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Selected</Caption>
+          <Radio checked id="radio--selected" />
+          <Label inline htmlFor="radio--selected">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Selected disabled</Caption>
+          <Radio checked disabled id="radio--selected-disabled" />
+          <Label inline disabled htmlFor="radio--selected-disabled">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Unselected disabled</Caption>
+          <Radio disabled id="radio--unselected-disabled" />
+          <Label inline disabled htmlFor="radio--unselected-disabled">Disabled</Label>
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>

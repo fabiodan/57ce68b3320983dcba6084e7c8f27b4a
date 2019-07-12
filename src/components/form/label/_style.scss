@@ -29,6 +29,7 @@
 
 .label--clickable {
   cursor: pointer;
+  user-select: none;
 }
 
 .label--disabled {

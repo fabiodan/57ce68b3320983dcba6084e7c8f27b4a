@@ -1,0 +1,64 @@
+/* Radio Component */
+
+// Dependencies
+@import "@asda/core/style";
+@import "../checkbox/mixins";
+
+// Variables
+$radio-border-radius: 50%;
+
+// Block
+.radio {
+  @include checkbox;
+}
+
+// Elements
+.radio__input {
+  @include checkbox__input;
+  border-radius: $radio-border-radius;
+
+  &:checked {
+    border-width: 2px;
+
+    & ~ .radio__background {
+      background: $color-green;
+      opacity: 1;
+    }
+  }
+
+  &[disabled]:not([checked]) {
+    cursor: not-allowed;
+    border-color: $color-medium-gray;
+
+    & ~ .radio__background {
+      background-color: $color-light-gray;
+      border: none;      
+      opacity: 1;
+    }
+  }
+
+  &[disabled]:checked {
+    cursor: not-allowed;
+    border-color: $color-green-disabled;
+
+    & ~ .radio__background {
+      background-color: $color-green-disabled;
+      opacity: 1;
+    }
+  }
+}
+
+.radio__background {
+  @include checkbox__background;
+  border-radius: $radio-border-radius;
+  border: solid 5px $color-white;
+}
+
+// Modifiers
+
+// For demo purposes only
+.radio--hover {
+  .radio__input:not([disabled]) {
+    border-width: 2px;
+  }
+}
