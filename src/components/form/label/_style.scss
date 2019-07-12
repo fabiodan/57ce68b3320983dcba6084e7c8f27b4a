@@ -20,3 +20,17 @@
   @include typography(xs);
   color: $color-dark-gray;
 }
+
+.label--inline {
+  display: inline-block;
+  margin: 0 0 0 $spacing-xs;
+  vertical-align: middle;
+}
+
+.label--clickable {
+  cursor: pointer;
+}
+
+.label--disabled {
+  cursor: not-allowed;
+}

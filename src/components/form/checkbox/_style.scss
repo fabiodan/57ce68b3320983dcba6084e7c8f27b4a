@@ -1,0 +1,107 @@
+/* Checkbox Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Variables
+$checkbox-border-radius: 2px;
+
+// Block
+.checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: $checkbox-border-radius;
+}
+
+// Elements/Mixes
+.checkbox__input {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: solid 1px $color-green;
+  border-radius: $checkbox-border-radius;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+
+  &:checked {
+    & ~ .checkbox__icon-check {
+      display: inline-flex;
+    }
+
+    & ~ .checkbox__background {
+      background: $color-green;
+    }
+  }
+
+  &[disabled]:not([checked]) {
+    cursor: not-allowed;
+    border-color: $color-medium-gray;
+
+    & ~ .checkbox__icon {
+      color: $color-medium-gray;
+    }
+
+    & ~ .checkbox__background {
+      background-color: $color-light-gray;
+    }
+  }
+
+  &[disabled]:checked {
+    border-color: $color-green-disabled;
+
+    & ~ .checkbox__background {
+      background-color: $color-green-disabled;
+    }
+  }
+
+  &:hover:not([disabled]) {
+    border-width: 2px;
+  }
+}
+
+.checkbox__icon {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 0;
+}
+
+.checkbox__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: $checkbox-border-radius;
+}
+
+// Modifiers
+.checkbox--indeterminate {
+  .checkbox__icon-minus {
+    display: inline-flex;
+  }
+
+  .checkbox__input {
+
+    & ~ .checkbox__icon-check {
+      display: none;
+    }
+  }
+}
+
+// For demo purposes only
+.checkbox--hover {
+  .checkbox__input:not([disabled]) {
+    border-width: 2px;
+  }
+}

@@ -2,13 +2,19 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import Icon from '@asda/icon'
+import { Checkbox, Label } from '@asda/form'
+import { Paragraph, Caption, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
 
-const Component = ({ children }) => (
-  <div className="input-controls-page__component">{ children }</div>
+const Grid = ({ children }) => (
+  <ul className="input-controls-page__grid">{children}</ul>
+)
+
+const GridItem = ({ children }) => (
+  <li className="input-controls-page__grid-item">{children}</li>
 )
 
 const InputControlsPage = () => (
@@ -22,7 +28,44 @@ const InputControlsPage = () => (
         Checkboxes allow the user to select one or more items from a set.
         Checkboxes can be used to turn an option on or off.
       </Paragraph>
-      <Component>Examples Here</Component>
+
+      <Grid>
+        <GridItem>
+          <Caption position="top">Default Active</Caption>
+          <Checkbox id="checkbox--default-active" />
+          <Label htmlFor="checkbox--default-active" inline>Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Hover Active</Caption>
+          <Checkbox hover id="checkbox--hover-active" />
+          <Label inline htmlFor="checkbox--hover-active">Default</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Selected</Caption>
+          <Checkbox checked id="checkbox--selected" />
+          <Label inline htmlFor="checkbox--selected">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Selected disabled</Caption>
+          <Checkbox checked disabled id="checkbox--selected-disabled" />
+          <Label inline disabled htmlFor="checkbox--selected-disabled">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Indeterminate</Caption>
+          <Checkbox indeterminate id="checkbox--indeterminate" />
+          <Label inline htmlFor="checkbox--indeterminate">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Disabled Indeterminate</Caption>
+          <Checkbox indeterminate disabled id="checkbox--indeterminate-disabled" />
+          <Label inline disabled htmlFor="checkbox--indeterminate-disabled">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Unselected disabled</Caption>
+          <Checkbox disabled id="checkbox--unselected-disabled" />
+          <Label inline disabled htmlFor="checkbox--unselected-disabled">Disabled</Label>
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>
@@ -33,7 +76,6 @@ const InputControlsPage = () => (
         options can be collapsed, consider using a dropdown menu because it
         uses less space.
       </Paragraph>
-      <Component>Examples Here</Component>
     </Section>
 
     <Section>
@@ -43,7 +85,6 @@ const InputControlsPage = () => (
         things on or off. They should be used to represent an action (e.g. start
         or stop, on or off)
       </Paragraph>
-      <Component>Examples Here</Component>
     </Section>
 
   </article>

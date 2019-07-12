@@ -6,6 +6,7 @@ import joinClassNames from 'classnames'
 import Label from './label'
 import TextField from './text-field'
 import Dropdown, { DropdownOption, DropdownSelect } from './dropdown'
+import Checkbox from './checkbox'
 
 // Assets
 import './_style.scss'
@@ -29,4 +30,5 @@ export {
   Dropdown,
   DropdownSelect,
   DropdownOption,
+  Checkbox,
 }
