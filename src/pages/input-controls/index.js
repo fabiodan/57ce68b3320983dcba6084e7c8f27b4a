@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Icon from '@asda/icon'
 import { Checkbox, Label, Radio, Switch } from '@asda/form'
 import { Paragraph, Caption, Subheading, Section, Heading } from '../components/sg-layout'
 

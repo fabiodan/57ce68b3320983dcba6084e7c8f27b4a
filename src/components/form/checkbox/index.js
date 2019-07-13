@@ -33,9 +33,9 @@ const Checkbox = ({
         disabled={disabled}
         id={id}
       />
-      <Icon className="checkbox__icon checkbox__icon-check" name="check" size="x-small" color="white"></Icon>
-      <Icon className="checkbox__icon checkbox__icon-minus" name="minus" size="x-small" color="white"></Icon>
-      <div className="checkbox__background"></div>
+      <Icon className="checkbox__icon checkbox__icon-check" name="check" size="x-small" color="white" />
+      <Icon className="checkbox__icon checkbox__icon-minus" name="minus" size="x-small" color="white" />
+      <div className="checkbox__background" />
     </div>
   )
 }

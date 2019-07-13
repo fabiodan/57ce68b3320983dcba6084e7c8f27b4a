@@ -67,7 +67,7 @@ const AccordionTitle = ({
 const AccordionButton = ({
   className,
   children,
-  ...rest,
+  ...rest
 }) => {
   const modifiers = []
   const classNames = joinClassNames('accordion__button', className, modifiers)
@@ -82,7 +82,7 @@ const AccordionButton = ({
 const AccordionLink = ({
   className,
   children,
-  ...rest,
+  ...rest
 }) => {
   const modifiers = []
   const classNames = joinClassNames('accordion__button', className, modifiers)

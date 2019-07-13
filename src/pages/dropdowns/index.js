@@ -4,7 +4,7 @@ import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import CreditCardIcon from '@asda/credit-card-icon'
-import { Dropdown, Label, DropdownSelect, DropdownOption } from '@asda/form'
+import { Dropdown, DropdownSelect, DropdownOption } from '@asda/form'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -25,15 +25,15 @@ class CreditCardDropdown extends Component {
     this.changeCard = this.changeCard.bind(this)
   }
 
-  changeCard(cardName) {
-    this.setState({ selectedCard: cardName })
-  }
-
   componentDidMount() {
     const { defaultValue } = this.props
     if (defaultValue) {
       this.changeCard(defaultValue)
     }
+  }
+
+  changeCard(cardName) {
+    this.setState({ selectedCard: cardName })
   }
 
   render() {
@@ -45,10 +45,10 @@ class CreditCardDropdown extends Component {
 
     return (
       <Dropdown className={classNames} {...rest}>
-        <CreditCardIcon name={selectedCard} className="credit-card-dropdown__icon"/>
+        <CreditCardIcon name={selectedCard} className="credit-card-dropdown__icon" />
         <DropdownSelect
           className="credit-card-dropdown__select"
-          onChange={(e) => this.changeCard(e.target.value)}
+          onChange={e => this.changeCard(e.target.value)}
           defaultValue={defaultValue}
         >
           <DropdownOption value="blank">Select a credit card</DropdownOption>
@@ -67,98 +67,97 @@ class CreditCardDropdown extends Component {
   }
 }
 
-const DropdownPage = () => {
-  return (
-    <article className="dropdowns-page">
+const DropdownPage = () => (
+  <article className="dropdowns-page">
 
-      <Heading>Dropdowns</Heading>
+    <Heading>Dropdowns</Heading>
 
-      <Section>
-        <Subheading>Dropdowns</Subheading>
-        <Paragraph>
+    <Section>
+      <Subheading>Dropdowns</Subheading>
+      <Paragraph>
           Input fields let users enter and edit text. Each input field is
           generally used for single entry and should aim to be clear and efficient.
-        </Paragraph>
+      </Paragraph>
 
-        <Grid>
-          <GridItem>
-            <Caption position="top">Default</Caption>
-            <Dropdown>
-              <DropdownSelect>
-                <DropdownOption>Select a value</DropdownOption>
-                <DropdownOption>Value 1</DropdownOption>
-                <DropdownOption>Value 2</DropdownOption>
-                <DropdownOption>Value 3</DropdownOption>
-                <DropdownOption>Value 4</DropdownOption>
-              </DropdownSelect>
-            </Dropdown>
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Hover</Caption>
-            <Dropdown hover>
-              <DropdownSelect>
-                <DropdownOption>Select a value</DropdownOption>
-                <DropdownOption>Value 1</DropdownOption>
-                <DropdownOption>Value 2</DropdownOption>
-                <DropdownOption>Value 3</DropdownOption>
-                <DropdownOption>Value 4</DropdownOption>
-              </DropdownSelect>
-            </Dropdown>
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Focus</Caption>
-            <Dropdown focus>
-              <DropdownSelect>
-                <DropdownOption>Select a value</DropdownOption>
-                <DropdownOption>Value 1</DropdownOption>
-                <DropdownOption>Value 2</DropdownOption>
-                <DropdownOption>Value 3</DropdownOption>
-                <DropdownOption>Value 4</DropdownOption>
-              </DropdownSelect>
-            </Dropdown>
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Selected Value</Caption>
-            <Dropdown>
-              <DropdownSelect defaultValue="Selected Value">
-                <DropdownOption>Select a value</DropdownOption>
-                <DropdownOption>Value 1</DropdownOption>
-                <DropdownOption>Value 2</DropdownOption>
-                <DropdownOption>Value 3</DropdownOption>
-                <DropdownOption>Selected Value</DropdownOption>
-              </DropdownSelect>
-            </Dropdown>
-          </GridItem>
-        </Grid>
-      </Section>
+      <Grid>
+        <GridItem>
+          <Caption position="top">Default</Caption>
+          <Dropdown>
+            <DropdownSelect>
+              <DropdownOption>Select a value</DropdownOption>
+              <DropdownOption>Value 1</DropdownOption>
+              <DropdownOption>Value 2</DropdownOption>
+              <DropdownOption>Value 3</DropdownOption>
+              <DropdownOption>Value 4</DropdownOption>
+            </DropdownSelect>
+          </Dropdown>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Hover</Caption>
+          <Dropdown hover>
+            <DropdownSelect>
+              <DropdownOption>Select a value</DropdownOption>
+              <DropdownOption>Value 1</DropdownOption>
+              <DropdownOption>Value 2</DropdownOption>
+              <DropdownOption>Value 3</DropdownOption>
+              <DropdownOption>Value 4</DropdownOption>
+            </DropdownSelect>
+          </Dropdown>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Focus</Caption>
+          <Dropdown focus>
+            <DropdownSelect>
+              <DropdownOption>Select a value</DropdownOption>
+              <DropdownOption>Value 1</DropdownOption>
+              <DropdownOption>Value 2</DropdownOption>
+              <DropdownOption>Value 3</DropdownOption>
+              <DropdownOption>Value 4</DropdownOption>
+            </DropdownSelect>
+          </Dropdown>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Selected Value</Caption>
+          <Dropdown>
+            <DropdownSelect defaultValue="Selected Value">
+              <DropdownOption>Select a value</DropdownOption>
+              <DropdownOption>Value 1</DropdownOption>
+              <DropdownOption>Value 2</DropdownOption>
+              <DropdownOption>Value 3</DropdownOption>
+              <DropdownOption>Selected Value</DropdownOption>
+            </DropdownSelect>
+          </Dropdown>
+        </GridItem>
+      </Grid>
+    </Section>
 
-      <Section>
-        <Subheading>Dropdowns with icons</Subheading>
-        <Paragraph>
+    <Section>
+      <Subheading>Dropdowns with icons</Subheading>
+      <Paragraph>
           Input fields let users enter and edit text. Each input field is
           generally used for single entry and should aim to be clear and efficient.
-        </Paragraph>
-        <Grid>
-          <GridItem>
-            <Caption position="top">Default</Caption>
-            <CreditCardDropdown />
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Hover</Caption>
-            <CreditCardDropdown hover />
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Focus</Caption>
-            <CreditCardDropdown focus />
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Selected Value</Caption>
-            <CreditCardDropdown hover defaultValue="amex" />
-          </GridItem>
-        </Grid>
-      </Section>
+      </Paragraph>
+      <Grid>
+        <GridItem>
+          <Caption position="top">Default</Caption>
+          <CreditCardDropdown />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Hover</Caption>
+          <CreditCardDropdown hover />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Focus</Caption>
+          <CreditCardDropdown focus />
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Selected Value</Caption>
+          <CreditCardDropdown hover defaultValue="amex" />
+        </GridItem>
+      </Grid>
+    </Section>
 
-      {/* <Section>
+    {/* <Section>
         <Subheading>Contextual Menus</Subheading>
         <Paragraph>
           Contextual menus aren’t triggered by a consistent UI element. They
@@ -171,9 +170,8 @@ const DropdownPage = () => {
         </Paragraph>
       </Section> */}
 
-    </article>
-  )
-}
+  </article>
+)
 
 
 export default DropdownPage

@@ -5,7 +5,7 @@ import joinClassNames from 'classnames'
 // Components (from atomic to composite)
 import { IconButton } from '@asda/icon'
 import Button from '@asda/button'
-import FocusLock from 'react-focus-lock';
+import FocusLock from 'react-focus-lock'
 
 // Assets
 import './_style.scss'
@@ -15,12 +15,6 @@ class Modal extends Component {
     super(props)
 
     this.handleEscKeydown = this.handleEscKeydown.bind(this)
-  }
-
-  handleEscKeydown(e) {
-    const { onEscKeydown } = this.props
-
-    if (e.keyCode === 27) onEscKeydown()
   }
 
   componentDidMount() {
@@ -43,6 +37,12 @@ class Modal extends Component {
     }
   }
 
+  handleEscKeydown(e) {
+    const { onEscKeydown } = this.props
+
+    if (e.keyCode === 27) onEscKeydown()
+  }
+
   render() {
     const {
       children,
@@ -63,7 +63,8 @@ class Modal extends Component {
         role="alertdialog"
         aria-modal="true"
         aria-describedby="modal__content"
-        aria-labelledby="modal__header">
+        aria-labelledby="modal__header"
+      >
         { children }
       </div>
     )

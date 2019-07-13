@@ -19,7 +19,7 @@ const Label = ({
     optional && 'label--optional',
     inline && 'label--inline',
     htmlFor && 'label--clickable',
-    disabled && 'label--disabled'
+    disabled && 'label--disabled',
   ]
   const classNames = joinClassNames('label', className, modifiers)
 

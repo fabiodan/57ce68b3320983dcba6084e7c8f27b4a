@@ -5,7 +5,7 @@ import joinClassNames from 'classnames'
 // Components (from atomic to composite)
 import Icon from '@asda/icon'
 import Button from '@asda/button'
-import TextareaAutosize from 'react-autosize-textarea';
+import TextareaAutosize from 'react-autosize-textarea'
 
 // Assets
 import './_style.scss'
@@ -15,7 +15,7 @@ class TextField extends Component {
     super(props)
 
     this.state = {
-      charCount: 0
+      charCount: 0,
     }
   }
 
@@ -34,7 +34,6 @@ class TextField extends Component {
       successMessage,
       errorMessage,
       extraPaddingLeft,
-      error,
       rows,
       maxRows,
       maxLength,
@@ -62,7 +61,7 @@ class TextField extends Component {
     const changeHandler = (e) => {
       if (charCounter) {
         this.setState({
-          charCount: e.target.value.length
+          charCount: e.target.value.length,
         })
       }
 
@@ -77,7 +76,6 @@ class TextField extends Component {
             className="text-field__element"
             defaultValue={value}
             placeholder={`${placeholder} ${required ? '*' : ''}`.trim()}
-            onChange={onChange}
             rows={rows}
             // Add 1 to keep consistency in the textarea size
             maxRows={maxRows && maxRows + 1}
@@ -91,7 +89,6 @@ class TextField extends Component {
             defaultValue={value}
             placeholder={`${placeholder} ${required ? '*' : ''}`.trim()}
             pattern={pattern}
-            onChange={onChange}
             required={required}
             maxLength={maxLength}
             onChange={changeHandler}

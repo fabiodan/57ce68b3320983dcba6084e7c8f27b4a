@@ -3,17 +3,12 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import CreditCardIcon from '@asda/credit-card-icon'
-import Icon from '@asda/icon'
 import { TextField, Label } from '@asda/form'
 import { Figure, Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
 import gridPNGSource from '../../assets/images/text-fields-page-grid.png'
 import './_style.scss'
-
-const Component = ({ children }) => (
-  <div className="text-fields-page__component">{ children }</div>
-)
 
 const Grid = ({ children }) => (
   <ul className="text-fields-page__grid">{children}</ul>
@@ -403,7 +398,6 @@ const TextFieldsPage = () => (
             <TextField
               placeholder="Error"
               value="Amelie Poulain"
-              helperText="Helper text"
               errorMessage="Error message"
               helperText="At least 8 characters"
             />
@@ -414,7 +408,6 @@ const TextFieldsPage = () => (
               placeholder="Error"
               value="Amelie"
               pattern="Amelie P(.*)"
-              helperText="Helper text"
               successMessage="Success message"
               errorMessage="Error: At least 8 characters"
               helperText="At least 8 characters"

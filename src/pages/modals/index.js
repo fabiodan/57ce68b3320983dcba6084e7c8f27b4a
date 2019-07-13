@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
-import { IconButton } from '@asda/icon'
 import { LinkText } from '@asda/link'
 import Button from '@asda/button'
 import Modal, {
@@ -30,7 +29,9 @@ import paddingModal768PNGSource from '../../assets/images/modals-page-padding-mo
 import paddingModal360PNGSource from '../../assets/images/modals-page-padding-modal-360.png'
 import './_style.scss'
 
-const ModalsPageParagraph = ({ className, children, noMargin, weight }) => {
+const ModalsPageParagraph = ({
+  className, children, noMargin, weight,
+}) => {
   const modifiers = [
     noMargin && 'modals-page__paragraph--no-margin',
     !!weight && `modals-page__paragraph--${weight}`,
@@ -38,7 +39,7 @@ const ModalsPageParagraph = ({ className, children, noMargin, weight }) => {
   const classNames = joinClassNames('modals-page__paragraph', className, modifiers)
 
   return (
-    <p className={ classNames }>{ children }</p>
+    <p className={classNames}>{ children }</p>
   )
 }
 
@@ -113,7 +114,7 @@ class ModalsPage extends Component {
 
           <div>
             <Button onClick={this.toggleModal1}>Show example</Button>
-            <br/><br/><br/>
+            <br /><br /><br />
 
             {this.state.showModal1 &&
               <Modal onEscKeydown={this.toggleModal1}>
@@ -192,7 +193,7 @@ class ModalsPage extends Component {
 
           <div>
             <Button onClick={this.toggleModal2}>Show example</Button>
-            <br/><br/><br/>
+            <br /><br /><br />
 
             {this.state.showModal2 &&
               <Modal onEscKeydown={this.toggleModal2} scrollable>

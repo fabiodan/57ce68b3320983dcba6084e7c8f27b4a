@@ -32,8 +32,8 @@ const DeliveryDetails = () => (
         <Icon name="truck" />
       </div>
       <div className="accordions-page__delivery-details__info">
-        100 My Street<br/>
-        Sutton-under-Whitestonecliff<br/>
+        100 My Street<br />
+        Sutton-under-Whitestonecliff<br />
         SW105LQ
       </div>
     </li>
@@ -42,7 +42,7 @@ const DeliveryDetails = () => (
         <Icon name="clock" />
       </div>
       <div className="accordions-page__delivery-details__info">
-        Thursday, 9&nbsp;November&nbsp;2017<br/>
+        Thursday, 9&nbsp;November&nbsp;2017<br />
         9:30pm - 10:30pm
       </div>
     </li>
@@ -93,7 +93,7 @@ class AccordionsPage extends Component {
       openAccordion2,
       openAccordion3,
       openAccordion4,
-      openAccordion5
+      openAccordion5,
     } = this.state
 
     return (
@@ -121,11 +121,26 @@ class AccordionsPage extends Component {
                   </AccordionButton>
                 </AccordionHeader>
                 <AccordionContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia ratione itaque, quia consectetur iure velit, vitae
+                  tenetur voluptatem odio asperiores labore quas aliquid odit,
+                  natus laudantium voluptate beatae, repellendus nesciunt.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia ratione itaque, quia consectetur iure velit, vitae
+                  tenetur voluptatem odio asperiores labore quas aliquid odit,
+                  natus laudantium voluptate beatae, repellendus nesciunt.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia ratione itaque, quia consectetur iure velit, vitae
+                  tenetur voluptatem odio asperiores labore quas aliquid odit,
+                  natus laudantium voluptate beatae, repellendus nesciunt.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia ratione itaque, quia consectetur iure velit, vitae
+                  tenetur voluptatem odio asperiores labore quas aliquid odit,
+                  natus laudantium voluptate beatae, repellendus nesciunt.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia ratione itaque, quia consectetur iure velit, vitae
+                  tenetur voluptatem odio asperiores labore quas aliquid odit,
+                  natus laudantium voluptate beatae, repellendus nesciunt.
                 </AccordionContent>
               </Accordion>
             </GridItem>
@@ -139,7 +154,10 @@ class AccordionsPage extends Component {
                   </AccordionButton>
                 </AccordionHeader>
                 <AccordionContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ratione itaque, quia consectetur iure velit, vitae tenetur voluptatem odio asperiores labore quas aliquid odit, natus laudantium voluptate beatae, repellendus nesciunt.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia ratione itaque, quia consectetur iure velit, vitae
+                  tenetur voluptatem odio asperiores labore quas aliquid odit,
+                  natus laudantium voluptate beatae, repellendus nesciunt.
                 </AccordionContent>
               </Accordion>
             </GridItem>
@@ -149,7 +167,7 @@ class AccordionsPage extends Component {
                 <AccordionHeader onClick={this.toggleAccordion3}>
                   <AccordionTitle className="accordions-page__credit-card-title">Payment card:
                     <span className="accordions-page__credit-card-info">
-                      <CreditCardIcon name="visa" className="accordions-page__credit-card-icon"/>
+                      <CreditCardIcon name="visa" className="accordions-page__credit-card-icon" />
                       <span>5792</span>
                     </span>
                   </AccordionTitle>

@@ -21,11 +21,13 @@ const LinkText = ({
   )
 }
 
-const LinkButton = ({ children, className, align, onClick, disabled }) => {
+const LinkButton = ({
+  children, className, align, onClick, disabled,
+}) => {
   const modifiers = [
     'link--button',
     !!align && `link--${align}`,
-    disabled && `link--disabled`,
+    disabled && 'link--disabled',
   ]
 
   const classNames = joinClassNames('link', className, modifiers)

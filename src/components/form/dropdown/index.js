@@ -1,5 +1,5 @@
 // Libs
-import React, { Component } from 'react'
+import React from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
