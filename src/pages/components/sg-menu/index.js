@@ -23,7 +23,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Dropdowns', url: '/dropdowns' },
     { name: 'Navigation (WIP)', url: '/navigation' },
     { name: 'Tooltips (WIP)', url: '/tooltips' },
-    { name: 'Input Controls (WIP)', url: '/input-controls' },
+    { name: 'Input Controls', url: '/input-controls' },
     { name: 'Miscellaneous (WIP)', url: '/miscellaneous' },
     { name: 'Modals', url: '/modals' },
     { name: 'Accordions', url: '/accordions' },
