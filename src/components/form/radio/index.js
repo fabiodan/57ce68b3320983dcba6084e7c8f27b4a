@@ -8,10 +8,6 @@ import Button from '@asda/button'
 // Assets
 import './_style.scss'
 
-const Component = ({ children }) => (
-  <p className="radio__paragraph">{children}</p>
-)
-
 const Radio = ({
   className,
   checked,

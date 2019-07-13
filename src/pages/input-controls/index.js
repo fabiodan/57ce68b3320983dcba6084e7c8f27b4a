@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Icon from '@asda/icon'
-import { Checkbox, Label, Radio } from '@asda/form'
+import { Checkbox, Label, Radio, Switch } from '@asda/form'
 import { Paragraph, Caption, Subheading, Section, Heading } from '../components/sg-layout'
 
 // Assets
@@ -33,7 +33,7 @@ const InputControlsPage = () => (
         <GridItem>
           <Caption position="top">Default Active</Caption>
           <Checkbox id="checkbox--default-active" />
-          <Label htmlFor="checkbox--default-active" inline>Label</Label>
+          <Label inline htmlFor="checkbox--default-active">Label</Label>
         </GridItem>
         <GridItem>
           <Caption position="top">Hover Active</Caption>
@@ -81,7 +81,7 @@ const InputControlsPage = () => (
         <GridItem>
           <Caption position="top">Default Active</Caption>
           <Radio name="example" id="radio--default-active" />
-          <Label htmlFor="radio--default-active" inline>Label</Label>
+          <Label inline htmlFor="radio--default-active">Label</Label>
         </GridItem>
         <GridItem>
           <Caption position="top">Hover Active</Caption>
@@ -113,6 +113,29 @@ const InputControlsPage = () => (
         things on or off. They should be used to represent an action (e.g. start
         or stop, on or off)
       </Paragraph>
+
+      <Grid>
+        <GridItem>
+          <Caption position="top">Turned Off</Caption>
+          <Switch id="switch--turned-off" />
+          <Label inline htmlFor="switch--turned-off">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Turned On</Caption>
+          <Switch checked id="switch--turned-on" />
+          <Label inline htmlFor="switch--turned-on">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Turned Off Disabled</Caption>
+          <Switch id="switch--turned-off-disabled" disabled />
+          <Label inline disabled htmlFor="switch--turned-off-disabled">Label</Label>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Turned On Disabled</Caption>
+          <Switch id="switch--turned-on-disabled" checked disabled />
+          <Label inline disabled htmlFor="switch--turned-on-disabled">Label</Label>
+        </GridItem>
+      </Grid>
     </Section>
 
   </article>

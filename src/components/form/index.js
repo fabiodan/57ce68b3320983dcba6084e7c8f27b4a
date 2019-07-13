@@ -8,6 +8,7 @@ import TextField from './text-field'
 import Dropdown, { DropdownOption, DropdownSelect } from './dropdown'
 import Checkbox from './checkbox'
 import Radio from './radio'
+import Switch from './switch'
 
 // Assets
 import './_style.scss'
@@ -33,4 +34,5 @@ export {
   DropdownOption,
   Checkbox,
   Radio,
+  Switch,
 }
