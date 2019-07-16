@@ -28,7 +28,7 @@ import LinksPage from './pages/links'
 import SpecialButtonsPage from './pages/special-buttons'
 import TextFieldsPage from './pages/text-fields'
 import DropdownsPage from './pages/dropdowns'
-import NavigationPage from './pages/navigation'
+// import NavigationPage from './pages/navigation'
 import TooltipsPage from './pages/tooltips'
 import InputControlsPage from './pages/input-controls'
 import MiscellaneousPage from './pages/miscellaneous'
@@ -112,7 +112,7 @@ ReactDOM.render(
         <Route path="/special-buttons" component={SpecialButtonsPage} />
         <Route path="/text-fields" component={TextFieldsPage} />
         <Route path="/dropdowns" component={DropdownsPage} />
-        <Route path="/navigation" component={NavigationPage} />
+        {/* <Route path="/navigation" component={NavigationPage} /> */}
         <Route path="/tooltips" component={TooltipsPage} />
         <Route path="/input-controls" component={InputControlsPage} />
         <Route path="/miscellaneous" component={MiscellaneousPage} />
