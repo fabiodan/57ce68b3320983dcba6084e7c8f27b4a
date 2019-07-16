@@ -37,7 +37,7 @@ const InputControlsPage = () => (
         <GridItem>
           <Caption position="top">Hover Active</Caption>
           <Checkbox hover id="checkbox--hover-active" />
-          <Label inline htmlFor="checkbox--hover-active">Default</Label>
+          <Label inline htmlFor="checkbox--hover-active">Label</Label>
         </GridItem>
         <GridItem>
           <Caption position="top">Selected</Caption>
@@ -62,7 +62,7 @@ const InputControlsPage = () => (
         <GridItem>
           <Caption position="top">Unselected disabled</Caption>
           <Checkbox disabled id="checkbox--unselected-disabled" />
-          <Label inline disabled htmlFor="checkbox--unselected-disabled">Disabled</Label>
+          <Label inline disabled htmlFor="checkbox--unselected-disabled">Label</Label>
         </GridItem>
       </Grid>
     </Section>
@@ -85,7 +85,7 @@ const InputControlsPage = () => (
         <GridItem>
           <Caption position="top">Hover Active</Caption>
           <Radio name="example" hover id="radio--hover-active" />
-          <Label inline htmlFor="radio--hover-active">Default</Label>
+          <Label inline htmlFor="radio--hover-active">Label</Label>
         </GridItem>
         <GridItem>
           <Caption position="top">Selected</Caption>
@@ -100,7 +100,7 @@ const InputControlsPage = () => (
         <GridItem>
           <Caption position="top">Unselected disabled</Caption>
           <Radio disabled id="radio--unselected-disabled" />
-          <Label inline disabled htmlFor="radio--unselected-disabled">Disabled</Label>
+          <Label inline disabled htmlFor="radio--unselected-disabled">Label</Label>
         </GridItem>
       </Grid>
     </Section>
