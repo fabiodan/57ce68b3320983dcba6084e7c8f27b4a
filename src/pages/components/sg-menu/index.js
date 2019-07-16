@@ -21,7 +21,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Special Buttons', url: '/special-buttons' },
     { name: 'Text Fields', url: '/text-fields' },
     { name: 'Dropdowns', url: '/dropdowns' },
-    { name: 'Navigation (WIP)', url: '/navigation' },
+    // { name: 'Navigation (WIP)', url: '/navigation' },
     { name: 'Tooltips (WIP)', url: '/tooltips' },
     { name: 'Input Controls', url: '/input-controls' },
     { name: 'Miscellaneous (WIP)', url: '/miscellaneous' },
