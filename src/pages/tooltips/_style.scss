@@ -8,3 +8,17 @@
 .tooltips-page {
 
 }
+
+.tooltips-page__grid {
+  max-width: 879px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0 $spacing-xs;
+  margin-top: 0;
+}
+
+.tooltips-page__grid-item {
+  padding: $spacing-m 0;
+}
