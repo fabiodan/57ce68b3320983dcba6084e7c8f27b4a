@@ -1,5 +1,6 @@
 // Libs
 import React from 'react'
+import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Tooltip from '@asda/tooltip'
@@ -8,9 +9,20 @@ import { Caption, Paragraph, Subheading, Section, Heading } from '../components/
 // Assets
 import './_style.scss'
 
-const Grid = ({ children }) => (
-  <ul className="tooltips-page__grid">{children}</ul>
-)
+const Grid = ({
+  children,
+  className,
+  noMargin,
+}) => {
+  const modifiers = [
+    noMargin && 'tooltips-page__grid--no-margin',
+  ]
+  const classNames = joinClassNames('tooltips-page__grid', className, modifiers)
+
+  return (
+    <ul className={classNames}>{children}</ul>
+  )
+}
 
 const GridItem = ({ children }) => (
   <li className="tooltips-page__grid-item">{children}</li>
@@ -74,7 +86,7 @@ const TooltipsPage = () => (
       </Grid>
 
       <Caption>Error Tooltips</Caption>
-      <Grid>
+      <Grid noMargin>
         <GridItem>
           <Tooltip arrowPosY="bottom" arrowPosX="left" error>Error</Tooltip>
         </GridItem>
@@ -133,7 +145,7 @@ const TooltipsPage = () => (
       </Paragraph>
 
       <Caption position="top">Multiple Lines</Caption>
-      <Grid>
+      <Grid noMargin>
         <GridItem>
           <Tooltip title="Title" arrowPosY="bottom" arrowPosX="center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

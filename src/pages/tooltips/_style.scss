@@ -16,9 +16,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0 $spacing-xs;
-  margin-top: 0;
+  margin-bottom: $spacing-xxl;
 }
 
 .tooltips-page__grid-item {
   padding: $spacing-m 0;
+}
+
+.tooltips-page__grid-multiple-lines {
+  margin-top: 0;
+}
+
+// Modifiers
+.tooltips-page__grid--no-margin {
+  margin: 0;
 }
