@@ -1,0 +1,19 @@
+/* ExpressLogo Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.express-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; // Keep inline elements vertically aligned
+}
+
+// Elements/Mixes
+.express-logo__svg {
+  vertical-align: middle; // Correct image alignment
+}
+
+// Modifiers

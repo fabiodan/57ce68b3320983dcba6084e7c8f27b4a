@@ -8,7 +8,7 @@ import Button from '@asda/button'
 // Assets
 import './_style.scss'
 
-const Component = ({ children }) => (
+const SubComponent = ({ children }) => (
   <p className="sample__paragraph">{children}</p>
 )
 
@@ -26,7 +26,7 @@ const Sample = ({
   return (
     <div className={classNames}>
       <Button>Click Here</Button>
-      <Component>Lorem Ipsum</Component>
+      <SubComponent>Lorem Ipsum</SubComponent>
     </div>
   )
 }

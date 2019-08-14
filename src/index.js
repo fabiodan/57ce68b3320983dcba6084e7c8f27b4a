@@ -31,7 +31,7 @@ import DropdownsPage from './pages/dropdowns'
 // import NavigationPage from './pages/navigation'
 import TooltipsPage from './pages/tooltips'
 import InputControlsPage from './pages/input-controls'
-import MiscellaneousPage from './pages/miscellaneous'
+import BrandPage from './pages/brand'
 import ModalsPage from './pages/modals'
 import AccordionsPage from './pages/accordions'
 import IconsPage from './pages/icons'
@@ -115,7 +115,7 @@ ReactDOM.render(
         {/* <Route path="/navigation" component={NavigationPage} /> */}
         <Route path="/tooltips" component={TooltipsPage} />
         <Route path="/input-controls" component={InputControlsPage} />
-        <Route path="/miscellaneous" component={MiscellaneousPage} />
+        <Route path="/brand" component={BrandPage} />
         <Route path="/modals" component={ModalsPage} />
         <Route path="/accordions" component={AccordionsPage} />
         <Route path="/icons" component={IconsPage} />
