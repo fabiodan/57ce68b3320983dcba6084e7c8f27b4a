@@ -29,7 +29,7 @@ const BrandPage = () => (
       <Grid>
         <GridItem>
           <Caption position="top">Large</Caption>
-          <ExpressLogo/>
+          <ExpressLogo size="large"/>
         </GridItem>
         <GridItem>
           <Caption position="top">Medium</Caption>
