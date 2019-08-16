@@ -29,7 +29,7 @@
 .text-fields-page__credit-card-icon {
   position: absolute;
   left: $spacing-s - $text-field-border-width;
-  top: $spacing-xxs;
+  top: $spacing-xs + $text-field-border-width;
 }
 
 // Breakpoints

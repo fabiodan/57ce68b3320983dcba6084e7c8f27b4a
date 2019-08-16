@@ -4,6 +4,11 @@
 @import "@asda/core/style";
 @import "../components/sg-core/style";
 
+// Variables
+$dropdown-border-width: 1px;
+$dropdown-card-icon-width: 32px;
+$dropdown-vertical-padding: $spacing-s - $dropdown-border-width;
+
 // Block
 .dropdowns-page {
 
@@ -27,14 +32,11 @@
 .credit-card-dropdown__icon {
   position: absolute;
   left: $spacing-s;
-  top: $spacing-xxs;
+  top: $spacing-xs + $dropdown-border-width;
   z-index: -1;
 }
 
 .credit-card-dropdown__select {
-  $dropdown-border-width: 1px;
-  $dropdown-card-icon-width: 32px;
-  $dropdown-vertical-padding: $spacing-s - $dropdown-border-width;
   padding-left: ($dropdown-vertical-padding * 2) + $dropdown-card-icon-width;
 }
 
