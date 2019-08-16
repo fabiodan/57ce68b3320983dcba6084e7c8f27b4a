@@ -23,6 +23,15 @@
   padding: $spacing-m 0;
 }
 
+.brand-page__card-container {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 78px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 // Breakpoints
 @media (min-width: 480px) {
   .brand-page__grid {

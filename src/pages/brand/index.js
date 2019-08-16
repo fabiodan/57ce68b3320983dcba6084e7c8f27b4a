@@ -17,6 +17,10 @@ const GridItem = ({ children }) => (
   <li className="brand-page__grid-item">{children}</li>
 )
 
+const CardContainer = ({ children }) => (
+  <div className="brand-page__card-container">{children}</div>
+)
+
 const BrandPage = () => (
   <article className="brand-page">
     <Heading>Brand Elements</Heading>
@@ -43,59 +47,101 @@ const BrandPage = () => (
       <Grid>
         <GridItem>
           <Caption position="top">Add New Card</Caption>
-          <CreditCardIcon name="add-new" />
+          <CardContainer>
+            <CreditCardIcon name="add-new" size="large" />
+            <CreditCardIcon name="add-new" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Blank</Caption>
-          <CreditCardIcon name="blank" />
+          <CardContainer>
+            <CreditCardIcon name="blank" size="large" />
+            <CreditCardIcon name="blank" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Amex</Caption>
-          <CreditCardIcon name="amex" />
+          <CardContainer>
+            <CreditCardIcon name="amex" size="large" />
+            <CreditCardIcon name="amex" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">CVV</Caption>
-          <CreditCardIcon name="cvv" />
+          <CardContainer>
+            <CreditCardIcon name="cvv" size="large" />
+            <CreditCardIcon name="cvv" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Gift Card Code</Caption>
-          <CreditCardIcon name="gift-code" />
+          <CardContainer>
+            <CreditCardIcon name="gift-code" size="large" />
+            <CreditCardIcon name="gift-code" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Cirrus</Caption>
-          <CreditCardIcon name="cirrus" />
+          <CardContainer>
+            <CreditCardIcon name="cirrus" size="large" />
+            <CreditCardIcon name="cirrus" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Diners</Caption>
-          <CreditCardIcon name="diners" />
+          <CardContainer>
+            <CreditCardIcon name="diners" size="large" />
+            <CreditCardIcon name="diners" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Discover</Caption>
-          <CreditCardIcon name="discover" />
+          <CardContainer>
+            <CreditCardIcon name="discover" size="large" />
+            <CreditCardIcon name="discover" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Maestro</Caption>
-          <CreditCardIcon name="maestro" />
+          <CardContainer>
+            <CreditCardIcon name="maestro" size="large" />
+            <CreditCardIcon name="maestro" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Mastercard</Caption>
-          <CreditCardIcon name="mastercard" />
+          <CardContainer>
+            <CreditCardIcon name="mastercard" size="large" />
+            <CreditCardIcon name="mastercard" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Plus</Caption>
-          <CreditCardIcon name="plus" />
+          <CardContainer>
+            <CreditCardIcon name="plus" size="large" />
+            <CreditCardIcon name="plus" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Visa</Caption>
-          <CreditCardIcon name="visa" />
+          <CardContainer>
+            <CreditCardIcon name="visa" size="large" />
+            <CreditCardIcon name="visa" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">ASDA Gift Cards</Caption>
-          <CreditCardIcon name="gift" />
+          <CardContainer>
+            <CreditCardIcon name="gift" size="large" />
+            <CreditCardIcon name="gift" />
+          </CardContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">Xmas Gift Cards</Caption>
-          <CreditCardIcon name="xmas" />
+          <CardContainer>
+            <CreditCardIcon name="xmas" size="large" />
+            <CreditCardIcon name="xmas" />
+          </CardContainer>
         </GridItem>
       </Grid>
     </Section>
