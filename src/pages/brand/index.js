@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import StatusLabel from '@asda/brand/status-label'
 import ExpressLogo from '@asda/brand/express-logo'
 import CreditCardIcon from '@asda/credit-card-icon'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
@@ -21,9 +22,49 @@ const CardContainer = ({ children }) => (
   <div className="brand-page__card-container">{children}</div>
 )
 
+const LabelContainer = ({ children }) => (
+  <div className="brand-page__label-container">{children}</div>
+)
+
 const BrandPage = () => (
   <article className="brand-page">
     <Heading>Brand Elements</Heading>
+
+    <Section>
+      <Subheading>Labels</Subheading>
+      <Paragraph>
+        Labels are used to indicate the status of orders. The width of the label is
+        based on the width of the text, plus 16px on each side. In cases of limited
+        space, the width can be aligned with the grid.
+      </Paragraph>
+      <Grid>
+        <GridItem>
+          <Caption position="top">For orders in progress</Caption>
+          <LabelContainer>
+            <StatusLabel color="blue">Label</StatusLabel>
+            <StatusLabel color="blue">Order Placed</StatusLabel>
+            <StatusLabel color="blue">Order Amending</StatusLabel>
+          </LabelContainer>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">For orders completed</Caption>
+          <LabelContainer>
+            <StatusLabel color="green">Label</StatusLabel>
+            <StatusLabel color="green">Order Delivered</StatusLabel>
+            <StatusLabel color="green">Order Collected</StatusLabel>
+          </LabelContainer>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">For orders in error state</Caption>
+          <LabelContainer>
+            <StatusLabel color="red">Label</StatusLabel>
+            <StatusLabel color="red">Order Unauthorised</StatusLabel>
+            <StatusLabel color="red">Order Cancelled</StatusLabel>
+          </LabelContainer>
+        </GridItem>
+      </Grid>
+    </Section>
+
     <Section>
       <Subheading>Express Logo</Subheading>
       <Grid>

@@ -1,0 +1,34 @@
+/* StatusLabel Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Variables
+$status-label-height: 20px;
+
+// Block
+.status-label {
+  @include typography(xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-white;
+  display: inline-flex;
+  align-items: center;
+  height: $status-label-height;
+  padding: 0 $spacing-m;
+  border-radius: $status-label-height/2;
+  overflow: hidden;
+}
+
+// Modifiers
+.status-label--blue {
+  background-color: $color-blue;
+}
+
+.status-label--green {
+  background-color: $color-green;
+}
+
+.status-label--red {
+  background-color: $color-red;
+}
