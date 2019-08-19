@@ -21,14 +21,14 @@ $status-label-height: 20px;
 }
 
 // Modifiers
-.status-label--blue {
+.status-label--progress {
   background-color: $color-blue;
 }
 
-.status-label--green {
+.status-label--completed {
   background-color: $color-green;
 }
 
-.status-label--red {
+.status-label--error {
   background-color: $color-red;
 }

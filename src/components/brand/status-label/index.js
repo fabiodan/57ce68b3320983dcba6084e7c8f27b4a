@@ -14,13 +14,11 @@ const SubComponent = ({ children }) => (
 
 const StatusLabel = ({
   className,
-  color,
-  hidden,
+  status,
   children,
 }) => {
   const modifiers = [
-    !!color && `status-label--${color}`,
-    hidden && 'status-label--hidden',
+    !!status && `status-label--${status}`,
   ]
   const classNames = joinClassNames('status-label', className, modifiers)
 
@@ -32,7 +30,7 @@ const StatusLabel = ({
 }
 
 StatusLabel.defaultProps = {
-  color: 'blue',
+  status: 'progress',
 }
 
 export default StatusLabel

@@ -41,25 +41,25 @@ const BrandPage = () => (
         <GridItem>
           <Caption position="top">For orders in progress</Caption>
           <LabelContainer>
-            <StatusLabel color="blue">Label</StatusLabel>
-            <StatusLabel color="blue">Order Placed</StatusLabel>
-            <StatusLabel color="blue">Order Amending</StatusLabel>
+            <StatusLabel status="progress">Label</StatusLabel>
+            <StatusLabel status="progress">Order Placed</StatusLabel>
+            <StatusLabel status="progress">Order Amending</StatusLabel>
           </LabelContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">For orders completed</Caption>
           <LabelContainer>
-            <StatusLabel color="green">Label</StatusLabel>
-            <StatusLabel color="green">Order Delivered</StatusLabel>
-            <StatusLabel color="green">Order Collected</StatusLabel>
+            <StatusLabel status="completed">Label</StatusLabel>
+            <StatusLabel status="completed">Order Delivered</StatusLabel>
+            <StatusLabel status="completed">Order Collected</StatusLabel>
           </LabelContainer>
         </GridItem>
         <GridItem>
           <Caption position="top">For orders in error state</Caption>
           <LabelContainer>
-            <StatusLabel color="red">Label</StatusLabel>
-            <StatusLabel color="red">Order Unauthorised</StatusLabel>
-            <StatusLabel color="red">Order Cancelled</StatusLabel>
+            <StatusLabel status="error">Label</StatusLabel>
+            <StatusLabel status="error">Order Unauthorised</StatusLabel>
+            <StatusLabel status="error">Order Cancelled</StatusLabel>
           </LabelContainer>
         </GridItem>
       </Grid>
