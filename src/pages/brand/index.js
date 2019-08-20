@@ -3,6 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import StatusLabel from '@asda/brand/status-label'
+import DeliveryPassLogo from '@asda/brand/delivery-pass-logo'
 import ExpressLogo from '@asda/brand/express-logo'
 import CreditCardIcon from '@asda/credit-card-icon'
 import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
@@ -61,6 +62,20 @@ const BrandPage = () => (
             <StatusLabel status="error">Order Unauthorised</StatusLabel>
             <StatusLabel status="error">Order Cancelled</StatusLabel>
           </LabelContainer>
+        </GridItem>
+      </Grid>
+    </Section>
+
+    <Section>
+      <Subheading>Delivery Pass Logo</Subheading>
+      <Grid>
+        <GridItem>
+          <Caption position="top">Large</Caption>
+          <DeliveryPassLogo size="large"/>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Small</Caption>
+          <DeliveryPassLogo size="small"/>
         </GridItem>
       </Grid>
     </Section>

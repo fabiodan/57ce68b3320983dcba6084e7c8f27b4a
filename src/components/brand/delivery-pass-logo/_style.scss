@@ -1,0 +1,19 @@
+/* DeliveryPassLogo Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.delivery-pass-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; // Keep inline elements vertically aligned
+}
+
+// Elements/Mixes
+.delivery-pass-logo__svg {
+  vertical-align: middle; // Correct image alignment
+}
+
+// Modifiers
