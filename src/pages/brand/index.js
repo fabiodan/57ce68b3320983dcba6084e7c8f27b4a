@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import Notification from '@asda/brand/notification'
 import StatusLabel from '@asda/brand/status-label'
 import DeliveryPassLogo from '@asda/brand/delivery-pass-logo'
 import ExpressLogo from '@asda/brand/express-logo'
@@ -25,6 +26,10 @@ const CardContainer = ({ children }) => (
 
 const LabelContainer = ({ children }) => (
   <div className="brand-page__label-container">{children}</div>
+)
+
+const NotificationContainer = ({ children }) => (
+  <div className="brand-page__notification-container">{children}</div>
 )
 
 const BrandPage = () => (
@@ -64,6 +69,19 @@ const BrandPage = () => (
           </LabelContainer>
         </GridItem>
       </Grid>
+    </Section>
+
+    <Section>
+      <Subheading>Notifications</Subheading>
+      <Paragraph>
+        Use these with icons to indicate value.
+      </Paragraph>
+      <Caption position="top">Notification</Caption>
+      <NotificationContainer>
+        <Notification>1</Notification>
+        <Notification>24</Notification>
+        <Notification>133</Notification>
+      </NotificationContainer>
     </Section>
 
     <Section>

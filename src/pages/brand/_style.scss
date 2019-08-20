@@ -40,6 +40,13 @@
   height: 76px;
 }
 
+.brand-page__notification-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 98px;
+}
+
 // Breakpoints
 @media (min-width: 480px) {
   .brand-page__grid {

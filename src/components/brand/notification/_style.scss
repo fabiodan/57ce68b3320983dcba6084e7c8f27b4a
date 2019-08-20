@@ -1,0 +1,28 @@
+/* Notification Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Variables
+$notification-height: 16px;
+
+// Block
+.notification {
+  @include typography(xs);
+  font-weight: 600;
+  color: $color-white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $notification-height;
+  min-width: $notification-height;
+  border-radius: $notification-height/2;
+  background-color: $color-red;
+  overflow: hidden;
+}
+
+// Modifiers
+.notification--more-than-two {
+  border-radius: 4px;
+  padding: 0 2px;
+}
