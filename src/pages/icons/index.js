@@ -35,25 +35,27 @@ const IconsPage = () => (
       <Subheading>Basic Icons</Subheading>
       <Grid>
         <GridItem><Icon name="browse" /><Caption>Browse</Caption></GridItem>
-        <GridItem><Icon name="caret-down" /><Caption>Caret Down</Caption></GridItem>
-        <GridItem><Icon name="caret-up" /><Caption>Caret Up</Caption></GridItem>
-        <GridItem><Icon name="change" /><Caption>Change</Caption></GridItem>
         <GridItem><Icon name="check" /><Caption>Check</Caption></GridItem>
         <GridItem><Icon name="chevron-down" /><Caption>Chevron Down</Caption></GridItem>
         <GridItem><Icon name="chevron-left" /><Caption>Chevron Left</Caption></GridItem>
         <GridItem><Icon name="chevron-right" /><Caption>Chevron Right</Caption></GridItem>
         <GridItem><Icon name="chevron-up" /><Caption>Chevron Up</Caption></GridItem>
+        <GridItem><Icon name="swap" /><Caption>Swap</Caption></GridItem>
         <GridItem><Icon name="close" /><Caption>Close</Caption></GridItem>
+        <GridItem><Icon name="change" /><Caption>Change</Caption></GridItem>
         <GridItem><Icon name="filter" /><Caption>Filter</Caption></GridItem>
         <GridItem><Icon name="menu" /><Caption>Menu</Caption></GridItem>
         <GridItem><Icon name="minus" /><Caption>Minus</Caption></GridItem>
         <GridItem><Icon name="more-actions" /><Caption>More Actions</Caption></GridItem>
         <GridItem><Icon name="plus" /><Caption>Plus</Caption></GridItem>
-        <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem>
+        <GridItem><Icon name="zoom" /><Caption>Zoom</Caption></GridItem>
         <GridItem><Icon name="search" /><Caption>Search</Caption></GridItem>
         <GridItem><Icon name="sort" /><Caption>Sort</Caption></GridItem>
-        <GridItem><Icon name="swap" /><Caption>Swap</Caption></GridItem>
-        <GridItem><Icon name="zoom" /><Caption>Zoom</Caption></GridItem>
+        <GridItem><Icon name="caret-down" /><Caption>Caret Down</Caption></GridItem>
+        <GridItem><Icon name="caret-up" /><Caption>Caret Up</Caption></GridItem>
+        <GridItem><Icon name="reload" /><Caption>Reload</Caption></GridItem>
+        <GridItem><Icon name="pause" /><Caption>Pause</Caption></GridItem>
+        <GridItem><Icon name="play" /><Caption>Play</Caption></GridItem>
       </Grid>
     </Section>
 
@@ -84,13 +86,10 @@ const IconsPage = () => (
         <GridItem><Icon name="barcode" /><Caption>Barcode</Caption></GridItem>
         <GridItem><Icon name="calendar" /><Caption>Calendar</Caption></GridItem>
         <GridItem><Icon name="camera" /><Caption>Camera</Caption></GridItem>
-        <GridItem><Icon name="conversation" /><Caption>Conversation</Caption></GridItem>
         <GridItem><Icon name="delivery-pass" /><Caption>Delivery Pass</Caption></GridItem>
         <GridItem><Icon name="events" /><Caption>Events</Caption></GridItem>
         <GridItem><Icon name="feedback" /><Caption>Feedback</Caption></GridItem>
         <GridItem><Icon name="groceries" /><Caption>Groceries</Caption></GridItem>
-        <GridItem><Icon name="heart-outlined" /><Caption>Heart Outlined</Caption></GridItem>
-        <GridItem><Icon name="heart-filled" /><Caption>Heart Filled</Caption></GridItem>
         <GridItem><Icon name="home" /><Caption>Home</Caption></GridItem>
         <GridItem><Icon name="list" /><Caption>List</Caption></GridItem>
         <GridItem><Icon name="lock" /><Caption>Lock</Caption></GridItem>
@@ -100,23 +99,37 @@ const IconsPage = () => (
         <GridItem><Icon name="payment" /><Caption>Payment</Caption></GridItem>
         <GridItem><Icon name="petrol" /><Caption>Petrol</Caption></GridItem>
         <GridItem><Icon name="preferences" /><Caption>Preferences</Caption></GridItem>
-        <GridItem><Icon name="printer" /><Caption>Printer</Caption></GridItem>
+        <GridItem><Icon name="print" /><Caption>Print</Caption></GridItem>
         <GridItem><Icon name="recipes" /><Caption>Recipes</Caption></GridItem>
-        <GridItem><Icon name="settings" /><Caption>Settings</Caption></GridItem>
         <GridItem><Icon name="star-outlined" /><Caption>Star Outlined</Caption></GridItem>
         <GridItem><Icon name="star-filled" /><Caption>Star Filled</Caption></GridItem>
-        <GridItem><Icon name="show" /><Caption>Show</Caption></GridItem>
-        <GridItem><Icon name="pin" /><Caption>Pin</Caption></GridItem>
-        <GridItem><Icon name="thumbs-down-outlined" /><Caption>Thumbs Down Outlined</Caption></GridItem>
-        <GridItem><Icon name="thumbs-down-filled" /><Caption>Thumbs Down Filled</Caption></GridItem>
-        <GridItem><Icon name="thumbs-up-outlined" /><Caption>Thumbs Up Outlined</Caption></GridItem>
-        <GridItem><Icon name="thumbs-up-filled" /><Caption>Thumbs Up Filled</Caption></GridItem>
         <GridItem><Icon name="trash" /><Caption>Trash</Caption></GridItem>
         <GridItem><Icon name="trolley" /><Caption>Trolley</Caption></GridItem>
         <GridItem><Icon name="truck" /><Caption>Truck</Caption></GridItem>
-        <GridItem><Icon name="upload" /><Caption>Upload</Caption></GridItem>
+        <GridItem><Icon name="cloud" /><Caption>Cloud</Caption></GridItem>
         <GridItem><Icon name="voucher" /><Caption>Voucher</Caption></GridItem>
-
+        <GridItem><Icon name="map-pin-outlined" /><Caption>Map Pin Outlined</Caption></GridItem>
+        <GridItem><Icon name="map-pin-filled" /><Caption>Map Pin Filled</Caption></GridItem>
+        <GridItem><Icon name="map-pin-checked" /><Caption>Map Pin Checked</Caption></GridItem>
+        <GridItem><Icon name="map-pin-express" /><Caption>Map Pin Express</Caption></GridItem>
+        <GridItem><Icon name="heart-outlined" /><Caption>Heart Outlined</Caption></GridItem>
+        <GridItem><Icon name="heart-filled" /><Caption>Heart Filled</Caption></GridItem>
+        <GridItem><Icon name="thumbs-up-outlined" /><Caption>Thumbs Up Outlined</Caption></GridItem>
+        <GridItem><Icon name="thumbs-down-outlined" /><Caption>Thumbs Down Outlined</Caption></GridItem>
+        <GridItem><Icon name="thumbs-up-filled" /><Caption>Thumbs Up Filled</Caption></GridItem>
+        <GridItem><Icon name="thumbs-down-filled" /><Caption>Thumbs Down Filled</Caption></GridItem>
+        <GridItem><Icon name="map" /><Caption>Map</Caption></GridItem>
+        <GridItem><Icon name="conversation" /><Caption>Conversation</Caption></GridItem>
+        <GridItem><Icon name="near-me-outlined" /><Caption>Near Me Outlined</Caption></GridItem>
+        <GridItem><Icon name="near-me" /><Caption>Near Me</Caption></GridItem>
+        <GridItem><Icon name="click-collect" /><Caption>Click & Collect</Caption></GridItem>
+        <GridItem><Icon name="lockers" /><Caption>Lockers</Caption></GridItem>
+        <GridItem><Icon name="show" /><Caption>Show</Caption></GridItem>
+        <GridItem><Icon name="pizza" /><Caption>Pizza</Caption></GridItem>
+        <GridItem><Icon name="support" /><Caption>Support</Caption></GridItem>
+        <GridItem><Icon name="account" /><Caption>Account</Caption></GridItem>
+        <GridItem><Icon name="settings" /><Caption>Settings</Caption></GridItem>
+        <GridItem><Icon name="summer" /><Caption>Summer</Caption></GridItem>
       </Grid>
     </Section>
 
