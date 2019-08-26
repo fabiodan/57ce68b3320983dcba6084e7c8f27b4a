@@ -2,6 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import Evoucher from '@asda/brand/evoucher'
 import Notification from '@asda/brand/notification'
 import StatusLabel from '@asda/brand/status-label'
 import DeliveryPassLogo from '@asda/brand/delivery-pass-logo'
@@ -12,8 +13,8 @@ import { Caption, Paragraph, Subheading, Section, Heading } from '../components/
 // Assets
 import './_style.scss'
 
-const Grid = ({ children }) => (
-  <ul className="brand-page__grid">{children}</ul>
+const Grid = ({ children, className = ''}) => (
+  <ul className={`brand-page__grid ${className}`}>{children}</ul>
 )
 
 const GridItem = ({ children }) => (
@@ -82,6 +83,24 @@ const BrandPage = () => (
         <Notification>24</Notification>
         <Notification>133</Notification>
       </NotificationContainer>
+    </Section>
+
+    <Section>
+      <Subheading>eVoucher</Subheading>
+      <Grid className="brand-page__evoucher__grid">
+        <GridItem>
+          <Caption position="top">Gold</Caption>
+          <Evoucher category="gold">10.99</Evoucher>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Silver</Caption>
+          <Evoucher category="silver">10.99</Evoucher>
+        </GridItem>
+        <GridItem>
+          <Caption position="top">Bronze</Caption>
+          <Evoucher category="bronze">10.99</Evoucher>
+        </GridItem>
+      </Grid>
     </Section>
 
     <Section>

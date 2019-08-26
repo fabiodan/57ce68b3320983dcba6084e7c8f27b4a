@@ -1,0 +1,45 @@
+/* Notification Component */
+
+// Dependencies
+@import "@asda/core/style";
+
+// Block
+.evoucher {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+// Elements
+.evoucher__category {
+  color: $color-charcoal;
+  padding: 1px 0;
+  @include typography(s);
+}
+
+.evoucher__value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  font-weight: 600;
+  border-radius: 0 0 4px 4px;
+  border-top: solid 1px $color-white;
+  background: $color-charcoal;
+  color: $color-white;
+}
+
+// Modifiers
+.evoucher--bronze {
+  background: $color-bronze;
+}
+
+.evoucher--silver {
+  background: $color-medium-gray
+}
+
+.evoucher--gold {
+  background: $color-yellow;
+}

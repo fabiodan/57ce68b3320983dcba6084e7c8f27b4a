@@ -28,6 +28,9 @@ $color-transparent: rgba(255, 255, 255, 0); // transparent
 $color-charcoal-transparent: rgba($color-charcoal, 0.5); // #3D3D3D (50%)
 $color-yellow-transparent: rgba($color-yellow, 0.2); // #F7CC00 (20%)
 
+// Brand Colors
+$color-bronze: rgba(204, 153, 102, 1); // #CC9966
+
 // Mixins
 @mixin color-base {
   ::-moz-selection {
