@@ -70,7 +70,6 @@ const IconsPage = () => (
         <GridItem><Icon name="info" /><Caption>Info</Caption></GridItem>
         <GridItem><Icon name="offer" /><Caption>Offer</Caption></GridItem>
         <GridItem><Icon name="price" /><Caption>Price</Caption></GridItem>
-        <GridItem><Icon name="user" /><Caption>User</Caption></GridItem>
         <GridItem><Icon name="twitter" /><Caption>Twitter</Caption></GridItem>
         <GridItem><Icon name="unavailable" /><Caption>Unavailable</Caption></GridItem>
       </Grid>
