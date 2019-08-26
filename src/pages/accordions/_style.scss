@@ -73,9 +73,10 @@
 }
 
 .accordions-page__text-field__credit-card-icon {
+  $text-field-border-width: 1px;
   position: absolute;
-  left: $spacing-s;
-  top: $spacing-xxs;
+  left: $spacing-s - $text-field-border-width;
+  top: $spacing-xs + $text-field-border-width;
 }
 
 // Breakpoints
