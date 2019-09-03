@@ -1,7 +1,8 @@
 // Dependencies
 @import "@asda/core/style";
 
-$sg-menu-item-height: 60px;
+$sg-menu-item-height: 94px;
+$sg-menu-border-width: 1px;
 
 // Block
 .sg-menu {
@@ -15,23 +16,22 @@ $sg-menu-item-height: 60px;
   margin: 0;
 }
 
-.sg-menu__item {
-  height: $sg-menu-item-height;
+.sg-menu__list-item {
+  border-bottom: solid $sg-menu-border-width $color-medium-gray;
 }
 
 .sg-menu__anchor {
-  @include typography(l);
+  @include typography(xl);
+  font-weight: 600;
   vertical-align: middle;
-  padding: 0 $spacing-s 0 $spacing-l;
+  padding: 0 $spacing-s 0 $spacing-xl;
   line-height: $sg-menu-item-height;
-  height: 100%;
+  height: $sg-menu-item-height;
   display: inline-block;
   width: 100%;
   color: $color-charcoal;
   text-decoration: none;
-  &:hover {
-    background: $color-background-gray;
-  }
+  position: relative;
 }
 
 .sg-menu__close-button {
@@ -50,10 +50,47 @@ $sg-menu-item-height: 60px;
   cursor: pointer;
 }
 
+.sg-menu__icon {
+  position: absolute;
+  right: $spacing-xl - $sg-menu-border-width;
+  top: calc(50% - 12px);
+  will-change: transform;
+  transition: transform 100ms ease-out;
+}
+
+.sg-menu__sublist {
+  list-style: none;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.sg-menu__sublist-anchor {
+  padding: $spacing-m 0 $spacing-m 56px;
+  @include typography(l);
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: $color-charcoal;
+}
+
 // Modifiers
 .sg-menu--active {
-  font-weight: bold;
-  background: $color-background-gray;
+  .sg-menu__icon {
+    transform: rotate(180deg);
+  }
+
+  & ~ {
+    .sg-menu__sublist {
+      height: auto;
+    }
+  }
+}
+
+.sg-menu__sublist-anchor--active {
+  font-weight: 600;
+  background-color: $color-background-gray;
 }
 
 @media (min-width: 768px) {

@@ -88,37 +88,31 @@ ReactDOM.render(
   (
     <Router>
       <Page>
-        <Route
-          exact
-          path="/"
-          render={() =>
-            <Redirect to="/color-scheme" />
-        }
-        />
-        <Route
-          exact
-          path="/pages/ukgr/asda-design-system/"
-          render={() =>
-            <Redirect to="/color-scheme" />
-        }
-        />
-        <Route path="/sample" component={SamplePage} />
-        <Route path="/color-scheme" component={ColorSchemePage} />
-        <Route path="/typography" component={TypographyPage} />
-        <Route path="/layout" component={LayoutPage} />
-        <Route path="/spacing" component={SpacingPage} />
-        <Route path="/buttons" component={ButtonsPage} />
-        <Route path="/links" component={LinksPage} />
-        <Route path="/special-buttons" component={SpecialButtonsPage} />
-        <Route path="/text-fields" component={TextFieldsPage} />
-        <Route path="/dropdowns" component={DropdownsPage} />
+        <Route exact path="/" render={() => <Redirect to="/common" />} />
+        {/* <Route exact path="/pages/ukgr/asda-design-system/" render={() => <Redirect to="/color-scheme" />} /> */}
+        {/* Common Library */}
+        <Route exact path="/common" render={() => <Redirect to="/common/color-scheme" />} />
+        <Route path="/common/color-scheme" component={ColorSchemePage} />
+        <Route path="/common/buttons" component={ButtonsPage} />
+        <Route path="/common/links" component={LinksPage} />
+        <Route path="/common/icons" component={IconsPage} />
+        <Route path="/common/brand" component={BrandPage} />
+
+        {/* rWeb Library */}
+        <Route exact path="/web" render={() => <Redirect to="/web/typography" />} />
+        <Route path="/web/typography" component={TypographyPage} />
+        <Route path="/web/special-buttons" component={SpecialButtonsPage} />
+        <Route path="/web/layout" component={LayoutPage} />
+        <Route path="/web/spacing" component={SpacingPage} />
+        <Route path="/web/text-fields" component={TextFieldsPage} />
+        <Route path="/web/dropdowns" component={DropdownsPage} />
+        <Route path="/web/tooltips" component={TooltipsPage} />
+        <Route path="/web/input-controls" component={InputControlsPage} />
+        <Route path="/web/modals" component={ModalsPage} />
+        <Route path="/web/accordions" component={AccordionsPage} />
+
         {/* <Route path="/navigation" component={NavigationPage} /> */}
-        <Route path="/tooltips" component={TooltipsPage} />
-        <Route path="/input-controls" component={InputControlsPage} />
-        <Route path="/brand" component={BrandPage} />
-        <Route path="/modals" component={ModalsPage} />
-        <Route path="/accordions" component={AccordionsPage} />
-        <Route path="/icons" component={IconsPage} />
+        <Route path="/sample" component={SamplePage} />
       </Page>
     </Router>
   ), document.querySelector('.sg-layout'),
