@@ -93,6 +93,10 @@ $sg-menu-border-width: 1px;
   background-color: $color-background-gray;
 }
 
+.sg-menu--scroll-lock {
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
   .sg-menu {
     padding: 0;

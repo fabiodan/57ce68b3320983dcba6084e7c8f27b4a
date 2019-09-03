@@ -46,6 +46,13 @@ class Page extends Component {
   }
 
   toggleMenu() {
+
+    if (!this.state.menuVisible) {
+      document.body.classList.add('sg-menu--scroll-lock')
+    } else {
+      document.body.classList.remove('sg-menu--scroll-lock')
+    }
+
     this.setState({
       menuVisible: !this.state.menuVisible,
     })

@@ -80,10 +80,11 @@ $sg-layout__aside-width: 314px;
 
 .sg-layout__aside {
   width: $sg-layout__aside-width;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: auto;
   z-index: 400;
   transform: translateX(-100%);
   border: 1px $color-medium-gray;
