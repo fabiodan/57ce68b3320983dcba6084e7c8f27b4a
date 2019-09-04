@@ -61,7 +61,7 @@ const Quantity = ({
         <Button iconName="minus" className="add-button__minus" onClick={onDecrement} hiddenText />
         <input
           className="add-button__input"
-          type="number"
+          type="text"
           value={quantity}
           onChange={onChange}
           onFocus={setFocus}
