@@ -2,6 +2,7 @@
 import React, { Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
+import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Icon, { IconButton } from '@asda/icon'
@@ -12,6 +13,11 @@ import './_style.scss'
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
+    { name: 'Introduction',
+      url: '/intro',
+      children: [
+      ]
+    },
     { name: 'Common library',
       url: '/common',
       children: [
@@ -22,7 +28,13 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Brand', url: '/common/brand' },
       ]
     },
-    { name: 'rWeb library',
+    { name: 'Content library',
+      url: '/content',
+      children: [
+        { name: 'Typography', url: '/web/typography', wip: true },
+      ]
+    },
+    { name: 'Web library',
       url: '/web',
       children: [
         { name: 'Typography', url: '/web/typography' },
@@ -36,6 +48,38 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Modals', url: '/web/modals' },
         { name: 'Accordions', url: '/web/accordions' },
         // { name: 'Navigation (WIP)', url: '/navigation' },
+      ]
+    },
+    { name: 'Android library',
+      url: '/android',
+      children: [
+        { name: 'Typography', url: '/web/typography', wip: true },
+      ]
+    },
+    { name: 'iOS library',
+      url: '/ios',
+      children: [
+        { name: 'Introduction', url: '/ios/intro', wip: true },
+        { name: 'Color Scheme', url: '/ios/color-scheme', wip: true },
+        { name: 'Typography', url: '/ios/typography', wip: true },
+        { name: 'Layout', url: '/ios/layout', wip: true },
+        { name: 'Spacing', url: '/ios/spacing', wip: true },
+        { name: 'Navigation Bars', url: '/ios/navigation-bars', wip: true },
+        { name: 'Search Bars', url: '/ios/search-bars', wip: true },
+        { name: 'Status Bars', url: '/ios/status-bars', wip: true },
+        { name: 'Tab Bar', url: '/ios/tab-bar', wip: true },
+        { name: 'Action Sheets', url: '/ios/action-sheets', wip: true },
+        { name: 'Alerts', url: '/ios/alerts', wip: true },
+        { name: 'Tables', url: '/ios/tables', wip: true },
+        { name: 'Product Module', url: '/ios/product-module', wip: true },
+        { name: 'Buttons', url: '/ios/buttons', wip: true },
+        { name: 'Controls', url: '/ios/controls', wip: true },
+        { name: 'Pickers', url: '/ios/pickers', wip: true },
+        { name: 'Progress Indicators', url: '/ios/progress-indicators', wip: true },
+        { name: 'Segmented Controls', url: '/ios/segmented-controls', wip: true },
+        { name: 'Steppers', url: '/ios/steppers', wip: true },
+        { name: 'Switches', url: '/ios/switches', wip: true },
+        { name: 'Text Fields', url: '/ios/text-fields', wip: true },
       ]
     }
   ]
@@ -57,7 +101,7 @@ const List = (props) => {
   const items = props.items.map(item => {
     return (
       <ListItem
-        key={item.name}
+        key={item.url}
         name={item.name}
         url={item.url}
         toggleMenu={toggleMenu}
@@ -95,9 +139,10 @@ const ListItem = ({ name, items, toggleMenu, url }) => {
 const SubList = ({ subMenuItems, toggleMenu }) => {
   const items = subMenuItems.map(item => (
     <SubListItem
-      key={item.name}
+      key={item.url}
       name={item.name}
       url={item.url}
+      wip={item.wip}
       onClick={toggleMenu}
     />
   ))
@@ -107,14 +152,27 @@ const SubList = ({ subMenuItems, toggleMenu }) => {
   )
 }
 
-const SubListItem = ({ url, name, onClick }) => {
+const SubListItem = ({ className, url, name, onClick, wip }) => {
+  const modifiers = [
+    wip && 'sg-menu__sublist-item--wip',
+  ]
+  const classNames = joinClassNames('sg-menu__sublist-item', className, modifiers)
+  const handleClick = function(e) {
+    if (wip) {
+      e.preventDefault()
+    } else if (onClick) {
+      onClick()
+    }
+  }
+
+
   return (
-    <li className="sg-menu__sublist-item">
+    <li className={classNames}>
       <NavLink
         className="sg-menu__sublist-anchor"
         to={url}
         activeClassName="sg-menu__sublist-anchor--active"
-        onClick={onClick}
+        onClick={handleClick}
       >
         {name}
       </NavLink>

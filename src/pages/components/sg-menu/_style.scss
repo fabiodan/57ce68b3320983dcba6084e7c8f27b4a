@@ -65,6 +65,10 @@ $sg-menu-border-width: 1px;
   overflow: hidden;
 }
 
+.sg-menu__sublist-item {
+  position: relative;
+}
+
 .sg-menu__sublist-anchor {
   padding: $spacing-m 0 $spacing-m 56px;
   @include typography(l);
@@ -72,7 +76,10 @@ $sg-menu-border-width: 1px;
   display: block;
   height: 100%;
   width: 100%;
-  color: $color-charcoal;
+  color: currentColor;
+  &:hover {
+    background-color: $color-background-gray;
+  }
 }
 
 // Modifiers
@@ -97,6 +104,34 @@ $sg-menu-border-width: 1px;
   overflow: hidden;
 }
 
+.sg-menu__sublist-item--wip {
+  color: $color-dark-gray;
+
+  .sg-menu__sublist-anchor {
+    pointer-events: none;
+    
+    &:hover {
+      background-color: $color-transparent;
+    }
+  }
+
+  &::after {
+    $sg-menu-wip-height: 24px;
+    content: "WIP";
+    width: 48px;
+    height: $sg-menu-wip-height;
+    @include typography(s);
+    position: absolute;
+    right: $spacing-xl;
+    bottom: calc(50% - #{$sg-menu-wip-height / 2});
+    border: solid 1px $color-medium-gray;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 22px;
+  }
+}
+
+// Breakpoints
 @media (min-width: 768px) {
   .sg-menu {
     padding: 0;
