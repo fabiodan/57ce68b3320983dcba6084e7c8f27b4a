@@ -13,11 +13,6 @@ import './_style.scss'
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
-    { name: 'Introduction',
-      url: '/intro',
-      children: [
-      ]
-    },
     { name: 'Common library',
       url: '/common',
       children: [
@@ -31,7 +26,9 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Content library',
       url: '/content',
       children: [
-        { name: 'Typography', url: '/web/typography', wip: true },
+        { name: 'Overview', url: '/content/overview', wip: true },
+        { name: 'Punctuation', url: '/content/punctuation', wip: true },
+        { name: 'Formatting', url: '/content/formatting', wip: true },
       ]
     },
     { name: 'Web library',
@@ -53,7 +50,9 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Android library',
       url: '/android',
       children: [
-        { name: 'Typography', url: '/web/typography', wip: true },
+        { name: 'Introduction', url: '/android/intro', wip: true },
+        { name: 'Color Scheme', url: '/android/color-scheme', wip: true },
+        { name: 'Typography', url: '/android/typography', wip: true },
       ]
     },
     { name: 'iOS library',
@@ -62,24 +61,24 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Introduction', url: '/ios/intro', wip: true },
         { name: 'Color Scheme', url: '/ios/color-scheme', wip: true },
         { name: 'Typography', url: '/ios/typography', wip: true },
-        { name: 'Layout', url: '/ios/layout', wip: true },
-        { name: 'Spacing', url: '/ios/spacing', wip: true },
-        { name: 'Navigation Bars', url: '/ios/navigation-bars', wip: true },
-        { name: 'Search Bars', url: '/ios/search-bars', wip: true },
-        { name: 'Status Bars', url: '/ios/status-bars', wip: true },
-        { name: 'Tab Bar', url: '/ios/tab-bar', wip: true },
-        { name: 'Action Sheets', url: '/ios/action-sheets', wip: true },
-        { name: 'Alerts', url: '/ios/alerts', wip: true },
-        { name: 'Tables', url: '/ios/tables', wip: true },
-        { name: 'Product Module', url: '/ios/product-module', wip: true },
-        { name: 'Buttons', url: '/ios/buttons', wip: true },
-        { name: 'Controls', url: '/ios/controls', wip: true },
-        { name: 'Pickers', url: '/ios/pickers', wip: true },
-        { name: 'Progress Indicators', url: '/ios/progress-indicators', wip: true },
-        { name: 'Segmented Controls', url: '/ios/segmented-controls', wip: true },
-        { name: 'Steppers', url: '/ios/steppers', wip: true },
-        { name: 'Switches', url: '/ios/switches', wip: true },
-        { name: 'Text Fields', url: '/ios/text-fields', wip: true },
+        // { name: 'Layout', url: '/ios/layout', wip: true },
+        // { name: 'Spacing', url: '/ios/spacing', wip: true },
+        // { name: 'Navigation Bars', url: '/ios/navigation-bars', wip: true },
+        // { name: 'Search Bars', url: '/ios/search-bars', wip: true },
+        // { name: 'Status Bars', url: '/ios/status-bars', wip: true },
+        // { name: 'Tab Bar', url: '/ios/tab-bar', wip: true },
+        // { name: 'Action Sheets', url: '/ios/action-sheets', wip: true },
+        // { name: 'Alerts', url: '/ios/alerts', wip: true },
+        // { name: 'Tables', url: '/ios/tables', wip: true },
+        // { name: 'Product Module', url: '/ios/product-module', wip: true },
+        // { name: 'Buttons', url: '/ios/buttons', wip: true },
+        // { name: 'Controls', url: '/ios/controls', wip: true },
+        // { name: 'Pickers', url: '/ios/pickers', wip: true },
+        // { name: 'Progress Indicators', url: '/ios/progress-indicators', wip: true },
+        // { name: 'Segmented Controls', url: '/ios/segmented-controls', wip: true },
+        // { name: 'Steppers', url: '/ios/steppers', wip: true },
+        // { name: 'Switches', url: '/ios/switches', wip: true },
+        // { name: 'Text Fields', url: '/ios/text-fields', wip: true },
       ]
     }
   ]

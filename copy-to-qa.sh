@@ -1,0 +1,3 @@
+echo Copying /dist/ folder to www.asda.com-static-assets-stage/design/...
+cp -R ~/Projects/asda-design-system/dist/ ~/Projects/www.asda.com-static-assets-stage/design/
+echo Done.
