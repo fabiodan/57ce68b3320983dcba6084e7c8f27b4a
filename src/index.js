@@ -36,6 +36,7 @@ import ModalsPage from './pages/modals'
 import AccordionsPage from './pages/accordions'
 import IconsPage from './pages/icons'
 import ContentOverviewPage from './pages/content/overview'
+import IOSIntroductionPage from './pages/ios/introduction'
 
 class Page extends Component {
   constructor(props) {
@@ -106,6 +107,10 @@ ReactDOM.render(
         <Route path="/common/icons" component={IconsPage} />
         <Route path="/common/brand" component={BrandPage} />
 
+        {/* Content Library */}
+        <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
+        <Route path="/content/overview" component={ContentOverviewPage} />
+
         {/* rWeb Library */}
         <Route exact path="/web" render={() => <Redirect to="/web/typography" />} />
         <Route path="/web/typography" component={TypographyPage} />
@@ -119,9 +124,9 @@ ReactDOM.render(
         <Route path="/web/modals" component={ModalsPage} />
         <Route path="/web/accordions" component={AccordionsPage} />
 
-        {/* Content Library */}
-        <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
-        <Route path="/content/overview" component={ContentOverviewPage} />
+        {/* iOS Library */}
+        <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />
+        <Route path="/ios/introduction" component={IOSIntroductionPage} />
 
         {/* <Route path="/navigation" component={NavigationPage} /> */}
         <Route path="/sample" component={SamplePage} />

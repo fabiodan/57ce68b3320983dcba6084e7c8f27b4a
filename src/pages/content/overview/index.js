@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, Paragraph, Subheading, Section, Heading } from '@onlineDoc/sg-layout'
+import { Figure, Paragraph, Subheading, Section, Heading } from '@doc/sg-layout'
 
 // Assets
 import sampleSVGSource from './images/sample.svg'
@@ -15,7 +15,7 @@ const Component = ({ children }) => (
 const ContentOverviewPage = () => (
   <article className="content-overview-page">
 
-    <Heading>Overview</Heading>
+    <Heading>Introduction</Heading>
 
     <Section>
       <Paragraph>

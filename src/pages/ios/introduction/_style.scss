@@ -1,0 +1,27 @@
+/* Sample Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@doc/sg-core/style";
+
+// Variables
+$ios-introduction-page-element-height: 250px;
+$ios-introduction-page-mix-border-color: $color-medium-gray;
+
+// Block
+.ios-introduction-page {
+
+}
+
+// Elements/Mixes
+.ios-introduction-page__component {
+  margin-bottom: $spacing-xxxl;
+}
+
+// Modifiers
+.ios-introduction-page--modifier {
+
+}
+.ios-introduction-page__element--modifier {
+
+}

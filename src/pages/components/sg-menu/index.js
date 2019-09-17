@@ -50,7 +50,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Android library',
       url: '/android',
       children: [
-        { name: 'Introduction', url: '/android/intro', wip: true },
+        { name: 'Introduction', url: '/android/introduction', wip: true },
         { name: 'Color Scheme', url: '/android/color-scheme', wip: true },
         { name: 'Typography', url: '/android/typography', wip: true },
       ]
@@ -58,7 +58,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'iOS library',
       url: '/ios',
       children: [
-        { name: 'Introduction', url: '/ios/intro', wip: true },
+        { name: 'Introduction', url: '/ios/introduction' },
         { name: 'Color Scheme', url: '/ios/color-scheme', wip: true },
         { name: 'Typography', url: '/ios/typography', wip: true },
         // { name: 'Layout', url: '/ios/layout', wip: true },
