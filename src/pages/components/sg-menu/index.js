@@ -26,7 +26,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Content library',
       url: '/content',
       children: [
-        { name: 'Overview', url: '/content/overview', wip: true },
+        { name: 'Overview', url: '/content/overview' },
         { name: 'Punctuation', url: '/content/punctuation', wip: true },
         { name: 'Formatting', url: '/content/formatting', wip: true },
       ]

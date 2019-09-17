@@ -1,0 +1,19 @@
+/* Content • Overview Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@onlineDoc/sg-core/style";
+
+// Block
+.content-overview-page {
+
+}
+
+// Elements/Mixes
+.content-overview-page__user-story {
+  @include typography(xl);
+  font-weight: 600;
+  background: $color-background-gray;
+  border-radius: 4px;
+  padding: $spacing-l;
+}

@@ -35,6 +35,7 @@ import BrandPage from './pages/brand'
 import ModalsPage from './pages/modals'
 import AccordionsPage from './pages/accordions'
 import IconsPage from './pages/icons'
+import ContentOverviewPage from './pages/content/overview'
 
 class Page extends Component {
   constructor(props) {
@@ -117,6 +118,10 @@ ReactDOM.render(
         <Route path="/web/input-controls" component={InputControlsPage} />
         <Route path="/web/modals" component={ModalsPage} />
         <Route path="/web/accordions" component={AccordionsPage} />
+
+        {/* Content Library */}
+        <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
+        <Route path="/content/overview" component={ContentOverviewPage} />
 
         {/* <Route path="/navigation" component={NavigationPage} /> */}
         <Route path="/sample" component={SamplePage} />
