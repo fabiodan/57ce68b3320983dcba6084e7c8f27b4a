@@ -5,7 +5,6 @@ import React from 'react'
 import { Figure, Paragraph, Subheading, Section, Heading } from '@doc/sg-layout'
 
 // Assets
-import sampleSVGSource from './images/sample.svg'
 import './_style.scss'
 
 const Component = ({ children }) => (
