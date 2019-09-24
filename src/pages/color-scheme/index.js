@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
+import { Heading1, Heading2, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -33,10 +33,10 @@ const ColorDescription = ({ children }) => (
 
 const ColorSchemePage = () => (
   <article className="color-page">
-    <Heading>Color Scheme</Heading>
+    <Heading1>Color Scheme</Heading1>
 
     <Section>
-      <Subheading>Asda Green</Subheading>
+      <Heading2>Asda Green</Heading2>
       <Paragraph>
         Green is our primary color and should be used for elements that must
         reflect Asda’s brand. For compliance to accessibility standards, we use
@@ -58,7 +58,7 @@ const ColorSchemePage = () => (
     </Section>
 
     <Section>
-      <Subheading>Secondary Colors</Subheading>
+      <Heading2>Secondary Colors</Heading2>
       <Paragraph>
         Use these colors for elements peripheral to core user journey.
       </Paragraph>
@@ -92,7 +92,7 @@ const ColorSchemePage = () => (
     </Section>
 
     <Section>
-      <Subheading>Blacks & Grays</Subheading>
+      <Heading2>Blacks & Grays</Heading2>
       <Paragraph>
         Blacks and grays are used for text, lines, borders, backgrounds, icons
         etc. The first two dark shades are accessibile friendly and can be used
@@ -135,7 +135,7 @@ const ColorSchemePage = () => (
     </Section>
 
     <Section>
-      <Subheading>Transparent Background</Subheading>
+      <Heading2>Transparent Background</Heading2>
       <ColorList>
         <ColorItem>
           <ColorSample color="charcoal-transparent" name="Charcoal (50%)" hex="3D3D3D" rgba="61, 61, 61, 0.5" />

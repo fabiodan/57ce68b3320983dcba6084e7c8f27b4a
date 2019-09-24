@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -14,10 +14,10 @@ const Component = ({ children }) => (
 const NavigationPage = () => (
   <article className="navigation-page">
 
-    <Heading>Navigation</Heading>
+    <Heading1>Navigation</Heading1>
 
     <Section>
-      <Subheading>Fixed Tabs</Subheading>
+      <Heading2>Fixed Tabs</Heading2>
       <Paragraph>
         Fixed tabs display all tabs on one screen. The width of each tab is
         determined by the number of tabs divided by the screen width. These
@@ -34,7 +34,7 @@ const NavigationPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Page Control</Subheading>
+      <Heading2>Page Control</Heading2>
       <Paragraph>
         Pagination dots are used as an indicator and a control for the user to
         scroll between pages & content.

@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 
 // Components (from atomic to composite)
-import { Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
+import { Heading1, Heading2, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -46,10 +46,10 @@ const FontWeightList = () => (
 
 const TypographyPage = () => (
   <article className="typography-page">
-    <Heading>Typography</Heading>
+    <Heading1>Typography</Heading1>
 
     <Section>
-      <Subheading>Typeface</Subheading>
+      <Heading2>Typeface</Heading2>
       <Paragraph>
         Asda’s primary typeface is Source Sans Pro. It is Adobe’s first open
         source typeface family designed by Paul D. Hunt. Its versatile, friendly,
@@ -66,7 +66,7 @@ const TypographyPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Font Sizes</Subheading>
+      <Heading2>Font Sizes</Heading2>
       <Paragraph>
         Font scale consists of 7 different sizes. The default size applied to
         the body is Medium (16px, 1em). Line height is always kept at auto and
@@ -137,7 +137,7 @@ const TypographyPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Font Weight</Subheading>
+      <Heading2>Font Weight</Heading2>
       <Paragraph>
         There are three font weights available for you to use - Bold, Semi Bold,
         Regular.

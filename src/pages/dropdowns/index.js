@@ -5,7 +5,7 @@ import joinClassNames from 'classnames'
 // Components (from atomic to composite)
 import CreditCardIcon from '@asda/credit-card-icon'
 import { Dropdown, DropdownSelect, DropdownOption } from '@asda/form'
-import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -70,10 +70,10 @@ class CreditCardDropdown extends Component {
 const DropdownPage = () => (
   <article className="dropdowns-page">
 
-    <Heading>Dropdowns</Heading>
+    <Heading1>Dropdowns</Heading1>
 
     <Section>
-      <Subheading>Dropdowns</Subheading>
+      <Heading2>Dropdowns</Heading2>
       <Paragraph>
           Input fields let users enter and edit text. Each input field is
           generally used for single entry and should aim to be clear and efficient.
@@ -132,7 +132,7 @@ const DropdownPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Dropdowns with icons</Subheading>
+      <Heading2>Dropdowns with icons</Heading2>
       <Paragraph>
           Input fields let users enter and edit text. Each input field is
           generally used for single entry and should aim to be clear and efficient.
@@ -158,7 +158,7 @@ const DropdownPage = () => (
     </Section>
 
     {/* <Section>
-        <Subheading>Contextual Menus</Subheading>
+        <Heading2>Contextual Menus</Heading2>
         <Paragraph>
           Contextual menus aren’t triggered by a consistent UI element. They
           appear next to where a user taps, and their actions can vary based on

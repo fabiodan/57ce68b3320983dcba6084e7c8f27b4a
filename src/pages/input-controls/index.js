@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import { Checkbox, Label, Radio, Switch } from '@asda/form'
-import { Paragraph, Caption, Subheading, Section, Heading } from '../components/sg-layout'
+import { Paragraph, Caption, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -19,10 +19,10 @@ const GridItem = ({ children }) => (
 const InputControlsPage = () => (
   <article className="input-controls-page">
 
-    <Heading>Input Controls</Heading>
+    <Heading1>Input Controls</Heading1>
 
     <Section>
-      <Subheading>Checkboxes</Subheading>
+      <Heading2>Checkboxes</Heading2>
       <Paragraph>
         Checkboxes allow the user to select one or more items from a set.
         Checkboxes can be used to turn an option on or off.
@@ -68,7 +68,7 @@ const InputControlsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Radio Buttons</Subheading>
+      <Heading2>Radio Buttons</Heading2>
       <Paragraph>
         Radio buttons allow the user to select one option from a set. Use radio
         buttons when the user needs to see all available options. If available
@@ -106,7 +106,7 @@ const InputControlsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Toggles</Subheading>
+      <Heading2>Toggles</Heading2>
       <Paragraph>
         The toggle switch represents a physical switch that allows users to turn
         things on or off. They should be used to represent an action (e.g. start

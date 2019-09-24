@@ -2,7 +2,7 @@
 
 // Dependencies
 @import "@asda/core/style";
-@import "../components/sg-core/style";
+@import "@doc/sg-core/style";
 
 // Variables
 $sample-page-element-height: 250px;
@@ -15,7 +15,7 @@ $sample-page-mix-border-color: $color-medium-gray;
 
 // Elements/Mixes
 .sample-page__component {
-  margin-bottom: $spacing-xxxl; 
+  margin-bottom: $spacing-xxxl;
 }
 
 // Modifiers

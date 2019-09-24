@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, Paragraph, Subheading, Section, Heading } from '@doc/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '@doc/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -14,7 +14,7 @@ const Component = ({ children }) => (
 const ContentOverviewPage = () => (
   <article className="content-overview-page">
 
-    <Heading>Introduction</Heading>
+    <Heading1>Introduction</Heading1>
 
     <Section>
       <Paragraph>
@@ -40,7 +40,7 @@ const ContentOverviewPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Our user story</Subheading>
+      <Heading2>Our user story</Heading2>
       <Paragraph>
         In UX, user needs are our north star.
       </Paragraph>

@@ -4,7 +4,7 @@ import React from 'react'
 // Components (from atomic to composite)
 import CreditCardIcon from '@asda/credit-card-icon'
 import { TextField, Label } from '@asda/form'
-import { Figure, Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Caption, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import gridPNGSource from '../../assets/images/text-fields-page-grid.png'
@@ -21,10 +21,10 @@ const GridItem = ({ children }) => (
 const TextFieldsPage = () => (
   <article className="text-fields-page">
 
-    <Heading>Text Fields</Heading>
+    <Heading1>Text Fields</Heading1>
 
     <Section>
-      <Subheading>Input Fields</Subheading>
+      <Heading2>Input Fields</Heading2>
       <Paragraph>
         Input fields let users enter and edit text. Each input field is
         generally used for single entry and should aim to be clear and
@@ -93,7 +93,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Input Fields with Icons</Subheading>
+      <Heading2>Input Fields with Icons</Heading2>
       <Paragraph>
         Input fields with leading icons provide users with more visual
         information about the input required.
@@ -180,7 +180,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Input Fields without Labels</Subheading>
+      <Heading2>Input Fields without Labels</Heading2>
       <Paragraph>
         Input fields with leading icons provide users with more visual
         information about the input required.
@@ -238,7 +238,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Text Fields</Subheading>
+      <Heading2>Text Fields</Heading2>
       <Paragraph>
         Multiline text fields and text areas are taller than traditional input
         fields and wrap the overflow text onto a new line. If the text overflows
@@ -320,7 +320,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Optional Text Field</Subheading>
+      <Heading2>Optional Text Field</Heading2>
       <Paragraph>
         In situations where a form has more required fields than optional, use
         the optional text field for the outlier input requirement and default
@@ -341,7 +341,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Assistive Elements Examples</Subheading>
+      <Heading2>Assistive Elements Examples</Heading2>
       <Paragraph>
         Assistive elements provide additionals details about text entered into
         text fields. Helper text, errors, success messages, character counters
@@ -388,7 +388,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Text Fields Examples</Subheading>
+      <Heading2>Text Fields Examples</Heading2>
       <Paragraph>
         When text fields have both helper text and error/success state, swap
         the helper text to error or success message.
@@ -457,7 +457,7 @@ const TextFieldsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Search Field</Subheading>
+      <Heading2>Search Field</Heading2>
       <Paragraph>
         Search is the only text field containing an icon with a background.
         The principle is to enhance the visibility of the search field. Its

@@ -3,16 +3,16 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Button from '@asda/button'
-import { Caption, Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
+import { Caption, Heading1, Heading2, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
 
 const ButtonsPage = () => (
   <article className="buttons-page">
-    <Heading>Buttons</Heading>
+    <Heading1>Buttons</Heading1>
     <Section>
-      <Subheading>Shopping Journey Buttons</Subheading>
+      <Heading2>Shopping Journey Buttons</Heading2>
       <Paragraph>
         For actions during the shopping journey, two button options are
         available based on the significance of the actions. For high emphasis
@@ -66,7 +66,7 @@ const ButtonsPage = () => (
       </ul>
     </Section>
     <Section>
-      <Subheading>Transactions & Account Buttons</Subheading>
+      <Heading2>Transactions & Account Buttons</Heading2>
       <Paragraph>
         For transactions and account related interactions, ASDA used blue
         buttons. Two different types are available based on the prominence of

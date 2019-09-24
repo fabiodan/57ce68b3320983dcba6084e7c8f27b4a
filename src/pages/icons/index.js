@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Icon from '@asda/icon'
-import { Caption, Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Figure, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import metrics32x32PNGSource from './images/metrics-32x32.png'
@@ -29,10 +29,10 @@ const GridItem = ({ children }) => (
 const IconsPage = () => (
   <article className="icons-page">
 
-    <Heading>Icons</Heading>
+    <Heading1>Icons</Heading1>
 
     <Section>
-      <Subheading>Basic Icons</Subheading>
+      <Heading2>Basic Icons</Heading2>
       <Grid>
         <GridItem><Icon name="browse" /><Caption>Browse</Caption></GridItem>
         <GridItem><Icon name="check" /><Caption>Check</Caption></GridItem>
@@ -60,7 +60,7 @@ const IconsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Circular</Subheading>
+      <Heading2>Circular</Heading2>
       <Grid>
         <GridItem><Icon name="circle-minus" /><Caption>Circle Minus</Caption></GridItem>
         <GridItem><Icon name="circle-plus" /><Caption>Circle Plus</Caption></GridItem>
@@ -76,7 +76,7 @@ const IconsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>System</Subheading>
+      <Heading2>System</Heading2>
       <Grid>
         <GridItem><Icon name="add-to-list" /><Caption>Add to List</Caption></GridItem>
         <GridItem><Icon name="address" /><Caption>Address</Caption></GridItem>
@@ -138,7 +138,7 @@ const IconsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Icon size and layout</Subheading>
+      <Heading2>Icon size and layout</Heading2>
       <Paragraph>
         Icons are created on a 32px by 32px grid. Create icons for viewing at
         100% scale for pixel perfect accuracy. The icons can be scaled to smaller
@@ -156,7 +156,7 @@ const IconsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Keyline and basic shapes</Subheading>
+      <Heading2>Keyline and basic shapes</Heading2>
       <Paragraph>
         Specific keylines are present for certain shapes: circle, square,
         rectangle, orthogonals, and diagonals. These basic shapes help in
@@ -202,7 +202,7 @@ const IconsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Icon stroke and radii</Subheading>
+      <Heading2>Icon stroke and radii</Heading2>
       <Paragraph>
         Icons use a consistent stroke width of 2px, including curves, angles,
         and both interior and exterior strokes. The radii for outer edges is 2px

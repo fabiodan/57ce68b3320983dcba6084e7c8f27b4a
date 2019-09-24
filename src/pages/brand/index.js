@@ -8,7 +8,7 @@ import StatusLabel from '@asda/brand/status-label'
 import DeliveryPassLogo from '@asda/brand/delivery-pass-logo'
 import ExpressLogo from '@asda/brand/express-logo'
 import CreditCardIcon from '@asda/credit-card-icon'
-import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Paragraph, Section, Heading1, Heading2, Heading3 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -35,10 +35,10 @@ const NotificationContainer = ({ children }) => (
 
 const BrandPage = () => (
   <article className="brand-page">
-    <Heading>Brand Elements</Heading>
+    <Heading1>Brand Elements</Heading1>
 
     <Section>
-      <Subheading>Labels</Subheading>
+      <Heading2>Labels</Heading2>
       <Paragraph>
         Labels are used to indicate the status of orders. The width of the label is
         based on the width of the text, plus 16px on each side. In cases of limited
@@ -73,7 +73,7 @@ const BrandPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Notifications</Subheading>
+      <Heading2>Notifications</Heading2>
       <Paragraph>
         Use these with icons to indicate value.
       </Paragraph>
@@ -86,7 +86,7 @@ const BrandPage = () => (
     </Section>
 
     <Section>
-      <Subheading>eVoucher</Subheading>
+      <Heading2>eVoucher</Heading2>
       <Grid className="brand-page__evoucher__grid">
         <GridItem>
           <Caption position="top">Gold</Caption>
@@ -104,7 +104,7 @@ const BrandPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Delivery Pass Logo</Subheading>
+      <Heading2>Delivery Pass Logo</Heading2>
       <Grid>
         <GridItem>
           <Caption position="top">Large</Caption>
@@ -118,7 +118,7 @@ const BrandPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Express Logo</Subheading>
+      <Heading2>Express Logo</Heading2>
       <Grid>
         <GridItem>
           <Caption position="top">Large</Caption>
@@ -136,7 +136,7 @@ const BrandPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Credit Cards</Subheading>
+      <Heading2>Credit Cards</Heading2>
       <Grid>
         <GridItem>
           <Caption position="top">Add New Card</Caption>

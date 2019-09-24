@@ -29,8 +29,16 @@ const Section = ({ children, className = '' }) => (
   <section className={`sg-layout__section ${className}`}>{children}</section>
 )
 
-const Heading = ({ children, className = '' }) => (
-  <h2 className={`sg-layout__heading ${className}`}>{children}</h2>
+const Heading1 = ({ children, className = '' }) => (
+  <h1 className={`sg-layout__heading1 ${className}`}>{children}</h1>
+)
+
+const Heading2 = ({ children, className = '' }) => (
+  <h2 className={`sg-layout__heading2 ${className}`}>{children}</h2>
+)
+
+const Heading3 = ({ children, className = '' }) => (
+  <h3 className={`sg-layout__heading3 ${className}`}>{children}</h3>
 )
 
 const Paragraph = ({ children, className, noMargin }) => {
@@ -43,10 +51,6 @@ const Paragraph = ({ children, className, noMargin }) => {
     <div className={classNames}>{children}</div>
   )
 }
-
-const Subheading = ({ children, className = '' }) => (
-  <h3 className={`sg-layout__subheading ${className}`}>{children}</h3>
-)
 
 const Figure = ({
   src, alt, className = '', maxWidth = 'none', caption = null, noMargin, fluid,
@@ -85,8 +89,9 @@ export {
   Header,
   Main,
   Section,
-  Heading,
-  Subheading,
+  Heading1,
+  Heading2,
+  Heading3,
   Paragraph,
   Figure,
   Caption,

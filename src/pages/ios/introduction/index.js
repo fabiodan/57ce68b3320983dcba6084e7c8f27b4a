@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import { LinkText } from '@asda/link'
-import { Figure, Paragraph, Subheading, Section, Heading } from '@doc/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '@doc/sg-layout'
 
 // Assets
 import appleDesignResourcesPNGSource from './images/apple-design-resources.png'
@@ -18,10 +18,10 @@ const Component = ({ children }) => (
 const IOSIntroductionPage = () => (
   <article className="ios-introduction-page">
 
-    <Heading>Introduction</Heading>
+    <Heading1>Introduction</Heading1>
 
     <Section>
-      <Subheading>Designing for iOS</Subheading>
+      <Heading2>Designing for iOS</Heading2>
       <Paragraph noMargin>
         The first step in getting prepared for designing for iOS is to visit Apple's design{' '}
         <LinkText target="_blank" href="https://developer.apple.com/design/resources/">
@@ -31,7 +31,7 @@ const IOSIntroductionPage = () => (
     </Section>
 
     <Section>
-      <Subheading>1 - Add the official Apple iOS Sketch Library</Subheading>
+      <Heading2>1 - Add the official Apple iOS Sketch Library</Heading2>
       <Paragraph>
 
       </Paragraph>
@@ -43,7 +43,7 @@ const IOSIntroductionPage = () => (
     </Section>
 
     <Section>
-      <Subheading>2 - Download the native font (SF Pro)</Subheading>
+      <Heading2>2 - Download the native font (SF Pro)</Heading2>
       <Paragraph>
         SF Pro is used on native views and can be found{' '}
         <LinkText target="_blank" href="https://developer.apple.com/fonts">
@@ -58,7 +58,7 @@ const IOSIntroductionPage = () => (
     </Section>
 
     <Section>
-      <Subheading>3 - Reference Apple Human Interface Guidelines (HIG)</Subheading>
+      <Heading2>3 - Reference Apple Human Interface Guidelines (HIG)</Heading2>
       <Paragraph>
         The Apple Human Interface Guidelines are a framework in which iOS apps are designed and built.
         They can be found{' '}

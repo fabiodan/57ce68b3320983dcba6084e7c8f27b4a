@@ -4,7 +4,7 @@ import React from 'react'
 // Components (from atomic to composite)
 import { LinkButton, LinkText } from '@asda/link'
 import Alert from '@asda/alert'
-import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -20,10 +20,10 @@ const GridItem = ({ children }) => (
 const LinksPage = () => (
   <article className="links-page">
 
-    <Heading>Links</Heading>
+    <Heading1>Links</Heading1>
 
     <Section>
-      <Subheading>Links</Subheading>
+      <Heading2>Links</Heading2>
       <Paragraph>
         For tertiary actions, text buttons and links are used. There are two
         types available, standalone buttons and text links which are part of
@@ -71,7 +71,7 @@ const LinksPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Links in alerts & alerts</Subheading>
+      <Heading2>Links in alerts & alerts</Heading2>
       <Paragraph>
         Links within alerts and other alerts should follow the standard
         text style for that component along with an underline and a heavier

@@ -15,7 +15,7 @@ import Modal, {
   ModalCloseIcon,
 } from '@asda/modal'
 
-import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import modalPNGSource from '../../assets/images/modals-page-modal.png'
@@ -67,10 +67,10 @@ class ModalsPage extends Component {
     return (
       <article className="modals-page">
 
-        <Heading>Modals</Heading>
+        <Heading1>Modals</Heading1>
 
         <Section>
-          <Subheading>Definition</Subheading>
+          <Heading2>Definition</Heading2>
           <Paragraph>
             A modal window is an element that sits on top. It creates a mode that
             disables the main window but keeps it visible with the modal window as
@@ -84,7 +84,7 @@ class ModalsPage extends Component {
         </Section>
 
         <Section>
-          <Subheading>Modal</Subheading>
+          <Heading2>Modal</Heading2>
           <Paragraph>
             A modal is a type of modal window that provides critical information or
             asks for a decision before user can continue with the journey.
@@ -99,7 +99,7 @@ class ModalsPage extends Component {
         </Section>
 
         <Section>
-          <Subheading>Informational Modal</Subheading>
+          <Heading2>Informational Modal</Heading2>
           <Paragraph>
             These modals appear in response to an user action, with relevant or
             contextual information. Titles should contain be brief and contain a
@@ -183,7 +183,7 @@ class ModalsPage extends Component {
         </Section>
 
         <Section>
-          <Subheading>Scrollable Modal</Subheading>
+          <Heading2>Scrollable Modal</Heading2>
           <Paragraph>
             Modals where the content is more than the height of the screen, use
             scrollable version. Maintain substantial padding around the modal to
@@ -306,7 +306,7 @@ class ModalsPage extends Component {
         </Section>
 
         <Section>
-          <Subheading>Avoid Links in Modal</Subheading>
+          <Heading2>Avoid Links in Modal</Heading2>
           <Paragraph>
             Most modal content should avoid links or actions which navigate away
             from the modal, creating further friction in the user journey.
@@ -325,7 +325,7 @@ class ModalsPage extends Component {
         </Section>
 
         <Section>
-          <Subheading>Padding in Modals</Subheading>
+          <Heading2>Padding in Modals</Heading2>
           <Paragraph>
             For screens above 768, use 32px all around margin inside in the modal.
             For smaller size, 24px all around margin should be maintained, for case

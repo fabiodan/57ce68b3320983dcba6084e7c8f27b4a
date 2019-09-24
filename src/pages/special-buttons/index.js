@@ -9,7 +9,7 @@ import {
   GooglePlayButton,
 } from '@asda/external-button'
 import AddButton from '@asda/add-button'
-import { Caption, Heading, Subheading, Paragraph, Section } from '../components/sg-layout'
+import { Caption, Heading1, Heading2, Paragraph, Section } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -24,10 +24,10 @@ const GridItem = ({ children }) => (
 
 const SpecialButtonsPage = () => (
   <article className="special-buttons-page">
-    <Heading>Special Buttons</Heading>
+    <Heading1>Special Buttons</Heading1>
 
     <Section>
-      <Subheading>Product Module Buttons</Subheading>
+      <Heading2>Product Module Buttons</Heading2>
       <Paragraph>
         Product modules are the bread and butter of Asda.com. The buttons follow
         similar standads to rest of the website with few special cases.
@@ -54,7 +54,7 @@ const SpecialButtonsPage = () => (
     </Section>
 
     {/* <Section>
-      <Subheading>Recipes Buttons</Subheading>
+      <Heading2>Recipes Buttons</Heading2>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
         voluptate adipisci rerum iure, omnis dolor quasi saepe vero accusamus,
@@ -64,7 +64,7 @@ const SpecialButtonsPage = () => (
     </Section> */}
 
     <Section>
-      <Subheading>External Buttons</Subheading>
+      <Heading2>External Buttons</Heading2>
       <Paragraph>
         For buttons which take the user to external links, like downloading the
         app, the following styles can be used.

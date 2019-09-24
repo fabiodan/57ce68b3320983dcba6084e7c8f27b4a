@@ -11,7 +11,7 @@ import Accordion, {
   AccordionContent,
 } from '@asda/accordion'
 import { TextField, Label } from '@asda/form'
-import { Caption, Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Figure, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import paddingExamplePNGSource from '../../assets/images/accordions-page-padding-example.png'
@@ -99,10 +99,10 @@ class AccordionsPage extends Component {
     return (
       <article className="accordions-page">
 
-        <Heading>Accordions</Heading>
+        <Heading1>Accordions</Heading1>
 
         <Section>
-          <Subheading>Bordered Accordions</Subheading>
+          <Heading2>Bordered Accordions</Heading2>
           <Paragraph>
             Accordions are a list of headers, that can be clicked to hide or reveal
             additional information. The width of the accordion is based on the page
@@ -219,9 +219,9 @@ class AccordionsPage extends Component {
         </Section>
 
         <Section>
-          <Subheading className="accordions-page__padding-example">
+          <Heading2 className="accordions-page__padding-example">
             Padding Example
-          </Subheading>
+          </Heading2>
           <Figure maxWidth="811px" src={paddingExamplePNGSource} fluid />
         </Section>
 

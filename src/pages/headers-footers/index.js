@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Subheading, Section, Heading } from '../components/sg-layout'
+import { Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -14,15 +14,15 @@ const Component = ({ children }) => (
 const HeadersFootersPage = () => (
   <article className="headers-footers-page">
 
-    <Heading>Headers & Footers</Heading>
+    <Heading1>Headers & Footers</Heading1>
 
     <Section>
-      <Subheading>Checkout Header</Subheading>
+      <Heading2>Checkout Header</Heading2>
       <Component>Examples Here</Component>
     </Section>
 
     <Section>
-      <Subheading>Checkout Footer</Subheading>
+      <Heading2>Checkout Footer</Heading2>
       <Component>Examples Here</Component>
     </Section>
 

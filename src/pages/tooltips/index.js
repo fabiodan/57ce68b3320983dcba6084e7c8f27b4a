@@ -4,7 +4,7 @@ import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Tooltip from '@asda/tooltip'
-import { Caption, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Caption, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -31,10 +31,10 @@ const GridItem = ({ children }) => (
 const TooltipsPage = () => (
   <article className="tooltips-page">
 
-    <Heading>Tooltips</Heading>
+    <Heading1>Tooltips</Heading1>
 
     <Section>
-      <Subheading>Simple Tooltips</Subheading>
+      <Heading2>Simple Tooltips</Heading2>
       <Paragraph>
       Tooltips are informative text shown to the user during hover, focus on,
       or tapping on an element. The text explains things that are not
@@ -109,7 +109,7 @@ const TooltipsPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Advanced Tooltips</Subheading>
+      <Heading2>Advanced Tooltips</Heading2>
       <Paragraph>
         Advanced tooltips are used to share detailed information about a new
         feature in detail. The information can be longer and detailed, but

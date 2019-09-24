@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import gridSVGSource from './images/responsive-layout-grid.svg'
@@ -11,10 +11,10 @@ import './_style.scss'
 const LayoutPage = () => (
   <article className="layout-page">
 
-    <Heading>Layout</Heading>
+    <Heading1>Layout</Heading1>
 
     <Section>
-      <Subheading>Responsive Layout Grid</Subheading>
+      <Heading2>Responsive Layout Grid</Heading2>
       <Paragraph>
         A responsive layout that adapts to different screen sizes and
         orientation can ensure consistency in element place across layouts.
@@ -23,7 +23,7 @@ const LayoutPage = () => (
 
       <Figure maxWidth="768px" src={gridSVGSource} />
 
-      <Subheading>Columns</Subheading>
+      <Heading2>Columns</Heading2>
       <Paragraph>
         Columns are the areas dedicated for placing content on the screen.
         They are defined as percentages and not fixed values. This allows the
@@ -34,7 +34,7 @@ const LayoutPage = () => (
         The number of columns in the grid are determined by the breakpoints.
       </Paragraph>
 
-      <Subheading>Gutters and Margins</Subheading>
+      <Heading2>Gutters and Margins</Heading2>
       <Paragraph noMargin>
         Gutters are the spaces between columns, while margins are the spaces
         between the columns and the left and right edge of the screen. Unlike
@@ -44,7 +44,7 @@ const LayoutPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Breakpoint System</Subheading>
+      <Heading2>Breakpoint System</Heading2>
       <Paragraph>
         Asda design system provides responsive layouts based on the following
         column structures. Layouts using 4-column, 8-column, and 12-column grids

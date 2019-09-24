@@ -59,9 +59,9 @@ const Menu = ({ toggleMenu }) => {
       url: '/ios',
       children: [
         { name: 'Introduction', url: '/ios/introduction' },
+        { name: 'Layout', url: '/ios/layout' },
         { name: 'Color Scheme', url: '/ios/color-scheme', wip: true },
         { name: 'Typography', url: '/ios/typography', wip: true },
-        // { name: 'Layout', url: '/ios/layout', wip: true },
         // { name: 'Spacing', url: '/ios/spacing', wip: true },
         // { name: 'Navigation Bars', url: '/ios/navigation-bars', wip: true },
         // { name: 'Search Bars', url: '/ios/search-bars', wip: true },

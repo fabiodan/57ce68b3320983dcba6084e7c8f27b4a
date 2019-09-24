@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Sample from '@asda/_sample'
-import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '@doc/sg-layout'
 
 // Assets
 import sampleSVGSource from './images/sample.svg'
@@ -16,10 +16,10 @@ const Component = ({ children }) => (
 const SamplePage = () => (
   <article className="sample-page">
 
-    <Heading>Heading</Heading>
+    <Heading1>Heading1</Heading1>
 
     <Section>
-      <Subheading>Subheading 1</Subheading>
+      <Heading2>Heading2 1</Heading2>
       <Paragraph>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Vero, necessitatibus quaerat animi dolorem voluptates illum voluptatibus
@@ -29,20 +29,20 @@ const SamplePage = () => (
 
       <Component><Sample /></Component>
 
-      <Paragraph>
+      <Paragraph noMargin>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Paragraph>
     </Section>
 
     <Section>
-      <Subheading>Subheading 2</Subheading>
+      <Heading2>Heading2 2</Heading2>
       <Paragraph>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Paragraph>
 
       <Component>Vero, necessitatibus quaerat animi!</Component>
 
-      <Figure maxWidth="815px" src={sampleSVGSource} />
+      <Figure maxWidth="815px" src={sampleSVGSource} noMargin />
 
     </Section>
 

@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, Paragraph, Subheading, Section, Heading } from '../components/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '../components/sg-layout'
 
 // Assets
 import scaleSVGSource from './images/scale.svg'
@@ -12,10 +12,10 @@ import './_style.scss'
 const SpacingPage = () => (
   <article className="spacing-page">
 
-    <Heading>Spacing</Heading>
+    <Heading1>Spacing</Heading1>
 
     <Section>
-      <Subheading>Structure</Subheading>
+      <Heading2>Structure</Heading2>
       <Paragraph>
         To achieve good visual balance, most measurements align to a 4px scale,
         with 8px being the preffered standard scale.
@@ -26,7 +26,7 @@ const SpacingPage = () => (
     </Section>
 
     <Section>
-      <Subheading>Padding</Subheading>
+      <Heading2>Padding</Heading2>
       <Paragraph>
         Padding refers to the space between UI elements. It’s a standard spacing
         method along with keylines, measured in increments of 8dp

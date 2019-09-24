@@ -17,7 +17,7 @@ import Logo from './pages/components/sg-logo'
 import Menu from './pages/components/sg-menu'
 import { Header, Aside, Main } from './pages/components/sg-layout'
 
-// Pages
+// Pages (Web)
 import SamplePage from './pages/_sample'
 import ColorSchemePage from './pages/color-scheme'
 import TypographyPage from './pages/typography'
@@ -35,8 +35,13 @@ import BrandPage from './pages/brand'
 import ModalsPage from './pages/modals'
 import AccordionsPage from './pages/accordions'
 import IconsPage from './pages/icons'
+
+// Pages (Content)
 import ContentOverviewPage from './pages/content/overview'
+
+// Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
+import IOSLayoutPage from './pages/ios/layout'
 
 class Page extends Component {
   constructor(props) {
@@ -98,8 +103,8 @@ ReactDOM.render(
     <Router>
       <Page>
         <Route exact path="/" render={() => <Redirect to="/common" />} />
-        {/* <Route exact path="/pages/ukgr/asda-design-system/" render={() => <Redirect to="/color-scheme" />} /> */}
-        {/* Common Library */}
+
+        {/* Common */}
         <Route exact path="/common" render={() => <Redirect to="/common/color-scheme" />} />
         <Route path="/common/color-scheme" component={ColorSchemePage} />
         <Route path="/common/buttons" component={ButtonsPage} />
@@ -107,11 +112,11 @@ ReactDOM.render(
         <Route path="/common/icons" component={IconsPage} />
         <Route path="/common/brand" component={BrandPage} />
 
-        {/* Content Library */}
+        {/* Content */}
         <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
         <Route path="/content/overview" component={ContentOverviewPage} />
 
-        {/* rWeb Library */}
+        {/* Web */}
         <Route exact path="/web" render={() => <Redirect to="/web/typography" />} />
         <Route path="/web/typography" component={TypographyPage} />
         <Route path="/web/special-buttons" component={SpecialButtonsPage} />
@@ -124,11 +129,12 @@ ReactDOM.render(
         <Route path="/web/modals" component={ModalsPage} />
         <Route path="/web/accordions" component={AccordionsPage} />
 
-        {/* iOS Library */}
+        {/* iOS */}
         <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />
         <Route path="/ios/introduction" component={IOSIntroductionPage} />
+        <Route path="/ios/layout" component={IOSLayoutPage} />
 
-        {/* <Route path="/navigation" component={NavigationPage} /> */}
+        {/* Sample (Don't delete) */}
         <Route path="/sample" component={SamplePage} />
       </Page>
     </Router>

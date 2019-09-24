@@ -1,0 +1,78 @@
+/* Sample Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@doc/sg-core/style";
+
+// Variables
+$ios-layout-page-element-height: 250px;
+$ios-layout-page-mix-border-color: $color-medium-gray;
+
+// Block
+.ios-layout-page {
+
+}
+
+// Elements/Mixes
+.ios-layout-page__subsection {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-xl;
+  max-width: 995px;
+}
+
+.ios-layout-page__legend {
+  max-width: 458px;
+}
+
+.ios-layout-page__legend__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.ios-layout-page__legend__list-item {
+  display: flex;
+  align-items: center;
+  padding-right: $spacing-xs;
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 50px;
+    background: $sg-color-light-blue;
+    margin-right: $spacing-xs;
+  }
+  &:first-child::before {
+    background: $sg-color-light-green;
+  }
+  &:last-child::before {
+    background: $sg-color-light-red;
+  }
+}
+
+// Modifiers
+.ios-layout-page--one-column {
+  grid-template-columns: 1fr;
+}
+
+// Breakpoints
+@media (min-width: 1024px) {
+  .ios-layout-page__subsection {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ios-layout-page__legend__list-item {
+    padding-right: $spacing-m;
+    &::before {
+      margin-right: $spacing-m;
+    }
+  }
+
+  // Modifiers
+  .ios-layout-page--one-column {
+    grid-template-columns: 1fr;
+  }
+}
