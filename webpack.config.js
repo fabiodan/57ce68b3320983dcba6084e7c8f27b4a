@@ -43,8 +43,8 @@ module.exports = {
                     file: resolve(nodeModulePath),
                   }
                 }
-                if (url.indexOf('@doc') === 0) {
-                  const filePath = url.split('@doc')[1]
+                if (url.indexOf('@sg') === 0) {
+                  const filePath = url.split('@sg')[1]
                   const nodeModulePath = `./src/pages/components/${filePath}`
                   return {
                     file: resolve(nodeModulePath),
@@ -74,7 +74,7 @@ module.exports = {
     // Create @asda alias to easly import or require global components.
     alias: {
       '@asda': resolve(__dirname, 'src/components/'),
-      '@doc': resolve(__dirname, 'src/pages/components/'),
+      '@sg': resolve(__dirname, 'src/pages/components/'),
     },
   },
 }

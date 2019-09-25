@@ -1,0 +1,47 @@
+/* TextFields Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+  $text-field-border-width: 1px;
+
+// Block
+.text-fields-page {
+
+}
+
+// Elements/Mixes
+.text-fields-page__grid {
+  max-width: 879px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0 $spacing-xs;
+}
+
+.text-fields-page__grid-item {
+  padding: $spacing-m 0;
+}
+
+.text-fields-page__credit-card-icon {
+  position: absolute;
+  left: $spacing-s - $text-field-border-width;
+  top: $spacing-xs + $text-field-border-width;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .text-fields-page__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 $spacing-xxl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-fields-page__grid {
+    grid-gap: 0 98px;
+  }
+}

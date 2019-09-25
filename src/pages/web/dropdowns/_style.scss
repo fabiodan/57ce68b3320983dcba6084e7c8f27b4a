@@ -1,0 +1,55 @@
+/* Dropdowns Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$dropdown-border-width: 1px;
+$dropdown-card-icon-width: 32px;
+$dropdown-vertical-padding: $spacing-s - $dropdown-border-width;
+
+// Block
+.dropdowns-page {
+
+}
+
+// Elements
+.dropdowns-page__grid {
+  max-width: 879px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0 $spacing-xs;
+}
+
+.dropdowns-page__grid-item {
+  padding: $spacing-m 0;
+}
+
+// CreditCardDropdown Component
+.credit-card-dropdown__icon {
+  position: absolute;
+  left: $spacing-s;
+  top: $spacing-xs + $dropdown-border-width;
+  z-index: -1;
+}
+
+.credit-card-dropdown__select {
+  padding-left: ($dropdown-vertical-padding * 2) + $dropdown-card-icon-width;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .dropdowns-page__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 $spacing-xxl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dropdowns-page__grid {
+    grid-gap: 0 98px;
+  }
+}

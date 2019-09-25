@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Sample from '@asda/_sample'
-import { Figure, Paragraph, Heading2, Section, Heading1 } from '@doc/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
 
 // Assets
 import sampleSVGSource from './images/sample.svg'

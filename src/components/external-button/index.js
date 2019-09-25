@@ -6,9 +6,9 @@ import joinClassNames from 'classnames'
 import Image from '@asda/image'
 
 // Assets
-import appleSVGSource from '../../assets/images/apple.svg'
-import googlePlaySVGSource from '../../assets/images/google-play.svg'
-import googleSVGSource from '../../assets/images/google.svg'
+import appleSVGSource from './images/apple.svg'
+import googlePlaySVGSource from './images/google-play.svg'
+import googleSVGSource from './images/google.svg'
 import './_style.scss'
 
 const ExternalButton = ({

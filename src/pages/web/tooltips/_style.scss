@@ -1,0 +1,33 @@
+/* Tooltips Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.tooltips-page {
+
+}
+
+.tooltips-page__grid {
+  max-width: 879px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0 $spacing-xs;
+  margin-bottom: $spacing-xxl;
+}
+
+.tooltips-page__grid-item {
+  padding: $spacing-m 0;
+}
+
+.tooltips-page__grid-multiple-lines {
+  margin-top: 0;
+}
+
+// Modifiers
+.tooltips-page__grid--no-margin {
+  margin: 0;
+}

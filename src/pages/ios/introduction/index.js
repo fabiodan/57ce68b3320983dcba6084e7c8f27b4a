@@ -3,7 +3,7 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import { LinkText } from '@asda/link'
-import { Figure, Paragraph, Heading2, Section, Heading1 } from '@doc/sg-layout'
+import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
 
 // Assets
 import appleDesignResourcesPNGSource from './images/apple-design-resources.png'

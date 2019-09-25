@@ -4,7 +4,7 @@ import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
 import Sample from '@asda/_sample'
-import { Figure, Paragraph, Section, Heading1, Heading2, Heading3, Caption } from '@doc/sg-layout'
+import { Figure, Paragraph, Section, Heading1, Heading2, Heading3, Caption } from '@sg/sg-layout'
 
 // Assets
 import iPhone6SEPNGSource from './images/iphone-6-se.png'

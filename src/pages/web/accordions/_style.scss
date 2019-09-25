@@ -1,0 +1,87 @@
+/* Accordions Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.accordions-page {
+
+}
+
+// Elements/Mixes
+.accordions-page__padding-example {
+  margin-bottom: $spacing-xxxl;
+}
+
+// Elements/Mixes
+.accordions-page__grid {
+  max-width: 879px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0 $spacing-xs;
+}
+
+.accordions-page__grid-item {
+  padding: $spacing-m 0;
+}
+
+.accordions-page__credit-card-info {
+  display: inline-flex;
+  align-items: center;
+  margin-left: $spacing-xs;
+  font-weight: 400;
+}
+
+.accordions-page__credit-card-icon {
+  // display: none;
+  margin-right: $spacing-xs;
+}
+
+.accordions-page__credit-card-title {
+  display: flex;
+  align-items: center;
+}
+
+.accordions-page__delivery-details {
+  padding: 0;
+  list-style: none;
+}
+
+.accordions-page__delivery-details__item {
+  display: flex;
+  align-items: flex-start;
+  &:nth-child(1) {
+    margin-bottom: $spacing-m;
+  }
+}
+
+.accordions-page__delivery-details__icon {
+  background: $color-light-gray;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-right: $spacing-m;
+}
+
+.accordions-page__text-field__credit-card {
+  max-width: 400px;
+}
+
+.accordions-page__text-field__credit-card-icon {
+  $text-field-border-width: 1px;
+  position: absolute;
+  left: $spacing-s - $text-field-border-width;
+  top: $spacing-xs + $text-field-border-width;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .accordions-page__credit-card-icon {
+    display: inline-block;
+  }
+}

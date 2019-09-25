@@ -1,0 +1,55 @@
+/* Icons Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.icons-page {
+
+}
+
+// Elements/Mixes
+.icons-page__grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0 $spacing-m;
+}
+
+.icons-page__grid-item {
+  padding: $spacing-m 0;
+}
+
+.icons-page__grid-icon-stroke,
+.icons-page__grid-basic-shapes {
+  grid-template-columns: 1fr;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .icons-page__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .icons-page__grid-basic-shapes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .icons-page__grid-icon-stroke {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icons-page__grid-basic-shapes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .icons-page__grid-icon-stroke {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,126 @@
+/* Color Scheme Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$color-sample-padding: $spacing-m;
+
+// Elements/Mixes
+.color-page__color-list {
+  list-style: none;
+  padding: 0;
+  margin: $spacing-xxxl 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+}
+
+.color-page__color-sample {
+  position: relative;
+  height: 120px;
+  padding: $color-sample-padding;
+  border-radius: 4px;
+}
+
+.color-page__color-name {
+  @include sg-typography(xs); // TODO: Remove color from this font-style
+  color: $color-white;
+  margin: 0;
+}
+
+.color-page__color-hex {
+  @include typography(xl);
+  font-weight: 600;
+  color: $color-white;
+}
+
+.color-page__color-rgb {
+  @include typography(xs);
+  color: $color-white;
+  position: absolute;
+  bottom: $color-sample-padding;
+  left: $color-sample-padding;
+}
+
+.color-page__description {
+  @include typography(s);
+}
+
+// Modifiers
+.color-page--green {
+  background: $color-green;
+}
+
+.color-page--dark-green {
+  background: $color-dark-green;
+}
+
+.color-page--green-disabled {
+  background: $color-green-disabled;
+}
+
+.color-page--red {
+  background: $color-red;
+}
+
+.color-page--blue {
+  background: $color-blue;
+}
+
+.color-page--blue-disabled {
+  background: $color-blue-disabled;
+}
+
+.color-page--yellow {
+  background: $color-yellow;
+}
+
+.color-page--charcoal {
+  background: $color-charcoal;
+}
+
+.color-page--dark-gray {
+  background: $color-dark-gray;
+}
+
+.color-page--medium-gray {
+  background: $color-medium-gray;
+}
+
+.color-page--light-gray {
+  background: $color-light-gray;
+}
+
+.color-page--background-gray {
+  background: $color-background-gray;
+}
+
+.color-page--charcoal-transparent {
+  background: $color-charcoal-transparent;
+}
+
+.color-page--yellow-transparent {
+  background: $color-yellow-transparent;
+}
+
+.color-page--yellow,
+.color-page--medium-gray,
+.color-page--light-gray,
+.color-page--background-gray,
+.color-page--charcoal-transparent,
+.color-page--yellow-transparent {
+  .color-page__color-name,
+  .color-page__color-hex,
+  .color-page__color-rgb {
+    color: $color-charcoal;
+  }
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .color-page__color-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

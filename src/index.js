@@ -17,24 +17,27 @@ import Logo from './pages/components/sg-logo'
 import Menu from './pages/components/sg-menu'
 import { Header, Aside, Main } from './pages/components/sg-layout'
 
-// Pages (Web)
+// Sample Page
 import SamplePage from './pages/_sample'
-import ColorSchemePage from './pages/color-scheme'
-import TypographyPage from './pages/typography'
-import LayoutPage from './pages/layout'
-import SpacingPage from './pages/spacing'
-import ButtonsPage from './pages/buttons'
-import LinksPage from './pages/links'
-import SpecialButtonsPage from './pages/special-buttons'
-import TextFieldsPage from './pages/text-fields'
-import DropdownsPage from './pages/dropdowns'
-// import NavigationPage from './pages/navigation'
-import TooltipsPage from './pages/tooltips'
-import InputControlsPage from './pages/input-controls'
-import BrandPage from './pages/brand'
-import ModalsPage from './pages/modals'
-import AccordionsPage from './pages/accordions'
-import IconsPage from './pages/icons'
+
+// Pages (Common)
+import ColorSchemePage from './pages/common/color-scheme'
+import ButtonsPage from './pages/common/buttons'
+import LinksPage from './pages/common/links'
+import IconsPage from './pages/common/icons'
+import BrandPage from './pages/common/brand'
+
+// Pages (Web)
+import TypographyPage from './pages/web/typography'
+import LayoutPage from './pages/web/layout'
+import SpacingPage from './pages/web/spacing'
+import SpecialButtonsPage from './pages/web/special-buttons'
+import TextFieldsPage from './pages/web/text-fields'
+import DropdownsPage from './pages/web/dropdowns'
+import TooltipsPage from './pages/web/tooltips'
+import InputControlsPage from './pages/web/input-controls'
+import ModalsPage from './pages/web/modals'
+import AccordionsPage from './pages/web/accordions'
 
 // Pages (Content)
 import ContentOverviewPage from './pages/content/overview'

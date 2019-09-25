@@ -1,0 +1,80 @@
+/* Typography Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.typography-page {
+
+}
+
+// Elements/Mixes
+.typography-page__typescale {
+  margin-top: $spacing-xxxl;
+}
+
+.typography-page__weight-definition,
+.typography-page__specs {
+  @include sg-typography(xs);
+}
+
+.typography-page__attribute {
+  display: block;
+  line-height: rem(15px);
+  margin-right: $spacing-l;
+  white-space: nowrap;
+}
+
+.typography-page__characters {
+  @include typography(xl);
+  line-height: rem(48px);
+  letter-spacing: rem(0.3px);
+}
+
+.typography-page__weight-list {
+  max-width: 580px;
+  margin: $spacing-xxxl auto $spacing-l auto;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.typography-page__weight-item {
+  width: 33%;
+  flex-grow: 1;
+  text-align: center;
+  &:nth-child(2) {
+    font-weight: 600;
+  }
+  &:nth-child(3) {
+    font-weight: 700;
+  }
+}
+
+.typography-page__weight-example {
+  font-size: rem(64px);
+  line-height: rem(91px);
+  letter-spacing: rem(0.6px);
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .typography-page__attribute {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .typography-page__characters {
+    line-height: rem(56px);
+  }
+
+  .typography-page__weight-list {
+    margin: 80px auto $spacing-xxxl auto;
+  }
+
+  .typography-page__weight-example {
+    font-size: rem(72px);
+  }
+}
