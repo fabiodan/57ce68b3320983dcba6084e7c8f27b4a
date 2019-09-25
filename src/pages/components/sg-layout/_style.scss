@@ -152,7 +152,8 @@ $sg-layout__aside-width: 314px;
 
 .sg-layout__figure--fluid {
   .sg-layout__figure__img {
-    width: 100%
+    width: 100%;
+    vertical-align: middle;
   }
 }
 

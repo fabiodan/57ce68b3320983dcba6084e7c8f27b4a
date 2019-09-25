@@ -45,6 +45,7 @@ import ContentOverviewPage from './pages/content/overview'
 // Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
 import IOSLayoutPage from './pages/ios/layout'
+import IOSSearchBarsPage from './pages/ios/search-bars'
 
 class Page extends Component {
   constructor(props) {
@@ -136,6 +137,7 @@ ReactDOM.render(
         <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />
         <Route path="/ios/introduction" component={IOSIntroductionPage} />
         <Route path="/ios/layout" component={IOSLayoutPage} />
+        <Route path="/ios/search-bars" component={IOSSearchBarsPage} />
 
         {/* Sample (Don't delete) */}
         <Route path="/sample" component={SamplePage} />

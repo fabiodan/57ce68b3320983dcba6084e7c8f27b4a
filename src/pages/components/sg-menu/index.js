@@ -60,11 +60,9 @@ const Menu = ({ toggleMenu }) => {
       children: [
         { name: 'Introduction', url: '/ios/introduction' },
         { name: 'Layout', url: '/ios/layout' },
-        { name: 'Color Scheme', url: '/ios/color-scheme', wip: true },
-        { name: 'Typography', url: '/ios/typography', wip: true },
+        { name: 'Search Bars', url: '/ios/search-bars' },
         // { name: 'Spacing', url: '/ios/spacing', wip: true },
         // { name: 'Navigation Bars', url: '/ios/navigation-bars', wip: true },
-        // { name: 'Search Bars', url: '/ios/search-bars', wip: true },
         // { name: 'Status Bars', url: '/ios/status-bars', wip: true },
         // { name: 'Tab Bar', url: '/ios/tab-bar', wip: true },
         // { name: 'Action Sheets', url: '/ios/action-sheets', wip: true },

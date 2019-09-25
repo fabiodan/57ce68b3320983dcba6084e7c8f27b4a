@@ -53,8 +53,9 @@ const Paragraph = ({ children, className, noMargin }) => {
 }
 
 const Figure = ({
-  src, alt, className = '', maxWidth = 'none', caption = null, noMargin, fluid,
+  src, alt, className, maxWidth, caption, noMargin, fluid,
 }) => {
+
   const modifiers = [
     noMargin && 'sg-layout__figure--no-margin',
     fluid && 'sg-layout__figure--fluid',
@@ -68,6 +69,12 @@ const Figure = ({
       <img className="sg-layout__figure__img" src={src} alt={alt} />
     </figure>
   )
+}
+
+Figure.defaultProps = {
+  className: '',
+  maxWidth: 'none',
+  caption: null,
 }
 
 const Caption = ({ children, className, position = 'bottom' }) => {
