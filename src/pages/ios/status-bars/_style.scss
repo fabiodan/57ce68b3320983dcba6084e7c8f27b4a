@@ -5,43 +5,42 @@
 @import "@sg/sg-core/style";
 
 // Block
-.ios-search-bars-page {
+.ios-status-bars-page {
 
 }
 
 // Elements/Mixes
-.ios-search-bars-page__examples {
+.ios-status-bars-page__examples {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 810px;
 }
 
-.ios-search-bars-page__list {
+.ios-status-bars-page__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.ios-search-bars-page__list-item {
+.ios-status-bars-page__list-item {
   margin-bottom: $spacing-xxl;
 }
 
-.ios-search-bars-page__figure {
-  margin-left: $spacing-xxxl;
-}
-
 // Modifiers
-.ios-search-bars-page--modifier {
+.ios-status-bars-page--modifier {
 
 }
-.ios-search-bars-page__element--modifier {
+.ios-status-bars-page__element--modifier {
 
 }
 
 // Breakpoints
 @media (min-width: 1024px) {
-  .ios-search-bars-page__examples {
+  .ios-status-bars-page__examples {
     flex-direction: row;
+    justify-content: space-between;
+  }
+  .ios-status-bars-page__figure {
+    margin-left: $spacing-xxxl;
   }
 }

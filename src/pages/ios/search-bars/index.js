@@ -13,10 +13,6 @@ import searchBarPNGSource from './images/search-bar.png'
 import searchTermPNGSource from './images/search-term.png'
 import './_style.scss'
 
-const Component = ({ children }) => (
-  <div className="ios-search-bars-page__component">{ children }</div>
-)
-
 const IOSSearchBarsPage = () => (
   <article className="ios-search-bars-page">
 
