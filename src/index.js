@@ -41,6 +41,7 @@ import AccordionsPage from './pages/web/accordions'
 
 // Pages (Content)
 import ContentOverviewPage from './pages/content/overview'
+import ContentOurApproachPage from './pages/content/our-approach'
 
 // Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
@@ -121,6 +122,7 @@ ReactDOM.render(
         {/* Content */}
         <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
         <Route path="/content/overview" component={ContentOverviewPage} />
+        <Route path="/content/our-approach" component={ContentOurApproachPage} />
 
         {/* Web */}
         <Route exact path="/web" render={() => <Redirect to="/web/typography" />} />

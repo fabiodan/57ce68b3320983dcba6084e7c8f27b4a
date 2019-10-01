@@ -2,14 +2,19 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
+import {
+  Figure,
+  Paragraph,
+  Heading2,
+  Heading3,
+  Section,
+  Heading1,
+  List,
+  ListItem,
+} from '@sg/sg-layout'
 
 // Assets
 import './_style.scss'
-
-const Component = ({ children }) => (
-  <div className="content-overview-page__component">{ children }</div>
-)
 
 const ContentOverviewPage = () => (
   <article className="content-overview-page">
@@ -31,16 +36,16 @@ const ContentOverviewPage = () => (
       </Paragraph>
       <Paragraph noMargin>
         Content design is a mindset. Always:
-        <ul>
-          <li>base what you do in evidence</li>
-          <li>put the user at the centre of what you do</li>
-          <li>get to the root of the problem</li>
-        </ul>
+        <List>
+          <ListItem>base what you do in evidence</ListItem>
+          <ListItem>put the user at the centre of what you do</ListItem>
+          <ListItem>get to the root of the problem</ListItem>
+        </List>
       </Paragraph>
     </Section>
 
     <Section>
-      <Heading2>Our user story</Heading2>
+      <Heading2>Our User Story</Heading2>
       <Paragraph>
         In UX, user needs are our north star.
       </Paragraph>
@@ -51,9 +56,11 @@ const ContentOverviewPage = () => (
       </Paragraph>
 
       <div className="content-overview-page__user-story">
-        As an Asda customer<br />
-        I need a simple and convenient way to shop online,<br />
-        so that I can get my order in the right way for me.
+        <Heading3>
+          As an Asda customer<br />
+          I need a simple and convenient way to shop online,<br />
+          so that I can get my order in the right way for me.
+        </Heading3>
       </div>
     </Section>
 

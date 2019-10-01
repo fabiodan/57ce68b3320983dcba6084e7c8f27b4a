@@ -1,0 +1,29 @@
+/* Content • Our Approach */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.content-our-approach-page {
+
+}
+
+// Elements/Mixes
+.content-our-approach-page__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+}
+
+.content-our-approach-page__recommendation {
+  padding: 80px $spacing-xl;
+  height: 250px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .content-our-approach-page__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

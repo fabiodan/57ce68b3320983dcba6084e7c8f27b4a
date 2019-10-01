@@ -1,3 +1,5 @@
+/* Style Guide • Menu */
+
 // Dependencies
 @import "@asda/core/style";
 
@@ -109,7 +111,7 @@ $sg-menu-border-width: 1px;
 
   .sg-menu__sublist-anchor {
     pointer-events: none;
-    
+
     &:hover {
       background-color: $color-transparent;
     }

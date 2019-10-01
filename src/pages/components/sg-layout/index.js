@@ -41,6 +41,24 @@ const Heading3 = ({ children, className = '' }) => (
   <h3 className={`sg-layout__heading3 ${className}`}>{children}</h3>
 )
 
+const List = ({ children, className = '' }) => {
+  const modifiers = []
+  const classNames = joinClassNames('sg-layout__list', className, modifiers)
+
+  return (
+    <ul className={classNames}>{children}</ul>
+  )
+}
+
+const ListItem = ({ children, className = '' }) => {
+  const modifiers = []
+  const classNames = joinClassNames('sg-layout__list-item', className, modifiers)
+
+  return (
+    <li className={classNames}>{children}</li>
+  )
+}
+
 const Paragraph = ({ children, className, noMargin }) => {
   const modifiers = [
     noMargin && 'sg-layout__paragraph--no-margin',
@@ -102,4 +120,6 @@ export {
   Paragraph,
   Figure,
   Caption,
+  List,
+  ListItem,
 }

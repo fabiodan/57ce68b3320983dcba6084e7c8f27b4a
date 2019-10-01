@@ -1,3 +1,5 @@
+/* Style Guide • Layout */
+
 // Dependencies
 @import "@asda/core/style";
 @import "@sg/sg-core/style";
@@ -135,6 +137,11 @@ $sg-layout__aside-width: 314px;
 
 .sg-layout__figure__caption {
   margin: 0 0 $spacing-m 0;
+}
+
+.sg-layout__list {
+  padding: 0;
+  list-style-position: inside;
 }
 
 // Modifiers

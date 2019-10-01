@@ -1,0 +1,61 @@
+/* Style Guide • Recommendation */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+// Variables
+$sg-recommendation-status-height: 32px;
+
+// Block
+.sg-recommendation {
+  background: $color-background-gray;
+  position: relative;
+  min-height: $spacing-m * 2 + $sg-recommendation-status-height;
+}
+
+// Elements/Mixes
+.sg-recommendation__status {
+  text-align: center;
+  background: $color-red;
+  color: $color-white;
+  width: 48px;
+  height: $sg-recommendation-status-height;
+  border-radius: 0 $sg-recommendation-status-height/2 $sg-recommendation-status-height/2 0;
+  position: absolute;
+  top: $spacing-m;
+  left: 0;
+}
+
+.sg-recommendation__icon-check   {
+  display: none;
+}
+
+// Modifiers
+.sg-recommendation--do {
+  .sg-recommendation__status {
+    background: $color-green;
+  }
+  .sg-recommendation__icon-close {
+    display: none;
+  }
+  .sg-recommendation__icon-check   {
+    display: inline-flex;
+  }
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}

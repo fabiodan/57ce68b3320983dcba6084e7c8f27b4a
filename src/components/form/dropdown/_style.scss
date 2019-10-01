@@ -17,6 +17,7 @@ $dropdown-border-width: 1px;
   @include text-field__element__base;
   padding-right: $spacing-xxl;
   cursor: pointer;
+  background-color: $color-transparent;
 }
 
 .dropdown__icon {
