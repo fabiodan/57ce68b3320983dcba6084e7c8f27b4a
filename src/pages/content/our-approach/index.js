@@ -12,7 +12,7 @@ import {
   List,
   ListItem,
 } from '@sg/sg-layout'
-import Recommendation from '@sg/sg-recommendation'
+import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
 import { TextField, Label } from '@asda/form'
 
 // Assets
@@ -84,7 +84,8 @@ const ContentOurApproachPage = () => (
         </List>
 
         <Container>
-          <Recommendation isRecommended className="content-our-approach-page__recommendation">
+          <Recommendation className="content-our-approach-page__recommendation">
+            <RecommendationStatus recommended />
             <Label>Label</Label>
             <TextField
               placeholder="Default"
@@ -97,16 +98,17 @@ const ContentOurApproachPage = () => (
             />
           </Recommendation>
           <Recommendation className="content-our-approach-page__recommendation">
-          <Label>Postcode</Label>
-          <TextField
-            placeholder="Default"
-            value="123456"
-            pattern=""
-            helperText="Helper text"
-            successMessage="Success message"
-            errorMessage="Oops! Looks like you mistyped that postcode! Try again!"
-            validate
-          />
+            <RecommendationStatus />
+            <Label>Postcode</Label>
+            <TextField
+              placeholder="Default"
+              value="123456"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Oops! Looks like you mistyped that postcode! Try again!"
+              validate
+            />
           </Recommendation>
         </Container>
       </Paragraph>
@@ -125,7 +127,8 @@ const ContentOurApproachPage = () => (
         </List>
 
         <Container>
-          <Recommendation isRecommended className="content-our-approach-page__recommendation">
+          <Recommendation recommended className="content-our-approach-page__recommendation">
+            <RecommendationStatus recommended />
             <Label>Label</Label>
             <TextField
               placeholder="Default"
@@ -138,16 +141,17 @@ const ContentOurApproachPage = () => (
             />
           </Recommendation>
           <Recommendation className="content-our-approach-page__recommendation">
-          <Label>Postcode</Label>
-          <TextField
-            placeholder="Default"
-            value="123456"
-            pattern=""
-            helperText="Helper text"
-            successMessage="Success message"
-            errorMessage="Hey mister, you messed up! You’ll need to go back and type that again, obviously."
-            validate
-          />
+            <RecommendationStatus />
+            <Label>Postcode</Label>
+            <TextField
+              placeholder="Default"
+              value="123456"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Hey mister, you messed up! You’ll need to go back and type that again, obviously."
+              validate
+            />
           </Recommendation>
         </Container>
       </Paragraph>

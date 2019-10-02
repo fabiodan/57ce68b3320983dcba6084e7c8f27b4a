@@ -108,6 +108,17 @@ const Caption = ({ children, className, position = 'bottom' }) => {
   )
 }
 
+const FeaturedSection = ({ children, className }) => {
+  const modifiers = []
+  const classNames = joinClassNames('sg-layout__featured-section', className, modifiers)
+
+  return (
+    <div className={classNames}>
+      { children }
+    </div>
+  )
+}
+
 export {
   Layout as default,
   Aside,
@@ -122,4 +133,5 @@ export {
   Caption,
   List,
   ListItem,
+  FeaturedSection,
 }

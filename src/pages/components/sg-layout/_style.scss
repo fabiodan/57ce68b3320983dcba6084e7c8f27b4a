@@ -116,7 +116,7 @@ $sg-layout__aside-width: 314px;
 }
 
 .sg-layout__heading3 {
-  @include typography(xxl);
+  @include typography(xl);
   margin: 0 0 $spacing-m 0;
 }
 
@@ -144,6 +144,23 @@ $sg-layout__aside-width: 314px;
   list-style-position: inside;
 }
 
+.sg-layout__featured-section {
+  background: $color-background-gray;
+  padding: $spacing-l;
+  margin-bottom: 40px;
+
+  .sg-layout__paragraph {
+    margin-bottom: $spacing-l;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .sg-layout__heading3 {
+    margin-bottom: $spacing-xxs;
+  }
+}
+
 // Modifiers
 .sg-layout__paragraph--no-margin {
   margin: 0;
@@ -165,6 +182,10 @@ $sg-layout__aside-width: 314px;
 }
 
 .sg-layout__figure--no-margin {
+  margin: 0;
+}
+
+.sg-layout__featured-section--no-margin {
   margin: 0;
 }
 

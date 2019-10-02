@@ -31,10 +31,9 @@ $sg-recommendation-status-height: 32px;
 }
 
 // Modifiers
-.sg-recommendation--do {
-  .sg-recommendation__status {
+.sg-recommendation__status--do {
     background: $color-green;
-  }
+    
   .sg-recommendation__icon-close {
     display: none;
   }

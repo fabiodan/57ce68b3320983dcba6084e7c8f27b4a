@@ -28,6 +28,7 @@ const Menu = ({ toggleMenu }) => {
       children: [
         { name: 'Overview', url: '/content/overview' },
         { name: 'Our Approach', url: '/content/our-approach' },
+        { name: 'How to Write', url: '/content/how-to-write' },
         { name: 'Punctuation', url: '/content/punctuation', wip: true },
         { name: 'Formatting', url: '/content/formatting', wip: true },
       ]
