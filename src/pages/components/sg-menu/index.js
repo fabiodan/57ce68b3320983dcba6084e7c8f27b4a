@@ -30,7 +30,6 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Our Approach', url: '/content/our-approach' },
         { name: 'How to Write', url: '/content/how-to-write' },
         { name: 'Punctuation', url: '/content/punctuation', wip: true },
-        { name: 'Formatting', url: '/content/formatting', wip: true },
       ]
     },
     { name: 'Web library',
@@ -52,9 +51,7 @@ const Menu = ({ toggleMenu }) => {
     { name: 'Android library',
       url: '/android',
       children: [
-        { name: 'Introduction', url: '/android/introduction', wip: true },
-        { name: 'Color Scheme', url: '/android/color-scheme', wip: true },
-        { name: 'Typography', url: '/android/typography', wip: true },
+        { name: 'Typography', url: '/android/typography' },
       ]
     },
     { name: 'iOS library',

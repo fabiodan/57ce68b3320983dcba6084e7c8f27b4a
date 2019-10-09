@@ -44,6 +44,9 @@ import ContentOverviewPage from './pages/content/overview'
 import ContentOurApproachPage from './pages/content/our-approach'
 import ContentHowToWritePage from './pages/content/how-to-write'
 
+// Pages (Android)
+import AndroidTypographyPage from './pages/android/typography'
+
 // Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
 import IOSLayoutPage from './pages/ios/layout'
@@ -138,6 +141,10 @@ ReactDOM.render(
         <Route path="/web/input-controls" component={InputControlsPage} />
         <Route path="/web/modals" component={ModalsPage} />
         <Route path="/web/accordions" component={AccordionsPage} />
+
+        {/* Android */}
+        <Route exact path="/android" render={() => <Redirect to="/android/typography" />} />
+        <Route path="/android/typography" component={AndroidTypographyPage} />
 
         {/* iOS */}
         <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />
