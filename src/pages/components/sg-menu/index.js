@@ -52,6 +52,8 @@ const Menu = ({ toggleMenu }) => {
       url: '/android',
       children: [
         { name: 'Typography', url: '/android/typography' },
+        { name: 'Layout', url: '/android/layout' },
+        { name: 'Spacing', url: '/android/spacing', wip: true },
       ]
     },
     { name: 'iOS library',

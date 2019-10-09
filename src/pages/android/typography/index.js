@@ -82,7 +82,7 @@ const AndroidTypographyPage = () => (
       </TypesScale>
 
       <TypesScale>
-        <span className="android-typography--l">The quick brown fox jumps over the lazy dog</span>
+        <span className="typography--l">The quick brown fox jumps over the lazy dog</span>
         <Specs>
           <Attribute>18px (1.125em) - Large</Attribute>
           <Attribute>Letter Spacing 0.2px</Attribute>
@@ -91,7 +91,7 @@ const AndroidTypographyPage = () => (
       </TypesScale>
 
       <TypesScale>
-        <span className="android-typography--m">The quick brown fox jumps over the lazy dog</span>
+        <span className="typography--m">The quick brown fox jumps over the lazy dog</span>
         <Specs>
           <Attribute>16px (1em) - Medium</Attribute>
           <Attribute>Letter Spacing 0.2px</Attribute>
@@ -100,7 +100,7 @@ const AndroidTypographyPage = () => (
       </TypesScale>
 
       <TypesScale>
-        <span className="android-typography--s">The quick brown fox jumps over the lazy dog</span>
+        <span className="typography--s">The quick brown fox jumps over the lazy dog</span>
         <Specs>
           <Attribute>14px (0.875em) - Small</Attribute>
           <Attribute>Letter Spacing 0.2px</Attribute>
@@ -109,7 +109,7 @@ const AndroidTypographyPage = () => (
       </TypesScale>
 
       <TypesScale>
-        <span className="android-typography--xs">The quick brown fox jumps over the lazy dog</span>
+        <span className="typography--xs">The quick brown fox jumps over the lazy dog</span>
         <Specs>
           <Attribute>12px (0.75em) - Extra Small</Attribute>
           <Attribute>Letter Spacing 0.1px</Attribute>
