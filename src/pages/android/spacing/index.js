@@ -6,11 +6,10 @@ import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
 
 // Assets
 import scalePNGSource from './images/scale.png'
-import paddingPNGSource from './images/padding.png'
 import './_style.scss'
 
-const SpacingPage = () => (
-  <article className="spacing-page">
+const AndroidSpacingPage = () => (
+  <article className="android-spacing-page">
 
     <Heading1>Spacing</Heading1>
 
@@ -36,12 +35,9 @@ const SpacingPage = () => (
         Padding should be used in combination with the responsive layout grid to
         place elements consistently across a design.
       </Paragraph>
-
-      <Figure maxWidth="815px" fluid src={paddingPNGSource} />
-
     </Section>
 
   </article>
 )
 
-export default SpacingPage
+export default AndroidSpacingPage

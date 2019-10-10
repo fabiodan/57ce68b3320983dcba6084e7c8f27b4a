@@ -53,7 +53,8 @@ const Menu = ({ toggleMenu }) => {
       children: [
         { name: 'Typography', url: '/android/typography' },
         { name: 'Layout', url: '/android/layout' },
-        { name: 'Spacing', url: '/android/spacing', wip: true },
+        { name: 'Spacing', url: '/android/spacing' },
+        { name: 'Android Bars', url: '/android/android-bars', wip: true },
       ]
     },
     { name: 'iOS library',
