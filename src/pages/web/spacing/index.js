@@ -21,7 +21,7 @@ const SpacingPage = () => (
         with 8px being the preffered standard scale.
       </Paragraph>
 
-      <Figure maxWidth="500px" fluid src={scalePNGSource} />
+      <Figure maxWidth="500px" fluid src={scalePNGSource} noMargin />
 
     </Section>
 
@@ -37,7 +37,7 @@ const SpacingPage = () => (
         place elements consistently across a design.
       </Paragraph>
 
-      <Figure maxWidth="815px" fluid src={paddingPNGSource} />
+      <Figure maxWidth="816px" fluid src={paddingPNGSource} noMargin />
 
     </Section>
 

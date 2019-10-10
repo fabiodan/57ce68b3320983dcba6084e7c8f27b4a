@@ -20,7 +20,7 @@ const AndroidSpacingPage = () => (
         with 8px being the preffered standard scale.
       </Paragraph>
 
-      <Figure maxWidth="500px" fluid src={scalePNGSource} />
+      <Figure maxWidth="500px" fluid src={scalePNGSource} noMargin />
 
     </Section>
 
