@@ -14,6 +14,7 @@ const Checkbox = ({
   disabled,
   indeterminate,
   id,
+  onChange,
 
   // For demo purposes only
   hover,
@@ -32,12 +33,17 @@ const Checkbox = ({
         defaultChecked={indeterminate || checked}
         disabled={disabled}
         id={id}
+        onChange={onChange}
       />
       <Icon className="checkbox__icon checkbox__icon-check" name="check" size="x-small" color="white" />
       <Icon className="checkbox__icon checkbox__icon-minus" name="minus" size="x-small" color="white" />
       <div className="checkbox__background" />
     </div>
   )
+}
+
+Checkbox.defaultProps = {
+  onChange: null,
 }
 
 export default Checkbox

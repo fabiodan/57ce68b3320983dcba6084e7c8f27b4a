@@ -44,6 +44,9 @@ import ContentOverviewPage from './pages/content/overview'
 import ContentOurApproachPage from './pages/content/our-approach'
 import ContentHowToWritePage from './pages/content/how-to-write'
 
+// Pages (Heuristics)
+import HeuristicsCallToActionPage from './pages/content/heuristics/call-to-action'
+
 // Pages (Android)
 import AndroidTypographyPage from './pages/android/typography'
 import AndroidLayoutPage from './pages/android/layout'
@@ -130,6 +133,10 @@ ReactDOM.render(
         <Route path="/content/overview" component={ContentOverviewPage} />
         <Route path="/content/our-approach" component={ContentOurApproachPage} />
         <Route path="/content/how-to-write" component={ContentHowToWritePage} />
+
+        {/* Heuristics */}
+        <Route exact path="/content/heuristics" render={() => <Redirect to="/content/heuristics/overview" />} />
+        <Route path="/content/heuristics/call-to-action" component={HeuristicsCallToActionPage} />
 
         {/* Web */}
         <Route exact path="/web" render={() => <Redirect to="/web/typography" />} />

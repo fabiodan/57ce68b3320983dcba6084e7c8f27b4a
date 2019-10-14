@@ -1,0 +1,77 @@
+/* Heuristics • Call to Action */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@asda/form/text-field/mixins";
+@import "@sg/sg-core/style";
+
+// Block
+.heuristics-call-to-action {
+  min-width: 432px;
+}
+
+// Elements/Mixes
+.heuristics-call-to-action__grid {
+  display: grid;
+  grid-template-columns: 40% minmax(60px, .5fr) minmax(0, 1fr);
+  grid-gap: 32px 16px;
+}
+
+.heuristics-call-to-action__grid__header {
+  @include typography(l);
+  padding-bottom: $spacing-m;
+  border-bottom: solid 1px $color-medium-gray;
+  font-weight: 600;
+}
+
+.heuristics-call-to-action__grid__description {
+  line-height: 20px;
+}
+
+.heuristics-call-to-action__grid__title {
+  margin: 0;
+  @include typography(s);
+  font-weight: 600;
+}
+
+.heuristics-call-to-action__grid__pass-fail {
+  padding-top: rem($spacing-m);
+}
+
+.heuristics-call-to-action__status {
+  @include typography(m);
+  font-weight: 600;
+  color: $color-red;
+  display: none;
+}
+
+.heuristics-call-to-action__grid__pass {
+  color: $color-green;
+}
+
+.heuristics-call-to-action__grid__notes {
+  @include text-field__element__base;
+}
+
+// Breakpoints
+@media (min-width: 480px) {}
+
+// Print
+@media print {
+  .sg-layout__header,
+  .sg-layout__aside {
+    display: none;
+  }
+  .sg-layout__heading1 {
+    border: none;
+  }
+  .heuristics-call-to-action__grid__notes {
+    border: none;
+  }
+  .heuristics-call-to-action__checkbox {
+    display: none;
+  }
+  .heuristics-call-to-action__status {
+    display: inline-block;
+  }
+}
