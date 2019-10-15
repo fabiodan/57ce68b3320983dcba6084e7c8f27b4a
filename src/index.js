@@ -43,6 +43,7 @@ import AccordionsPage from './pages/web/accordions'
 import ContentOverviewPage from './pages/content/overview'
 import ContentOurApproachPage from './pages/content/our-approach'
 import ContentHowToWritePage from './pages/content/how-to-write'
+import ContentPatternsPage from './pages/content/patterns'
 
 // Pages (Heuristics)
 import HeuristicsCallToActionPage from './pages/content/heuristics/call-to-action'
@@ -133,6 +134,7 @@ ReactDOM.render(
         <Route path="/content/overview" component={ContentOverviewPage} />
         <Route path="/content/our-approach" component={ContentOurApproachPage} />
         <Route path="/content/how-to-write" component={ContentHowToWritePage} />
+        <Route path="/content/patterns" component={ContentPatternsPage} />
 
         {/* Heuristics */}
         <Route exact path="/content/heuristics" render={() => <Redirect to="/content/heuristics/overview" />} />

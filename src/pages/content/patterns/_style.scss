@@ -1,0 +1,98 @@
+/* Content • Patterns */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.content-patterns-page {
+
+}
+
+// Elements/Mixes
+
+.content-patterns-page__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+}
+
+.content-patterns-page__custom-recommendation {
+  background: $color-background-gray;
+}
+
+.content-patterns-page__recommendation {
+  padding: 80px $spacing-xl;
+  width: 100%;
+}
+
+.content-patterns-page__recommendation-item {
+  margin-bottom: $spacing-xxxl;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content-patterns-page__button {
+  max-width: 300px;
+}
+
+.content-patterns-page__custom-recommendation-table {
+  width: calc(100% - #{$spacing-s * 2});
+  border-collapse: collapse;
+  margin: $spacing-s;
+  & td {
+    height: 68px;
+    width: 50%;
+  }
+
+  & thead td {
+    position: relative;
+  }
+
+  & tbody td {
+    border-bottom: solid 1px $color-white;
+    padding: $spacing-m $spacing-s;
+  }
+
+  & tbody tr:last-child td {
+    border: none;
+  }
+}
+
+.content-patterns-page__recommendation-status {
+  left: -$spacing-s;
+}
+
+// Modifiers
+.content-patterns-page--semibold {
+  font-weight: 600;
+}
+
+.content-patterns-page__action-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+  max-width: 600px + $spacing-m;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .content-patterns-page__recommendation-status {
+    left: -$spacing-l;
+  }
+  .content-patterns-page__custom-recommendation-table {
+    width: calc(100% - #{$spacing-l * 2});
+    margin: $spacing-l;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-patterns-page__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-patterns-page__action-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+}

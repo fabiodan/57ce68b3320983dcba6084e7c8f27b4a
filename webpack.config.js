@@ -19,6 +19,15 @@ module.exports = {
         }],
       },
       {
+        test: /\.(pdf)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: './assets/images/[name].[ext]',
+          },
+        }],
+      },
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
         options: {

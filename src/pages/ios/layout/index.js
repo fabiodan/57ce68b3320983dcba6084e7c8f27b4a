@@ -100,7 +100,7 @@ const IOSLayoutPage = () => (
       </Subsection>
     </Section>
     <Section>
-      <Heading3>iPad (9.5” & iPad Mini) Locked to Landscape orientation</Heading3>
+      <Heading3>iPad (9.5" & iPad Mini) Locked to Landscape orientation</Heading3>
       <Subsection oneColumn>
         <Figure src={iPadPNGSource} maxWidth="1234px" noMargin fluid />
         <Legend screenSize="1024 x 568" margin="24" column="74" gutter="8" />

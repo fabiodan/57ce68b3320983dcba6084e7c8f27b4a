@@ -29,6 +29,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Overview', url: '/content/overview' },
         { name: 'Our Approach', url: '/content/our-approach' },
         { name: 'How to Write', url: '/content/how-to-write' },
+        { name: 'Patterns', url: '/content/patterns' },
         { name: 'Punctuation', url: '/content/punctuation', wip: true },
       ]
     },

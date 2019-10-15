@@ -54,7 +54,7 @@ const ContentOurApproachPage = () => (
       <Heading2>Be Calm</Heading2>
       <Paragraph>
         Imagine a friend or colleague starts flooding you with messages. Messages
-        full of exclamation marks and excitable little phrases like “oops!”.
+        full of exclamation marks and excitable little phrases like “oops!".
       </Paragraph>
       <Paragraph>
         You would think they were anxious, panicked or hyper.

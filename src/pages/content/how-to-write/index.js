@@ -25,12 +25,12 @@ const Container = ({ children }) => (
 
 const CustomRecommendation = ({ children }) => {
   return (
-    <div className="content-how-to-write-page__recommendation">
-      <table className="content-how-to-write-page__table">
+    <div className="content-how-to-write-page__custom-recommendation">
+      <table className="content-how-to-write-page__custom-recommendation-table">
         <thead>
           <tr>
-            <td><RecommendationStatus className="content-how-to-write-page__recommendation-status" /></td>
-            <td><RecommendationStatus className="content-how-to-write-page__recommendation-status" recommended /></td>
+            <td><RecommendationStatus className="content-how-to-write-page__custom-recommendation-status" /></td>
+            <td><RecommendationStatus className="content-how-to-write-page__custom-recommendation-status" recommended /></td>
           </tr>
         </thead>
         <tbody>
@@ -60,7 +60,7 @@ const CustomRecommendation = ({ children }) => {
           <tr><td>Sorry</td><td>Use sparingly and only where we have caused inconvenience</td></tr>
           <tr><td>Check out, checkout</td><td>PayNote, please note</td></tr>
           <tr><td>Note, please note</td><td><del>Omit this</del></td></tr>
-          <tr><td>Valid</td><td>For error messaging use recognise instead eg “We do not recognise that postcode” rather than “That is not a valid postcode”</td></tr>
+          <tr><td>Valid</td><td>For error messaging use recognise instead eg “We do not recognise that postcode" rather than “That is not a valid postcode"</td></tr>
           <tr><td>Proceed</td><td>Continue</td></tr>
           <tr><td>Minimise</td><td>Reduce, cut down on</td></tr>
           <tr><td>Lessen</td><td>Reduce, cut down on</td></tr>

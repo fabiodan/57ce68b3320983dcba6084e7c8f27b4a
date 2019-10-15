@@ -50,7 +50,7 @@ const ContentOverviewPage = () => (
         In UX, user needs are our north star.
       </Paragraph>
       <Paragraph>
-        So we do not define a marketing-style “value proposition” – namely, what
+        So we do not define a marketing-style “value proposition" – namely, what
         the business thinks the value ought to be. We define our goal in terms
         of what the user needs: a user story.
       </Paragraph>
