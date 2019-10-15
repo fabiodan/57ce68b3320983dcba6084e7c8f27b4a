@@ -10,7 +10,6 @@
 }
 
 // Elements/Mixes
-
 .content-patterns-page__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -62,6 +61,52 @@
 
 .content-patterns-page__recommendation-status {
   left: -$spacing-s;
+}
+
+.content-patterns-page__use-case-text {
+  display: inline-flex;
+  width: calc(100% - 22px);
+  justify-content: space-between;
+  margin-bottom: $spacing-m;
+}
+
+.content-patterns-page__use-case-item {
+  margin-bottom: $spacing-xxxl;
+}
+
+.content-patterns-page__recommendation-cvv {
+  display: flex;
+  align-items: flex-start;
+  max-width: 312px;
+}
+
+.content-patterns-page__cvv-icon {
+  margin-left: $spacing-m;
+}
+
+.content-patterns-page__recommendation-radio,
+.content-patterns-page__recommendation-checkbox {
+  margin-top: $spacing-m;
+  &:last-of-type {
+    margin-bottom: $spacing-m;
+  }
+}
+
+.content-patterns-page__select-button {
+  width: 100%;
+  max-width: 340px;
+}
+
+.content-patterns-page__select-button-error-message {
+  display: block;
+  @include typography(xs);
+  color: $color-red;
+  margin-top: $spacing-xxs;
+}
+
+.content-patterns-page__text-block {
+  text-align: center;
+  @include typography(l);
 }
 
 // Modifiers

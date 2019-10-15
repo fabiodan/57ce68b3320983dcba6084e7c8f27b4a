@@ -2,7 +2,9 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { ButtonLink } from '@asda/button'
+import CreditCardIcon from '@asda/credit-card-icon'
+import { LinkText } from '@asda/link'
+import Button, { ButtonLink } from '@asda/button'
 import {
   Figure,
   Paragraph,
@@ -15,7 +17,7 @@ import {
   FeaturedSection,
 } from '@sg/sg-layout'
 import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
-import { TextField, Label } from '@asda/form'
+import { TextField, Checkbox, Label, Radio } from '@asda/form'
 
 // Assets
 import './_style.scss'
@@ -167,7 +169,7 @@ const ContentPatternsPage = () => (
 
       <Heading3>Style notes</Heading3>
 
-      <Paragraph noMargin>
+      <Paragraph>
         <List>
           <ListItem>No full stop on single sentence error messages</ListItem>
           <ListItem>If there are two or more sentences, apply full stops to all but the last sentence</ListItem>
@@ -231,6 +233,300 @@ const ContentPatternsPage = () => (
           </Recommendation>
         </Container>
       </Paragraph>
+
+      <Heading3>Use cases</Heading3>
+      <List>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Already registered</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Email address</Label>
+            <TextField
+              placeholder="Default"
+              value="jane.doe@abc.com"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Error message"
+              validate
+            />
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Not eligible/barred from applying</span>
+            <span>User error, major serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Email address</Label>
+            <TextField
+              placeholder="Default"
+              value="jane.doe@abc.com"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Sorry, you are not currently able to apply for [service name]. [Give reason where possible]"
+              validate
+            />
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Technical error with registration</span>
+            <span>System error, major serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Card number</Label>
+            <TextField
+              extraPaddingLeft="medium"
+              placeholder="Default"
+              value="jane.doe@abc.com"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Sorry, we cannot [register your card etc] right now. Try again later"
+              validate
+            >
+              <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+            </TextField>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Field left blank</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Enter CVV number</Label>
+            <div className="content-patterns-page__recommendation-cvv">
+              <TextField
+                placeholder="3 digits"
+                value=""
+                pattern="12345"
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="Fill in [field name] to continue"
+                required
+                validate
+              />
+              <CreditCardIcon className="content-patterns-page__cvv-icon" name="cvv" size="large" />
+          </div>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Can’t deliver</span>
+            <span>System error, major serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Postcode</Label>
+            <TextField
+              placeholder="Default"
+              value="NX16XE"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="Sorry, we do not deliver to [address/postcode]"
+              validate
+            />
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Address not found in postcode finder</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Postcode</Label>
+            <TextField
+              placeholder="Default"
+              value="NX16XE"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="We could not find an address for this postcode. Try again or enter your address manually."
+              validate
+            />
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Not valid or mistyped</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Postcode</Label>
+            <TextField
+              placeholder="Default"
+              value="123456"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="We do not recognise that [date, phone number, postcode etc]"
+              validate
+            />
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Too few characters</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Card number</Label>
+            <TextField
+              extraPaddingLeft="medium"
+              placeholder="Default"
+              value="123456"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="[Field name] must be at least [xx] characters"
+              validate
+            >
+              <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+            </TextField>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Too many characters</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Card number</Label>
+            <TextField
+              extraPaddingLeft="medium"
+              placeholder="Default"
+              value="1234 5678 1234 5670 1234"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="[Field name] must be [less than xx] characters"
+              validate
+            >
+              <CreditCardIcon className="text-fields-page__credit-card-icon" name="amex" />
+            </TextField>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Checkbox not selected</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            Select your favourite fruits:
+            <div className="content-patterns-page__recommendation-checkbox">
+              <Checkbox id="content-patterns-page__checkbox1" />
+              <Label inline htmlFor="content-patterns-page__checkbox1">Apple</Label>
+            </div>
+            <div className="content-patterns-page__recommendation-checkbox">
+              <Checkbox id="content-patterns-page__checkbox2" />
+              <Label inline htmlFor="content-patterns-page__checkbox2">Banana</Label>
+            </div>
+            <div className="content-patterns-page__recommendation-checkbox">
+              <Checkbox id="content-patterns-page__checkbox3" />
+              <Label inline htmlFor="content-patterns-page__checkbox3">Grapes</Label>
+            </div>
+            <Button className="content-patterns-page__select-button">Select</Button>
+            <span className="content-patterns-page__select-button-error-message">
+              Select [whatever they are choosing, eg fruits] to continue
+            </span>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Date must be in past or future</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <Label>Expiry date</Label>
+            <TextField
+              placeholder="Default"
+              value="11/2018"
+              pattern=""
+              helperText="Helper text"
+              successMessage="Success message"
+              errorMessage="[Name of field eg Date of birth] must be in the future / past"
+              validate
+            />
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Radio button not selected</span>
+            <span>User error, minor serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            Select your favourite fruits:
+            <div className="content-patterns-page__recommendation-radio">
+              <Radio id="content-patterns-page__radio1" />
+              <Label inline htmlFor="content-patterns-page__radio1">Apple</Label>
+            </div>
+            <div className="content-patterns-page__recommendation-radio">
+              <Radio id="content-patterns-page__radio2" />
+              <Label inline htmlFor="content-patterns-page__radio2">Banana</Label>
+            </div>
+            <div className="content-patterns-page__recommendation-radio">
+              <Radio id="content-patterns-page__radio3" />
+              <Label inline htmlFor="content-patterns-page__radio3">Grapes</Label>
+            </div>
+            <Button className="content-patterns-page__select-button">Select</Button>
+            <span className="content-patterns-page__select-button-error-message">
+              If [rephrase question] then select [Yes/No/option]
+            </span>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Page not found</span>
+            <span>System error, major serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <div className="content-patterns-page__text-block">
+              We can’t find that page.<br />
+              Try these useful links instead:<br />
+              <LinkText>Homepage</LinkText><br />
+              <LinkText>Search</LinkText><br />
+              <LinkText>[Others]</LinkText><br />
+            </div>
+          </Recommendation>
+        </ListItem>
+        <ListItem className="content-patterns-page__use-case-item">
+          <div className="content-patterns-page__use-case-text">
+            <span>Server error/technical problem (page cannot be 	refreshed due to SPA)</span>
+            <span>System error, major serverity</span>
+          </div>
+          <Recommendation className="content-patterns-page__recommendation">
+            <RecommendationStatus recommended />
+            <div className="content-patterns-page__text-block">
+              Something went wrong<br /><br />
+              We are working hard to make it right. Refresh will not work on
+              this page. Go back to the previous page and try again to see if we
+              fixed it. Or go to asda.com for an update on what we're doing to fix this.
+              <br /><br />
+              Go back<br />
+              Go to Asda.com
+            </div>
+          </Recommendation>
+        </ListItem>
+      </List>
+
     </Section>
 
     <Section>

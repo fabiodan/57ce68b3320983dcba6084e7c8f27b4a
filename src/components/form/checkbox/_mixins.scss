@@ -9,6 +9,7 @@ $checkbox-border-radius: 2px;
   height: 20px;
   vertical-align: middle;
   border-radius: $checkbox-border-radius;
+  background: $color-white;  
 }
 
 @mixin checkbox__input {

@@ -154,7 +154,6 @@ const CreditCardIcon = ({ name, children, className, size }) => {
     !!size && `credit-card-icon--${size}`,
   ]
   const classNames = joinClassNames('credit-card-icon', className, modifiers)
-
   return (
     <span className={classNames}>
       <CreditCardSVG name={name} />
