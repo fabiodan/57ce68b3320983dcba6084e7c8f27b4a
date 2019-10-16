@@ -231,6 +231,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Email address</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               placeholder="Default"
               value="jane.doe@abc.com"
               pattern=""
@@ -250,6 +251,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Email address</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               placeholder="Default"
               value="jane.doe@abc.com"
               pattern=""
@@ -269,6 +271,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Card number</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               extraPaddingLeft="medium"
               placeholder="Default"
               value="1234 5678 1230 5670"
@@ -314,6 +317,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Postcode</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               placeholder="Default"
               value="NX16XE"
               pattern=""
@@ -333,6 +337,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Postcode</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               placeholder="Default"
               value="NX16XE"
               pattern=""
@@ -352,6 +357,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Postcode</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               placeholder="Default"
               value="123456"
               pattern=""
@@ -371,6 +377,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Card number</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               extraPaddingLeft="medium"
               placeholder="Default"
               value="123456"
@@ -393,6 +400,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Card number</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"
               extraPaddingLeft="medium"
               placeholder="Default"
               value="1234 5678 1234 5670 1234"
@@ -441,6 +449,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Expiry date</Label>
             <TextField
+              className="content-patterns-page__recommendation__text-field"                        
               placeholder="Default"
               value="11/2018"
               pattern=""

@@ -14,10 +14,12 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: $spacing-m;
+  max-width: 780px;
 }
 
 .content-patterns-page__custom-recommendation {
   background: $color-background-gray;
+  max-width: 780px;
 }
 
 .content-patterns-page__recommendation {
@@ -72,6 +74,7 @@
 
 .content-patterns-page__use-case-item {
   margin-bottom: $spacing-xxxl;
+  max-width: 780px;
 }
 
 .content-patterns-page__recommendation-cvv {
@@ -107,6 +110,10 @@
 .content-patterns-page__text-block {
   text-align: center;
   @include typography(l);
+}
+
+.content-patterns-page__recommendation__text-field {
+  max-width: 580px;
 }
 
 // Modifiers
