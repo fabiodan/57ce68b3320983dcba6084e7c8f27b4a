@@ -18,9 +18,11 @@
   font-size: inherit;
   font-weight: 600;
   color: $color-blue;
-  text-decoration: underline;
   cursor: pointer;
   user-select: none;
+  &:hover {
+    text-decoration: underline;    
+  }
 }
 
 // Modifiers
