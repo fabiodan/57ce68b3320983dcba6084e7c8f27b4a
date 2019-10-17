@@ -6,7 +6,7 @@ import Sample from '@asda/_sample'
 import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
 
 // Assets
-import sampleSVGSource from './images/sample.svg'
+import samplePNGSource from './images/sample.png'
 import './_style.scss'
 
 const MyComponent = ({ children }) => (
@@ -42,7 +42,7 @@ const SamplePage = () => (
 
       <MyComponent>Vero, necessitatibus quaerat animi!</MyComponent>
 
-      <Figure maxWidth="815px" src={sampleSVGSource} noMargin fluid />
+      <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid />
 
     </Section>
 
