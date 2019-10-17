@@ -449,7 +449,7 @@ const ContentPatternsPage = () => (
             <RecommendationStatus recommended />
             <Label>Expiry date</Label>
             <TextField
-              className="content-patterns-page__recommendation__text-field"                        
+              className="content-patterns-page__recommendation__text-field"
               placeholder="Default"
               value="11/2018"
               pattern=""
@@ -549,7 +549,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/call-to-action"
             target="_blank"
             type="submit"
@@ -557,7 +557,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -620,7 +620,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/headings"
             target="_blank"
             type="submit"
@@ -628,7 +628,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -669,7 +669,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/instructions-and-help-text"
             target="_blank"
             type="submit"
@@ -677,7 +677,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -717,7 +717,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/links"
             target="_blank"
             type="submit"
@@ -725,7 +725,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -763,7 +763,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/promotional-labels"
             target="_blank"
             type="submit"
@@ -771,7 +771,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
     </Section>
@@ -799,7 +799,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/statements-and-warnings"
             target="_blank"
             type="submit"
@@ -807,7 +807,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -845,7 +845,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/call-to-action"
             target="_blank"
             type="submit"
@@ -853,7 +853,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -894,7 +894,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/empty-states"
             target="_blank"
             type="submit"
@@ -902,7 +902,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
 
@@ -942,7 +942,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/service-mails"
             target="_blank"
             type="submit"
@@ -950,7 +950,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
     </Section>
@@ -980,7 +980,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/onboarding"
             target="_blank"
             type="submit"
@@ -988,7 +988,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
     </Section>
@@ -1015,7 +1015,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/modals"
             target="_blank"
             type="submit"
@@ -1023,7 +1023,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
     </Section>
@@ -1053,7 +1053,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/forms"
             target="_blank"
             type="submit"
@@ -1061,7 +1061,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
     </Section>
@@ -1089,7 +1089,7 @@ const ContentPatternsPage = () => (
           >
             Download worksheet
           </ButtonLink>
-          <ButtonLink
+          {/* <ButtonLink
             href="/#/content/heuristics/notifications-and-alerts"
             target="_blank"
             type="submit"
@@ -1097,7 +1097,7 @@ const ContentPatternsPage = () => (
             className="content-patterns-page__button"
           >
             Online worksheet
-          </ButtonLink>
+          </ButtonLink> */}
         </ActionBar>
       </Paragraph>
     </Section>
