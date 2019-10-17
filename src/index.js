@@ -52,6 +52,7 @@ import HeuristicsCallToActionPage from './pages/content/heuristics/call-to-actio
 import AndroidTypographyPage from './pages/android/typography'
 import AndroidLayoutPage from './pages/android/layout'
 import AndroidSpacingPage from './pages/android/spacing'
+import AndroidNativeUIPage from './pages/android/native-ui'
 
 // Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
@@ -158,6 +159,7 @@ ReactDOM.render(
         <Route path="/android/typography" component={AndroidTypographyPage} />
         <Route path="/android/layout" component={AndroidLayoutPage} />
         <Route path="/android/spacing" component={AndroidSpacingPage} />
+        <Route path="/android/native-ui" component={AndroidNativeUIPage} />
 
         {/* iOS */}
         <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />

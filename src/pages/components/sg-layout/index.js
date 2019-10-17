@@ -95,6 +95,21 @@ Figure.defaultProps = {
   caption: null,
 }
 
+const FigureContainer = ({ children, className, noMargin }) => {
+  const modifiers = [
+    noMargin && 'sg-layout__figure-container--no-margin',
+  ]
+  const classNames = joinClassNames('sg-layout__figure-container', className, modifiers)
+
+  return (
+    <div className={classNames}>{ children }</div>
+  )
+}
+
+FigureContainer.defaultProps = {
+  children: null,
+}
+
 const Caption = ({ children, className, position = 'bottom' }) => {
   const modifiers = [
     position && `sg-layout__caption--position-${position}`,
@@ -130,6 +145,7 @@ export {
   Heading3,
   Paragraph,
   Figure,
+  FigureContainer,
   Caption,
   List,
   ListItem,

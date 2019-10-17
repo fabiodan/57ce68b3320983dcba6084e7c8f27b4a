@@ -9,7 +9,7 @@ import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
 import sampleSVGSource from './images/sample.svg'
 import './_style.scss'
 
-const Component = ({ children }) => (
+const MyComponent = ({ children }) => (
   <div className="sample-page__component">{ children }</div>
 )
 
@@ -27,7 +27,7 @@ const SamplePage = () => (
         quas voluptatem perferendis fugit!
       </Paragraph>
 
-      <Component><Sample /></Component>
+      <MyComponent><Sample /></MyComponent>
 
       <Paragraph noMargin>
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -40,9 +40,9 @@ const SamplePage = () => (
         Paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </Paragraph>
 
-      <Component>Vero, necessitatibus quaerat animi!</Component>
+      <MyComponent>Vero, necessitatibus quaerat animi!</MyComponent>
 
-      <Figure maxWidth="815px" src={sampleSVGSource} noMargin />
+      <Figure maxWidth="815px" src={sampleSVGSource} noMargin fluid />
 
     </Section>
 
