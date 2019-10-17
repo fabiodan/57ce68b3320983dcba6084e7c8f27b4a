@@ -60,6 +60,7 @@ import IOSLayoutPage from './pages/ios/layout'
 import IOSSearchBarsPage from './pages/ios/search-bars'
 import IOSStatusBarsPage from './pages/ios/status-bars'
 import IOSBottomNavPage from './pages/ios/bottom-nav'
+import IOSActionSheetsPage from './pages/ios/action-sheets'
 
 class Page extends Component {
   constructor(props) {
@@ -168,6 +169,7 @@ ReactDOM.render(
         <Route path="/ios/search-bars" component={IOSSearchBarsPage} />
         <Route path="/ios/status-bars" component={IOSStatusBarsPage} />
         <Route path="/ios/bottom-nav" component={IOSBottomNavPage} />
+        <Route path="/ios/action-sheets" component={IOSActionSheetsPage} />
 
         {/* Sample (Don't delete) */}
         <Route path="/sample" component={SamplePage} />

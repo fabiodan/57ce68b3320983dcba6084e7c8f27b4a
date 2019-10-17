@@ -12,10 +12,6 @@ import smallDarkPNGSource from './images/status-bar-small-dark.png'
 import smallLightPNGSource from './images/status-bar-small-light.png'
 import './_style.scss'
 
-const Component = ({ children }) => (
-  <div className="ios-status-bars-page__component">{ children }</div>
-)
-
 const IOSStatusBarsPage = () => (
   <article className="ios-status-bars-page">
     <Heading1>Status Bars</Heading1>

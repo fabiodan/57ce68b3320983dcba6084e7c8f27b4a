@@ -1,0 +1,28 @@
+/* iOS • Action Sheets Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.ios-action-sheets-page {
+
+}
+
+// Elements/Mixes
+.ios-action-sheets-page__examples {
+  display: flex;
+  flex-direction: column;
+  max-width: 878px;
+}
+
+// Breakpoints
+@media (min-width: 1024px) {
+  .ios-action-sheets-page__examples {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ios-action-sheets-page__figure {
+    margin-left: $spacing-xxxl;
+  }
+}
