@@ -33,7 +33,7 @@ const ColorDescription = ({ children }) => (
 
 const ColorSchemePage = () => (
   <article className="color-page">
-    <Heading1>Color Scheme</Heading1>
+    <Heading1>Color scheme</Heading1>
 
     <Section>
       <Heading2>Asda Green</Heading2>

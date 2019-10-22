@@ -14,7 +14,7 @@ import './_style.scss'
 
 const IOSStatusBarsPage = () => (
   <article className="ios-status-bars-page">
-    <Heading1>Status Bars</Heading1>
+    <Heading1>Status bars</Heading1>
 
     <Section>
       <Heading2>Status Bars</Heading2>

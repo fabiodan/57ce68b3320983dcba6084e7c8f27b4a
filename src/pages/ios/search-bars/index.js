@@ -16,7 +16,7 @@ import './_style.scss'
 const IOSSearchBarsPage = () => (
   <article className="ios-search-bars-page">
 
-    <Heading1>Search Bars</Heading1>
+    <Heading1>Search bars</Heading1>
 
     <Section>
       <Heading2>Search Bars</Heading2>

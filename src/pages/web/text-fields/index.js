@@ -21,7 +21,7 @@ const GridItem = ({ children }) => (
 const TextFieldsPage = () => (
   <article className="text-fields-page">
 
-    <Heading1>Text Fields</Heading1>
+    <Heading1>Text fields</Heading1>
 
     <Section>
       <Heading2>Input Fields</Heading2>

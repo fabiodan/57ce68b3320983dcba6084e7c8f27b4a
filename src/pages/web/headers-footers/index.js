@@ -14,7 +14,7 @@ const Component = ({ children }) => (
 const HeadersFootersPage = () => (
   <article className="headers-footers-page">
 
-    <Heading1>Headers & Footers</Heading1>
+    <Heading1>Headers & footers</Heading1>
 
     <Section>
       <Heading2>Checkout Header</Heading2>

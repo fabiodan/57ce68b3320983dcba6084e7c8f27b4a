@@ -25,7 +25,7 @@ const Container = ({ children }) => (
 const ContentOurApproachPage = () => (
   <article className="content-our-approach-page">
 
-    <Heading1>Our Approach</Heading1>
+    <Heading1>Our approach</Heading1>
 
     <Section>
       <Paragraph>

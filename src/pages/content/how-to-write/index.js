@@ -77,7 +77,7 @@ const CustomRecommendation = ({ children }) => {
 const ContentOurApproachPage = () => (
   <article className="content-how-to-write-page">
 
-    <Heading1>How to Write</Heading1>
+    <Heading1>How to write</Heading1>
 
     <Section>
       <Paragraph>

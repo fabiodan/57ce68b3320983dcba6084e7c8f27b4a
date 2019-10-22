@@ -43,6 +43,7 @@ import AccordionsPage from './pages/web/accordions'
 import ContentOverviewPage from './pages/content/overview'
 import ContentOurApproachPage from './pages/content/our-approach'
 import ContentHowToWritePage from './pages/content/how-to-write'
+import ContentPunctuationPage from './pages/content/punctuation'
 import ContentPatternsPage from './pages/content/patterns'
 
 // Pages (Heuristics)
@@ -137,6 +138,7 @@ ReactDOM.render(
         <Route path="/content/overview" component={ContentOverviewPage} />
         <Route path="/content/our-approach" component={ContentOurApproachPage} />
         <Route path="/content/how-to-write" component={ContentHowToWritePage} />
+        <Route path="/content/punctuation" component={ContentPunctuationPage} />
         <Route path="/content/patterns" component={ContentPatternsPage} />
 
         {/* Heuristics */}

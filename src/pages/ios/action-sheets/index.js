@@ -14,7 +14,7 @@ const IOSActionSheetsPage = () => (
     <Heading1>Action Sheets</Heading1>
 
     <Section>
-      <Heading2>Action Sheets</Heading2>
+      <Heading2>Action sheets</Heading2>
       <Paragraph>
         An action sheet is an overlay that appears in response to a control or
         action - presenting a set of two or more choices based on the current context.

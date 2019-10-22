@@ -35,7 +35,7 @@ const NotificationContainer = ({ children }) => (
 
 const BrandPage = () => (
   <article className="brand-page">
-    <Heading1>Brand Elements</Heading1>
+    <Heading1>Brand elements</Heading1>
 
     <Section>
       <Heading2>Labels</Heading2>

@@ -15,7 +15,7 @@ const Component = ({ children }) => (
 
 const IOSStatusBarsPage = () => (
   <article className="ios-bottom-nav-page">
-    <Heading1>Bottom Nav (Tab Bar)</Heading1>
+    <Heading1>Bottom nav (tab bar)</Heading1>
 
     <Section>
       <Heading2>Bottom Nav</Heading2>

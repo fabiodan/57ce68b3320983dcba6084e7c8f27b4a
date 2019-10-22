@@ -19,7 +19,7 @@ const GridItem = ({ children }) => (
 const InputControlsPage = () => (
   <article className="input-controls-page">
 
-    <Heading1>Input Controls</Heading1>
+    <Heading1>Input controls</Heading1>
 
     <Section>
       <Heading2>Checkboxes</Heading2>

@@ -58,7 +58,7 @@ const GridItem = ({ children }) => (
 
 const AndroidAppBarsPage = () => (
   <article className="android-app-bars-page">
-    <Heading1>App Bars</Heading1>
+    <Heading1>App bars</Heading1>
 
     <Section>
       <Heading2>Headers</Heading2>

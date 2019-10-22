@@ -24,7 +24,7 @@ const GridItem = ({ children }) => (
 
 const SpecialButtonsPage = () => (
   <article className="special-buttons-page">
-    <Heading1>Special Buttons</Heading1>
+    <Heading1>Special buttons</Heading1>
 
     <Section>
       <Heading2>Product Module Buttons</Heading2>
