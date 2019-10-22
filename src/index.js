@@ -53,6 +53,7 @@ import AndroidTypographyPage from './pages/android/typography'
 import AndroidLayoutPage from './pages/android/layout'
 import AndroidSpacingPage from './pages/android/spacing'
 import AndroidNativeUIPage from './pages/android/native-ui'
+import AndroidAppBarsPage from './pages/android/app-bars'
 
 // Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
@@ -161,6 +162,7 @@ ReactDOM.render(
         <Route path="/android/layout" component={AndroidLayoutPage} />
         <Route path="/android/spacing" component={AndroidSpacingPage} />
         <Route path="/android/native-ui" component={AndroidNativeUIPage} />
+        <Route path="/android/app-bars" component={AndroidAppBarsPage} />
 
         {/* iOS */}
         <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />

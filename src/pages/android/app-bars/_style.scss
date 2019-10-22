@@ -1,0 +1,60 @@
+/* Android • App Bars Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+
+// Block
+.android-app-bars-page {
+
+}
+
+// Elements/Mixes
+.android-app-bars-page__grid {
+  max-width: 878px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 60px;
+  grid-column-gap: $spacing-xl;
+  padding: $spacing-xl;
+  background: $color-background-gray;
+  align-items: end;
+}
+
+// Modifiers
+.android-app-bars-page--modifier {
+
+}
+.android-app-bars-page__element--modifier {
+
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .android-app-bars-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+// Animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
