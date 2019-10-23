@@ -5,8 +5,6 @@
 @import "@sg/sg-core/style";
 
 // Variables
-$content-punctuation-page-element-height: 250px;
-$content-punctuation-page-mix-border-color: $color-medium-gray;
 
 // Block
 .content-punctuation-page {
@@ -14,16 +12,75 @@ $content-punctuation-page-mix-border-color: $color-medium-gray;
 }
 
 // Elements/Mixes
-.content-punctuation-page__component {
-  margin-bottom: $spacing-xxxl;
+.content-punctuation-page__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+  max-width: 780px;
+  margin-top: $spacing-m;
+}
+
+.content-punctuation-page__recommendation {
+  padding: $spacing-m $spacing-m 0 64px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content-punctuation-page__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: $color-white;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  padding: $spacing-xs $spacing-m;
+}
+
+.content-punctuation-page__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-xxs 0;
+}
+
+.content-punctuation-page__list {
+  margin: 0;
+  padding: $spacing-xs 0;
+}
+
+.content-punctuation-page__recommendation-link {
+  margin-bottom: $spacing-m;
+  align-self: center;
+}
+
+.content-punctuation-page__recommendation__text-field {
+  width: 100%;
+  margin-bottom: $spacing-m;
+}
+
+.content-punctuation-page__recommendation__paragraph {
+  padding: 0;
+  margin: 0;
+  background: $color-white;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  padding: $spacing-xs $spacing-m;
+  overflow: hidden;
+}
+
+.content-punctuation-page__recommendation__text-example {
+  @include typography(s);
+}
+
+.content-punctuation-page__recommendation__fields {
+  padding: 80px $spacing-xl;
+  width: 100%;
 }
 
 // Modifiers
-.content-punctuation-page--modifier {
-
-}
-.content-punctuation-page__element--modifier {
-
+.content-punctuation-page__recommendation--no-padding {
+  padding: 0;
 }
 
 // Breakpoints
@@ -36,19 +93,11 @@ $content-punctuation-page-mix-border-color: $color-medium-gray;
 }
 
 @media (min-width: 1024px) {
-
+  .content-punctuation-page__container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 1280px) {
 
-}
-
-// Animation
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }

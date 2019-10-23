@@ -194,6 +194,10 @@ $sg-layout__aside-width: 314px;
   margin: 0;
 }
 
+.sg-layout--fluid {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .sg-layout {
     display: flex;
