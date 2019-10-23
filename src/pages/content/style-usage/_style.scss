@@ -1,0 +1,59 @@
+/* Content • Style & Usage Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+
+// Block
+.content-style-usage-page {
+
+}
+
+// Elements/Mixes
+.content-style-usage-page__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+  max-width: 780px;
+  margin-top: $spacing-m;
+}
+
+.content-style-usage-page__recommendation {
+  padding: $spacing-m $spacing-m 0 64px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content-style-usage-page__recommendation__paragraph {
+  padding: 0;
+  margin: 0;
+  background: $color-white;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  padding: $spacing-xs $spacing-m;
+  overflow: hidden;
+}
+
+// Modifiers
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+  .content-style-usage-page__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+
+}

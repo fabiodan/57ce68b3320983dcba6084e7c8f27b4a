@@ -11,6 +11,7 @@ $radio-border-radius: 50%;
 .radio {
   @include checkbox;
   z-index: 1;
+  border-radius: $radio-border-radius;
 }
 
 // Elements

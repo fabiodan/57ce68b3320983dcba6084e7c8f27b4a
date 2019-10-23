@@ -29,9 +29,10 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Overview', url: '/content/overview' },
         { name: 'Our approach', url: '/content/our-approach' },
         { name: 'How to write', url: '/content/how-to-write' },
-        { name: 'Patterns', url: '/content/patterns' },
         { name: 'Punctuation', url: '/content/punctuation' },
-        { name: 'Style & usage', url: '/content/style-usage', wip: true },
+        { name: 'Style & usage', url: '/content/style-usage' },
+        { name: 'Patterns', url: '/content/patterns' },
+        { name: 'Formatting', url: '/content/formatting', wip: true },
       ]
     },
     { name: 'Web library',
