@@ -3,9 +3,19 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Icon from '@asda/icon'
+import Button from '@asda/button'
 import { LinkText } from '@asda/link'
 import { Label, TextField } from '@asda/form'
 import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
+import Modal, {
+  ModalHeader,
+  ModalContent,
+  ModalActionBar,
+  ModalContainer,
+  ModalBackdrop,
+  ModalButton,
+  ModalCloseIcon,
+} from '@asda/modal'
 import {
   Heading1,
   Heading2,
@@ -17,11 +27,16 @@ import {
   Section,
 } from '@sg/sg-layout'
 
+
 // Assets
 import './_style.scss'
 
 const Container = ({ children }) => (
   <div className="content-style-usage-page__container">{children}</div>
+)
+
+const Strong = ({ children }) => (
+  <strong className="content-punctuation-page__modal-strong">{children}</strong>
 )
 
 const ContentStyleUsagePage = () => (
@@ -342,49 +357,67 @@ const ContentStyleUsagePage = () => (
         <Container>
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus recommended />
-            <div className="content-patterns-page__recommendation-item">
-              <Label>Postcode</Label>
-              <TextField
-                placeholder="Input Text"
-                value="123456"
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="We do not recognise that postcode"
-                validate
-              />
-            </div>
+            <Modal className="content-punctuation-page__modal" scrollLock={false}>
+              <ModalContainer className="content-punctuation-page__modal-container">
+                <ModalHeader>Not available</ModalHeader>
+                <ModalContent>
+                  Sorry, we do not currently offer home delivery or Click &
+                  Collect for <Strong>{`<postcode>`}</Strong>. Try another postcode:
+                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield"/>
+                  <Button className="content-punctuation-page__modal-button">Check postcode</Button>
+                  <div className="content-punctuation-page__modal-paragraph">
+                    <Strong>New build house?</Strong><br/>
+                    It may not be on our system yet.
+                    {' '}<LinkText>Contact us</LinkText>{' '}
+                    and we will add it for you.
+                  </div>
+                </ModalContent>
+                <ModalCloseIcon />
+              </ModalContainer>
+            </Modal>
           </Recommendation>
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus />
-            <div className="content-patterns-page__recommendation-item">
-              <Label>Postcode</Label>
-              <TextField
-                placeholder="Input Text"
-                value="123456"
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="Sorry, we do not recognise that postcode"
-                validate
-              />
-            </div>
+            <Modal className="content-punctuation-page__modal" scrollLock={false}>
+              <ModalContainer className="content-punctuation-page__modal-container">
+                <ModalHeader>Not available</ModalHeader>
+                <ModalContent>
+                  We do not currently offer home delivery or Click &
+                  Collect for <Strong>{`<postcode>`}</Strong>. Try another postcode:
+                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield"/>
+                  <Button className="content-punctuation-page__modal-button">Check postcode</Button>
+                  <div className="content-punctuation-page__modal-paragraph">
+                    <Strong>New build house?</Strong><br/>
+                    It may not be on our system yet.
+                    {' '}<LinkText>Contact us</LinkText>{' '}
+                    and we will add it for you.
+                  </div>
+                </ModalContent>
+                <ModalCloseIcon />
+              </ModalContainer>
+            </Modal>
           </Recommendation>
           <div>{/* Empty field */}</div>
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus />
-            <div className="content-patterns-page__recommendation-item">
-              <Label>Postcode</Label>
-              <TextField
-                placeholder="Input Text"
-                value="123456"
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="Sorry, we do not recognise that postcode"
-                validate
-              />
-            </div>
+            <Modal className="content-punctuation-page__modal" scrollLock={false}>
+              <ModalContainer className="content-punctuation-page__modal-container">
+                <ModalHeader>Sorry</ModalHeader>
+                <ModalContent>
+                  We do not currently offer home delivery or Click &
+                  Collect for <Strong>{`<postcode>`}</Strong>. Try another postcode:
+                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield"/>
+                  <Button className="content-punctuation-page__modal-button">Check postcode</Button>
+                  <div className="content-punctuation-page__modal-paragraph">
+                    <Strong>New build house?</Strong><br/>
+                    It may not be on our system yet.
+                    {' '}<LinkText>Contact us</LinkText>{' '}
+                    and we will add it for you.
+                  </div>
+                </ModalContent>
+                <ModalCloseIcon />
+              </ModalContainer>
+            </Modal>
           </Recommendation>
         </Container>
       </Paragraph>

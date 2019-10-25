@@ -64,6 +64,31 @@
   grid-gap: $spacing-m;
 }
 
+.content-punctuation-page__modal {
+  position: static;
+}
+
+.content-punctuation-page__modal-container {
+  width: 100%;
+}
+
+.content-punctuation-page__modal-textfield {
+  margin: $spacing-m 0;
+}
+
+.content-punctuation-page__modal-paragraph {
+  text-align: center;
+}
+
+.content-punctuation-page__modal-strong {
+  font-weight: 600;
+}
+
+.content-punctuation-page__modal-button {
+  width: 100%;
+  margin-bottom: $spacing-m;  
+}
+
 // Modifiers
 
 // Breakpoints

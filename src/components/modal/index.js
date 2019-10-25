@@ -18,9 +18,11 @@ class Modal extends Component {
   }
 
   componentDidMount() {
-    const { onEscKeydown } = this.props
+    const { onEscKeydown, scrollLock } = this.props
 
-    document.body.classList.add('modal--scroll-lock')
+    if (scrollLock) {
+      document.body.classList.add('modal--scroll-lock')
+    }
 
     if (onEscKeydown) {
       document.addEventListener('keydown', this.handleEscKeydown, false)
@@ -28,9 +30,11 @@ class Modal extends Component {
   }
 
   componentWillUnmount() {
-    const { onEscKeydown } = this.props
+    const { onEscKeydown, scrollLock } = this.props
 
-    document.body.classList.remove('modal--scroll-lock')
+    if (scrollLock) {
+      document.body.classList.remove('modal--scroll-lock')
+    }
 
     if (onEscKeydown) {
       document.removeEventListener('keydown', this.handleEscKeydown, false)
@@ -69,6 +73,10 @@ class Modal extends Component {
       </div>
     )
   }
+}
+
+Modal.defaultProps = {
+  scrollLock: true,
 }
 
 const ModalBackdrop = ({ children, className, onClick }) => {
