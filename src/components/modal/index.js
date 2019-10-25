@@ -1,5 +1,5 @@
 // Libs
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
@@ -101,18 +101,26 @@ const ModalHeader = ({ children, className }) => {
   )
 }
 
-const ModalContainer = ({ children, className }) => {
+const ModalContainer = ({ children, className, focusLock }) => {
   const modifiers = []
   const classNames = joinClassNames('modal__container', className, modifiers)
 
   return (
     // modal__outer-container is needed to fix scroll issues on IE11 :P
-    <FocusLock className="modal__outer-container">
-      <div className={classNames}>
-        { children }
-      </div>
-    </FocusLock>
+    <Fragment>
+      {focusLock ? (
+        <FocusLock className="modal__outer-container">
+          <div className={classNames}>{ children }</div>
+        </FocusLock>
+      ) : (
+        <div className={classNames}>{ children }</div>
+      )}
+    </Fragment>
   )
+}
+
+ModalContainer.defaultProps = {
+  focusLock: true,
 }
 
 const ModalContent = ({ children, className }) => {

@@ -358,7 +358,7 @@ const ContentStyleUsagePage = () => (
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus recommended />
             <Modal className="content-punctuation-page__modal" scrollLock={false}>
-              <ModalContainer className="content-punctuation-page__modal-container">
+              <ModalContainer className="content-punctuation-page__modal-container" focusLock={false}>
                 <ModalHeader>Not available</ModalHeader>
                 <ModalContent>
                   Sorry, we do not currently offer home delivery or Click &
@@ -379,7 +379,7 @@ const ContentStyleUsagePage = () => (
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus />
             <Modal className="content-punctuation-page__modal" scrollLock={false}>
-              <ModalContainer className="content-punctuation-page__modal-container">
+              <ModalContainer className="content-punctuation-page__modal-container" focusLock={false}>
                 <ModalHeader>Not available</ModalHeader>
                 <ModalContent>
                   We do not currently offer home delivery or Click &
@@ -401,7 +401,7 @@ const ContentStyleUsagePage = () => (
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus />
             <Modal className="content-punctuation-page__modal" scrollLock={false}>
-              <ModalContainer className="content-punctuation-page__modal-container">
+              <ModalContainer className="content-punctuation-page__modal-container" focusLock={false}>
                 <ModalHeader>Sorry</ModalHeader>
                 <ModalContent>
                   We do not currently offer home delivery or Click &
