@@ -29,6 +29,30 @@ const ContentStyleUsagePage = () => (
     <Heading1>Style & usage</Heading1>
 
     <Section>
+      <Heading2>Abbreviation</Heading2>
+      <Paragraph noMargin>
+        Avoid abbreviations if possible. Otherwise write out in full on the
+        first usage, followed by abbreviation in brackets.
+        <Container>
+          <Recommendation>
+            <RecommendationStatus recommended />
+            <div className="content-style-usage-page__recommendation__slot">
+              <span className="content-style-usage-page__recommendation__slot-text">Full</span>
+              <LinkText>Collect?</LinkText>
+            </div>
+          </Recommendation>
+          <Recommendation>
+            <RecommendationStatus />
+            <div className="content-style-usage-page__recommendation__slot">
+              <span className="content-style-usage-page__recommendation__slot-text">Full</span>
+              <LinkText>Try C&C</LinkText>
+            </div>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
       <Heading2>Contraction</Heading2>
       <Paragraph>
         Do not contract “have”. Research shows that contractions of “have” can
@@ -81,6 +105,64 @@ const ContentStyleUsagePage = () => (
             <RecommendationStatus />
             <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
               We wouldn’t usually wait this long.
+            </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Date</Heading2>
+      <Paragraph noMargin>
+        Write dates as DD Month YYYY. No commas in dates. Avoid “st”, “rd” or “th” as it makes it harder to scan.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus recommended />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__cell-group">
+              <span className="content-style-usage-page__recommendation__cell">
+                16 June 2019
+              </span>
+              <span className="content-style-usage-page__recommendation__cell">
+                17 June 2019
+              </span>
+            </Paragraph>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__cell-group">
+              <span className="content-style-usage-page__recommendation__cell">
+                16th June 2019
+              </span>
+              <span className="content-style-usage-page__recommendation__cell">
+                17th June 2019
+              </span>
+            </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Day and month</Heading2>
+      <Paragraph noMargin>
+        Weekdays and months can be abbreviated to 3 letters if space is tight. Avoid commas between days and months.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus recommended />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__cell-group">
+              <span className="content-style-usage-page__recommendation__cell">Wed 9 May</span>
+              <span className="content-style-usage-page__recommendation__cell">Thu 10 May</span>
+            </Paragraph>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__cell-group">
+              <span className="content-style-usage-page__recommendation__cell">
+                Wed, 9 May
+              </span>
+              <span className="content-style-usage-page__recommendation__cell">
+                Thu, 10 May
+              </span>
             </Paragraph>
           </Recommendation>
         </Container>
@@ -247,6 +329,97 @@ const ContentStyleUsagePage = () => (
             <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
               Order placed
             </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Sorry</Heading2>
+      <Paragraph>
+        Sorry does not help fix anything and quickly becomes meaningless. Use it
+        only where we prevented something or denied access to something.
+        <Container>
+          <Recommendation className="content-punctuation-page__recommendation__fields">
+            <RecommendationStatus recommended />
+            <div className="content-patterns-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="We do not recognise that postcode"
+                validate
+              />
+            </div>
+          </Recommendation>
+          <Recommendation className="content-punctuation-page__recommendation__fields">
+            <RecommendationStatus />
+            <div className="content-patterns-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="Sorry, we do not recognise that postcode"
+                validate
+              />
+            </div>
+          </Recommendation>
+          <div>{/* Empty field */}</div>
+          <Recommendation className="content-punctuation-page__recommendation__fields">
+            <RecommendationStatus />
+            <div className="content-patterns-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="Sorry, we do not recognise that postcode"
+                validate
+              />
+            </div>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+      <Paragraph noMargin>
+        Do not use sorry in validation messages.
+        <Container>
+          <Recommendation className="content-punctuation-page__recommendation__fields">
+            <RecommendationStatus />
+            <div className="content-patterns-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="We do not recognise that postcode"
+                validate
+              />
+            </div>
+          </Recommendation>
+          <Recommendation className="content-punctuation-page__recommendation__fields">
+            <RecommendationStatus />
+            <div className="content-patterns-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="Sorry, we do not recognise that postcode"
+                validate
+              />
+            </div>
           </Recommendation>
         </Container>
       </Paragraph>

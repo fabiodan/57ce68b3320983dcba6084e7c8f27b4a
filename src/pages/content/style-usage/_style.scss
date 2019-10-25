@@ -37,6 +37,33 @@
   overflow: hidden;
 }
 
+.content-style-usage-page__recommendation__slot {
+  @include typography(s);
+  color: $color-dark-gray;
+  margin: $spacing-m 64px;
+  background: $color-white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 68px;
+}
+
+.content-style-usage-page__recommendation__cell {
+  background-color: $color-white;
+  border-radius: 4px 4px 0 0;
+  padding: $spacing-xs $spacing-m;
+}
+
+.content-style-usage-page__recommendation__cell-group {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $spacing-m;
+}
+
 // Modifiers
 
 // Breakpoints
