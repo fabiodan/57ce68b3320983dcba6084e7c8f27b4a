@@ -1,0 +1,29 @@
+/* iOS • Alerts Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Block
+.ios-alerts-page {
+
+}
+
+// Elements/Mixes
+
+.ios-alerts-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 60px;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+  .ios-alerts-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+
+}
