@@ -19,11 +19,11 @@
 
 // Breakpoints
 @media (min-width: 480px) {
-  .ios-alerts-page__grid {
-    grid-template-columns: 1fr 1fr;
-  }
+
 }
 
 @media (min-width: 1024px) {
-
+  .ios-alerts-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
