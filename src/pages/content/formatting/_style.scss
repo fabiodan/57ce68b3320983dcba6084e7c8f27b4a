@@ -1,0 +1,112 @@
+/* Content • Formatting Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$content-formatting-page-element-height: 250px;
+$content-formatting-page-mix-border-color: $color-medium-gray;
+
+// Block
+.content-formatting-page {
+
+}
+
+// Elements/Mixes
+.content-formatting-page__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+  max-width: 780px;
+  margin-top: $spacing-m;
+}
+
+.content-formatting-page__button-container {
+  display: grid;
+  grid-gap: $spacing-m;
+  padding: $spacing-m $spacing-m $spacing-m 64px;
+}
+
+.content-formatting-page__label-container {
+  padding: $spacing-m $spacing-m $spacing-m 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.content-formatting-page__status-label {
+  margin: 0 $spacing-m $spacing-m 0;
+}
+
+.content-formatting-page__recommendation {
+  padding: $spacing-m $spacing-m 0 64px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content-formatting-page__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: $color-white;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  padding: $spacing-xs $spacing-m;
+}
+
+.content-formatting-page__menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-xxs 0;
+}
+
+.content-formatting-page__recommendation__paragraph {
+  padding: 0;
+  margin: 0;
+  background: $color-white;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  padding: $spacing-xs $spacing-m;
+  overflow: hidden;
+}
+
+.content-formatting-page__text-icon {
+  position: relative;
+  top: 2px;
+  margin-left: $spacing-xs;
+}
+
+// Modifiers
+.content-formatting-page--semibold {
+  font-weight: 600;
+}
+
+.content-formatting-page--underline {
+  text-decoration: underline;
+}
+
+.content-formatting-page--small {
+  @include typography(s);
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+  .content-formatting-page__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+
+}

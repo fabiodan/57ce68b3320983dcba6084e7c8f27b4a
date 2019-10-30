@@ -45,6 +45,7 @@ import ContentOurApproachPage from './pages/content/our-approach'
 import ContentHowToWritePage from './pages/content/how-to-write'
 import ContentPunctuationPage from './pages/content/punctuation'
 import ContentStyleUsagePage from './pages/content/style-usage'
+import ContentFormattingPage from './pages/content/formatting'
 import ContentPatternsPage from './pages/content/patterns'
 
 // Pages (Heuristics)
@@ -143,6 +144,7 @@ ReactDOM.render(
         <Route path="/content/how-to-write" component={ContentHowToWritePage} />
         <Route path="/content/punctuation" component={ContentPunctuationPage} />
         <Route path="/content/style-usage" component={ContentStyleUsagePage} />
+        <Route path="/content/formatting" component={ContentFormattingPage} />
         <Route path="/content/patterns" component={ContentPatternsPage} />
 
         {/* Heuristics */}

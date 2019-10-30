@@ -32,7 +32,8 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Punctuation', url: '/content/punctuation' },
         { name: 'Style & usage', url: '/content/style-usage' },
         { name: 'Patterns', url: '/content/patterns' },
-        { name: 'Formatting', url: '/content/formatting', wip: true },
+        { name: 'Formatting', url: '/content/formatting' },
+        { name: 'The Asda voice', url: '/content/asda-voice', wip: true },
       ]
     },
     { name: 'Web library',
