@@ -47,6 +47,7 @@ import ContentPunctuationPage from './pages/content/punctuation'
 import ContentStyleUsagePage from './pages/content/style-usage'
 import ContentFormattingPage from './pages/content/formatting'
 import ContentPatternsPage from './pages/content/patterns'
+import ContentAsdaVoicePage from './pages/content/asda-voice'
 
 // Pages (Heuristics)
 import HeuristicsCallToActionPage from './pages/content/heuristics/call-to-action'
@@ -146,6 +147,7 @@ ReactDOM.render(
         <Route path="/content/style-usage" component={ContentStyleUsagePage} />
         <Route path="/content/formatting" component={ContentFormattingPage} />
         <Route path="/content/patterns" component={ContentPatternsPage} />
+        <Route path="/content/asda-voice" component={ContentAsdaVoicePage} />
 
         {/* Heuristics */}
         <Route exact path="/content/heuristics" render={() => <Redirect to="/content/heuristics/overview" />} />

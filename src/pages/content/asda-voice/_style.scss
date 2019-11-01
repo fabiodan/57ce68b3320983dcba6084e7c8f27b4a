@@ -1,0 +1,81 @@
+/* Content • ASDA Voice Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+
+// Block
+.content-asda-voice-page {
+
+}
+
+// Elements/Mixes
+.content-asda-voice-page__state {
+  width: 20px;
+  height: 20px;
+  background: $color-dark-gray;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  top: 3px;
+  margin-right: $spacing-xs;
+}
+
+.content-asda-voice-page__range {
+  max-width: 672px;
+  display: grid;
+  grid-template-columns: 110px minmax($spacing-m, 1fr) 110px;
+  grid-gap: $spacing-m;
+}
+
+.content-asda-voice-page__tone {
+  &:nth-child(3n-2) {
+    text-align: right;
+  }
+}
+
+.content-asda-voice-page__dashes {
+  border-bottom: dashed 1px $color-black;
+  height: 1px;
+  align-self: center;
+}
+
+.content-asda-voice-page__sentence-container {
+  max-width: 780px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $spacing-m;
+}
+
+.content-asda-voice-page__sentence {
+  @include typography(xl);
+  font-weight: bold;
+  background-color: $color-background-gray;
+  padding: $spacing-l;
+}
+
+.content-asda-voice-page__sentence-caption {
+  margin-top: 0;
+}
+
+// Modifiers
+.content-asda-voice-page__state--curious {
+  background-color: $color-blue;
+}
+
+.content-asda-voice-page__state--positive {
+  background-color: $color-green;
+}
+
+.content-asda-voice-page__state--negative {
+  background-color: $color-red;
+}
+
+// Breakpoints
+@media (min-width: 1024px) {
+  .content-asda-voice-page__sentence-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

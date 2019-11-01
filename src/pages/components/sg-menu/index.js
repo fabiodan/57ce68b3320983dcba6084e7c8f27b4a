@@ -33,7 +33,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Style & usage', url: '/content/style-usage' },
         { name: 'Patterns', url: '/content/patterns' },
         { name: 'Formatting', url: '/content/formatting' },
-        { name: 'The Asda voice', url: '/content/asda-voice', wip: true },
+        { name: 'The Asda voice', url: '/content/asda-voice' },
       ]
     },
     { name: 'Web library',
