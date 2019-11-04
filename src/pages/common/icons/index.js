@@ -134,6 +134,8 @@ const IconsPage = () => (
         <GridItem><Icon name="park-ride" /><Caption>Park & Ride</Caption></GridItem>
         <GridItem><Icon name="market" /><Caption>Market</Caption></GridItem>
         <GridItem><Icon name="internal-collection" /><Caption>Internal Collection</Caption></GridItem>
+        <GridItem><Icon name="no-alcohol" /><Caption>No Alcohol</Caption></GridItem>
+        <GridItem><Icon name="cook" /><Caption>Cook Mode</Caption></GridItem>
       </Grid>
     </Section>
 
