@@ -80,7 +80,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Tables', url: '/ios/tables' },
         // { name: 'Product Module', url: '/ios/product-module', wip: true },
         // { name: 'Buttons', url: '/ios/buttons', wip: true },
-        // { name: 'Controls', url: '/ios/controls', wip: true },
+        { name: 'Controls', url: '/ios/controls' },
         // { name: 'Pickers', url: '/ios/pickers', wip: true },
         // { name: 'Progress Indicators', url: '/ios/progress-indicators', wip: true },
         // { name: 'Segmented Controls', url: '/ios/segmented-controls', wip: true },
