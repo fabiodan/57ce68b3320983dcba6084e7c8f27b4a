@@ -69,6 +69,8 @@ import IOSBottomNavPage from './pages/ios/bottom-nav'
 import IOSActionSheetsPage from './pages/ios/action-sheets'
 import IOSAlertsPage from './pages/ios/alerts'
 import IOSTablesPage from './pages/ios/tables'
+import IOSPickersPage from './pages/ios/pickers'
+import IOSProgressIndicatorsPage from './pages/ios/progress-indicators'
 import IOSControlsPage from './pages/ios/controls'
 
 class Page extends Component {
@@ -187,6 +189,8 @@ ReactDOM.render(
         <Route path="/ios/action-sheets" component={IOSActionSheetsPage} />
         <Route path="/ios/alerts" component={IOSAlertsPage} />
         <Route path="/ios/tables" component={IOSTablesPage} />
+        <Route path="/ios/pickers" component={IOSPickersPage} />
+        <Route path="/ios/progress-indicators" component={IOSProgressIndicatorsPage} />
         <Route path="/ios/controls" component={IOSControlsPage} />
 
         {/* Sample (Don't delete) */}
