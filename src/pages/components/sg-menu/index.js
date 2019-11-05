@@ -60,7 +60,8 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Spacing', url: '/android/spacing' },
         { name: 'Native UI', url: '/android/native-ui' },
         { name: 'App bars', url: '/android/app-bars' },
-        { name: 'Modals', url: '/android/modals', wip: true },
+        { name: 'Modals', url: '/android/modals' },
+        { name: 'Lists', url: '/android/lists', wip: true },
       ]
     },
     { name: 'iOS library',
