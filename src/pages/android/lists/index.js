@@ -86,7 +86,7 @@ const FigureContainerStackItem = ({ children }) => (
 const AndroidListsPage = () => (
   <article className="android-lists-page">
 
-    <Heading1>Heading1</Heading1>
+    <Heading1>Lists</Heading1>
     <Section>
       <Paragraph>
         Lists are a continuous group of text or images. They are composed of
