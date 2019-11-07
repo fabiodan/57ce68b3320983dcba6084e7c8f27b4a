@@ -61,7 +61,8 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Native UI', url: '/android/native-ui' },
         { name: 'App bars', url: '/android/app-bars' },
         { name: 'Modals', url: '/android/modals' },
-        { name: 'Lists', url: '/android/lists', wip: true },
+        { name: 'Lists', url: '/android/lists' },
+        { name: 'Menus', url: '/android/menus', wip: true },
       ]
     },
     { name: 'iOS library',

@@ -1,0 +1,54 @@
+/* Android • Lists Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$android-lists-page-element-height: 250px;
+$android-lists-page-mix-border-color: $color-medium-gray;
+
+// Block
+.android-lists-page {
+
+}
+
+// Elements/Mixes
+.android-lists-page__stack-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 60px;
+  max-width: 878px;
+}
+
+.android-lists-page__stack-grid-item {
+  margin: 0 auto;
+}
+
+.android-lists-page__grid--multiple-gray {
+  background: $color-background-gray;
+  padding: 60px $spacing-xl;
+  max-width: 878px;
+}
+
+// Modifiers
+.android-lists-page--max-width {
+  max-width: 878px;
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
