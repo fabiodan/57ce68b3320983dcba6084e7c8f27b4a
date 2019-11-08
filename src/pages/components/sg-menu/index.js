@@ -62,6 +62,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'App bars', url: '/android/app-bars' },
         { name: 'Modals', url: '/android/modals' },
         { name: 'Lists', url: '/android/lists' },
+        { name: 'Selection controls', url: '/android/selection-controls', },
         { name: 'Menus', url: '/android/menus', wip: true },
       ]
     },

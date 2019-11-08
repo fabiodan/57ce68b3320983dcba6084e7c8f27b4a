@@ -7,30 +7,27 @@
 // Variables
 
 // Block
-.android-lists-page {
+.android-selection-controls-page {
 
 }
 
 // Elements/Mixes
-.android-lists-page__stack-grid {
+.android-selection-controls-page__grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 60px;
-  max-width: 878px;
+  margin-bottom: 60px;
+  max-width: 689px;
 }
 
-.android-lists-page__stack-grid-item {
+.android-selection-controls-page__stack-grid-item {
   margin: 0 auto;
 }
 
-.android-lists-page__grid--multiple-gray {
+// Modifiers
+.android-selection-controls-page__grid--multiple-gray {
   background: $color-background-gray;
   padding: 60px $spacing-xl;
-  max-width: 878px;
-}
-
-// Modifiers
-.android-lists-page--max-width {
   max-width: 878px;
 }
 
@@ -44,7 +41,12 @@
 }
 
 @media (min-width: 1024px) {
-
+  .android-selection-controls-page__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .android-selection-controls-page__grid--3-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: 1280px) {
