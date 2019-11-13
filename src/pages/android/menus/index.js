@@ -36,12 +36,16 @@ import dropdownIconsCollapsedSelectedPNGSource from './images/dropdown-icons-col
 import dropdownIconsCollapsedDefaultPNGSource from './images/dropdown-icons-collapsed.png'
 import dropdownIconsExpandedDefaultPNGSource from './images/dropdown-icons-expanded-default.png'
 import dropdownIconsExpandedSelectedPNGSource from './images/dropdown-icons-expanded-selected.png'
-
 import dropdownsIconsDefaultScrollablePNGSource from './images/dropdowns-icons-default-scrollable.png'
 import dropdownsIconsScrollableAddPNGSource from './images/dropdowns-icons-scrollable-add.png'
 import dropdownsIconsScrollableSelectedAddPNGSource from './images/dropdowns-icons-scrollable-selected-add.png'
 import dropdownsIconsDefaultIconScrollableSelectedPNGSource from './images/dropdowns-icons-default-icon-scrollable-selected.png'
 
+import accordionClosedDefaultPNGSource from './images/accordion-closed-default.png'
+import accordionClosedSelectedPNGSource from './images/accordion-closed-selected.png'
+import accordionOpenDefaultPNGSource from './images/accordion-open-default.png'
+import accordionOpenSelectedPNGSource from './images/accordion-open-selected.png'
+import accordionSingleLineListItem from './images/accordion-single-line-list-item.png'
 import './_style.scss'
 
 const AndroidMenusPage = () => {
@@ -107,7 +111,7 @@ const AndroidMenusPage = () => {
 
       <Section>
         <Heading2>Dropdowns</Heading2>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+        <Grid columnCount={ minWidth1024 ? 2 : 1 } noMargin>
           <GridItem>
             <Caption position="top">Collapsed Default</Caption>
             <Figure maxWidth="280px" src={dropdownCollapsedDefaultPNGSource} noMargin fluid />
@@ -142,20 +146,6 @@ const AndroidMenusPage = () => {
           </GridItem>
         </Grid>
       </Section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <Section>
         <Heading2>Dropdowns with icons</Heading2>
@@ -195,6 +185,40 @@ const AndroidMenusPage = () => {
         </Grid>
       </Section>
 
+      <Section>
+        <Heading2>Acordion</Heading2>
+        <Paragraph>
+          Accordions are a list of headers, that can be clicked to hide or reveal
+          additional information. The width of the accordion is based on the page
+          layout and the grid, while the height of the accordion is dependant on
+          the content inside.
+        </Paragraph>
+        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+          <GridItem>
+            <Caption position="top">Closed Default</Caption>
+            <Figure maxWidth="360px" src={accordionClosedDefaultPNGSource} noMargin fluid />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Closed Selected</Caption>
+            <Figure maxWidth="360px" src={accordionClosedSelectedPNGSource} noMargin fluid />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Open Default</Caption>
+            <Figure maxWidth="360px" src={accordionOpenDefaultPNGSource} noMargin fluid />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Open Selected</Caption>
+            <Figure maxWidth="360px" src={accordionOpenSelectedPNGSource} noMargin fluid />
+          </GridItem>
+        </Grid>
+        <Paragraph>
+          You can extand or modify menu with using lists items. To keep layout
+          clean and  easy to scan use lists item type Subtext.
+        </Paragraph>
+        <FigureContainer>
+          <Figure maxWidth="838px" src={accordionSingleLineListItem} noMargin fluid />
+        </FigureContainer>
+      </Section>
     </article>
   )
 }
