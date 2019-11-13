@@ -57,21 +57,21 @@
 @media (min-width: 480px) {}
 
 // Print
-@media print {
-  .sg-layout__header,
-  .sg-layout__aside {
-    display: none;
-  }
-  .sg-layout__heading1 {
-    border: none;
-  }
-  .heuristics-call-to-action__grid__notes {
-    border: none;
-  }
-  .heuristics-call-to-action__checkbox {
-    display: none;
-  }
-  .heuristics-call-to-action__status {
-    display: inline-block;
-  }
-}
+// @media print {
+//   .sg-layout__header,
+//   .sg-layout__aside {
+//     display: none;
+//   }
+//   .sg-layout__heading1 {
+//     border: none;
+//   }
+//   .heuristics-call-to-action__grid__notes {
+//     border: none;
+//   }
+//   .heuristics-call-to-action__checkbox {
+//     display: none;
+//   }
+//   .heuristics-call-to-action__status {
+//     display: inline-block;
+//   }
+// }

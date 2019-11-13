@@ -134,6 +134,32 @@ const FeaturedSection = ({ children, className }) => {
   )
 }
 
+const Grid = ({ children, className, columnCount, noMargin }) => {
+  const modifiers = [
+    columnCount && `sg-layout__grid--${columnCount}-col`,
+    noMargin && 'sg-layout--no-margin',
+  ]
+  const classNames = joinClassNames('sg-layout__grid', className, modifiers)
+  return (
+    <div className={classNames}>{ children }</div>
+  )
+}
+
+Figure.defaultProps = {
+  className: null,
+  maxWidth: 'none',
+  columnCount: null,
+  noMargin: false,
+}
+
+const GridItem = ({ children, className }) => {
+  const modifiers = []
+  const classNames = joinClassNames('sg-layout__grid__item', className, modifiers)
+  return (
+    <div className={classNames}>{ children }</div>
+  )
+}
+
 export {
   Layout as default,
   Aside,
@@ -150,4 +176,6 @@ export {
   List,
   ListItem,
   FeaturedSection,
+  GridItem,
+  Grid,
 }
