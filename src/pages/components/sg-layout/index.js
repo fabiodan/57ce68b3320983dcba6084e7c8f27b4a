@@ -134,10 +134,11 @@ const FeaturedSection = ({ children, className }) => {
   )
 }
 
-const Grid = ({ children, className, columnCount, noMargin }) => {
+const Grid = ({ children, className, columnCount, noMargin, withBackground }) => {
   const modifiers = [
     columnCount && `sg-layout__grid--${columnCount}-col`,
     noMargin && 'sg-layout--no-margin',
+    withBackground && 'sg-layout--with-background',
   ]
   const classNames = joinClassNames('sg-layout__grid', className, modifiers)
   return (
@@ -145,10 +146,10 @@ const Grid = ({ children, className, columnCount, noMargin }) => {
   )
 }
 
-Figure.defaultProps = {
+Grid.defaultProps = {
   className: null,
   maxWidth: 'none',
-  columnCount: null,
+  columnCount: 1,
   noMargin: false,
 }
 

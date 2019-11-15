@@ -174,7 +174,7 @@ $sg-layout__aside-width: 314px;
   display: grid;
   grid-gap: 60px;
   margin-bottom: 60px;
-  max-width: 848px;  
+  max-width: 848px;
 }
 
 // Modifiers
@@ -188,6 +188,14 @@ $sg-layout__aside-width: 314px;
 
 .sg-layout__grid--3-col {
   grid-template-columns: auto auto auto;
+}
+
+.sg-layout--with-background {
+  background: $color-background-gray;
+  padding: 60px $spacing-xl;
+  &.sg-layout__grid--1-col {
+    justify-content: center;
+  }
 }
 
 .sg-layout__caption--position-top {

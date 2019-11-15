@@ -1,0 +1,54 @@
+/* Sample Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$miscellaneous-page-element-height: 250px;
+$miscellaneous-page-mix-border-color: $color-medium-gray;
+
+// Block
+.miscellaneous-page {
+
+}
+
+// Elements/Mixes
+.miscellaneous-page__component {
+  margin-bottom: $spacing-xxxl;
+}
+
+// Modifiers
+.miscellaneous-page--modifier {
+
+}
+.miscellaneous-page__element--modifier {
+
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+// Animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
