@@ -177,6 +177,10 @@ $sg-layout__aside-width: 314px;
   max-width: 848px;
 }
 
+.sg-layout__grid__item {
+  // background: red;
+}
+
 // Modifiers
 .sg-layout__grid--1-col {
   grid-template-columns: auto;

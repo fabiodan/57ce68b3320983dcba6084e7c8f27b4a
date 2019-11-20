@@ -1,0 +1,54 @@
+/* Sample Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$android-text-fields-page-element-height: 250px;
+$android-text-fields-page-mix-border-color: $color-medium-gray;
+
+// Block
+.android-text-fields-page {
+
+}
+
+// Elements/Mixes
+.android-text-fields-page__component {
+  margin-bottom: $spacing-xxxl;
+}
+
+// Modifiers
+.android-text-fields-page--modifier {
+
+}
+.android-text-fields-page__element--modifier {
+
+}
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
+
+// Animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
