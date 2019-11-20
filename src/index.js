@@ -76,6 +76,8 @@ import IOSTablesPage from './pages/ios/tables'
 import IOSPickersPage from './pages/ios/pickers'
 import IOSProgressIndicatorsPage from './pages/ios/progress-indicators'
 import IOSControlsPage from './pages/ios/controls'
+import IOSSpacingPage from './pages/ios/spacing'
+import IOSNavigationBarsPage from './pages/ios/navigation-bars'
 
 class Page extends Component {
   constructor(props) {
@@ -200,6 +202,8 @@ ReactDOM.render(
         <Route path="/ios/pickers" component={IOSPickersPage} />
         <Route path="/ios/progress-indicators" component={IOSProgressIndicatorsPage} />
         <Route path="/ios/controls" component={IOSControlsPage} />
+        <Route path="/ios/spacing" component={IOSSpacingPage} />
+        <Route path="/ios/navigation-bars" component={IOSNavigationBarsPage} />
 
         {/* Sample (Don't delete) */}
         <Route path="/sample" component={SamplePage} />

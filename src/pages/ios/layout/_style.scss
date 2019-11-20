@@ -14,11 +14,14 @@ $ios-layout-page-mix-border-color: $color-medium-gray;
 }
 
 // Elements/Mixes
-.ios-layout-page__subsection {
+.ios-layout-page__figure-container {
+  background-color: $color-background-gray;
+  padding: 60px $spacing-xl;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: $spacing-xl;
-  max-width: 995px;
+  justify-items: center;
+  margin-bottom: 60px;
+  grid-gap: 60px;
 }
 
 .ios-layout-page__legend {
@@ -32,6 +35,15 @@ $ios-layout-page-mix-border-color: $color-medium-gray;
   padding: 0;
   height: 50px;
   justify-content: space-between;
+}
+
+.ios-layout-page__legend__caption{
+  font-size: 22px;
+  text-align: center;
+  background: white;
+  margin-bottom: $spacing-xl;
+  border-radius: 36px;
+  padding: 8px;
 }
 
 .ios-layout-page__legend__list-item {
@@ -54,13 +66,86 @@ $ios-layout-page-mix-border-color: $color-medium-gray;
   }
 }
 
+.ios-layout-page__table {
+  @include typography(m);
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  // We are breaking BEM rules here and use element selectors instead classes to
+  // avoid to pollute the markup with long classNames on each table element.
+
+  & tr {
+    height: 60px;
+    border-bottom: solid 1px $color-light-gray;
+    &:last-of-type {
+      border-bottom: solid 1px $color-medium-gray;
+    }
+  }
+
+  & th {
+    font-weight: 600;
+    text-align: left;
+    padding-right: $spacing-xs;
+  }
+
+  & tbody {
+    & tr:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
 // Modifiers
 .ios-layout-page--one-column {
   grid-template-columns: 1fr;
 }
 
 // Breakpoints
+@media (min-width: 320px) {
+  .ios-layout-page__table {
+    @include typography(xs);
+
+    & tr {
+      height: 80px;
+    }
+    & td {
+      padding-right: $spacing-s;
+    }
+    & th {
+      padding-right: $spacing-s;
+    }
+  }
+}
+
+@media (min-width: 475px) {
+  .ios-layout-page__table {
+    @include typography(s);
+
+    & tr {
+      height: 80px;
+    }
+    & td {
+      padding-right: $spacing-s;
+    }
+    & th {
+      padding-right: $spacing-s;
+    }
+  }
+}
+
+
 @media (min-width: 1024px) {
+  .ios-layout-page__table {
+    @include typography(l);
+
+    & tr {
+      height: 80px;
+    }
+    & th {
+      padding-right: $spacing-l;
+    }
+  }
+
   .ios-layout-page__subsection {
     grid-template-columns: 1fr 1fr;
   }
@@ -70,9 +155,10 @@ $ios-layout-page-mix-border-color: $color-medium-gray;
       margin-right: $spacing-m;
     }
   }
+}
 
-  // Modifiers
-  .ios-layout-page--one-column {
-    grid-template-columns: 1fr;
+@media (min-width: 1440px) {
+  .ios-layout-page__figure-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
