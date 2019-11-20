@@ -66,7 +66,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Miscellaneous', url: '/android/miscellaneous' },
         { name: 'Selection controls', url: '/android/selection-controls', },
         { name: 'Text Fields', url: '/android/text-fields' },
-        { name: 'Notifications', url: '/android/notification', wip: true },
+        { name: 'Notifications', url: '/android/notifications' },
       ]
     },
     { name: 'iOS library',

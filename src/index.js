@@ -64,6 +64,7 @@ import AndroidMenusPage from './pages/android/menus'
 import AndroidMiscellaneousPage from './pages/android/miscellaneous'
 import AndroidSelectionControlsPage from './pages/android/selection-controls'
 import AndroidTextFieldsPage from './pages/android/text-fields'
+import AndroidNotificationsPage from './pages/android/notifications'
 
 // Pages (iOS)
 import IOSIntroductionPage from './pages/ios/introduction'
@@ -190,6 +191,7 @@ ReactDOM.render(
         <Route path="/android/miscellaneous" component={AndroidMiscellaneousPage} />
         <Route path="/android/selection-controls" component={AndroidSelectionControlsPage} />
         <Route path="/android/text-fields" component={AndroidTextFieldsPage} />
+        <Route path="/android/notifications" component={AndroidNotificationsPage} />
 
         {/* iOS */}
         <Route exact path="/ios" render={() => <Redirect to="/ios/introduction" />} />
