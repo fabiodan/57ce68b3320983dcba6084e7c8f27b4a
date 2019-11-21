@@ -88,6 +88,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Pickers', url: '/ios/pickers' },
         { name: 'Progress Indicators', url: '/ios/progress-indicators' },
         { name: 'Controls', url: '/ios/controls' },
+        { name: 'Push Notifications', url: '/ios/push-notifications' },
         { name: 'Keyboards', url: '/ios/keyboards' },
         // { name: 'Segmented Controls', url: '/ios/segmented-controls', wip: true },
         // { name: 'Steppers', url: '/ios/steppers', wip: true },
