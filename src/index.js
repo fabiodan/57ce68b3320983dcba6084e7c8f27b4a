@@ -80,6 +80,7 @@ import IOSProgressIndicatorsPage from './pages/ios/progress-indicators'
 import IOSControlsPage from './pages/ios/controls'
 import IOSSpacingPage from './pages/ios/spacing'
 import IOSNavigationBarsPage from './pages/ios/navigation-bars'
+import IOSSegmentedControlsPage from './pages/ios/segmented-controls'
 import IOSTextFieldsPage from './pages/ios/text-fields'
 import IOSPushNotificationsPage from './pages/ios/push-notifications'
 import IOSKeyboardsPage from './pages/ios/keyboards'
@@ -211,6 +212,7 @@ ReactDOM.render(
         <Route path="/ios/controls" component={IOSControlsPage} />
         <Route path="/ios/spacing" component={IOSSpacingPage} />
         <Route path="/ios/navigation-bars" component={IOSNavigationBarsPage} />
+        <Route path="/ios/segmented-controls" component={IOSSegmentedControlsPage} />
         <Route path="/ios/text-fields" component={IOSTextFieldsPage} />
         <Route path="/ios/push-notifications" component={IOSPushNotificationsPage} />
         <Route path="/ios/keyboards" component={IOSKeyboardsPage} />

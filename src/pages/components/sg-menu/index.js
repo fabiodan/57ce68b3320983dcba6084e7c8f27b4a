@@ -79,21 +79,16 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Bottom nav (tab bar)', url: '/ios/bottom-nav' },
         { name: 'Action sheets', url: '/ios/action-sheets' },
         { name: 'Alerts', url: '/ios/alerts' },
-        //{ name: 'Tab Bar', url: '/ios/tab-bar', wip: true },
         { name: 'Spacing', url: '/ios/spacing' },
         { name: 'Navigation Bars', url: '/ios/navigation-bars', },
         { name: 'Tables', url: '/ios/tables' },
-        // { name: 'Product Module', url: '/ios/product-module', wip: true },
-        // { name: 'Buttons', url: '/ios/buttons', wip: true },
         { name: 'Pickers', url: '/ios/pickers' },
         { name: 'Progress Indicators', url: '/ios/progress-indicators' },
         { name: 'Controls', url: '/ios/controls' },
+        { name: 'Segmented Controls', url: '/ios/segmented-controls' },
         { name: 'Text Fields', url: '/ios/text-fields' },
         { name: 'Push Notifications', url: '/ios/push-notifications' },
         { name: 'Keyboards', url: '/ios/keyboards' },
-        // { name: 'Segmented Controls', url: '/ios/segmented-controls', wip: true },
-        // { name: 'Steppers', url: '/ios/steppers', wip: true },
-        // { name: 'Switches', url: '/ios/switches', wip: true },
       ]
     }
   ]
