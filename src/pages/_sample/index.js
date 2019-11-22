@@ -3,7 +3,13 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import Sample from '@asda/_sample'
-import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
+import {
+  Heading1,
+  Heading2,
+  Figure, 
+  Paragraph,
+  Section,
+} from '@sg/sg-layout'
 
 // Assets
 import samplePNGSource from './images/sample.png'
