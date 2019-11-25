@@ -25,7 +25,7 @@ const IOSIntroductionPage = () => (
     <Section>
       <Heading2>Designing for iOS</Heading2>
       <Paragraph noMargin>
-        The first step in getting prepared for designing for iOS is to visit Apple's design{' '}
+        The first step in getting prepared for designing for iOS is to visit Apple{'\''}s design{' '}
         <LinkText target="_blank" href="https://developer.apple.com/design/resources/">
           resources page
         </LinkText>.

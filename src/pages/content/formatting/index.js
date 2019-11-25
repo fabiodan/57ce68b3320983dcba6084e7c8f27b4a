@@ -205,7 +205,7 @@ const ContentFormattingPage = () => (
           <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus recommended />
             <Paragraph noMargin className="content-formatting-page__recommendation__paragraph content-formatting-page--small">
-              If you'd like to get in touch, please call our customer services team on{' '}
+              If you{'\''}d like to get in touch, please call our customer services team on{' '}
               <span className="content-formatting-page--underline content-formatting-page--semibold">
                 0800 952 6060
               </span>
@@ -214,7 +214,7 @@ const ContentFormattingPage = () => (
           <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus />
             <Paragraph noMargin className="content-formatting-page__recommendation__paragraph content-formatting-page--small">
-              If you'd like to get in touch, please call our customer services team on{' '}
+              If you{'\''}d like to get in touch, please call our customer services team on{' '}
               <span className="content-formatting-page--underline">
                 0800 952 6060
               </span>

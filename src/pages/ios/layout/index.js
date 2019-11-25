@@ -89,7 +89,7 @@ const IOSLayoutPage = () => (
       </FigureContainer>
     </Section>
     <Section>
-      <Heading3>iPad (9.5" & iPad Mini) Locked to Landscape orientation</Heading3>
+      <Heading3>iPad (9.5{'"'} & iPad Mini) Locked to Landscape orientation</Heading3>
       <FigureContainer className="ios-layout-page__figure-container">
         <Figure src={iPadPNGSource} maxWidth="1234px" noMargin fluid />
         <Legend screenSize="1024 x 768" margin="24" column="74" gutter="8" />

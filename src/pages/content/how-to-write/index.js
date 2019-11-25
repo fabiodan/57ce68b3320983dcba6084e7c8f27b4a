@@ -57,8 +57,8 @@ const CustomRecommendation = () => (
         <tr>
           <td>Valid</td>
           <td>
-            For error messaging use recognise instead eg “We do not recognise
-            that postcode" rather than “That is not a valid postcode"
+            For error messaging use recognise instead eg {'"'}We do not recognise
+            that postcode{'"'} rather than {'"'}That is not a valid postcode{'"'}
           </td>
         </tr>
         <tr><td>Proceed</td><td>Continue</td></tr>

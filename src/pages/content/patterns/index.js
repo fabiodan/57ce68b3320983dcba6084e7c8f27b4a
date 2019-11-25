@@ -69,7 +69,7 @@ const ContentPatternsPage = () => (
         These are our guiding principles. But context always come first.
         <List>
           <ListItem>Be specific – general errors help no-one</ListItem>
-          <ListItem>No humorous or patronising messaging like "Oops", "Whoops"</ListItem>
+          <ListItem>No humorous or patronising messaging like {'"'}Oops{'"'}, {'"'}Whoops{'"'}</ListItem>
           <ListItem>
             Give only the information the user needs in order to understand how
             to move forward
@@ -77,7 +77,7 @@ const ContentPatternsPage = () => (
           <ListItem>State how to fix it (or what to do/try next)</ListItem>
           <ListItem>
             If the customer is trying to do something - register, sign in, check
-            out etc - then we	need to use direct, instructional microcopy so
+            out etc - then we need to use direct, instructional microcopy so
             they can complete their task as fast as possible. Now is not the
             time to be cute.
           </ListItem>
@@ -312,7 +312,7 @@ const ContentPatternsPage = () => (
         </ListItem>
         <ListItem className="content-patterns-page__use-case-item">
           <div className="content-patterns-page__use-case-text">
-            <span>Can't deliver</span>
+            <span>Can{'\''}t deliver</span>
             <span>System error, major serverity</span>
           </div>
           <Recommendation className="content-patterns-page__recommendation">
@@ -496,7 +496,7 @@ const ContentPatternsPage = () => (
           <Recommendation className="content-patterns-page__recommendation">
             <RecommendationStatus recommended />
             <div className="content-patterns-page__text-block">
-              We can't find that page.<br />
+              We can{'\''}t find that page.<br />
               Try these useful links instead:<br />
               <LinkText>Homepage</LinkText><br />
               <LinkText>Search</LinkText><br />
@@ -506,7 +506,7 @@ const ContentPatternsPage = () => (
         </ListItem>
         <ListItem className="content-patterns-page__use-case-item">
           <div className="content-patterns-page__use-case-text">
-            <span>Server error/technical problem (page cannot be 	refreshed due to SPA)</span>
+            <span>Server error/technical problem (page cannot be refreshed due to SPA)</span>
             <span>System error, major serverity</span>
           </div>
           <Recommendation className="content-patterns-page__recommendation">
@@ -515,7 +515,7 @@ const ContentPatternsPage = () => (
               Something went wrong<br /><br />
               We are working hard to make it right. Refresh will not work on
               this page. Go back to the previous page and try again to see if we
-              fixed it. Or go to asda.com for an update on what we're doing to fix this.
+              fixed it. Or go to asda.com for an update on what we{'\''}re doing to fix this.
               <br /><br />
               Go back<br />
               Go to Asda.com
@@ -535,8 +535,8 @@ const ContentPatternsPage = () => (
         <List>
           <ListItem><span className="content-patterns-page--semibold">Concise</span> – keep button labels and calls to action to 3 words or less</ListItem>
           <ListItem><span className="content-patterns-page--semibold">Positive</span> - use active language. Start with a verb where possible. Focus on the positive</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Relevant</span> - Give only the information the user needs in order to understand how to	move forward</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Natural</span> - Use self explanatory, natural language – try to role play the action to see	what you'd say to a friend.</ListItem>
+          <ListItem><span className="content-patterns-page--semibold">Relevant</span> - Give only the information the user needs in order to understand how to move forward</ListItem>
+          <ListItem><span className="content-patterns-page--semibold">Natural</span> - Use self explanatory, natural language – try to role play the action to see what you{'\''}d say to a friend.</ListItem>
         </List>
       </Paragraph>
 
@@ -605,9 +605,9 @@ const ContentPatternsPage = () => (
 
         <List>
           <ListItem><span className="content-patterns-page--semibold">Concise</span> – 3 words or less wherever possible</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Descriptive</span> - Can I tell what will be in this section from the heading? Marketing 	phrases should not be used as headings as they are inspirational, not descriptive.</ListItem>
+          <ListItem><span className="content-patterns-page--semibold">Descriptive</span> - Can I tell what will be in this section from the heading? Marketing phrases should not be used as headings as they are inspirational, not descriptive.</ListItem>
           <ListItem><span className="content-patterns-page--semibold">Logical</span> - Headings should have a logical flow and make sense even without their supporting content.</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Active</span> - Use active, positive and personal language. For example, "Account area" is passive. But "View your account" is active and personal.</ListItem>
+          <ListItem><span className="content-patterns-page--semibold">Active</span> - Use active, positive and personal language. For example, {'"'}Account area{'"'} is passive. But {'"'}View your account{'"'} is active and personal.</ListItem>
         </List>
       </Paragraph>
 
@@ -663,7 +663,7 @@ const ContentPatternsPage = () => (
               Helpful
             </span>
              - Help the user succeed first time. Users have enough context to
-             begin a multi-	step task. Give routes to get more help eg offline
+             begin a multi - step task. Give routes to get more help eg offline
              where needed
           </ListItem>
           <ListItem>
@@ -751,7 +751,7 @@ const ContentPatternsPage = () => (
             use “tap” rather than click
           </ListItem>
         </List>
-        <span className="content-patterns-page--semibold">Never use "Click here"</span>
+        <span className="content-patterns-page--semibold">Never use {'"'}Click here{'"'}</span>
       </Paragraph>
 
       <Paragraph>
@@ -830,10 +830,10 @@ const ContentPatternsPage = () => (
       <Paragraph>
         These are our guiding principles. But context always come first.
         <List>
-          <ListItem><span className="content-patterns-page--semibold">Minimal</span> - Never overuse warnings and callouts. Aim to change the design to not need 	them in the first instance</ListItem>
+          <ListItem><span className="content-patterns-page--semibold">Minimal</span> - Never overuse warnings and callouts. Aim to change the design to not need them in the first instance</ListItem>
           <ListItem><span className="content-patterns-page--semibold">Meaningful</span> - Use honest, authentic language</ListItem>
         </List>
-        <span className="content-patterns-page--semibold">Never use "Click here"</span>
+        <span className="content-patterns-page--semibold">Never use {'"'}Click here{'"'}</span>
       </Paragraph>
 
       <Paragraph>
@@ -879,7 +879,7 @@ const ContentPatternsPage = () => (
           <ListItem><span className="content-patterns-page--semibold">Meaningful</span> - Use honest, authentic language. Use language our customers use.</ListItem>
           <ListItem><span className="content-patterns-page--semibold">Concise</span> - Short and without fluff.</ListItem>
         </List>
-        <span className="content-patterns-page--semibold">Never use "Click here"</span>
+        <span className="content-patterns-page--semibold">Never use {'"'}Click here{'"'}</span>
       </Paragraph>
 
       <Paragraph>
@@ -910,13 +910,13 @@ const ContentPatternsPage = () => (
           <Fragment>
             <tr>
               <td>I have read and accept the terms and conditions</td>
-              <td>I've read and accept the terms and conditions</td>
+              <td>I{'\''}ve read and accept the terms and conditions</td>
             </tr>
             <tr>
               <td>Yes I want to get exclusive offers and news from Asda</td>
               <td>
-                We'd love to keep in touch with exclusive offers and the latest
-                info from Asda. You can ask us to stop anytime, but if you don't
+                We{'\''}d love to keep in touch with exclusive offers and the latest
+                info from Asda. You can ask us to stop anytime, but if you don{'\''}t
                 want to hear from us, please tick the box.
               </td>
             </tr>
@@ -933,7 +933,7 @@ const ContentPatternsPage = () => (
             <tr>
               <td>
                 We sell some things by weight, usually fresh produce like meat
-                and vegetables. We'll let you know what we think the cost will
+                and vegetables. We{'\''}ll let you know what we think the cost will
                 be now but this may change on the day depending on exact weight.
                 {' '}<LinkText>Find out more</LinkText>
               </td>
@@ -959,7 +959,7 @@ const ContentPatternsPage = () => (
           <ListItem><span className="content-patterns-page--semibold">Friendly</span> - Headlines are conversational and reiterate the subject (but not verbatim)</ListItem>
           <ListItem><span className="content-patterns-page--semibold">Essential</span> - Body text is short and scannable</ListItem>
         </List>
-        <span className="content-patterns-page--semibold">Never use "Click here"</span>
+        <span className="content-patterns-page--semibold">Never use {'"'}Click here{'"'}</span>
       </Paragraph>
 
       <Paragraph>
@@ -988,10 +988,41 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>I have read and accept the terms and conditions</td><td>I've read and accept the terms and conditions</td></tr>
-            <tr><td>Yes I want to get exclusive offers and news from Asda</td><td>We'd love to keep in touch with exclusive offers and the latest info from Asda. You can ask us to stop anytime, but if you don't want to hear from us, please tick the box.</td></tr>
-            <tr><td>In our <LinkText>Privacy Centre</LinkText> you can learn about your rights and how we use your information</td><td>You can find out about your rights and choices, and how we use the information in our <LinkText>Privacy Centre</LinkText>.</td></tr>
-            <tr><td>We sell some things by weight, usually fresh produce like meat and vegetables. We'll let you know what we think the cost will be now but this may change on the day depending on exact weight. <LinkText>Find out more</LinkText></td><td>Please note: for items sold by weight, the exact price may vary depending on the exact weight of items available. <LinkText>Find out more</LinkText></td></tr>
+            <tr>
+              <td>I have read and accept the terms and conditions</td>
+              <td>I{'\''}ve read and accept the terms and conditions</td>
+            </tr>
+            <tr>
+              <td>Yes I want to get exclusive offers and news from Asda</td>
+              <td>
+                We{'\''}d love to keep in touch with exclusive offers and the
+                latest info from Asda. You can ask us to stop anytime, but if
+                you don{'\''}t want to hear from us, please tick the box.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                In our <LinkText>Privacy Centre</LinkText> you can learn about
+                your rights and how we use your information
+              </td>
+              <td>
+                You can find out about your rights and choices, and how we use
+                the information in our <LinkText>Privacy Centre</LinkText>.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                We sell some things by weight, usually fresh produce like meat
+                and vegetables. We{'\''}ll let you know what we think the cost
+                will be now but this may change on the day depending on exact
+                weight. <LinkText>Find out more</LinkText>
+              </td>
+              <td>
+                Please note: for items sold by weight, the exact price may vary
+                depending on the exact weight of items available.
+                {' '}<LinkText>Find out more</LinkText>
+              </td>
+            </tr>
           </Fragment>
         </CustomRecommendation>
       </Paragraph>

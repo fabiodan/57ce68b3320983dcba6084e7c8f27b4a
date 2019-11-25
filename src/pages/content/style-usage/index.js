@@ -266,8 +266,8 @@ const ContentStyleUsagePage = () => (
     <Section>
       <Heading2>Your versus My</Heading2>
       <Paragraph noMargin>
-        Use "Your" to indicate areas that the user can interact with once they
-        are registered with the site. Using "Your" lets the user know we're
+        Use {'"'}Your{'"'} to indicate areas that the user can interact with once they
+        are registered with the site. Using {'"'}Your{'"'} lets the user know we{'\''}re
         addressing them and we are at their service.
         <Container>
           <Recommendation className="content-style-usage-page__recommendation">
@@ -303,7 +303,7 @@ const ContentStyleUsagePage = () => (
         fashioned and formal.
       </Paragraph>
       <Paragraph noMargin>
-        "Please" can also imply there’s a choice. But a choice between doing the
+        {'"'}Please{'"'} can also imply there’s a choice. But a choice between doing the
         thing we ask and not getting to use the service is not really a choice
         <Container>
           <Recommendation className="content-style-usage-page__recommendation">
