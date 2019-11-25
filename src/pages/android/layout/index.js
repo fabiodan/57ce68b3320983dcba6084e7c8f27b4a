@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Sample from '@asda/_sample'
 import { Figure, Paragraph, Heading2, Heading3, Section, Heading1 } from '@sg/sg-layout'
 
 // Assets

@@ -67,7 +67,7 @@ const AndroidMenusPage = () => {
           Minimum width for Menus is 112pt, maximum is 280pt. Width of contextual
           menu should be decided based upon the length of list item and the grid.
         </Paragraph>
-        <Grid columnCount={ minWidth1280 ? 3 : 1 }>
+        <Grid columnCount={minWidth1280 ? 3 : 1}>
           <GridItem>
             <Caption position="top">Default</Caption>
             <Figure maxWidth="114px" src={menusDefaultPNGSource} noMargin fluid />
@@ -111,7 +111,7 @@ const AndroidMenusPage = () => {
 
       <Section>
         <Heading2>Dropdowns</Heading2>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 } noMargin>
+        <Grid columnCount={minWidth1024 ? 2 : 1} noMargin>
           <GridItem>
             <Caption position="top">Collapsed Default</Caption>
             <Figure maxWidth="280px" src={dropdownCollapsedDefaultPNGSource} noMargin fluid />
@@ -149,7 +149,7 @@ const AndroidMenusPage = () => {
 
       <Section>
         <Heading2>Dropdowns with icons</Heading2>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
             <Caption position="top">Collapsed Default</Caption>
             <Figure maxWidth="280px" src={dropdownIconsCollapsedDefaultPNGSource} noMargin fluid />
@@ -193,7 +193,7 @@ const AndroidMenusPage = () => {
           layout and the grid, while the height of the accordion is dependant on
           the content inside.
         </Paragraph>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
             <Caption position="top">Closed Default</Caption>
             <Figure maxWidth="360px" src={accordionClosedDefaultPNGSource} noMargin fluid />

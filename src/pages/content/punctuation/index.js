@@ -185,8 +185,8 @@ const ContentPunctuationPage = () => (
             <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
               <Heading3>Substitutions: how we keep you informed</Heading3>
               <span className="content-punctuation-page__recommendation__text-example">
-                Hi John,<br/>
-                We’re sorry about the problem with your groceries order.<br/>
+                Hi John,<br />
+                We’re sorry about the problem with your groceries order.<br />
               </span>
             </Paragraph>
           </Recommendation>
@@ -195,8 +195,8 @@ const ContentPunctuationPage = () => (
             <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
               <Heading3>How we keep you informed about the substitutions</Heading3>
               <span className="content-punctuation-page__recommendation__text-example">
-                Hi John,<br/>
-                We’re sorry about the problem with your groceries order.<br/>
+                Hi John,<br />
+                We’re sorry about the problem with your groceries order.<br />
               </span>
             </Paragraph>
           </Recommendation>

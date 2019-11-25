@@ -104,14 +104,14 @@ const ContentFormattingPage = () => (
           <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus recommended />
             <Paragraph noMargin className="content-formatting-page__recommendation__paragraph">
-              Meanwood Supermarket,<br/>
+              Meanwood Supermarket,<br />
               Leeds, LS6 4JP
             </Paragraph>
           </Recommendation>
           <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus />
             <Paragraph noMargin className="content-formatting-page__recommendation__paragraph">
-              Meanwood supermarket,<br/>
+              Meanwood supermarket,<br />
               leeds, ls6 4jp
             </Paragraph>
           </Recommendation>

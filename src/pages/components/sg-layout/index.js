@@ -73,7 +73,6 @@ const Paragraph = ({ children, className, noMargin }) => {
 const Figure = ({
   src, alt, className, maxWidth, caption, noMargin, fluid,
 }) => {
-
   const modifiers = [
     noMargin && 'sg-layout__figure--no-margin',
     fluid && 'sg-layout__figure--fluid',
@@ -134,7 +133,9 @@ const FeaturedSection = ({ children, className }) => {
   )
 }
 
-const Grid = ({ children, className, columnCount, noMargin, withBackground }) => {
+const Grid = ({
+  children, className, columnCount, noMargin, withBackground,
+}) => {
   const modifiers = [
     columnCount && `sg-layout__grid--${columnCount}-col`,
     noMargin && 'sg-layout--no-margin',

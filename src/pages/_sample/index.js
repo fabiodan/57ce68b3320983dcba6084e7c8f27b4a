@@ -6,7 +6,7 @@ import Sample from '@asda/_sample'
 import {
   Heading1,
   Heading2,
-  Figure, 
+  Figure,
   Paragraph,
   Section,
 } from '@sg/sg-layout'

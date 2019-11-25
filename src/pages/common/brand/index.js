@@ -13,7 +13,7 @@ import { Caption, Paragraph, Section, Heading1, Heading2, Heading3 } from '@sg/s
 // Assets
 import './_style.scss'
 
-const Grid = ({ children, className = ''}) => (
+const Grid = ({ children, className = '' }) => (
   <ul className={`brand-page__grid ${className}`}>{children}</ul>
 )
 
@@ -108,11 +108,11 @@ const BrandPage = () => (
       <Grid>
         <GridItem>
           <Caption position="top">Large</Caption>
-          <DeliveryPassLogo size="large"/>
+          <DeliveryPassLogo size="large" />
         </GridItem>
         <GridItem>
           <Caption position="top">Small</Caption>
-          <DeliveryPassLogo size="small"/>
+          <DeliveryPassLogo size="small" />
         </GridItem>
       </Grid>
     </Section>
@@ -122,15 +122,15 @@ const BrandPage = () => (
       <Grid>
         <GridItem>
           <Caption position="top">Large</Caption>
-          <ExpressLogo size="large"/>
+          <ExpressLogo size="large" />
         </GridItem>
         <GridItem>
           <Caption position="top">Medium</Caption>
-          <ExpressLogo size="medium"/>
+          <ExpressLogo size="medium" />
         </GridItem>
         <GridItem>
           <Caption position="top">Small</Caption>
-          <ExpressLogo size="small"/>
+          <ExpressLogo size="small" />
         </GridItem>
       </Grid>
     </Section>

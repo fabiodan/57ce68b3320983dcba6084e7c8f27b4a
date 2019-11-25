@@ -3,7 +3,6 @@ import React from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
-import Sample from '@asda/_sample'
 import { Figure, FigureContainer, Paragraph, Section, Heading1, Heading2, Heading3, Caption } from '@sg/sg-layout'
 
 // Assets
@@ -15,7 +14,9 @@ import iPhone78PlusPNGSource from './images/iphone-7-8-plus.png'
 import iPadPNGSource from './images/ipad.png'
 import './_style.scss'
 
-const Legend = ({ screenSize, margin, column, gutter }) => (
+const Legend = ({
+  screenSize, margin, column, gutter,
+}) => (
   <div className="ios-layout-page__legend">
     <div className="ios-layout-page__legend__caption">
       Screen Size:<br /><strong>{screenSize}</strong>
@@ -37,7 +38,7 @@ const IOSLayoutPage = () => (
     <Section>
       <Heading2>Devices</Heading2>
       <Paragraph>
-        The smallest supported device in the Apple line up is the iPhone SE.<br/>
+        The smallest supported device in the Apple line up is the iPhone SE.<br />
         Always design for the smallest screen size first, then scale up to larger devices if needed.
       </Paragraph>
       <Paragraph>

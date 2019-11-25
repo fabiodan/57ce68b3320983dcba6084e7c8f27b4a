@@ -183,7 +183,8 @@ const ContentOurApproachPage = () => (
         you need.
       </Paragraph>
       <Paragraph noMargin>
-        Designing for trust means we: 
+        Designing for trust means we:
+
         <List>
           <ListItem>are honest and authentic in our use of language</ListItem>
           <ListItem>consistent</ListItem>

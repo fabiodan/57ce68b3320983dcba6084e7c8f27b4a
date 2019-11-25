@@ -38,7 +38,7 @@ const AndroidNotificationsPage = () => {
 
       <Section>
         <Heading2>Android notifications</Heading2>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 } withBackground noMargin>
+        <Grid columnCount={minWidth1024 ? 2 : 1} withBackground noMargin>
           <GridItem>
             <Caption position="top">Notification without Action</Caption>
             <Figure maxWidth="344px" src={notificationWoActionPNGSource} noMargin fluid />
@@ -56,7 +56,7 @@ const AndroidNotificationsPage = () => {
           Snackbars provide brief messages about app processes at the bottom of the
           screen.
         </Paragraph>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
             <Caption position="top">One line message</Caption>
             <Figure maxWidth="344px" src={oneLineMessagePNGSource} noMargin fluid />
@@ -91,7 +91,7 @@ const AndroidNotificationsPage = () => {
         <Paragraph>
           Alert dialogs interrupt users with urgent information, details, or actions.
         </Paragraph>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 } noMargin>
+        <Grid columnCount={minWidth1024 ? 2 : 1} noMargin>
           <GridItem>
             <Caption position="top">Alert Dialog + Short Action</Caption>
             <Figure className="android-notifications-page--5px-negative-margin" maxWidth="300px" src={alertShortActionPNGSource} noMargin fluid />

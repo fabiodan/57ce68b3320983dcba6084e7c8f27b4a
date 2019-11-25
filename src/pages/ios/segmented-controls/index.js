@@ -39,7 +39,7 @@ const IOSSegmentedControlsPage = () => {
           Segmented controls contain between 2 and 5 sections.
         </Paragraph>
 
-        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
             <Caption position="top">Segmented Control - Option 1 Selected</Caption>
             <Figure maxWidth="359px" src={segmentedControls1PNGSource} noMargin fluid />

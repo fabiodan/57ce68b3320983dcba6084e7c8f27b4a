@@ -14,7 +14,7 @@ const Notification = ({
   children,
 }) => {
   const modifiers = [
-    children.length > 1 && `notification--more-than-two`,
+    children.length > 1 && 'notification--more-than-two',
   ]
   const classNames = joinClassNames('notification', className, modifiers)
 

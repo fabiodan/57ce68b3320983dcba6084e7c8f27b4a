@@ -38,7 +38,7 @@ const IOSPickersPage = () => {
           Pickers allow users to select a value from a list. Native pickers on iOS
           are best suited for a small number of values.
         </Paragraph>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 }>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
             <Caption position="top">Numeric Picker</Caption>
             <Figure maxWidth="375px" src={numericPNGSource} noMargin fluid />

@@ -3,7 +3,6 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 // Components (from atomic to composite)
-import Sample from '@asda/_sample'
 import {
   Caption,
   Figure,
@@ -41,7 +40,7 @@ const IOSKeyboardsPage = () => {
           different contexts (i.e. a numeric keyboard for mobile phone entry).
         </Paragraph>
 
-        <Grid columnCount={ minWidth1024 ? 2 : 1 } noMargin>
+        <Grid columnCount={minWidth1024 ? 2 : 1} noMargin>
           <GridItem>
             <Caption position="top">Alphanumeric</Caption>
             <Figure maxWidth="375px" src={keyboardsAlphanumericPNGSource} noMargin fluid />

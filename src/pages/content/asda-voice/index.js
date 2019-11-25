@@ -125,7 +125,7 @@ const ContentAsdaVoicePage = () => (
         {' '}<LinkText
           href="https://www.nngroup.com/articles/tone-of-voice-dimensions/"
           target="_blank"
-          >
+        >
           4&nbsp;ranges for tone&nbsp;of&nbsp;voice
         </LinkText>{' '}
         for commerce websites.
@@ -133,19 +133,19 @@ const ContentAsdaVoicePage = () => (
       <Paragraph noMargin>
         <div className="content-asda-voice-page__range">
           <div className="content-asda-voice-page__tone">Formal</div>
-          <div className="content-asda-voice-page__dashes"></div>
+          <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Casual</div>
 
           <div className="content-asda-voice-page__tone">Respectful</div>
-          <div className="content-asda-voice-page__dashes"></div>
+          <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Irreverant</div>
 
           <div className="content-asda-voice-page__tone">Serious</div>
-          <div className="content-asda-voice-page__dashes"></div>
+          <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Funny</div>
 
           <div className="content-asda-voice-page__tone">Enthusiastic</div>
-          <div className="content-asda-voice-page__dashes"></div>
+          <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Matter of fact</div>
         </div>
       </Paragraph>

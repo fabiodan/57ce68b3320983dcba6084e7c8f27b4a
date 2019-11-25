@@ -106,6 +106,6 @@ ButtonLink.defaultProps = {
 }
 
 export {
-   Button as default,
-   ButtonLink,
- }
+  Button as default,
+  ButtonLink,
+}

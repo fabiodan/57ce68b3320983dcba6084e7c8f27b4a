@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Sample from '@asda/_sample'
 import {
   Caption,
   Heading1,
@@ -57,7 +56,7 @@ const AndroidListsPage = () => (
 
     <Heading1>Selection controls</Heading1>
     <Section>
-    <Heading2>Input controls</Heading2>
+      <Heading2>Input controls</Heading2>
       <Paragraph>
         Selection controls should be placed on the left side of  primary text if
         there is no need in supporting visuals. There is a several list items

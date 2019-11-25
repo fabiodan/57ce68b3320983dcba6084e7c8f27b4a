@@ -3,7 +3,6 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 // Components (from atomic to composite)
-import Sample from '@asda/_sample'
 import {
   Heading1,
   Heading2,
@@ -50,7 +49,7 @@ const IOSTextFieldsPage = () => {
           If a text field is being populated or is in focus, a clear button should be shown on the right hand side.
         </Paragraph>
 
-        <Grid columnCount={ minWidth1024 ? 2 : 1 } withBackground>
+        <Grid columnCount={minWidth1024 ? 2 : 1} withBackground>
           <GridItem>
             <Caption position="top">Text Field - Placeholder</Caption>
             <Figure maxWidth="375px" src={textFieldsPlaceholderPNGSource} noMargin fluid />

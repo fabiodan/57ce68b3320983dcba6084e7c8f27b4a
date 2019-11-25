@@ -362,11 +362,11 @@ const ContentStyleUsagePage = () => (
                 <ModalHeader>Not available</ModalHeader>
                 <ModalContent>
                   Sorry, we do not currently offer home delivery or Click &
-                  Collect for <Strong>{`<postcode>`}</Strong>. Try another postcode:
-                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield"/>
+                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
+                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield" />
                   <Button className="content-punctuation-page__modal-button">Check postcode</Button>
                   <div className="content-punctuation-page__modal-paragraph">
-                    <Strong>New build house?</Strong><br/>
+                    <Strong>New build house?</Strong><br />
                     It may not be on our system yet.
                     {' '}<LinkText>Contact us</LinkText>{' '}
                     and we will add it for you.
@@ -383,11 +383,11 @@ const ContentStyleUsagePage = () => (
                 <ModalHeader>Not available</ModalHeader>
                 <ModalContent>
                   We do not currently offer home delivery or Click &
-                  Collect for <Strong>{`<postcode>`}</Strong>. Try another postcode:
-                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield"/>
+                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
+                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield" />
                   <Button className="content-punctuation-page__modal-button">Check postcode</Button>
                   <div className="content-punctuation-page__modal-paragraph">
-                    <Strong>New build house?</Strong><br/>
+                    <Strong>New build house?</Strong><br />
                     It may not be on our system yet.
                     {' '}<LinkText>Contact us</LinkText>{' '}
                     and we will add it for you.
@@ -405,11 +405,11 @@ const ContentStyleUsagePage = () => (
                 <ModalHeader>Sorry</ModalHeader>
                 <ModalContent>
                   We do not currently offer home delivery or Click &
-                  Collect for <Strong>{`<postcode>`}</Strong>. Try another postcode:
-                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield"/>
+                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
+                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield" />
                   <Button className="content-punctuation-page__modal-button">Check postcode</Button>
                   <div className="content-punctuation-page__modal-paragraph">
-                    <Strong>New build house?</Strong><br/>
+                    <Strong>New build house?</Strong><br />
                     It may not be on our system yet.
                     {' '}<LinkText>Contact us</LinkText>{' '}
                     and we will add it for you.

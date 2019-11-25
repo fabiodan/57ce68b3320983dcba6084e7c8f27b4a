@@ -35,5 +35,5 @@ const RecommendationStatus = ({ className, recommended }) => {
 
 export {
   Recommendation as default,
-  RecommendationStatus
+  RecommendationStatus,
 }

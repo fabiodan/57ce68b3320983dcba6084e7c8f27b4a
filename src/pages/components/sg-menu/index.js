@@ -13,7 +13,8 @@ import './_style.scss'
 const Menu = ({ toggleMenu }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
-    { name: 'Common library',
+    {
+      name: 'Common library',
       url: '/common',
       children: [
         { name: 'Color scheme', url: '/common/color-scheme' },
@@ -21,9 +22,10 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Links', url: '/common/links' },
         { name: 'Icons', url: '/common/icons' },
         { name: 'Brand', url: '/common/brand' },
-      ]
+      ],
     },
-    { name: 'Content library',
+    {
+      name: 'Content library',
       url: '/content',
       children: [
         { name: 'Overview', url: '/content/overview' },
@@ -34,9 +36,10 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Patterns', url: '/content/patterns' },
         { name: 'Formatting', url: '/content/formatting' },
         { name: 'The Asda voice', url: '/content/asda-voice' },
-      ]
+      ],
     },
-    { name: 'Web library',
+    {
+      name: 'Web library',
       url: '/web',
       children: [
         { name: 'Typography', url: '/web/typography' },
@@ -50,9 +53,10 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Modals', url: '/web/modals' },
         { name: 'Accordions', url: '/web/accordions' },
         // { name: 'Navigation (WIP)', url: '/navigation' },
-      ]
+      ],
     },
-    { name: 'Android library',
+    {
+      name: 'Android library',
       url: '/android',
       children: [
         { name: 'Typography', url: '/android/typography' },
@@ -64,12 +68,13 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Lists', url: '/android/lists' },
         { name: 'Menus', url: '/android/menus' },
         { name: 'Miscellaneous', url: '/android/miscellaneous' },
-        { name: 'Selection controls', url: '/android/selection-controls', },
+        { name: 'Selection controls', url: '/android/selection-controls' },
         { name: 'Text Fields', url: '/android/text-fields' },
         { name: 'Notifications', url: '/android/notifications' },
-      ]
+      ],
     },
-    { name: 'iOS library',
+    {
+      name: 'iOS library',
       url: '/ios',
       children: [
         { name: 'Introduction', url: '/ios/introduction' },
@@ -80,7 +85,7 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Action sheets', url: '/ios/action-sheets' },
         { name: 'Alerts', url: '/ios/alerts' },
         { name: 'Spacing', url: '/ios/spacing' },
-        { name: 'Navigation Bars', url: '/ios/navigation-bars', },
+        { name: 'Navigation Bars', url: '/ios/navigation-bars' },
         { name: 'Tables', url: '/ios/tables' },
         { name: 'Pickers', url: '/ios/pickers' },
         { name: 'Progress Indicators', url: '/ios/progress-indicators' },
@@ -89,8 +94,8 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Text Fields', url: '/ios/text-fields' },
         { name: 'Push Notifications', url: '/ios/push-notifications' },
         { name: 'Keyboards', url: '/ios/keyboards' },
-      ]
-    }
+      ],
+    },
   ]
 
   return (
@@ -107,17 +112,15 @@ const Menu = ({ toggleMenu }) => {
 
 const List = (props) => {
   const { toggleMenu } = props
-  const items = props.items.map(item => {
-    return (
-      <ListItem
-        key={item.url}
-        name={item.name}
-        url={item.url}
-        toggleMenu={toggleMenu}
-        items={item.children}
-      />
-    )
-  })
+  const items = props.items.map(item => (
+    <ListItem
+      key={item.url}
+      name={item.name}
+      url={item.url}
+      toggleMenu={toggleMenu}
+      items={item.children}
+    />
+  ))
 
   return (
     <nav className="sg-menu">
@@ -129,21 +132,21 @@ const List = (props) => {
   )
 }
 
-const ListItem = ({ name, items, toggleMenu, url }) => {
-  return (
-    <li className="sg-menu__list-item">
-      <NavLink
-        className="sg-menu__anchor"
-        to={url}
-        activeClassName="sg-menu--active"
-      >
-        {name}
-        <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
-      </NavLink>
-      <SubList subMenuItems={items} toggleMenu={toggleMenu} />
-    </li>
-  )
-}
+const ListItem = ({
+  name, items, toggleMenu, url,
+}) => (
+  <li className="sg-menu__list-item">
+    <NavLink
+      className="sg-menu__anchor"
+      to={url}
+      activeClassName="sg-menu--active"
+    >
+      {name}
+      <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
+    </NavLink>
+    <SubList subMenuItems={items} toggleMenu={toggleMenu} />
+  </li>
+)
 
 const SubList = ({ subMenuItems, toggleMenu }) => {
   const items = subMenuItems.map(item => (
@@ -161,12 +164,14 @@ const SubList = ({ subMenuItems, toggleMenu }) => {
   )
 }
 
-const SubListItem = ({ className, url, name, onClick, wip }) => {
+const SubListItem = ({
+  className, url, name, onClick, wip,
+}) => {
   const modifiers = [
     wip && 'sg-menu__sublist-item--wip',
   ]
   const classNames = joinClassNames('sg-menu__sublist-item', className, modifiers)
-  const handleClick = function(e) {
+  const handleClick = function (e) {
     if (wip) {
       e.preventDefault()
     } else if (onClick) {

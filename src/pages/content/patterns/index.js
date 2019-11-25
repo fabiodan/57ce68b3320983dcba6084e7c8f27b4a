@@ -42,23 +42,21 @@ const ActionBar = ({ children }) => (
   <div className="content-patterns-page__action-bar">{children}</div>
 )
 
-const CustomRecommendation = ({ children }) => {
-  return (
-    <div className="content-patterns-page__custom-recommendation">
-      <table className="content-patterns-page__custom-recommendation-table">
-        <thead>
-          <tr>
-            <td><RecommendationStatus className="content-patterns-page__recommendation-status" /></td>
-            <td><RecommendationStatus className="content-patterns-page__recommendation-status" recommended /></td>
-          </tr>
-        </thead>
-        <tbody>
-          { children }
-        </tbody>
-      </table>
-    </div>
-  )
-}
+const CustomRecommendation = ({ children }) => (
+  <div className="content-patterns-page__custom-recommendation">
+    <table className="content-patterns-page__custom-recommendation-table">
+      <thead>
+        <tr>
+          <td><RecommendationStatus className="content-patterns-page__recommendation-status" /></td>
+          <td><RecommendationStatus className="content-patterns-page__recommendation-status" recommended /></td>
+        </tr>
+      </thead>
+      <tbody>
+        { children }
+      </tbody>
+    </table>
+  </div>
+)
 
 const ContentPatternsPage = () => (
   <article className="content-patterns-page">
@@ -305,7 +303,7 @@ const ContentPatternsPage = () => (
                 validate
               />
               <CreditCardIcon className="content-patterns-page__cvv-icon" name="cvv" size="large" />
-          </div>
+            </div>
           </Recommendation>
         </ListItem>
         <ListItem className="content-patterns-page__use-case-item">
@@ -564,32 +562,32 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>Check postcode</td><td></td></tr>
-            <tr><td>Sign in</td><td></td></tr>
+            <tr><td>Check postcode</td><td /></tr>
+            <tr><td>Sign in</td><td /></tr>
             <tr><td>Create an account</td><td>Register</td></tr>
             <tr><td>Help</td><td>Need some help?</td></tr>
-            <tr><td>Start shopping</td><td></td></tr>
-            <tr><td>Book a slot</td><td></td></tr>
-            <tr><td>Find out more</td><td></td></tr>
-            <tr><td>Shop now</td><td></td></tr>
+            <tr><td>Start shopping</td><td /></tr>
+            <tr><td>Book a slot</td><td /></tr>
+            <tr><td>Find out more</td><td /></tr>
+            <tr><td>Shop now</td><td /></tr>
             <tr><td>Book a delivery</td><td>Book home delivery</td></tr>
             <tr><td>Book a collection</td><td>Book click & collect</td></tr>
-            <tr><td>Add</td><td></td></tr>
-            <tr><td>View</td><td></td></tr>
-            <tr><td>Back</td><td></td></tr>
-            <tr><td>Checkout</td><td></td></tr>
-            <tr><td>Back to shop</td><td></td></tr>
-            <tr><td>Find out more</td><td></td></tr>
-            <tr><td>View as a list</td><td></td></tr>
-            <tr><td>Select this location</td><td></td></tr>
-            <tr><td>Use previous trolley</td><td></td></tr>
-            <tr><td>Use current trolley</td><td></td></tr>
-            <tr><td>Your account</td><td></td></tr>
-            <tr><td>Continue checkout</td><td></td></tr>
-            <tr><td>Yes</td><td></td></tr>
-            <tr><td>No</td><td></td></tr>
+            <tr><td>Add</td><td /></tr>
+            <tr><td>View</td><td /></tr>
+            <tr><td>Back</td><td /></tr>
+            <tr><td>Checkout</td><td /></tr>
+            <tr><td>Back to shop</td><td /></tr>
+            <tr><td>Find out more</td><td /></tr>
+            <tr><td>View as a list</td><td /></tr>
+            <tr><td>Select this location</td><td /></tr>
+            <tr><td>Use previous trolley</td><td /></tr>
+            <tr><td>Use current trolley</td><td /></tr>
+            <tr><td>Your account</td><td /></tr>
+            <tr><td>Continue checkout</td><td /></tr>
+            <tr><td>Yes</td><td /></tr>
+            <tr><td>No</td><td /></tr>
             <tr><td>Got it</td><td>OK</td></tr>
-            <tr><td>Continue</td><td></td></tr>
+            <tr><td>Continue</td><td /></tr>
           </Fragment>
         </CustomRecommendation>
       </Paragraph>
@@ -635,8 +633,8 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>Check postcode</td><td></td></tr>
-            <tr><td>Sign in</td><td></td></tr>
+            <tr><td>Check postcode</td><td /></tr>
+            <tr><td>Sign in</td><td /></tr>
             <tr><td>Create an account</td><td>Register</td></tr>
             <tr><td>Help</td><td>Need some help?</td></tr>
           </Fragment>
@@ -684,8 +682,8 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>Check postcode</td><td></td></tr>
-            <tr><td>Sign in</td><td></td></tr>
+            <tr><td>Check postcode</td><td /></tr>
+            <tr><td>Sign in</td><td /></tr>
             <tr><td>Create an account</td><td>Register</td></tr>
             <tr><td>Help</td><td>Need some help?</td></tr>
           </Fragment>
@@ -732,9 +730,9 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>Empty trolley</td><td></td></tr>
-            <tr><td>Add to shopping list</td><td></td></tr>
-            <tr><td>View full trolley</td><td></td></tr>
+            <tr><td>Empty trolley</td><td /></tr>
+            <tr><td>Add to shopping list</td><td /></tr>
+            <tr><td>View full trolley</td><td /></tr>
           </Fragment>
         </CustomRecommendation>
       </Paragraph>
@@ -814,7 +812,7 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>Out of stock</td><td></td></tr>
+            <tr><td>Out of stock</td><td /></tr>
             <tr><td>No longer being stocked</td><td>No longer being stocked</td></tr>
           </Fragment>
         </CustomRecommendation>

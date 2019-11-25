@@ -32,9 +32,7 @@ const IOSIntroductionPage = () => (
 
     <Section>
       <Heading2>1 - Add the official Apple iOS Sketch Library</Heading2>
-      <Paragraph>
-
-      </Paragraph>
+      <Paragraph />
       <Figure
         fluid
         maxWidth="810px"

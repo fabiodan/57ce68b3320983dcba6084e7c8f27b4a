@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Sample from '@asda/_sample'
 import {
   Caption,
   Heading1,

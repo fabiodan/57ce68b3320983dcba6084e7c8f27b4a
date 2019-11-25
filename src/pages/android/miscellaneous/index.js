@@ -47,7 +47,7 @@ const AndroidMiscellaneousPage = () => {
           A divider groups content in lists and layouts. There is two types of
           dividers: text and line.
         </Paragraph>
-        <Grid columnCount={ minWidth1024 ? 2 : 1 } withBackground>
+        <Grid columnCount={minWidth1024 ? 2 : 1} withBackground>
           <GridItem>
             <Caption position="top">Line Divider</Caption>
             <Figure maxWidth="300px" src={dividersLineDividerPNGSource} noMargin fluid />
@@ -74,8 +74,7 @@ const AndroidMiscellaneousPage = () => {
       </Section>
 
 
-            {/* chipsExampleSelectorChipPNGSource
-
+      {/* chipsExampleSelectorChipPNGSource
 
 
              */}
@@ -85,7 +84,7 @@ const AndroidMiscellaneousPage = () => {
         <Paragraph>
           Chips allow users to make selections, filter content.
         </Paragraph>
-        <Grid columnCount={ minWidth1024 ? 3 : 1 }>
+        <Grid columnCount={minWidth1024 ? 3 : 1}>
           <GridItem>
             <Caption position="top">Filter Chip Active</Caption>
             <Figure maxWidth="105px" src={chipsFilterChipActivePNGSource} noMargin fluid />
@@ -109,7 +108,7 @@ const AndroidMiscellaneousPage = () => {
           <GridItem>
             <Figure maxWidth="360px" src={dividersExampleTextDividerPNGSource} noMargin fluid />
           </GridItem>
-          </Grid>
+        </Grid>
       </Section>
     </article>
   )

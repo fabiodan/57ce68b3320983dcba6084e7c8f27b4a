@@ -24,13 +24,13 @@ const Tooltip = ({
   const modifiers = [
     error && 'tooltip--error',
     !!title && 'tooltip--with-title',
-    !!!title && size === 'small' && 'tooltip--small'
+    !title && size === 'small' && 'tooltip--small',
   ]
   const classNames = joinClassNames('tooltip', className, modifiers)
 
   return (
     <div className={classNames}>
-      {title && <h2 className='tooltip__title'>{title}</h2>}
+      {title && <h2 className="tooltip__title">{title}</h2>}
       {children}
       <TooltipArrow arrowPosX={arrowPosX} arrowPosY={arrowPosY} />
     </div>
@@ -38,7 +38,7 @@ const Tooltip = ({
 }
 
 Tooltip.defaultValue = {
-  arrosPos: 'bottomLeft'
+  arrosPos: 'bottomLeft',
 }
 
 const TooltipArrow = ({

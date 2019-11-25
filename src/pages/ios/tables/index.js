@@ -2,7 +2,7 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, Caption, Paragraph, Heading2, Section, Heading1,} from '@sg/sg-layout'
+import { Figure, Caption, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
 
 // Assets
 import examplePNGSource from './images/tables-example.png'
@@ -29,7 +29,7 @@ const Grid = ({ children }) => (
 
 const IOSTablesPage = () => (
   <article className="ios-tables-page">
-  
+
     <Heading1>Tables</Heading1>
 
     <Section>
@@ -86,23 +86,23 @@ const IOSTablesPage = () => (
         Table view cells are contained by section headers.
       </Paragraph>
       <Grid>
-          <div>
-            <div className="ios-tables-page__dark-background">
-              <Caption position="top">Standard section header</Caption>
-              <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="350px" src={tableviewPNGSource} />
-              <Caption position="top">Navigate a level down</Caption>
-              <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="350px" src={leveldownPNGSource} />
-              <Caption position="top">Navigate a level down & Supporting Text</Caption>
-              <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="350px" src={supportingtextPNGSource} />
-              <Caption position="top">Expandable Text in Table View</Caption>
-              <Figure noMargin fluid maxWidth="350px" src={expandablePNGSource} />
-            </div>
-            <Caption position="top">Grey Table View</Caption>
-            <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="382px" src={greytablePNGSource} />
+        <div>
+          <div className="ios-tables-page__dark-background">
+            <Caption position="top">Standard section header</Caption>
+            <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="350px" src={tableviewPNGSource} />
+            <Caption position="top">Navigate a level down</Caption>
+            <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="350px" src={leveldownPNGSource} />
+            <Caption position="top">Navigate a level down & Supporting Text</Caption>
+            <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="350px" src={supportingtextPNGSource} />
+            <Caption position="top">Expandable Text in Table View</Caption>
+            <Figure noMargin fluid maxWidth="350px" src={expandablePNGSource} />
           </div>
-          <div>
-            <Figure noMargin fluid maxWidth="206px" src={viewexamplePNGSource} />
-          </div>
+          <Caption position="top">Grey Table View</Caption>
+          <Figure className="ios-tables-page__figure" noMargin fluid maxWidth="382px" src={greytablePNGSource} />
+        </div>
+        <div>
+          <Figure noMargin fluid maxWidth="206px" src={viewexamplePNGSource} />
+        </div>
       </Grid>
     </Section>
 
