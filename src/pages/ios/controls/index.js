@@ -2,7 +2,15 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, FigureContainer, Caption, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
+import {
+  Caption,
+  Heading1,
+  Heading2,
+  Figure,
+  FigureContainer,
+  Paragraph,
+  Section,
+} from '@sg/sg-layout'
 
 // Assets
 import controlsexamplePNGSource from './images/controls-example.png'
@@ -127,7 +135,8 @@ const IOSControlsPage = () => (
       </GridWhite>
       <FigureContainer>
         <Figure noMargin fluid maxWidth="183px" src={toggleexamplePNGSource} />
-      </FigureContainer><FigureContainer>
+      </FigureContainer>
+      <FigureContainer>
         <Figure noMargin fluid maxWidth="341px" src={togglerealexamplePNGSource} />
       </FigureContainer>
     </Section>
@@ -145,7 +154,8 @@ const IOSControlsPage = () => (
       </GridWhite>
       <FigureContainer>
         <Figure noMargin fluid maxWidth="183px" src={stepperexamplePNGSource} />
-      </FigureContainer><FigureContainer>
+      </FigureContainer>
+      <FigureContainer>
         <Figure noMargin fluid maxWidth="341px" src={stepperrealexamplePNGSource} />
       </FigureContainer>
     </Section>

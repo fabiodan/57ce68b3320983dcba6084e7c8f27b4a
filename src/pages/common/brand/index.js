@@ -8,7 +8,13 @@ import StatusLabel from '@asda/brand/status-label'
 import DeliveryPassLogo from '@asda/brand/delivery-pass-logo'
 import ExpressLogo from '@asda/brand/express-logo'
 import CreditCardIcon from '@asda/credit-card-icon'
-import { Caption, Paragraph, Section, Heading1, Heading2, Heading3 } from '@sg/sg-layout'
+import {
+  Heading1,
+  Heading2,
+  Caption,
+  Paragraph,
+  Section,
+} from '@sg/sg-layout'
 
 // Assets
 import './_style.scss'

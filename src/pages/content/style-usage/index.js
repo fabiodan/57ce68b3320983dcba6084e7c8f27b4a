@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import Icon from '@asda/icon'
 import Button from '@asda/button'
 import { LinkText } from '@asda/link'
 import { Label, TextField } from '@asda/form'
@@ -10,23 +9,15 @@ import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
 import Modal, {
   ModalHeader,
   ModalContent,
-  ModalActionBar,
   ModalContainer,
-  ModalBackdrop,
-  ModalButton,
   ModalCloseIcon,
 } from '@asda/modal'
 import {
   Heading1,
   Heading2,
-  Heading3,
-  Figure,
   Paragraph,
-  ListItem,
-  List,
   Section,
 } from '@sg/sg-layout'
-
 
 // Assets
 import './_style.scss'
@@ -129,7 +120,8 @@ const ContentStyleUsagePage = () => (
     <Section>
       <Heading2>Date</Heading2>
       <Paragraph noMargin>
-        Write dates as DD Month YYYY. No commas in dates. Avoid “st”, “rd” or “th” as it makes it harder to scan.
+        Write dates as DD Month YYYY. No commas in dates. Avoid “st”, “rd” or
+        “th” as it makes it harder to scan.
         <Container>
           <Recommendation className="content-style-usage-page__recommendation">
             <RecommendationStatus recommended />
@@ -160,7 +152,8 @@ const ContentStyleUsagePage = () => (
     <Section>
       <Heading2>Day and month</Heading2>
       <Paragraph noMargin>
-        Weekdays and months can be abbreviated to 3 letters if space is tight. Avoid commas between days and months.
+        Weekdays and months can be abbreviated to 3 letters if space is tight.
+        Avoid commas between days and months.
         <Container>
           <Recommendation className="content-style-usage-page__recommendation">
             <RecommendationStatus recommended />
@@ -306,7 +299,8 @@ const ContentStyleUsagePage = () => (
         Avoid please. It adds content without adding value.
       </Paragraph>
       <Paragraph>
-        UX writing does not seem impolite without it and adding it looks old fashioned and formal.
+        UX writing does not seem impolite without it and adding it looks old
+        fashioned and formal.
       </Paragraph>
       <Paragraph noMargin>
         "Please" can also imply there’s a choice. But a choice between doing the
@@ -363,7 +357,10 @@ const ContentStyleUsagePage = () => (
                 <ModalContent>
                   Sorry, we do not currently offer home delivery or Click &
                   Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
-                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield" />
+                  <TextField
+                    placeholder="Enter postcode"
+                    className="content-punctuation-page__modal-textfield"
+                  />
                   <Button className="content-punctuation-page__modal-button">Check postcode</Button>
                   <div className="content-punctuation-page__modal-paragraph">
                     <Strong>New build house?</Strong><br />
@@ -384,7 +381,10 @@ const ContentStyleUsagePage = () => (
                 <ModalContent>
                   We do not currently offer home delivery or Click &
                   Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
-                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield" />
+                  <TextField
+                    placeholder="Enter postcode"
+                    className="content-punctuation-page__modal-textfield"
+                  />
                   <Button className="content-punctuation-page__modal-button">Check postcode</Button>
                   <div className="content-punctuation-page__modal-paragraph">
                     <Strong>New build house?</Strong><br />
@@ -406,7 +406,10 @@ const ContentStyleUsagePage = () => (
                 <ModalContent>
                   We do not currently offer home delivery or Click &
                   Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
-                  <TextField placeholder="Enter postcode" className="content-punctuation-page__modal-textfield" />
+                  <TextField
+                    placeholder="Enter postcode"
+                    className="content-punctuation-page__modal-textfield"
+                  />
                   <Button className="content-punctuation-page__modal-button">Check postcode</Button>
                   <div className="content-punctuation-page__modal-paragraph">
                     <Strong>New build house?</Strong><br />

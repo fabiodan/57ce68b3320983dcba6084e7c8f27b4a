@@ -30,7 +30,7 @@ const Large = () => (
 )
 
 const ExpressLogoBase = ({
-  children, className, size, color,
+  children, className, color,
 }) => {
   const modifiers = [
     !!color && `express-logo--${color}`,

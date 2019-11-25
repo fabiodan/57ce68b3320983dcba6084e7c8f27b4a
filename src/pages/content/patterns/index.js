@@ -6,15 +6,13 @@ import CreditCardIcon from '@asda/credit-card-icon'
 import { LinkText } from '@asda/link'
 import Button, { ButtonLink } from '@asda/button'
 import {
-  Figure,
-  Paragraph,
+  Heading1,
   Heading2,
   Heading3,
-  Section,
-  Heading1,
   List,
   ListItem,
-  FeaturedSection,
+  Paragraph,
+  Section,
 } from '@sg/sg-layout'
 import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
 import { TextField, Checkbox, Label, Radio } from '@asda/form'
@@ -72,12 +70,15 @@ const ContentPatternsPage = () => (
         <List>
           <ListItem>Be specific – general errors help no-one</ListItem>
           <ListItem>No humorous or patronising messaging like "Oops", "Whoops"</ListItem>
-          <ListItem>Give only the information the user needs in order to understand how to move forward</ListItem>
+          <ListItem>
+            Give only the information the user needs in order to understand how
+            to move forward
+          </ListItem>
           <ListItem>State how to fix it (or what to do/try next)</ListItem>
           <ListItem>
-            If the customer is trying to do something – register, sign in, check
-            out etc – then we 	need to use direct, instructional microcopy so
-            they can complete their task as fast as 	possible. Now is not the
+            If the customer is trying to do something - register, sign in, check
+            out etc - then we	need to use direct, instructional microcopy so
+            they can complete their task as fast as possible. Now is not the
             time to be cute.
           </ListItem>
         </List>
@@ -156,7 +157,10 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <List>
           <ListItem>No full stop on single sentence error messages</ListItem>
-          <ListItem>If there are two or more sentences, apply full stops to all but the last sentence</ListItem>
+          <ListItem>
+            If there are two or more sentences, apply full stops to all but the
+            last sentence
+          </ListItem>
           <ListItem>Use sentence case</ListItem>
           <ListItem>No ALL CAPS</ListItem>
           <ListItem>If we say sorry, comma goes after sorry</ListItem>
@@ -648,11 +652,39 @@ const ContentPatternsPage = () => (
       <Paragraph>
         These are our guiding principles. But context always come first.
         <List>
-          <ListItem><span className="content-patterns-page--semibold">Informative</span> - Users know enough to decide and continue</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Helpful</span> - Help the user succeed first time. Users have enough context to begin a multi-	step task. Give routes to get more help eg offline where needed</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Guiding</span> - Friction points are addressed with reassuring guidance</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Intuitive</span> - Make the design clear and intuitive so that instructions are minimal. 	Instructions should not be added to solve design problems.</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Positive</span> - Be warm and supportive. Keep language positive</ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Informative
+            </span>
+             - Users know enough to decide and continue
+          </ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Helpful
+            </span>
+             - Help the user succeed first time. Users have enough context to
+             begin a multi-	step task. Give routes to get more help eg offline
+             where needed
+          </ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Guiding
+            </span>
+             - Friction points are addressed with reassuring guidance
+          </ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Intuitive
+            </span>
+             - Make the design clear and intuitive so that instructions are minimal.
+             Instructions should not be added to solve design problems.
+          </ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Positive
+            </span>
+             - Be warm and supportive. Keep language positive
+          </ListItem>
         </List>
       </Paragraph>
 
@@ -697,9 +729,27 @@ const ContentPatternsPage = () => (
       <Paragraph>
         These are our guiding principles. But context always come first.
         <List>
-          <ListItem><span className="content-patterns-page--semibold">Concise</span> - As short as possible </ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Helpful</span> - Use descriptive language</ListItem>
-          <ListItem><span className="content-patterns-page--semibold">Active</span> - Use positive language and focus on verbs. Avoid device specific language 	where possible.  So “Find out more in our Privacy Centre”, not “Click here to visit our Privacy Centre”. If this is not possible, use “tap” rather than click</ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Concise
+            </span>
+            - As short as possible
+          </ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Helpful
+            </span>
+            - Use descriptive language
+          </ListItem>
+          <ListItem>
+            <span className="content-patterns-page--semibold">
+              Active
+            </span>
+            - Use positive language and focus on verbs. Avoid device specific
+            language where possible. So “Find out more in our Privacy Centre”,
+            not “Click here to visit our Privacy Centre”. If this is not possible,
+            use “tap” rather than click
+          </ListItem>
         </List>
         <span className="content-patterns-page--semibold">Never use "Click here"</span>
       </Paragraph>
@@ -858,10 +908,41 @@ const ContentPatternsPage = () => (
       <Paragraph>
         <CustomRecommendation>
           <Fragment>
-            <tr><td>I have read and accept the terms and conditions</td><td>I've read and accept the terms and conditions</td></tr>
-            <tr><td>Yes I want to get exclusive offers and news from Asda</td><td>We'd love to keep in touch with exclusive offers and the latest info from Asda. You can ask us to stop anytime, but if you don't want to hear from us, please tick the box.</td></tr>
-            <tr><td>In our <LinkText>Privacy Centre</LinkText> you can learn about your rights and how we use your information</td><td>You can find out about your rights and choices, and how we use the information in our <LinkText>Privacy Centre</LinkText></td></tr>
-            <tr><td>We sell some things by weight, usually fresh produce like meat and vegetables. We'll let you know what we think the cost will be now but this may change on the day depending on exact weight. <LinkText>Find out more</LinkText></td><td>Please note: for items sold by weight, the exact price may vary depending on the exact weight of items available. <LinkText>Find out more</LinkText></td></tr>
+            <tr>
+              <td>I have read and accept the terms and conditions</td>
+              <td>I've read and accept the terms and conditions</td>
+            </tr>
+            <tr>
+              <td>Yes I want to get exclusive offers and news from Asda</td>
+              <td>
+                We'd love to keep in touch with exclusive offers and the latest
+                info from Asda. You can ask us to stop anytime, but if you don't
+                want to hear from us, please tick the box.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                In our <LinkText>Privacy Centre</LinkText> you can learn about
+                your rights and how we use your information
+              </td>
+              <td>
+                You can find out about your rights and choices, and how we use
+                the information in our <LinkText>Privacy Centre</LinkText>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                We sell some things by weight, usually fresh produce like meat
+                and vegetables. We'll let you know what we think the cost will
+                be now but this may change on the day depending on exact weight.
+                {' '}<LinkText>Find out more</LinkText>
+              </td>
+              <td>
+                Please note: for items sold by weight, the exact price may vary
+                depending on the exact weight of items available.
+                {' '}<LinkText>Find out more</LinkText>
+              </td>
+            </tr>
           </Fragment>
         </CustomRecommendation>
       </Paragraph>

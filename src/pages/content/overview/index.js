@@ -3,14 +3,13 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import {
-  Figure,
-  Paragraph,
+  Heading1,
   Heading2,
   Heading3,
-  Section,
-  Heading1,
-  List,
   ListItem,
+  List,
+  Paragraph,
+  Section,
 } from '@sg/sg-layout'
 
 // Assets
@@ -26,7 +25,8 @@ const ContentOverviewPage = () => (
         Words matter. They shape how people see Asda.
       </Paragraph>
       <Paragraph>
-        They can make shopping with us easy and quick – or frustrate customers into heading to our competitors.
+        They can make shopping with us easy and quick – or frustrate customers
+        into heading to our competitors.
       </Paragraph>
       <Paragraph>
         We need to make every word count.

@@ -8,7 +8,6 @@ import {
   Heading1,
   Caption,
   Figure,
-  FigureContainer,
   GridItem,
   Grid,
   Paragraph,

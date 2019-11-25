@@ -150,7 +150,7 @@ const CreditCardSVG = ({ name }) => {
 }
 
 const CreditCardIcon = ({
-  name, children, className, size,
+  name, className, size,
 }) => {
   const modifiers = [
     !!size && `credit-card-icon--${size}`,

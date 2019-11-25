@@ -3,27 +3,19 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import {
-  Figure,
-  Paragraph,
+  Heading1,
   Heading2,
   Heading3,
-  Section,
-  Heading1,
-  List,
-  ListItem,
   FeaturedSection,
+  Paragraph,
+  Section,
 } from '@sg/sg-layout'
-import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
-import { TextField, Label } from '@asda/form'
+import { RecommendationStatus } from '@sg/sg-recommendation'
 
 // Assets
 import './_style.scss'
 
-const Container = ({ children }) => (
-  <div className="content-how-to-write-page__container">{children}</div>
-)
-
-const CustomRecommendation = ({ children }) => (
+const CustomRecommendation = () => (
   <div className="content-how-to-write-page__custom-recommendation">
     <table className="content-how-to-write-page__custom-recommendation-table">
       <thead>
@@ -44,7 +36,10 @@ const CustomRecommendation = ({ children }) => (
         <tr><td>Item</td><td>Rephrase to avoid if possible</td></tr>
         <tr><td>Utilise</td><td>Use</td></tr>
         <tr><td>Pick (products)</td><td>Select, choose</td></tr>
-        <tr><td>Fulfil, Fulfilment</td><td>Deliver, delivery option (or be specific about method, or rephrase to avoid)</td></tr>
+        <tr>
+          <td>Fulfil, Fulfilment</td>
+          <td>Deliver, delivery option (or be specific about method, or rephrase to avoid)</td>
+        </tr>
         <tr><td>Via</td><td>By</td></tr>
         <tr><td>Preferences</td><td>Rephrase to avoid</td></tr>
         <tr><td>Dispatch</td><td>Send, on the way</td></tr>
@@ -59,7 +54,13 @@ const CustomRecommendation = ({ children }) => (
         <tr><td>Sorry</td><td>Use sparingly and only where we have caused inconvenience</td></tr>
         <tr><td>Check out, checkout</td><td>PayNote, please note</td></tr>
         <tr><td>Note, please note</td><td><del>Omit this</del></td></tr>
-        <tr><td>Valid</td><td>For error messaging use recognise instead eg “We do not recognise that postcode" rather than “That is not a valid postcode"</td></tr>
+        <tr>
+          <td>Valid</td>
+          <td>
+            For error messaging use recognise instead eg “We do not recognise
+            that postcode" rather than “That is not a valid postcode"
+          </td>
+        </tr>
         <tr><td>Proceed</td><td>Continue</td></tr>
         <tr><td>Minimise</td><td>Reduce, cut down on</td></tr>
         <tr><td>Lessen</td><td>Reduce, cut down on</td></tr>

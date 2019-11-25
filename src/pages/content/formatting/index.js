@@ -5,7 +5,12 @@ import React from 'react'
 import Icon from '@asda/icon'
 import Button from '@asda/button'
 import StatusLabel from '@asda/brand/status-label'
-import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
+import {
+  Heading1,
+  Heading2,
+  Paragraph,
+  Section,
+} from '@sg/sg-layout'
 import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
 
 // Assets

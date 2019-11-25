@@ -6,13 +6,13 @@ import { LinkText } from '@asda/link'
 
 import {
   Caption,
-  Figure,
   Heading1,
   Heading2,
   Heading3,
-  Paragraph,
-  List,
+  Figure,
   ListItem,
+  List,
+  Paragraph,
   Section,
 } from '@sg/sg-layout'
 
@@ -23,7 +23,7 @@ import respectfulPNGSource from './images/respectful-irreverent.png'
 import seriousPNGSource from './images/serious-funny.png'
 import './_style.scss'
 
-const SentenceContainer = ({ children, caption }) => (
+const SentenceContainer = ({ children }) => (
   <div className="content-asda-voice-page__sentence-container">
     { children }
   </div>
@@ -45,10 +45,12 @@ const ContentAsdaVoicePage = () => (
 
     <Section>
       <Paragraph>
-        When you talk to a good friend you use a different manner and tone than when you talk to a senior manager. But it’s always you speaking.
+        When you talk to a good friend you use a different manner and tone than
+        when you talk to a senior manager. But it’s always you speaking.
       </Paragraph>
       <Paragraph>
-        In the same way, Asda as a brand has a distinct personality, but the tone changes depending on who we are speaking to and why.
+        In the same way, Asda as a brand has a distinct personality, but the
+        tone changes depending on who we are speaking to and why.
       </Paragraph>
       <Paragraph noMargin>
         The Asda brand personality is defined and set by the Marketing team.
@@ -58,16 +60,20 @@ const ContentAsdaVoicePage = () => (
     <Section>
       <Heading2>Emotions</Heading2>
       <Paragraph>
-        We are human. We do not do anything in a neutral state. We experience emotions as we move through a service.
+        We are human. We do not do anything in a neutral state. We experience
+        emotions as we move through a service.
       </Paragraph>
       <Paragraph>
-        We cannot know every user’s individual state of mind, but we do need to reflect likely emotional states in our language choices.
+        We cannot know every user’s individual state of mind, but we do need to
+        reflect likely emotional states in our language choices.
       </Paragraph>
       <Paragraph>
-        For example, we should not be flippant or jolly when telling someone their payment has been rejected.
+        For example, we should not be flippant or jolly when telling someone
+        their payment has been rejected.
       </Paragraph>
       <Paragraph>
-        While the full range of emotion is very nuanced, for our purposes we can consider 4 main states.
+        While the full range of emotion is very nuanced, for our purposes we can
+        consider 4 main states.
       </Paragraph>
 
       <Heading3>
@@ -122,12 +128,14 @@ const ContentAsdaVoicePage = () => (
       <Heading2>The 4 dimensions of tone</Heading2>
       <Paragraph>
         Norman Nielsen Institute research has identified
-        {' '}<LinkText
+        {' '}
+        <LinkText
           href="https://www.nngroup.com/articles/tone-of-voice-dimensions/"
           target="_blank"
         >
           4&nbsp;ranges for tone&nbsp;of&nbsp;voice
-        </LinkText>{' '}
+        </LinkText>
+        {' '}
         for commerce websites.
       </Paragraph>
       <Paragraph noMargin>
@@ -201,10 +209,19 @@ const ContentAsdaVoicePage = () => (
       <Heading3>Serious to Funny</Heading3>
       <Paragraph>
         <List>
-          <ListItem>We do not take ourselves to seriously and our optimism is infectious</ListItem>
-          <ListItem>Our brand personality is playful and cheeky but we need to be cautious in UX</ListItem>
-          <ListItem>We avoid colloquial, local humour that may not be understood by all</ListItem>
-          <ListItem>When we deal with serious topics, we take a serious tone</ListItem>
+          <ListItem>
+            We do not take ourselves to seriously and our optimism is infectious
+          </ListItem>
+          <ListItem>
+            Our brand personality is playful and cheeky but we need to be
+            cautious in UX
+          </ListItem>
+          <ListItem>
+            We avoid colloquial, local humour that may not be understood by all
+          </ListItem>
+          <ListItem>
+            When we deal with serious topics, we take a serious tone
+          </ListItem>
         </List>
       </Paragraph>
 

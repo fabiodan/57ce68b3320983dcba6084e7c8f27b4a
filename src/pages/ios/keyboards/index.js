@@ -21,10 +21,6 @@ import keyboardsEmojiPNGSource from './images/keyboards-emoji.png'
 import keyboardsNumericPNGSource from './images/keyboards-numeric.png'
 import './_style.scss'
 
-const MyComponent = ({ children }) => (
-  <div className="ios-keyboards-page__component">{ children }</div>
-)
-
 const IOSKeyboardsPage = () => {
   const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 

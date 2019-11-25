@@ -3,14 +3,12 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import {
-  Figure,
-  Paragraph,
-  Heading2,
-  Heading3,
-  Section,
   Heading1,
-  List,
+  Heading2,
   ListItem,
+  List,
+  Paragraph,
+  Section,
 } from '@sg/sg-layout'
 import Recommendation, { RecommendationStatus } from '@sg/sg-recommendation'
 import { TextField, Label } from '@asda/form'
@@ -78,8 +76,12 @@ const ContentOurApproachPage = () => (
           <ListItem>we are minimal and concise with our messaging</ListItem>
           <ListItem>we are sparing with warnings, callouts and overlays</ListItem>
           <ListItem>we avoid visual clutter</ListItem>
-          <ListItem>we allow the user to focus on the important choice or call to action</ListItem>
-          <ListItem>we tell the user only what they need to know to keep going at that point</ListItem>
+          <ListItem>
+            we allow the user to focus on the important choice or call to action
+          </ListItem>
+          <ListItem>
+            we tell the user only what they need to know to keep going at that point
+          </ListItem>
           <ListItem>we look for the intuitive path</ListItem>
         </List>
 
@@ -192,8 +194,14 @@ const ContentOurApproachPage = () => (
           <ListItem>keep users informed at every step</ListItem>
           <ListItem>put user needs first</ListItem>
           <ListItem>help the user succeed first time</ListItem>
-          <ListItem>develop a relationship - and keep our interactions at the right level for the relationship</ListItem>
-          <ListItem>behave in a trustworthy manner, for example by rejecting dark UX patterns</ListItem>
+          <ListItem>
+            develop a relationship - and keep our interactions at the right level
+            for the relationship
+          </ListItem>
+          <ListItem>
+            behave in a trustworthy manner, for example by rejecting dark UX
+            patterns
+          </ListItem>
         </List>
       </Paragraph>
     </Section>

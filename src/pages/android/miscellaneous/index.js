@@ -17,7 +17,6 @@ import {
 } from '@sg/sg-layout'
 
 // Assets
-import chipsExampleSelectorChipPNGSource from './images/chips-example-selector-chip.png'
 import chipsFilterChipActivePNGSource from './images/chips-filter-chip-active.png'
 import chipsSelectorChipActivePNGSource from './images/chips-selector-chip-active.png'
 import chipsSelectorChipInactivePNGSource from './images/chips-selector-chip-inactive.png'
@@ -26,19 +25,13 @@ import dividersExampleTextDividerPNGSource from './images/dividers-example-text-
 import dividersLineDividerPNGSource from './images/dividers-line-divider.png'
 import dividersTextDividerActionPNGSource from './images/dividers-text-divider-action.png'
 import dividersTextDividerPNGSource from './images/dividers-text-divider.png'
-
 import './_style.scss'
-
-const MyComponent = ({ children }) => (
-  <div className="miscellaneous-page__component">{ children }</div>
-)
 
 const AndroidMiscellaneousPage = () => {
   const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 
   return (
     <article className="miscellaneous-page">
-
       <Heading1>Miscellaneous</Heading1>
 
       <Section>
@@ -72,12 +65,6 @@ const AndroidMiscellaneousPage = () => {
           <Figure maxWidth="360px" src={dividersExampleTextDividerActionPNGSource} noMargin fluid />
         </Grid>
       </Section>
-
-
-      {/* chipsExampleSelectorChipPNGSource
-
-
-             */}
 
       <Section>
         <Heading2>Chips</Heading2>

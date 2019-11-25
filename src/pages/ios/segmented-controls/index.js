@@ -28,7 +28,7 @@ const IOSSegmentedControlsPage = () => {
   const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 
   return (
-    <article className="ios-segmented-control-page">
+    <article className="ios-segmented-controls-page">
       <Heading1>Segmented Controls</Heading1>
 
       <Section>

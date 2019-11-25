@@ -8,7 +8,6 @@ import {
   Heading2,
   Heading3,
   Figure,
-  FigureContainer,
   Paragraph,
   Section,
 } from '@sg/sg-layout'

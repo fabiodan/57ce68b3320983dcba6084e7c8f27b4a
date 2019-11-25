@@ -3,14 +3,9 @@ import React from 'react'
 import joinClassNames from 'classnames'
 
 // Components (from atomic to composite)
-import Button from '@asda/button'
 
 // Assets
 import './_style.scss'
-
-const Component = ({ children }) => (
-  <p className="tooltip__paragraph">{children}</p>
-)
 
 const Tooltip = ({
   className,

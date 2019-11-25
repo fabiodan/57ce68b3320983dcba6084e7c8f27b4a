@@ -3,17 +3,19 @@ import React from 'react'
 
 // Components (from atomic to composite)
 import { LinkText } from '@asda/link'
-import { Figure, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
+import {
+  Heading1,
+  Heading2,
+  Figure,
+  Paragraph,
+  Section,
+} from '@sg/sg-layout'
 
 // Assets
 import appleDesignResourcesPNGSource from './images/apple-design-resources.png'
 import sketchLibraryPNGSource from './images/sketch-library.png'
 import iosFontsPNGSource from './images/ios-fonts.png'
 import './_style.scss'
-
-const Component = ({ children }) => (
-  <div className="ios-introduction-page__component">{ children }</div>
-)
 
 const IOSIntroductionPage = () => (
   <article className="ios-introduction-page">
@@ -58,9 +60,13 @@ const IOSIntroductionPage = () => (
     <Section>
       <Heading2>3 - Reference Apple Human Interface Guidelines (HIG)</Heading2>
       <Paragraph>
-        The Apple Human Interface Guidelines are a framework in which iOS apps are designed and built.
+        The Apple Human Interface Guidelines are a framework in which iOS apps
+        are designed and built.
         They can be found{' '}
-        <LinkText target="_blank" href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/">
+        <LinkText
+          target="_blank"
+          href="https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/"
+        >
           here
         </LinkText>.
       </Paragraph>

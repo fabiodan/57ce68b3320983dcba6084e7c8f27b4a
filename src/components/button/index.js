@@ -84,11 +84,16 @@ const ButtonLink = ({
   const iconColor = category === 'primary' ? 'white' : color
 
   return (
-    <a href={href} target={target} download={download} className={classNames} aria-disabled={disabled} onClick={onClick}>
-
+    <a
+      href={href}
+      target={target}
+      download={download}
+      className={classNames}
+      aria-disabled={disabled}
+      onClick={onClick}
+    >
       { loading && <ButtonIcon><Spinner color={iconColor} /></ButtonIcon> }
       { iconName && <Icon className="button__icon" name={iconName} color={iconColor} /> }
-
       <span className="button__content">{children}</span>
     </a>
   )

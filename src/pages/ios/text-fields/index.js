@@ -43,10 +43,12 @@ const IOSTextFieldsPage = () => {
           Text fields capture information entered by the user.
         </Paragraph>
         <Paragraph>
-          Text fields require a field label and placeholder text, along with appropriate error and success messaging.
+          Text fields require a field label and placeholder text, along with
+          appropriate error and success messaging.
         </Paragraph>
         <Paragraph>
-          If a text field is being populated or is in focus, a clear button should be shown on the right hand side.
+          If a text field is being populated or is in focus, a clear button
+          should be shown on the right hand side.
         </Paragraph>
 
         <Grid columnCount={minWidth1024 ? 2 : 1} withBackground>

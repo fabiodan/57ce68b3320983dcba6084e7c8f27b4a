@@ -2,19 +2,22 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Figure, FigureContainer, Caption, Paragraph, Heading2, Section, Heading1 } from '@sg/sg-layout'
+import {
+  Paragraph,
+  Heading1,
+  Heading2,
+  Figure,
+  FigureContainer,
+  Section,
+} from '@sg/sg-layout'
 
 // Assets
 import examplePNGSource from './images/progress-indicators-example.png'
-
 import './_style.scss'
-
 
 const IOSProgressIndicatorsPage = () => (
   <article className="ios-progress-indicators-page">
-
     <Heading1>Progress Indicators</Heading1>
-
     <Section>
       <Heading2>Progress Indicators</Heading2>
       <Paragraph>
@@ -24,7 +27,6 @@ const IOSProgressIndicatorsPage = () => (
         <Figure noMargin fluid maxWidth="330px" src={examplePNGSource} />
       </FigureContainer>
     </Section>
-
   </article>
 )
 

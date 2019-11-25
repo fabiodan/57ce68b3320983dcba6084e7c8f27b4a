@@ -10,7 +10,6 @@ import {
   Heading1,
   Heading2,
   Heading3,
-  Figure,
   Paragraph,
   ListItem,
   List,
