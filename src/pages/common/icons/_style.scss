@@ -16,11 +16,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 0 $spacing-m;
+  grid-gap: $spacing-m;
 }
 
 .icons-page__grid-item {
-  padding: $spacing-m 0;
+  position: relative;
+  max-width: 120px;
 }
 
 .icons-page__grid-icon-stroke,
@@ -28,10 +29,40 @@
   grid-template-columns: 1fr;
 }
 
+.icons-page__download-bar {
+  $download-bar-height: $spacing-xl;
+  position: absolute;
+  bottom: -$download-bar-height;
+  left: 0;
+  opacity: 0;
+  height: $download-bar-height;
+  transition: opacity 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+  display: flex;
+  align-items: flex-end;
+}
+
+.icons-page__grid-item:hover {
+  .icons-page__download-bar {
+    opacity: 1;
+  }
+}
+
+.icons-page__download-link {
+  @include typography(s);
+  &:first-child {
+    padding-right: $spacing-m;
+  }
+}
+
+.icons-page__download-text {
+  @include typography(s);
+  font-weight: 600;
+}
+
 // Breakpoints
 @media (min-width: 480px) {
   .icons-page__grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .icons-page__grid-basic-shapes {
@@ -48,7 +79,7 @@
   .icons-page__grid-basic-shapes {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  
+
   .icons-page__grid-icon-stroke {
     grid-template-columns: 1fr 1fr;
   }

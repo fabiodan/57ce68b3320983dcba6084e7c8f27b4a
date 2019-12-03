@@ -6,7 +6,7 @@ import joinClassNames from 'classnames'
 import './_style.scss'
 
 const LinkText = ({
-  children, className, href, target, color,
+  children, className, href, target, color, download,
 }) => {
   const modifiers = [
 
@@ -17,8 +17,14 @@ const LinkText = ({
   const classNames = joinClassNames('link', className, modifiers)
 
   return (
-    <a href={href} className={classNames} target={target}>{children}</a>
+    <a href={href} className={classNames} target={target} download={download}>
+      {children}
+    </a>
   )
+}
+
+LinkText.defaultProps = {
+  download: null,
 }
 
 const LinkButton = ({
