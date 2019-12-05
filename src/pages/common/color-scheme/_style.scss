@@ -97,6 +97,11 @@ $color-sample-padding: $spacing-m;
   background: $color-background-gray;
 }
 
+.color-page--white {
+  background: $color-white;
+  border: solid 1px $color-medium-gray;
+}
+
 .color-page--charcoal-transparent {
   background: $color-charcoal-transparent;
 }
@@ -109,6 +114,7 @@ $color-sample-padding: $spacing-m;
 .color-page--medium-gray,
 .color-page--light-gray,
 .color-page--background-gray,
+.color-page--white,
 .color-page--charcoal-transparent,
 .color-page--yellow-transparent {
   .color-page__color-name,

@@ -2,7 +2,12 @@
 import React from 'react'
 
 // Components (from atomic to composite)
-import { Heading1, Heading2, Paragraph, Section } from '@sg/sg-layout'
+import {
+  Heading1,
+  Heading2,
+  Paragraph,
+  Section
+} from '@sg/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -51,9 +56,6 @@ const ColorSchemePage = () => (
         <ColorItem>
           <ColorSample color="dark-green" name="Emerald Green" hex="538316" rgb="104, 165, 28" />
         </ColorItem>
-        <ColorItem>
-          <ColorSample color="green-disabled" name="Asda Green (Disabled)" hex="B4D28E" rgb="180, 210, 142" />
-        </ColorItem>
       </ColorList>
     </Section>
 
@@ -71,12 +73,6 @@ const ColorSchemePage = () => (
           </ColorDescription>
         </ColorItem>
         <ColorItem>
-          <ColorSample color="blue-disabled" name="Cobalt Blue (Disabled)" hex="68A51C" rgb="127, 185, 216" />
-          <ColorDescription>
-            Used for disabled secondary buttons
-          </ColorDescription>
-        </ColorItem>
-        <ColorItem>
           <ColorSample color="red" name="Crimson Red" hex="D43030" rgb="212, 48, 48" />
           <ColorDescription>
             Used for errors, warnings, promotions & value toolkit
@@ -86,6 +82,24 @@ const ColorSchemePage = () => (
           <ColorSample color="yellow" name="California Gold" hex="F7CC00" rgb="83, 121, 22" />
           <ColorDescription>
             Used for warnings, out of stock or unavailable labels
+          </ColorDescription>
+        </ColorItem>
+      </ColorList>
+    </Section>
+
+    <Section>
+      <Heading2>Disabled Button Colors</Heading2>
+      <ColorList>
+        <ColorItem>
+          <ColorSample color="green-disabled" name="Asda Green (Disabled)" hex="B4D28E" rgb="180, 210, 142" />
+          <ColorDescription>
+            Used for disabled green buttons
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="blue-disabled" name="Cobalt Blue (Disabled)" hex="68A51C" rgb="127, 185, 216" />
+          <ColorDescription>
+            Used for disabled blue buttons
           </ColorDescription>
         </ColorItem>
       </ColorList>
@@ -129,6 +143,12 @@ const ColorSchemePage = () => (
           <ColorSample color="background-gray" name="Background Gray" hex="F6F6F6" rgb="246, 246, 246" />
           <ColorDescription>
             Used for backgrounds
+          </ColorDescription>
+        </ColorItem>
+        <ColorItem>
+          <ColorSample color="white" name="White" hex="FFFFFF" rgb="255, 255, 255" />
+          <ColorDescription>
+            White
           </ColorDescription>
         </ColorItem>
       </ColorList>
