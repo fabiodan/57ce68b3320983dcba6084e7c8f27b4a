@@ -10,20 +10,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|pdf)$/,
         use: [{
           loader: 'file-loader',
           options: {
             name: './assets/images/[name]-[contenthash].[ext]',
-          },
-        }],
-      },
-      {
-        test: /\.(pdf)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: './assets/images/[name].[ext]',
           },
         }],
       },

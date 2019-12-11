@@ -30,16 +30,17 @@ import iconSet from '@asda/icon/svg-sources.js'
 import './_style.scss'
 
 const DownloadBar = ({ iconName }) => {
-const filePath = iconSet[iconName]
+  const filePathSVG = iconSet[iconName].svg
+  const filePathPDF = iconSet[iconName].pdf
 
   return (
     <div className="icons-page__download-bar">
-      <LinkText href={filePath} align="left" className="icons-page__download-link" download={`asda-${iconName}.svg`}>
+      <LinkText href={filePathSVG} align="left" className="icons-page__download-link" download={`asda-${iconName}.svg`}>
         SVG
       </LinkText>
-      {/* <LinkText href={filePath} align="left" className="icons-page__download-link" download={`asda-${iconName}.pdf`}>
+      <LinkText href={filePathPDF} align="left" className="icons-page__download-link" download={`asda-${iconName}.pdf`}>
         PDF
-      </LinkText> */}
+      </LinkText>
     </div>
   )
 }
@@ -128,19 +129,21 @@ const IconsPage = () => {
           <GridIcon name="payment"><Caption>Payment</Caption></GridIcon>
           <GridIcon name="petrol"><Caption>Petrol</Caption></GridIcon>
           <GridIcon name="preferences"><Caption>Preferences</Caption></GridIcon>
-          <GridIcon name="print"><Caption>Print</Caption></GridIcon>
+          <GridIcon name="printer"><Caption>Print</Caption></GridIcon>
           <GridIcon name="recipes"><Caption>Recipes</Caption></GridIcon>
           <GridIcon name="star-outlined"><Caption>Star Outlined</Caption></GridIcon>
+          <GridIcon name="star-half-filled"><Caption>Star Half Filled</Caption></GridIcon>
           <GridIcon name="star-filled"><Caption>Star Filled</Caption></GridIcon>
           <GridIcon name="trash"><Caption>Trash</Caption></GridIcon>
           <GridIcon name="trolley"><Caption>Trolley</Caption></GridIcon>
           <GridIcon name="truck"><Caption>Truck</Caption></GridIcon>
-          <GridIcon name="cloud"><Caption>Cloud</Caption></GridIcon>
+          <GridIcon name="upload"><Caption>Cloud</Caption></GridIcon>
           <GridIcon name="voucher"><Caption>Voucher</Caption></GridIcon>
           <GridIcon name="map-pin-outlined"><Caption>Map Pin Outlined</Caption></GridIcon>
           <GridIcon name="map-pin-filled"><Caption>Map Pin Filled</Caption></GridIcon>
           <GridIcon name="map-pin-checked"><Caption>Map Pin Checked</Caption></GridIcon>
           <GridIcon name="map-pin-express"><Caption>Map Pin Express</Caption></GridIcon>
+          <GridIcon name="map-pin-your-store"><Caption>Map Pin Your Store</Caption></GridIcon>
           <GridIcon name="heart-outlined"><Caption>Heart Outlined</Caption></GridIcon>
           <GridIcon name="heart-filled"><Caption>Heart Filled</Caption></GridIcon>
           <GridIcon name="thumbs-up-outlined"><Caption>Thumbs Up Outlined</Caption></GridIcon>
@@ -150,7 +153,7 @@ const IconsPage = () => {
           <GridIcon name="map"><Caption>Map</Caption></GridIcon>
           <GridIcon name="conversation"><Caption>Conversation</Caption></GridIcon>
           <GridIcon name="near-me-outlined"><Caption>Near Me Outlined</Caption></GridIcon>
-          <GridIcon name="near-me"><Caption>Near Me</Caption></GridIcon>
+          <GridIcon name="near-me-filled"><Caption>Near Me</Caption></GridIcon>
           <GridIcon name="click-collect"><Caption>Click & Collect</Caption></GridIcon>
           <GridIcon name="lockers"><Caption>Lockers</Caption></GridIcon>
           <GridIcon name="show"><Caption>Show</Caption></GridIcon>
@@ -166,6 +169,8 @@ const IconsPage = () => {
           <GridIcon name="internal-collection"><Caption>Internal Collection</Caption></GridIcon>
           <GridIcon name="no-alcohol"><Caption>No Alcohol</Caption></GridIcon>
           <GridIcon name="cook"><Caption>Cook Mode</Caption></GridIcon>
+          <GridIcon name="christmas"><Caption>Christmas</Caption></GridIcon>
+          <GridIcon name="santa"><Caption>Santa</Caption></GridIcon>
         </Grid>
       </Section>
 
