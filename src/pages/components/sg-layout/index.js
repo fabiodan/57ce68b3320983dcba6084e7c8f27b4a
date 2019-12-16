@@ -81,9 +81,9 @@ const Figure = ({
   const style = { maxWidth }
 
   return (
-    <figure className={classNames} style={style}>
+    <figure className={classNames}>
       { caption && <figcaption className="sg-layout__figure__caption">{caption}</figcaption> }
-      <img className="sg-layout__figure__img" src={src} alt={alt} />
+      <img className="sg-layout__figure__img" src={src} alt={alt} style={style} />
     </figure>
   )
 }
