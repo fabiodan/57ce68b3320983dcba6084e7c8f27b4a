@@ -69,8 +69,8 @@ const IconsPage = () => {
           <GridIcon name="check"><Caption>Check</Caption></GridIcon>
           <GridIcon name="chevron-down"><Caption>Chevron Down</Caption></GridIcon>
           <GridIcon name="chevron-left"><Caption>Chevron Left</Caption></GridIcon>
-          <GridIcon name="chevron-right"><Caption>Chevron Right</Caption></GridIcon>
           <GridIcon name="chevron-up"><Caption>Chevron Up</Caption></GridIcon>
+          <GridIcon name="chevron-right"><Caption>Chevron Right</Caption></GridIcon>
           <GridIcon name="swap"><Caption>Swap</Caption></GridIcon>
           <GridIcon name="close"><Caption>Close</Caption></GridIcon>
           <GridIcon name="change"><Caption>Change</Caption></GridIcon>
@@ -83,10 +83,11 @@ const IconsPage = () => {
           <GridIcon name="search"><Caption>Search</Caption></GridIcon>
           <GridIcon name="sort"><Caption>Sort</Caption></GridIcon>
           <GridIcon name="caret-down"><Caption>Caret Down</Caption></GridIcon>
+          <GridIcon name="caret-left"><Caption>Caret Left</Caption></GridIcon>
           <GridIcon name="caret-up"><Caption>Caret Up</Caption></GridIcon>
-          <GridIcon name="reload"><Caption>Reload</Caption></GridIcon>
+          <GridIcon name="caret-right"><Caption>Caret Right</Caption></GridIcon>
           <GridIcon name="pause"><Caption>Pause</Caption></GridIcon>
-          <GridIcon name="play"><Caption>Play</Caption></GridIcon>
+          <GridIcon name="reload"><Caption>Reload</Caption></GridIcon>
         </Grid>
       </Section>
 
@@ -129,23 +130,21 @@ const IconsPage = () => {
           <GridIcon name="payment"><Caption>Payment</Caption></GridIcon>
           <GridIcon name="petrol"><Caption>Petrol</Caption></GridIcon>
           <GridIcon name="preferences"><Caption>Preferences</Caption></GridIcon>
-          <GridIcon name="printer"><Caption>Print</Caption></GridIcon>
+          <GridIcon name="printer"><Caption>Printer</Caption></GridIcon>
           <GridIcon name="recipes"><Caption>Recipes</Caption></GridIcon>
           <GridIcon name="star-outlined"><Caption>Star Outlined</Caption></GridIcon>
           <GridIcon name="star-half-filled"><Caption>Star Half Filled</Caption></GridIcon>
           <GridIcon name="star-filled"><Caption>Star Filled</Caption></GridIcon>
-          <GridIcon name="trash"><Caption>Trash</Caption></GridIcon>
           <GridIcon name="trolley"><Caption>Trolley</Caption></GridIcon>
           <GridIcon name="truck"><Caption>Truck</Caption></GridIcon>
-          <GridIcon name="upload"><Caption>Cloud</Caption></GridIcon>
+          <GridIcon name="upload"><Caption>Upload</Caption></GridIcon>
           <GridIcon name="voucher"><Caption>Voucher</Caption></GridIcon>
           <GridIcon name="map-pin-outlined"><Caption>Map Pin Outlined</Caption></GridIcon>
           <GridIcon name="map-pin-filled"><Caption>Map Pin Filled</Caption></GridIcon>
           <GridIcon name="map-pin-checked"><Caption>Map Pin Checked</Caption></GridIcon>
           <GridIcon name="map-pin-express"><Caption>Map Pin Express</Caption></GridIcon>
           <GridIcon name="map-pin-your-store"><Caption>Map Pin Your Store</Caption></GridIcon>
-          <GridIcon name="heart-outlined"><Caption>Heart Outlined</Caption></GridIcon>
-          <GridIcon name="heart-filled"><Caption>Heart Filled</Caption></GridIcon>
+          <GridIcon name="trash"><Caption>Trash</Caption></GridIcon>
           <GridIcon name="thumbs-up-outlined"><Caption>Thumbs Up Outlined</Caption></GridIcon>
           <GridIcon name="thumbs-down-outlined"><Caption>Thumbs Down Outlined</Caption></GridIcon>
           <GridIcon name="thumbs-up-filled"><Caption>Thumbs Up Filled</Caption></GridIcon>
@@ -153,7 +152,7 @@ const IconsPage = () => {
           <GridIcon name="map"><Caption>Map</Caption></GridIcon>
           <GridIcon name="conversation"><Caption>Conversation</Caption></GridIcon>
           <GridIcon name="near-me-outlined"><Caption>Near Me Outlined</Caption></GridIcon>
-          <GridIcon name="near-me-filled"><Caption>Near Me</Caption></GridIcon>
+          <GridIcon name="near-me-filled"><Caption>Near Me Filled</Caption></GridIcon>
           <GridIcon name="click-collect"><Caption>Click & Collect</Caption></GridIcon>
           <GridIcon name="lockers"><Caption>Lockers</Caption></GridIcon>
           <GridIcon name="show"><Caption>Show</Caption></GridIcon>
@@ -168,8 +167,10 @@ const IconsPage = () => {
           <GridIcon name="market"><Caption>Market</Caption></GridIcon>
           <GridIcon name="internal-collection"><Caption>Internal Collection</Caption></GridIcon>
           <GridIcon name="no-alcohol"><Caption>No Alcohol</Caption></GridIcon>
-          <GridIcon name="cook"><Caption>Cook Mode</Caption></GridIcon>
-          <GridIcon name="christmas"><Caption>Christmas</Caption></GridIcon>
+          <GridIcon name="cook"><Caption>Cook</Caption></GridIcon>
+          <GridIcon name="heart-outlined"><Caption>Heart Outlined</Caption></GridIcon>
+          <GridIcon name="heart-filled"><Caption>Heart Filled</Caption></GridIcon>
+          <GridIcon name="reindeer"><Caption>Reindeer</Caption></GridIcon>
           <GridIcon name="santa"><Caption>Santa</Caption></GridIcon>
         </Grid>
       </Section>

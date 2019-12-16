@@ -11,13 +11,14 @@ import asdaCalendarSVGSource from './images/asda-calendar.svg'
 import asdaCameraSVGSource from './images/asda-camera.svg'
 import asdaCaretDownSVGSource from './images/asda-caret-down.svg'
 import asdaCaretUpSVGSource from './images/asda-caret-up.svg'
+import asdaCaretLeftSVGSource from './images/asda-caret-left.svg'
 import asdaChangeSVGSource from './images/asda-change.svg'
 import asdaCheckSVGSource from './images/asda-check.svg'
 import asdaChevronDownSVGSource from './images/asda-chevron-down.svg'
 import asdaChevronLeftSVGSource from './images/asda-chevron-left.svg'
 import asdaChevronRightSVGSource from './images/asda-chevron-right.svg'
 import asdaChevronUpSVGSource from './images/asda-chevron-up.svg'
-import asdaChristmasSVGSource from './images/asda-reindeer.svg'
+import asdaReindeerSVGSource from './images/asda-reindeer.svg'
 import asdaCircleMinusSVGSource from './images/asda-circle-minus.svg'
 import asdaCirclePlusSVGSource from './images/asda-circle-plus.svg'
 import asdaClickCollectSVGSource from './images/asda-click-collect.svg'
@@ -62,7 +63,7 @@ import asdaPauseSVGSource from './images/asda-pause.svg'
 import asdaPaymentSVGSource from './images/asda-payment.svg'
 import asdaPetrolSVGSource from './images/asda-petrol.svg'
 import asdaPizzaSVGSource from './images/asda-pizza.svg'
-import asdaPlaySVGSource from './images/asda-play.svg'
+import asdaCaretRightSVGSource from './images/asda-caret-right.svg'
 import asdaPlusSVGSource from './images/asda-plus.svg'
 import asdaPreferencesSVGSource from './images/asda-preferences.svg'
 import asdaPriceSVGSource from './images/asda-price.svg'
@@ -107,13 +108,14 @@ import asdaCalendarPDFSource from './images/asda-calendar.pdf'
 import asdaCameraPDFSource from './images/asda-camera.pdf'
 import asdaCaretDownPDFSource from './images/asda-caret-down.pdf'
 import asdaCaretUpPDFSource from './images/asda-caret-up.pdf'
+import asdaCaretLeftPDFSource from './images/asda-caret-left.pdf'
 import asdaChangePDFSource from './images/asda-change.pdf'
 import asdaCheckPDFSource from './images/asda-check.pdf'
 import asdaChevronDownPDFSource from './images/asda-chevron-down.pdf'
 import asdaChevronLeftPDFSource from './images/asda-chevron-left.pdf'
 import asdaChevronRightPDFSource from './images/asda-chevron-right.pdf'
 import asdaChevronUpPDFSource from './images/asda-chevron-up.pdf'
-import asdaChristmasPDFSource from './images/asda-reindeer.pdf'
+import asdaReindeerPDFSource from './images/asda-reindeer.pdf'
 import asdaCircleMinusPDFSource from './images/asda-circle-minus.pdf'
 import asdaCirclePlusPDFSource from './images/asda-circle-plus.pdf'
 import asdaClickCollectPDFSource from './images/asda-click-collect.pdf'
@@ -158,7 +160,7 @@ import asdaPausePDFSource from './images/asda-pause.pdf'
 import asdaPaymentPDFSource from './images/asda-payment.pdf'
 import asdaPetrolPDFSource from './images/asda-petrol.pdf'
 import asdaPizzaPDFSource from './images/asda-pizza.pdf'
-import asdaPlayPDFSource from './images/asda-play.pdf'
+import asdaCaretRightPDFSource from './images/asda-caret-right.pdf'
 import asdaPlusPDFSource from './images/asda-plus.pdf'
 import asdaPreferencesPDFSource from './images/asda-preferences.pdf'
 import asdaPricePDFSource from './images/asda-price.pdf'
@@ -263,9 +265,9 @@ const iconSet = {
     svg: asdaChevronUpSVGSource,
     pdf: asdaChevronUpPDFSource,
   },
-  'christmas': {
-    svg: asdaChristmasSVGSource,
-    pdf: asdaChristmasPDFSource,
+  'reindeer': {
+    svg: asdaReindeerSVGSource,
+    pdf: asdaReindeerPDFSource,
   },
   'circle-minus': {
     svg: asdaCircleMinusSVGSource,
@@ -443,9 +445,13 @@ const iconSet = {
     svg: asdaPizzaSVGSource,
     pdf: asdaPizzaPDFSource,
   },
-  'play': {
-    svg: asdaPlaySVGSource,
-    pdf: asdaPlayPDFSource,
+  'caret-right': {
+    svg: asdaCaretRightSVGSource,
+    pdf: asdaCaretRightPDFSource,
+  },
+  'caret-left': {
+    svg: asdaCaretLeftSVGSource,
+    pdf: asdaCaretLeftPDFSource,
   },
   'plus': {
     svg: asdaPlusSVGSource,
