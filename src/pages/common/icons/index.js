@@ -17,15 +17,15 @@ import {
 } from '@sg/sg-layout'
 
 // Assets
-import metrics32x32PNGSource from './images/metrics-32x32.png'
-import iconLayoutPNGSource from './images/icon-layout.png'
-import strokeRadiiAddPNGSource from './images/stroke-radii-add.png'
-import strokeRadiiHeadphonePNGSource from './images/stroke-radii-headphone.png'
-import keylinePNGSource from './images/keyline.png'
-import squarePNGSource from './images/square.png'
-import circlePNGSource from './images/circle.png'
-import verticalRectanglePNGSource from './images/vertical-rectangle.png'
-import horizontalRectanglePNGSource from './images/horizontal-rectangle.png'
+import metrics32x32PNGSource from './images/icons-32x32.png'
+import iconLayoutPNGSource from './images/icons-layout.png'
+import strokeRadiiAddPNGSource from './images/icons-example-1.png'
+import strokeRadiiHeadphonePNGSource from './images/icons-example-2.png'
+import keylinePNGSource from './images/icons-keyline.png'
+import squarePNGSource from './images/icons-square.png'
+import circlePNGSource from './images/icons-circle.png'
+import verticalRectanglePNGSource from './images/icons-vertical-rectangle.png'
+import horizontalRectanglePNGSource from './images/icons-horizontal-rectangle.png'
 import iconSet from '@asda/icon/svg-sources.js'
 import './_style.scss'
 
@@ -185,10 +185,14 @@ const IconsPage = () => {
         <Figure
           src={metrics32x32PNGSource}
           caption="32 x 32 (100% Scale)"
+          maxWidth="79px"
+          fluid
         />
         <Figure
           src={iconLayoutPNGSource}
           caption="Icon layout (400% scale)"
+          maxWidth="397px"
+          fluid
           noMargin
         />
       </Section>
@@ -205,6 +209,8 @@ const IconsPage = () => {
             <Figure
               src={keylinePNGSource}
               caption="Keyline (400% scale)"
+              maxWidth="130px"
+              fluid
               noMargin
             />
           </GridItem>
@@ -212,6 +218,8 @@ const IconsPage = () => {
             <Figure
               src={squarePNGSource}
               caption="Square (400% scale)"
+              maxWidth="130px"
+              fluid
               noMargin
             />
           </GridItem>
@@ -219,6 +227,8 @@ const IconsPage = () => {
             <Figure
               src={circlePNGSource}
               caption="Circle (400% scale)"
+              maxWidth="130px"
+              fluid
               noMargin
             />
           </GridItem>
@@ -226,6 +236,8 @@ const IconsPage = () => {
             <Figure
               src={verticalRectanglePNGSource}
               caption="Vertical Rectangle (400% scale)"
+              maxWidth="130px"
+              fluid
               noMargin
             />
           </GridItem>
@@ -233,6 +245,8 @@ const IconsPage = () => {
             <Figure
               src={horizontalRectanglePNGSource}
               caption="Horizontal Rectangle (400% scale)"
+              maxWidth="130px"
+              fluid
               noMargin
             />
           </GridItem>
@@ -253,10 +267,20 @@ const IconsPage = () => {
 
         <Grid columnCount={minWidth1024 ? 2 : 1} noMargin>
           <GridItem>
-            <Figure src={strokeRadiiAddPNGSource} noMargin />
+            <Figure
+              src={strokeRadiiAddPNGSource}
+              noMargin
+              maxWidth="258px"
+              fluid
+            />
           </GridItem>
           <GridItem>
-            <Figure src={strokeRadiiHeadphonePNGSource} noMargin />
+            <Figure
+              src={strokeRadiiHeadphonePNGSource}
+              noMargin
+              maxWidth="258px"
+              fluid
+            />
           </GridItem>
         </Grid>
       </Section>
