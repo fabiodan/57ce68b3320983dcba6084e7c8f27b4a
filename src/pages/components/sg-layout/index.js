@@ -88,6 +88,15 @@ const Figure = ({
   )
 }
 
+const Semibold = ({ children, className = '' }) => {
+  const modifiers = []
+  const classNames = joinClassNames('sg-layout__semibold', className, modifiers)
+
+  return (
+    <strong className={classNames}>{children}</strong>
+  )
+}
+
 Figure.defaultProps = {
   className: '',
   maxWidth: 'none',
@@ -168,6 +177,7 @@ export {
   Header,
   Main,
   Section,
+  Semibold,
   Heading1,
   Heading2,
   Heading3,

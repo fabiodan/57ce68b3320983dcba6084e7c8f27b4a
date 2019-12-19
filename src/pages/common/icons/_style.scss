@@ -59,6 +59,12 @@
   font-weight: 600;
 }
 
+.icons-page__charcoal:hover {
+  background-color: $color-charcoal;
+  color: $color-white;
+  transition: background-color, color 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
 // Breakpoints
 @media (min-width: 480px) {
   .icons-page__grid {

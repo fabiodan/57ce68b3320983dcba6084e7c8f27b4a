@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import Icon from '@asda/icon'
 import { LinkText } from '@asda/link'
 import {
+  Semibold,
   Heading1,
   Heading2,
   Caption,
@@ -26,6 +27,9 @@ import squarePNGSource from './images/icons-square.png'
 import circlePNGSource from './images/icons-circle.png'
 import verticalRectanglePNGSource from './images/icons-vertical-rectangle.png'
 import horizontalRectanglePNGSource from './images/icons-horizontal-rectangle.png'
+import stepsExample1PNGSource from './images/steps-example1.png'
+import stepsExample2PNGSource from './images/steps-example2.png'
+import stepsExample3PNGSource from './images/steps-example3.png'
 import iconSet from '@asda/icon/svg-sources.js'
 import './_style.scss'
 
@@ -283,6 +287,57 @@ const IconsPage = () => {
             />
           </GridItem>
         </Grid>
+      </Section>
+
+      <Section>
+        <Heading2>Exporting icons as assets</Heading2>
+        <Paragraph>
+          When creating or updating an icon, these step-by-step directions will help you
+          create light, lean and bug-free assets to handoff to developers.
+        </Paragraph>
+
+        <Paragraph>
+          1. <Semibold>Duplicate</Semibold> the icon symbol and <Semibold>rename</Semibold> it following the pattern: <br />
+          <Semibold>✱ / Export / Icons / Icon Group / asda-icon-name</Semibold><br />
+        </Paragraph>
+        <Paragraph>
+          If there is already an existing duplicated symbol for this icon, <Semibold>delete</Semibold> the previous one.
+        </Paragraph>
+
+        <Figure
+          src={stepsExample1PNGSource}
+          maxWidth="658px"
+          fluid
+        />
+
+        <Paragraph>
+          2. <Semibold>Delete</Semibold> grids, guidelines, color symbols and folders
+          as they are not needed for development.
+        </Paragraph>
+        <Paragraph>
+          If your shape or path is defined as a mask, right click and
+          {' '}<Semibold>uncheck</Semibold> the mask.
+        </Paragraph>
+        <Figure
+          src={stepsExample2PNGSource}
+          maxWidth="658px"
+          fluid
+        />
+
+        <Paragraph>
+          3. <Semibold>Flatten</Semibold> all shapes to provide as few paths as possible,
+          {' '}<Semibold>set</Semibold> fill color to <span className="icons-page__charcoal">charcoal</span> (#3D3D3D) and <Semibold>delete</Semibold>{' '}
+          any extra style.
+        </Paragraph>
+        <Paragraph>
+          Finally <Semibold>create</Semibold> the exports for SVG and PDF formats <Semibold>(1x of size, no prefix/sufix)</Semibold>.
+        </Paragraph>
+        <Figure
+          src={stepsExample3PNGSource}
+          maxWidth="945px"
+          fluid
+        />
+
       </Section>
     </article>
   )
