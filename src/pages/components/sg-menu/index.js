@@ -17,7 +17,7 @@ const Menu = ({ toggleMenu }) => {
       name: 'Common library',
       url: '/common',
       children: [
-        // { name: 'Guiding principles', url: '/common/guiding-principles' },
+        { name: 'Guiding principles', url: '/common/guiding-principles', wip: true },
         { name: 'Color scheme', url: '/common/color-scheme' },
         { name: 'Buttons', url: '/common/buttons' },
         { name: 'Links', url: '/common/links' },
