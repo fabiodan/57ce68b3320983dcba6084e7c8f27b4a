@@ -21,6 +21,7 @@ import { Header, Aside, Main } from './pages/components/sg-layout'
 import SamplePage from './pages/_sample'
 
 // Pages (Common)
+import CommonGuidingPrinciples from './pages/common/guiding-principles'
 import ColorSchemePage from './pages/common/color-scheme'
 import ButtonsPage from './pages/common/buttons'
 import LinksPage from './pages/common/links'
@@ -146,7 +147,8 @@ ReactDOM.render(
         <Route exact path="/" render={() => <Redirect to="/common" />} />
 
         {/* Common */}
-        <Route exact path="/common" render={() => <Redirect to="/common/color-scheme" />} />
+        <Route exact path="/common" render={() => <Redirect to="/common/guiding-principles" />} />
+        <Route path="/common/guiding-principles" component={CommonGuidingPrinciples} />
         <Route path="/common/color-scheme" component={ColorSchemePage} />
         <Route path="/common/buttons" component={ButtonsPage} />
         <Route path="/common/links" component={LinksPage} />
