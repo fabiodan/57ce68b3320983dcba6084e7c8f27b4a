@@ -25,7 +25,7 @@ const CommonGuidingPrinciples = () => (
     <Heading1>Guiding principles</Heading1>
 
     <Section>
-      <Heading2>Component Creation</Heading2>
+      <Heading2>Component creation</Heading2>
       <Paragraph>
         The guiding principles below will make it easier for members of the
         design team to create meaningful components that our team can find,
@@ -33,7 +33,7 @@ const CommonGuidingPrinciples = () => (
         and adoption.
       </Paragraph>
 
-      {/* <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid /> */}
+      <Figure maxWidth="815px" src={samplePNGSource}  fluid />
     </Section>
 
     <Section>
@@ -46,7 +46,7 @@ const CommonGuidingPrinciples = () => (
         splitting the component into sections (left/centre/right) and add
         descriptive terms for each section.
       </Paragraph>
-      {/* <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid /> */}
+      <Figure maxWidth="815px" src={samplePNGSource}  fluid />
 
       <Heading3>Layer structure</Heading3>
       <Paragraph>
@@ -54,14 +54,14 @@ const CommonGuidingPrinciples = () => (
         appear first in the list (Icon - Placeholder Left), scanning left to
         right, top to bottom.
       </Paragraph>
-      {/* <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid /> */}
+      <Figure maxWidth="815px" src={samplePNGSource}  fluid />
 
       <Heading3>Override list</Heading3>
       <Paragraph>
         By arranging layers in this way the override structure becomes easier to
         understand and scan/edit.
       </Paragraph>
-      {/* <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid /> */}
+      <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid />
 
     </Section>
 
@@ -72,7 +72,7 @@ const CommonGuidingPrinciples = () => (
         Responsive web components may have 3 different layouts (320, 768 & 1024).
         Consider vertical scalability also.
       </Paragraph>
-      {/* <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid /> */}
+      <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid />
     </Section>
 
     <Section>
@@ -81,7 +81,7 @@ const CommonGuidingPrinciples = () => (
         Use the STARK plugin to check that colour combinations are accessible.
         Aim for passing at a AA standard.
       </Paragraph>
-      {/* <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid /> */}
+      <Figure maxWidth="815px" src={samplePNGSource} noMargin fluid />
     </Section>
 
   </article>
