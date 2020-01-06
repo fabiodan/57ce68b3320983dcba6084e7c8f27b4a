@@ -10,29 +10,8 @@
 }
 
 // Elements/Mixes
-.ios-bottom-nav-page__examples {
-  display: flex;
-  flex-direction: column;
-  max-width: 810px;
-}
-
-.ios-bottom-nav-page__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.ios-bottom-nav-page__list-item {
-  margin-bottom: $spacing-xxl;
-}
 
 // Breakpoints
 @media (min-width: 1024px) {
-  .ios-bottom-nav-page__examples {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .ios-bottom-nav-page__figure {
-    margin-left: $spacing-xxxl;
-  }
+
 }
