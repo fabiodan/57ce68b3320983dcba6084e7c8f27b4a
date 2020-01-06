@@ -50,7 +50,7 @@ const IOSNavigationBarsPage = () => {
         </Paragraph>
 
         <Heading3>Navigation Bar - LEFT</Heading3>
-        <Grid columnCount={minWidth1024 ? 2 : 1}>
+        <Grid columnCount={minWidth1024 ? 2 : 1} withBackground>
           <GridItem>
             <Caption position="top">Back Navigation</Caption>
             <Figure noMargin fluid maxWidth="375px" src={navigationBarBackNavigationPNGSource} />
@@ -62,7 +62,7 @@ const IOSNavigationBarsPage = () => {
         </Grid>
 
         <Heading3>Navigation Bar - CENTRE</Heading3>
-        <Grid columnCount={minWidth1024 ? 2 : 1}>
+        <Grid columnCount={minWidth1024 ? 2 : 1} withBackground>
           <GridItem>
             <Caption position="top">ASDA LOGO</Caption>
             <Figure noMargin fluid maxWidth="375px" src={navigationBarAsdaLogoPNGSource} />
@@ -78,7 +78,7 @@ const IOSNavigationBarsPage = () => {
         </Grid>
 
         <Heading3>Navigation Bar - RIGHT</Heading3>
-        <Grid columnCount={minWidth1024 ? 2 : 1}>
+        <Grid columnCount={minWidth1024 ? 2 : 1} withBackground>
           <GridItem>
             <Caption position="top">Empty Trolley</Caption>
             <Figure noMargin fluid maxWidth="375px" src={navigationEmptyTrolleyPNGSource} />
