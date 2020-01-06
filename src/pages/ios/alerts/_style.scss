@@ -11,19 +11,7 @@
 
 // Elements/Mixes
 
-.ios-alerts-page__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 60px;
-}
-
 // Breakpoints
-@media (min-width: 480px) {
-
-}
-
 @media (min-width: 1024px) {
-  .ios-alerts-page__grid {
-    grid-template-columns: 1fr 1fr;
-  }
+
 }
