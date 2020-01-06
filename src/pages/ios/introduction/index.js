@@ -12,9 +12,10 @@ import {
 } from '@sg/sg-layout'
 
 // Assets
-import appleDesignResourcesPNGSource from './images/apple-design-resources.png'
-import sketchLibraryPNGSource from './images/sketch-library.png'
-import iosFontsPNGSource from './images/ios-fonts.png'
+import appleDesignResourcesPNGSource from './images/introduction-apple-design-resources.png'
+import sketchLibraryPNGSource from './images/introduction-add-library.png'
+import iosFontsPNGSource from './images/introduction-ios-fonts.png'
+import interfaceGuidelinesPNGSource from './images/introduction-human-interface-guidelines.png'
 import './_style.scss'
 
 const IOSIntroductionPage = () => (
@@ -24,12 +25,18 @@ const IOSIntroductionPage = () => (
 
     <Section>
       <Heading2>Designing for iOS</Heading2>
-      <Paragraph noMargin>
-        The first step in getting prepared for designing for iOS is to visit Apple{'\''}s design{' '}
+      <Paragraph>
+        The first step in getting prepared for designing for iOS is to visit{' '}
         <LinkText target="_blank" href="https://developer.apple.com/design/resources/">
-          resources page
+          Apple{'\''}s Design Resources page
         </LinkText>.
       </Paragraph>
+      <Figure
+        fluid
+        maxWidth="810px"
+        noMargin
+        src={appleDesignResourcesPNGSource}
+      />
     </Section>
 
     <Section>
@@ -38,7 +45,8 @@ const IOSIntroductionPage = () => (
       <Figure
         fluid
         maxWidth="810px"
-        src={appleDesignResourcesPNGSource}
+        noMargin
+        src={sketchLibraryPNGSource}
       />
     </Section>
 
@@ -52,8 +60,9 @@ const IOSIntroductionPage = () => (
       </Paragraph>
       <Figure
         fluid
-        maxWidth="785px"
-        src={sketchLibraryPNGSource}
+        maxWidth="810px"
+        noMargin
+        src={iosFontsPNGSource}
       />
     </Section>
 
@@ -72,8 +81,9 @@ const IOSIntroductionPage = () => (
       </Paragraph>
       <Figure
         fluid
-        maxWidth="778px"
-        src={iosFontsPNGSource}
+        maxWidth="810px"
+        noMargin
+        src={interfaceGuidelinesPNGSource}
       />
     </Section>
 
