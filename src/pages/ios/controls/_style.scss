@@ -10,22 +10,6 @@
 }
 
 // Elements/Mixes
-.ios-controls-page__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 60px;
-  justify-items: center;
-  padding: 60px 32px;
-  background-color: $color-background-gray;
-}
-
-.ios-controls-page__grid-white-mode {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 60px;
-  justify-items: left;
-  margin-bottom: $spacing-xxxl;
-}
 
 // Modifiers
 .ios-controls-page--minus-margin {
@@ -38,10 +22,5 @@
 }
 
 @media (min-width: 1024px) {
-  .ios-controls-page__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .ios-controls-page__grid-white-mode {
-    grid-template-columns: 1fr 1fr;
-  }
+  
 }

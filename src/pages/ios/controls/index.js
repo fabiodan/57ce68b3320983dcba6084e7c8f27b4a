@@ -1,166 +1,170 @@
 // Libs
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 // Components (from atomic to composite)
 import {
   Caption,
+  Paragraph,
   Heading1,
   Heading2,
   Figure,
-  FigureContainer,
-  Paragraph,
+  GridItem,
+  Grid,
   Section,
 } from '@sg/sg-layout'
 
 // Assets
 import controlsexamplePNGSource from './images/controls-example.png'
-import examplecheckPNGSource from './images/controls-example-check.png'
+
 import selectedradioPNGSource from './images/controls-selected-radio.png'
 import unselectedradioPNGSource from './images/controls-unselected-radio.png'
 import radioexamplePNGSource from './images/controls-radio-example.png'
+
 import selectedcheckboxPNGSource from './images/controls-selected-checkbox.png'
 import unselectedcheckboxPNGSource from './images/controls-unselected-checkbox.png'
 import checkboxexamplePNGSource from './images/controls-checkbox-example.png'
+
+import inlineTickPNGSource from './images/controls-inline-tick.png'
+import inlineTickExamplePNGSource from './images/controls-inline-tick-example.png'
+
 import selectrightPNGSource from './images/controls-select-right.png'
 import selectleftPNGSource from './images/controls-select-left.png'
 import selectexamplePNGSource from './images/controls-select-example.png'
+
 import toggleonPNGSource from './images/controls-toggle-on.png'
 import toggleoffPNGSource from './images/controls-toggle-off.png'
 import toggleexamplePNGSource from './images/controls-toggles-example.png'
-import togglerealexamplePNGSource from './images/controls-toggles-real-example.png'
-import stepperPNGSource from './images/controls-stepper.png'
-import stepperexamplePNGSource from './images/controls-stepper-example.png'
-import stepperrealexamplePNGSource from './images/controls-stepper-real-example.png'
+
 import './_style.scss'
 
-const Grid = ({ children }) => (
-  <div className="ios-controls-page__grid">{ children }</div>
-)
 
-const GridWhite = ({ children }) => (
-  <div className="ios-controls-page__grid-white-mode">{ children }</div>
-)
+const IOSControlsPage = () => {
+  const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 
-const IOSControlsPage = () => (
-  <article className="ios-controls-page">
+  return (
+    <article className="ios-controls-page">
 
-    <Heading1>Controls</Heading1>
+      <Heading1>Controls</Heading1>
 
-    <Section>
-      <Heading2>Input Controls</Heading2>
-      <Grid>
-        <div>
-          <Figure noMargin fluid maxWidth="325px" src={controlsexamplePNGSource} />
-        </div>
-        <div>
-          <Figure noMargin fluid maxWidth="325px" src={examplecheckPNGSource} />
-        </div>
-      </Grid>
-    </Section>
+      <Section>
+        <Heading2>Input Controls</Heading2>
+        <Paragraph>
+          Input controls let the user interact in a number of different ways.
+          They are usually found within forms.
+        </Paragraph>
+        <Grid withBackground>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="223px" src={controlsexamplePNGSource} />
+          </GridItem>
+        </Grid>
+      </Section>
 
-    <Section>
-      <Heading2>Radio Buttons</Heading2>
-      <Paragraph>
-        Radio buttons let users select a single item from a list at once.
-      </Paragraph>
-      <GridWhite>
-        <div>
-          <Figure noMargin fluid maxWidth="375px" src={unselectedradioPNGSource} />
-        </div>
-        <div>
-          <Figure noMargin fluid maxWidth="375px" src={selectedradioPNGSource} />
-        </div>
-      </GridWhite>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="183px" src={radioexamplePNGSource} />
-      </FigureContainer>
-    </Section>
+      <Section>
+        <Heading2>Radio Buttons</Heading2>
+        <Paragraph>
+          Radio buttons let users select a single item from a list at once.
+        </Paragraph>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="375px" src={unselectedradioPNGSource} />
+          </GridItem>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="375px" src={selectedradioPNGSource} />
+          </GridItem>
+        </Grid>
+        <Grid withBackground>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="223px" src={radioexamplePNGSource} />
+          </GridItem>
+        </Grid>
+      </Section>
 
-    <Section>
-      <Heading2>Checkboxes</Heading2>
-      <Paragraph>
-        Checkboxes let users select multiple items from a list.
-      </Paragraph>
-      <GridWhite>
-        <div>
-          <Figure noMargin fluid maxWidth="375px" src={unselectedcheckboxPNGSource} />
-        </div>
-        <div>
-          <Figure noMargin fluid maxWidth="375px" src={selectedcheckboxPNGSource} />
-        </div>
-      </GridWhite>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="183px" src={checkboxexamplePNGSource} />
-      </FigureContainer>
-    </Section>
+      <Section>
+        <Heading2>Checkboxes</Heading2>
+        <Paragraph>
+          Checkboxes let users select multiple items from a list.
+        </Paragraph>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="375px" src={unselectedcheckboxPNGSource} />
+          </GridItem>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="375px" src={selectedcheckboxPNGSource} />
+          </GridItem>
+        </Grid>
+        <Grid withBackground>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="223px" src={checkboxexamplePNGSource} />
+          </GridItem>
+        </Grid>
+      </Section>
 
-    <Section>
-      <Heading2>Quantity Select</Heading2>
-      <Paragraph>
-        Quantity select lets the user add more than one of the same item.
-      </Paragraph>
-      <GridWhite>
-        <div>
-          <Caption position="top">Quantity Select - with right arrow</Caption>
-          <div className="ios-controls-page--minus-margin">
-            <Figure noMargin fluid maxWidth="222px" src={selectrightPNGSource} />
-          </div>
-        </div>
-        <div>
-          <Caption position="top">Quantity Select - with left arrow</Caption>
-          <div className="ios-controls-page--minus-margin">
-            <Figure noMargin fluid maxWidth="221px" src={selectleftPNGSource} />
-          </div>
-        </div>
-      </GridWhite>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="183px" src={selectexamplePNGSource} />
-      </FigureContainer>
-    </Section>
+      <Section>
+        <Heading2>Inline Tick</Heading2>
+        <Paragraph>
+          Inline ticks appear within the filter and sort menu.
+        </Paragraph>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="375px" src={inlineTickPNGSource} />
+          </GridItem>
+        </Grid>
+        <Grid withBackground>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="223px" src={inlineTickExamplePNGSource} />
+          </GridItem>
+        </Grid>
+      </Section>
 
-    <Section>
-      <Heading2>Toggles</Heading2>
-      <Paragraph>
-        Toggles let the user turn something on or off.
-      </Paragraph>
-      <GridWhite>
-        <div>
-          <Caption position="top">Toggle Off</Caption>
-          <Figure noMargin fluid maxWidth="84px" src={toggleoffPNGSource} />
-        </div>
-        <div>
-          <Caption position="top">Toggle On</Caption>
-          <Figure noMargin fluid maxWidth="84px" src={toggleonPNGSource} />
-        </div>
-      </GridWhite>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="183px" src={toggleexamplePNGSource} />
-      </FigureContainer>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="341px" src={togglerealexamplePNGSource} />
-      </FigureContainer>
-    </Section>
+      <Section>
+        <Heading2>Quantity Select</Heading2>
+        <Paragraph>
+          Quantity select lets the user add more than one of the same item.
+        </Paragraph>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
+          <GridItem>
+            <Caption position="top">Quantity Select - with right arrow</Caption>
+            <div className="ios-controls-page--minus-margin">
+              <Figure noMargin fluid maxWidth="222px" src={selectrightPNGSource} />
+            </div>
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Quantity Select - with left arrow</Caption>
+            <div className="ios-controls-page--minus-margin">
+              <Figure noMargin fluid maxWidth="221px" src={selectleftPNGSource} />
+            </div>
+          </GridItem>
+        </Grid>
+        <Grid withBackground>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="223px" src={selectexamplePNGSource} />
+          </GridItem>
+        </Grid>
+      </Section>
 
-    <Section>
-      <Heading2>Steppers</Heading2>
-      <Paragraph>
-        Steppers allow the user to increase or decrease an amount.
-      </Paragraph>
-      <GridWhite>
-        <div>
-          <Caption position="top">Stepper</Caption>
-          <Figure noMargin fluid maxWidth="84px" src={stepperPNGSource} />
-        </div>
-      </GridWhite>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="183px" src={stepperexamplePNGSource} />
-      </FigureContainer>
-      <FigureContainer>
-        <Figure noMargin fluid maxWidth="341px" src={stepperrealexamplePNGSource} />
-      </FigureContainer>
-    </Section>
-
-  </article>
-)
-
+      <Section>
+        <Heading2>Toggles</Heading2>
+        <Paragraph>
+          Toggles let the user turn something on or off.
+        </Paragraph>
+        <Grid columnCount={minWidth1024 ? 2 : 1}>
+          <GridItem>
+            <Caption position="top">Toggle Off</Caption>
+            <Figure noMargin fluid maxWidth="84px" src={toggleoffPNGSource} />
+          </GridItem>
+          <GridItem>
+            <Caption position="top">Toggle On</Caption>
+            <Figure noMargin fluid maxWidth="84px" src={toggleonPNGSource} />
+          </GridItem>
+        </Grid>
+        <Grid withBackground>
+          <GridItem>
+            <Figure noMargin fluid maxWidth="223px" src={toggleexamplePNGSource} />
+          </GridItem>
+        </Grid>
+      </Section>
+    </article>
+  )
+}
 export default IOSControlsPage
