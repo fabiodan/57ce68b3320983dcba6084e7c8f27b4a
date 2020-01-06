@@ -11,31 +11,7 @@
 
 // Elements/Mixes
 
-.ios-tables-page__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 60px;
-  justify-items: center;
-}
-
-.ios-tables-page__figure {
-  margin-bottom: $spacing-l;
-}
-
-.ios-tables-page__dark-background{
-  background-color: $color-background-gray;
-  padding:  $spacing-m $spacing-m $spacing-l $spacing-m;
-  margin-bottom: $spacing-xxxl;
-}
-
 // Breakpoints
-@media (min-width: 320px) {
-
-}
-
 @media (min-width: 1024px) {
-  .ios-tables-page__grid {
-    grid-template-columns: 1fr 1fr;
-    justify-items: left;
-  }
+
 }
