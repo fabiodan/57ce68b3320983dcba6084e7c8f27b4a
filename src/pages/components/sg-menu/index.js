@@ -18,6 +18,7 @@ const Menu = ({ toggleMenu }) => {
       url: '/common',
       children: [
         { name: 'Guiding principles', url: '/common/guiding-principles', wip: true },
+        { name: 'Atomic design', url: '/common/atomic-design' },
         { name: 'Color scheme', url: '/common/color-scheme' },
         { name: 'Buttons', url: '/common/buttons' },
         { name: 'Links', url: '/common/links' },

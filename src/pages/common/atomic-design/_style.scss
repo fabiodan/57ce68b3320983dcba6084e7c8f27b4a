@@ -1,0 +1,46 @@
+/* Sample Page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+
+// Block
+.common-atomic-design-page {
+
+}
+
+// Elements/Mixes
+.common-atomic-design-page__atomic-element {
+  margin-bottom: $spacing-xxxl;
+  max-width: 878px;
+  min-height: 127px;
+}
+
+.common-atomic-design-page__atomic-element__figure {
+  float: left;
+  margin-right: $spacing-xxxl;
+}
+
+.common-atomic-design-page__atomic-element__text {
+}
+
+// Modifiers
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
