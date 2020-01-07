@@ -19,11 +19,9 @@ import textFieldsErrorPNGSource from './images/text-fields-error.png'
 import textFieldsExamplePNGSource from './images/text-fields-example.png'
 import textFieldsFreeFormatPNGSource from './images/text-fields-free-format.png'
 import textFieldsPlaceholderDropdownPNGSource from './images/text-fields-placeholder-dropdown.png'
-import textFieldsPlaceholderFocusPNGSource from './images/text-fields-placeholder-focus.png'
 import textFieldsPlaceholderIconPNGSource from './images/text-fields-placeholder-icon.png'
 import textFieldsPlaceholderPNGSource from './images/text-fields-placeholder.png'
 import textFieldsPopulatedDropdownPNGSource from './images/text-fields-populated-dropdown.png'
-import textFieldsPopulatedFocusPNGSource from './images/text-fields-populated-focus.png'
 import textFieldsPopulatedIconPNGSource from './images/text-fields-populated-icon.png'
 import textFieldsPopulatedPNGSource from './images/text-fields-populated.png'
 import textFieldsSuccessPNGSource from './images/text-fields-success.png'
@@ -57,16 +55,8 @@ const IOSTextFieldsPage = () => {
             <Figure maxWidth="375px" src={textFieldsPlaceholderPNGSource} noMargin fluid />
           </GridItem>
           <GridItem>
-            <Caption position="top">Text Field - Placeholder - In Focus</Caption>
-            <Figure maxWidth="375px" src={textFieldsPlaceholderFocusPNGSource} noMargin fluid />
-          </GridItem>
-          <GridItem>
             <Caption position="top">Text Field - Populated</Caption>
             <Figure maxWidth="375px" src={textFieldsPopulatedPNGSource} noMargin fluid />
-          </GridItem>
-          <GridItem>
-            <Caption position="top">Text Field - Populated - In Focus</Caption>
-            <Figure maxWidth="375px" src={textFieldsPopulatedFocusPNGSource} noMargin fluid />
           </GridItem>
           <GridItem>
             <Caption position="top">Text Field - Placeholder with dropdown</Caption>
