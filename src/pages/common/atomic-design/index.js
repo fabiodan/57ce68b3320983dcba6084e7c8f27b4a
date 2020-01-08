@@ -33,7 +33,7 @@ const AtomicElement = ({ type, children }) => {
   return (
     <div className="common-atomic-design-page__atomic-element">
       <Figure
-        className="common-atomic-design-page__atomic-element__figure" 
+        className="common-atomic-design-page__atomic-element__figure"
         maxWidth="100px" src={elements[type]} noMargin
       />
       <div className="common-atomic-design-page__atomic-element__text">
@@ -106,7 +106,7 @@ const CommonAtomicDesignPage = () => (
       </AtomicElement>
 
       <Paragraph>
-        For further information check the {' '}
+        For further information check {' '}
         <LinkText target="_blank" href="http://atomicdesign.bradfrost.com/chapter-2/">
           chapter 2 of the Atomic Design book
         </LinkText>.
