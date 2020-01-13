@@ -2,50 +2,56 @@
 import React, { Fragment } from 'react'
 
 // Components (from atomic to composite)
-import { Heading1, Heading2, Paragraph, Section } from '@sg/sg-layout'
+import { LinkText } from '@asda/link'
+import {
+  Heading1,
+  Heading2,
+  Paragraph,
+  Section
+} from '@sg/sg-layout'
 
 // Assets
 import './_style.scss'
 
 const TypesScale = ({ children }) => (
-  <div className="typography-page__typescale">
+  <div className="common-typography-page__typescale">
     {children}
   </div>
 )
 
 const Specs = ({ children }) => (
-  <div className="typography-page__specs">
+  <div className="common-typography-page__specs">
     {children}
   </div>
 )
 
 const Attribute = ({ children }) => (
   <Fragment>
-    <span className="typography-page__attribute">
+    <span className="common-typography-page__attribute">
       {children}
     </span><wbr /> {/* Break the specs in a gracefull way */}
   </Fragment>
 )
 
 const FontWeightList = () => (
-  <ul className="typography-page__weight-list">
-    <li className="typography-page__weight-item">
-      <div className="typography-page__weight-example">Aa</div>
-      <div className="typography-page__weight-definition">Regular</div>
+  <ul className="common-typography-page__weight-list">
+    <li className="common-typography-page__weight-item">
+      <div className="common-typography-page__weight-example">Aa</div>
+      <div className="common-typography-page__weight-definition">Regular</div>
     </li>
-    <li className="typography-page__weight-item">
-      <div className="typography-page__weight-example">Aa</div>
-      <div className="typography-page__weight-definition">Semi Bold</div>
+    <li className="common-typography-page__weight-item">
+      <div className="common-typography-page__weight-example">Aa</div>
+      <div className="common-typography-page__weight-definition">Semi Bold</div>
     </li>
-    <li className="typography-page__weight-item">
-      <div className="typography-page__weight-example">Aa</div>
-      <div className="typography-page__weight-definition">Bold</div>
+    <li className="common-typography-page__weight-item">
+      <div className="common-typography-page__weight-example">Aa</div>
+      <div className="common-typography-page__weight-definition">Bold</div>
     </li>
   </ul>
 )
 
-const TypographyPage = () => (
-  <article className="typography-page">
+const CommonTypographyPage = () => (
+  <article className="common-typography-page">
     <Heading1>Typography</Heading1>
 
     <Section>
@@ -56,7 +62,7 @@ const TypographyPage = () => (
         fun and simple enough to let the content speak for itself.
       </Paragraph>
 
-      <Paragraph className="typography-page__characters" noMargin>
+      <Paragraph className="common-typography-page__characters" noMargin>
         {'ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžАБВГҐДЂЕЁЄЖЗЅИІЇЙЈКЛЉМНЊОПРСТЋУЎФХЦЧЏШЩЪЫЬЭЮЯабвгґдђеёєжзѕиіїйјклљмнњопрстћуўфхцчџшщъыьэюяΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωάΆέΈέΉίϊΐΊόΌύΰϋΎΫὰάὲέὴήὶίὸόὺύὼώΏĂÂÊÔƠƯăâêôơư1234567890‘?’“!"(%)[#]{@}/&\\<-+÷×=>®©$€£¥¢:;,.*'}
       </Paragraph>
 
@@ -68,9 +74,16 @@ const TypographyPage = () => (
     <Section>
       <Heading2>Font Sizes</Heading2>
       <Paragraph>
-        Font scale consists of 7 different sizes. The default size applied to
+        Font scale for Web and iOS consists of 7 different sizes. The default size applied to
         the body is Medium (16px, 1em). Line height is always kept at auto and
         maximum 10-12 words per line in a paragraph should be the aim.
+      </Paragraph>
+      <Paragraph>
+        There are few differences on Android font scale, to learn more about
+        them visit the{' '}
+        <LinkText href="/#/android/typography">
+          typography page for the Android platform
+        </LinkText>.
       </Paragraph>
       <TypesScale>
         <span className="typography--xxxl">The quick brown fox jumps over the lazy dog</span>
@@ -148,4 +161,4 @@ const TypographyPage = () => (
   </article>
 )
 
-export default TypographyPage
+export default CommonTypographyPage

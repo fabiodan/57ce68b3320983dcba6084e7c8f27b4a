@@ -19,6 +19,7 @@ const Menu = ({ toggleMenu }) => {
       children: [
         { name: 'Guiding principles', url: '/common/guiding-principles', wip: true },
         { name: 'Atomic design', url: '/common/atomic-design' },
+        { name: 'Typography', url: '/common/typography' },
         { name: 'Color scheme', url: '/common/color-scheme' },
         { name: 'Buttons', url: '/common/buttons' },
         { name: 'Links', url: '/common/links' },
@@ -44,9 +45,8 @@ const Menu = ({ toggleMenu }) => {
       name: 'Web library',
       url: '/web',
       children: [
-        { name: 'Typography', url: '/web/typography' },
-        { name: 'Special buttons', url: '/web/special-buttons' },
         { name: 'Layout', url: '/web/layout' },
+        { name: 'Special buttons', url: '/web/special-buttons' },
         { name: 'Spacing', url: '/web/spacing' },
         { name: 'Text fields', url: '/web/text-fields' },
         { name: 'Dropdowns', url: '/web/dropdowns' },

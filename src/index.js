@@ -23,6 +23,7 @@ import SamplePage from './pages/_sample'
 // Pages (Common)
 import CommonGuidingPrinciples from './pages/common/guiding-principles'
 import CommonAtomicDesign from './pages/common/atomic-design'
+import CommonTypographyPage from './pages/common/typography'
 import ColorSchemePage from './pages/common/color-scheme'
 import ButtonsPage from './pages/common/buttons'
 import LinksPage from './pages/common/links'
@@ -30,7 +31,6 @@ import IconsPage from './pages/common/icons'
 import BrandPage from './pages/common/brand'
 
 // Pages (Web)
-import TypographyPage from './pages/web/typography'
 import LayoutPage from './pages/web/layout'
 import SpacingPage from './pages/web/spacing'
 import SpecialButtonsPage from './pages/web/special-buttons'
@@ -151,6 +151,7 @@ ReactDOM.render(
         <Route exact path="/common" render={() => <Redirect to="/common/atomic-design" />} />
         <Route path="/common/guiding-principles" component={CommonGuidingPrinciples} />
         <Route path="/common/atomic-design" component={CommonAtomicDesign} />
+        <Route path="/common/typography" component={CommonTypographyPage} />
         <Route path="/common/color-scheme" component={ColorSchemePage} />
         <Route path="/common/buttons" component={ButtonsPage} />
         <Route path="/common/links" component={LinksPage} />
@@ -173,10 +174,9 @@ ReactDOM.render(
         <Route path="/content/heuristics/call-to-action" component={HeuristicsCallToActionPage} />
 
         {/* Web */}
-        <Route exact path="/web" render={() => <Redirect to="/web/typography" />} />
-        <Route path="/web/typography" component={TypographyPage} />
-        <Route path="/web/special-buttons" component={SpecialButtonsPage} />
+        <Route exact path="/web" render={() => <Redirect to="/web/layout" />} />
         <Route path="/web/layout" component={LayoutPage} />
+        <Route path="/web/special-buttons" component={SpecialButtonsPage} />
         <Route path="/web/spacing" component={SpacingPage} />
         <Route path="/web/text-fields" component={TextFieldsPage} />
         <Route path="/web/dropdowns" component={DropdownsPage} />
