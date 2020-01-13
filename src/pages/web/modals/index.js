@@ -145,7 +145,7 @@ class ModalsPage extends Component {
                     </ModalsPageParagraph>
 
                     <ModalsPageParagraph noMargin>
-                      Click here to view <LinkText href="#/modals">terms and conditions.</LinkText>
+                      Click here to view <LinkText href="#/web/modals">terms and conditions.</LinkText>
                     </ModalsPageParagraph>
                   </ModalContent>
                   <ModalActionBar>

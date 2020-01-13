@@ -81,7 +81,7 @@ const CommonTypographyPage = () => (
       <Paragraph>
         There are few differences on Android font scale, to learn more about
         them visit the{' '}
-        <LinkText href="/#/android/typography">
+        <LinkText href="#/android/typography">
           typography page for the Android platform
         </LinkText>.
       </Paragraph>

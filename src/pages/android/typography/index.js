@@ -91,7 +91,7 @@ const AndroidTypographyPage = () => (
 
       <Paragraph>
         Please visit the{' '}
-        <LinkText href="/#/common/typography">
+        <LinkText href="#/common/typography">
           typography page
         </LinkText>{' '}
         to learn more about typeface, font weight and alignment.

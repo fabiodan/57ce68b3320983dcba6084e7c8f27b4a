@@ -552,7 +552,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/call-to-action"
+            href="#/content/heuristics/call-to-action"
             target="_blank"
             type="submit"
             category="secondary"
@@ -623,7 +623,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/headings"
+            href="#/content/heuristics/headings"
             target="_blank"
             type="submit"
             category="secondary"
@@ -700,7 +700,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/instructions-and-help-text"
+            href="#/content/heuristics/instructions-and-help-text"
             target="_blank"
             type="submit"
             category="secondary"
@@ -766,7 +766,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/links"
+            href="#/content/heuristics/links"
             target="_blank"
             type="submit"
             category="secondary"
@@ -812,7 +812,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/promotional-labels"
+            href="#/content/heuristics/promotional-labels"
             target="_blank"
             type="submit"
             category="secondary"
@@ -848,7 +848,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/statements-and-warnings"
+            href="#/content/heuristics/statements-and-warnings"
             target="_blank"
             type="submit"
             category="secondary"
@@ -894,7 +894,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/call-to-action"
+            href="#/content/heuristics/call-to-action"
             target="_blank"
             type="submit"
             category="secondary"
@@ -974,7 +974,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/empty-states"
+            href="#/content/heuristics/empty-states"
             target="_blank"
             type="submit"
             category="secondary"
@@ -1053,7 +1053,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/service-mails"
+            href="#/content/heuristics/service-mails"
             target="_blank"
             type="submit"
             category="secondary"
@@ -1091,7 +1091,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/onboarding"
+            href="#/content/heuristics/onboarding"
             target="_blank"
             type="submit"
             category="secondary"
@@ -1126,7 +1126,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/modals"
+            href="#/content/heuristics/modals"
             target="_blank"
             type="submit"
             category="secondary"
@@ -1164,7 +1164,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/forms"
+            href="#/content/heuristics/forms"
             target="_blank"
             type="submit"
             category="secondary"
@@ -1200,7 +1200,7 @@ const ContentPatternsPage = () => (
             Download worksheet
           </ButtonLink>
           {/* <ButtonLink
-            href="/#/content/heuristics/notifications-and-alerts"
+            href="#/content/heuristics/notifications-and-alerts"
             target="_blank"
             type="submit"
             category="secondary"
