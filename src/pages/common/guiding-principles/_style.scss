@@ -1,4 +1,4 @@
-/* Sample Page */
+/* Guiding Principles Page */
 
 // Dependencies
 @import "@asda/core/style";
@@ -12,16 +12,20 @@
 }
 
 // Elements/Mixes
-.common-guiding-principles-page__component {
+.common-guiding-principles-page__accessibility__example {
+  background: $color-light-gray;
+  padding: $spacing-xxl;
   margin-bottom: $spacing-xxxl;
 }
 
-// Modifiers
-.common-guiding-principles-page--modifier {
-
+.common-guiding-principles-page__accessibility__text {
+  background: $color-white;
+  padding: $spacing-l;
 }
-.common-guiding-principles-page__element--modifier {
 
+// Modifiers
+.common-guiding-principles-page--offset-top {
+  margin-top: -6px;
 }
 
 // Breakpoints
@@ -39,14 +43,4 @@
 
 @media (min-width: 1280px) {
 
-}
-
-// Animation
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
