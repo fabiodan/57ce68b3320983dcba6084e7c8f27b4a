@@ -148,7 +148,7 @@ ReactDOM.render(
         <Route exact path="/" render={() => <Redirect to="/common" />} />
 
         {/* Common */}
-        <Route exact path="/common" render={() => <Redirect to="/common/atomic-design" />} />
+        <Route exact path="/common" render={() => <Redirect to="/common/guiding-principles" />} />
         <Route path="/common/guiding-principles" component={CommonGuidingPrinciples} />
         <Route path="/common/atomic-design" component={CommonAtomicDesign} />
         <Route path="/common/typography" component={CommonTypographyPage} />
