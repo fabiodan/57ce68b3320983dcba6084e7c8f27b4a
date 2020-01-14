@@ -120,7 +120,7 @@ const CommonGuidingPrinciples = () => {
           </GridItem>
           <GridItem>
             <Figure
-              className="common-guiding-principles-page--offset-top"
+              className="common-guiding-principles-page--offset"
               maxWidth="383px" src={accessible1PNGSource} noMargin fluid />
           </GridItem>
           <GridItem>
@@ -142,7 +142,7 @@ const CommonGuidingPrinciples = () => {
           </GridItem>
           <GridItem>
             <Figure
-              className="common-guiding-principles-page--offset-top"
+              className="common-guiding-principles-page--offset"
               maxWidth="383px" src={accessible2PNGSource} noMargin fluid />
           </GridItem>
         </Grid>
