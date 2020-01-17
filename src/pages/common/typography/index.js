@@ -62,13 +62,13 @@ const CommonTypographyPage = () => (
         fun and simple enough to let the content speak for itself.
       </Paragraph>
 
-      <Paragraph className="common-typography-page__characters" noMargin>
+      <Paragraph className="common-typography-page__characters">
         {'ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžАБВГҐДЂЕЁЄЖЗЅИІЇЙЈКЛЉМНЊОПРСТЋУЎФХЦЧЏШЩЪЫЬЭЮЯабвгґдђеёєжзѕиіїйјклљмнњопрстћуўфхцчџшщъыьэюяΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωάΆέΈέΉίϊΐΊόΌύΰϋΎΫὰάὲέὴήὶίὸόὺύὼώΏĂÂÊÔƠƯăâêôơư1234567890‘?’“!"(%)[#]{@}/&\\<-+÷×=>®©$€£¥¢:;,.*'}
       </Paragraph>
 
-      {/* <Paragraph> */}
-      {/* <a href="https://github.com/adobe-fonts/source-sans-pro/archive/release.zip">Download</a> */}
-      {/* </Paragraph> */}
+      <Paragraph noMargin>
+        <LinkText href="./assets/fonts/asda-fonts.zip">Download fonts</LinkText>
+      </Paragraph>
     </Section>
 
     <Section>

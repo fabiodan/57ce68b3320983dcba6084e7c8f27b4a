@@ -4,6 +4,7 @@
   "description": "ASDA Design System",
   "main": "server.js",
   "dependencies": {
+    "bestzip": "^2.1.5",
     "classnames": "^2.2.5",
     "express": "^4.16.2",
     "react": "^16.8.1",

@@ -64,7 +64,6 @@ const IconsPage = () => {
 
   return (
     <article className="icons-page">
-
       <Heading1>Icons</Heading1>
       <Section>
         <Heading2>Basic Icons</Heading2>
@@ -337,6 +336,10 @@ const IconsPage = () => {
           maxWidth="945px"
           fluid
         />
+
+        <Paragraph>
+          <LinkText href="./assets/images/asda-icons.zip">Download all icons</LinkText>
+        </Paragraph>
 
       </Section>
     </article>
