@@ -31,8 +31,13 @@
     &.button--green {
       background-color: $color-green-disabled;
     }
+
     &.button--blue {
       background-color: $color-blue-disabled;
+    }
+
+    &.button--red {
+      background-color: $color-red-disabled;
     }
   }
 }
@@ -43,6 +48,10 @@
 
 .button--blue {
   background-color: $color-blue;
+}
+
+.button--red {
+  background-color: $color-red;
 }
 
 .button--secondary {
@@ -56,12 +65,19 @@
     color: $color-blue;
   }
 
+  &.button--red {
+    color: $color-red;
+  }
+
   &.button--disabled {
     &.button--green {
       color: $color-green-disabled;
     }
     &.button--blue {
       color: $color-blue-disabled;
+    }
+    &.button--red {
+      color: $color-red-disabled;
     }
   }
 }

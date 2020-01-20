@@ -84,11 +84,6 @@ $button-secondary-border-width-hover: 2px;
     padding: 0 ($spacing-m - $button-secondary-border-width-hover);
     line-height: $button-height - ($button-secondary-border-width-hover * 2);
 
-    &::after {
-      background-color: currentColor;
-      opacity: 0.1;
-    }
-
     .button__content {
       height: $button-height - ($button-secondary-border-width-hover);
     }

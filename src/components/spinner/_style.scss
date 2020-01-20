@@ -27,6 +27,11 @@ $spinner-size: 20px;
   border-left-color: $color-blue;
 }
 
+.spinner--red {
+  border: 2px solid rgba($color-red, 0.4);
+  border-left-color: $color-red;
+}
+
 // Animation
 @keyframes spin {
   0% {

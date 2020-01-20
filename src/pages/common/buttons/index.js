@@ -12,7 +12,7 @@ const ButtonsPage = () => (
   <article className="buttons-page">
     <Heading1>Buttons</Heading1>
     <Section>
-      <Heading2>Shopping Journey Buttons</Heading2>
+      <Heading2>Shopping journey buttons</Heading2>
       <Paragraph>
         For actions during the shopping journey, two button options are
         available based on the significance of the actions. For high emphasis
@@ -66,7 +66,7 @@ const ButtonsPage = () => (
       </ul>
     </Section>
     <Section>
-      <Heading2>Transactions & Account Buttons</Heading2>
+      <Heading2>Transactions & account buttons</Heading2>
       <Paragraph>
         For transactions and account related interactions, ASDA used blue
         buttons. Two different types are available based on the prominence of
@@ -92,6 +92,34 @@ const ButtonsPage = () => (
         <li className="buttons-page__item">
           <Button color="blue" loading fluid>Button Text</Button>
           <Caption>Primary Button Loading with text</Caption>
+        </li>
+      </ul>
+    </Section>
+    <Section>
+      <Heading2>Destructive action buttons</Heading2>
+      <Paragraph>
+        Destructive action buttons are used in instances where a destructive action can occur.
+      </Paragraph>
+      <ul className="buttons-page__list">
+        <li className="buttons-page__item">
+          <Button color="red" category="secondary" fluid>Button Text</Button>
+          <Caption>Destructive Button Default</Caption>
+        </li>
+        <li className="buttons-page__item">
+          <Button color="red" category="secondary" disabled fluid>Button Text</Button>
+          <Caption>Destructive Button Disabled</Caption>
+        </li>
+        <li className="buttons-page__item">
+          <Button color="red" category="secondary" hover fluid>Button Text</Button>
+          <Caption>Destructive Button Hover/Focus</Caption>
+        </li>
+        <li className="buttons-page__item">
+          <Button color="red" category="secondary" loading fluid hiddenText>Button Text</Button>
+          <Caption>Destructive Button Loading</Caption>
+        </li>
+        <li className="buttons-page__item">
+          <Button color="red" category="secondary" loading fluid>Button Text</Button>
+          <Caption>Destructive Button Loading with Text</Caption>
         </li>
       </ul>
     </Section>
