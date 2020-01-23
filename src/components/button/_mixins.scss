@@ -48,13 +48,6 @@ $button-secondary-border-width-hover: 2px;
       box-shadow: none;
     }
   }
-
-  &:active:not(.button--disabled), {
-    &::before {
-      background-color: $color-black;
-      opacity: 0.1;
-    }
-  }
 }
 
 @mixin button_primary_base {
@@ -64,6 +57,13 @@ $button-secondary-border-width-hover: 2px;
   &:hover:not(.button--disabled),
   &.button--hover:not(.button--disabled) { // For demostrantion purposes only
     &::after {
+      background-color: $color-black;
+      opacity: 0.1;
+    }
+  }
+
+  &:active:not(.button--disabled), {
+    &::before {
       background-color: $color-black;
       opacity: 0.1;
     }
@@ -86,12 +86,6 @@ $button-secondary-border-width-hover: 2px;
 
     .button__content {
       height: $button-height - ($button-secondary-border-width-hover);
-    }
-  }
-
-  &:active:not(.button--disabled) {
-    &::before {
-      background-color: currentColor;
     }
   }
 }
