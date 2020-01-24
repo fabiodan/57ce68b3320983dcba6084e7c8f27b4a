@@ -39,6 +39,10 @@
     &.button--red {
       background-color: $color-red-disabled;
     }
+
+    &.button--gray {
+      color: $color-dark-gray;
+    }
   }
 }
 
@@ -52,6 +56,14 @@
 
 .button--red {
   background-color: $color-red;
+}
+
+.button--gray {
+  background-color: $color-light-gray;
+
+  &.button--primary {
+    color: $color-charcoal;
+  }
 }
 
 .button--secondary {

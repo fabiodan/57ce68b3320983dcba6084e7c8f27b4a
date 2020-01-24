@@ -2,8 +2,15 @@
 import React from 'react'
 
 // Components (from atomic to composite)
+import Notification from '@asda/brand/notification'
 import Button from '@asda/button'
-import { Caption, Heading1, Heading2, Paragraph, Section } from '@sg/sg-layout'
+import {
+  Caption,
+  Heading1,
+  Heading2,
+  Paragraph,
+  Section
+} from '@sg/sg-layout'
 
 // Assets
 import './_style.scss'
@@ -92,6 +99,44 @@ const ButtonsPage = () => (
         <li className="buttons-page__item">
           <Button color="blue" loading fluid>Button Text</Button>
           <Caption>Primary Button Loading with text</Caption>
+        </li>
+      </ul>
+    </Section>
+    <Section>
+      <Heading2>Clear Buttons</Heading2>
+      <Paragraph>
+        Clear buttons are used when the actions have to be present on the screen
+        without distracting the user. These can be used with both icons and with
+        text. Most common use case would be in the header.
+      </Paragraph>
+      <ul className="buttons-page__list">
+        <li className="buttons-page__item">
+          <Button color="gray" category="primary" fluid>Button Text</Button>
+          <Caption>Clear Button Default</Caption>
+        </li>
+        <li className="buttons-page__item">
+          <Button color="gray" category="primary" disabled fluid>Button Text</Button>
+          <Caption>Clear Button Disabled</Caption>
+        </li>
+        <li className="buttons-page__item">
+          <Button color="gray" category="primary" hover fluid>Button Text</Button>
+          <Caption>Clear Button Hover/Focus</Caption>
+        </li>
+        <li className="buttons-page__item">
+          {/* Refactor this scenario */}
+          <div className="buttons-page__button-notification">
+            <Notification className="buttons-page__notification">1</Notification>
+            <Button color="gray" category="primary" iconName="mail" hiddenText fluid>Mail</Button>
+          </div>
+          <Caption>Clear button with icon default</Caption>
+        </li>
+        <li className="buttons-page__item">
+          {/* Refactor this scenario */}
+          <div className="buttons-page__button-notification">
+            <Notification className="buttons-page__notification">1</Notification>
+            <Button color="gray" category="primary" iconName="mail" hover hiddenText fluid>Mail</Button>
+          </div>
+          <Caption>Clear button with icon Hover</Caption>
         </li>
       </ul>
     </Section>

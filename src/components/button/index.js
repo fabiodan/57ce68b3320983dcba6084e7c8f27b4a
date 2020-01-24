@@ -35,7 +35,11 @@ const Button = ({
     fluid && 'button--fluid',
   ]
   const classNames = joinClassNames('button', className, modifiers)
-  const iconColor = category === 'primary' ? 'white' : color
+  let iconColor = category === 'primary' ? 'white' : color
+
+  if (color === 'gray') {
+    iconColor = 'charcoal'
+  }
 
   return (
     <button className={classNames} aria-disabled={disabled} onClick={onClick}>

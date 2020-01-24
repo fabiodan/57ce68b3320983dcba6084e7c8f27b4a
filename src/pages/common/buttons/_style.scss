@@ -1,7 +1,15 @@
+/* Buttons Page */
+
 // Dependencies
 @import "@asda/core/style";
 @import "@sg/sg-core/style";
 
+// Block
+.buttons-page {
+
+}
+
+// Elements/Mixes
 .buttons-page__list {
   list-style: none;
   padding: 0;
@@ -16,6 +24,20 @@
   padding: $spacing-m 0;
 }
 
+.buttons-page__button-notification {
+  position: relative;
+  max-width: 64px;
+}
+
+.buttons-page__notification {
+  position: absolute;
+  left: calc(50% + 2px);
+  top: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+// Breakpoints
 @media (min-width: 480px) {
   .buttons-page__list {
     grid-template-columns: 1fr 1fr 1fr;
