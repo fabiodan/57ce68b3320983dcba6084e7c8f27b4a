@@ -59,7 +59,7 @@ const CustomRecommendation = ({ children }) => (
 const ContentPatternsPage = () => (
   <article className="content-patterns-page">
 
-    <Heading1>Patterns</Heading1>
+    <Heading1>Patterns and heuristics</Heading1>
 
     <Section>
       <Heading2>Error Messaging</Heading2>

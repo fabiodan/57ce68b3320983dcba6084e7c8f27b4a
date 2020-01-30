@@ -42,14 +42,14 @@ import ModalsPage from './pages/web/modals'
 import AccordionsPage from './pages/web/accordions'
 
 // Pages (Content)
-import ContentOverviewPage from './pages/content/overview'
 import ContentOurApproachPage from './pages/content/our-approach'
 import ContentHowToWritePage from './pages/content/how-to-write'
-import ContentPunctuationPage from './pages/content/punctuation'
-import ContentStyleUsagePage from './pages/content/style-usage'
-import ContentFormattingPage from './pages/content/formatting'
 import ContentPatternsPage from './pages/content/patterns'
 import ContentAsdaVoicePage from './pages/content/asda-voice'
+import ContentWordsToAvoidPage from './pages/content/words-to-avoid'
+import ContentStyleUsagePage from './pages/content/style-usage'
+import ContentPunctuationPage from './pages/content/punctuation'
+import ContentFormattingPage from './pages/content/formatting'
 
 // Pages (Heuristics)
 import HeuristicsCallToActionPage from './pages/content/heuristics/call-to-action'
@@ -159,15 +159,15 @@ ReactDOM.render(
         <Route path="/common/brand" component={BrandPage} />
 
         {/* Content */}
-        <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
-        <Route path="/content/overview" component={ContentOverviewPage} />
+        <Route exact path="/content" render={() => <Redirect to="/content/our-approach" />} />
         <Route path="/content/our-approach" component={ContentOurApproachPage} />
         <Route path="/content/how-to-write" component={ContentHowToWritePage} />
-        <Route path="/content/punctuation" component={ContentPunctuationPage} />
-        <Route path="/content/style-usage" component={ContentStyleUsagePage} />
-        <Route path="/content/formatting" component={ContentFormattingPage} />
         <Route path="/content/patterns" component={ContentPatternsPage} />
         <Route path="/content/asda-voice" component={ContentAsdaVoicePage} />
+        <Route path="/content/words-to-avoid" component={ContentWordsToAvoidPage} />
+        <Route path="/content/style-usage" component={ContentStyleUsagePage} />
+        <Route path="/content/punctuation" component={ContentPunctuationPage} />
+        <Route path="/content/formatting" component={ContentFormattingPage} />
 
         {/* Heuristics */}
         <Route exact path="/content/heuristics" render={() => <Redirect to="/content/heuristics/overview" />} />

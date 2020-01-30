@@ -78,6 +78,13 @@
   width: 100%;
 }
 
+.content-punctuation-page__recommendation-item {
+  margin-bottom: $spacing-xxxl;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Modifiers
 .content-punctuation-page__recommendation--no-padding {
   padding: 0;
