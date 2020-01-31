@@ -82,7 +82,6 @@ const Menu = ({ toggleMenu }) => {
         { name: 'Introduction', url: '/ios/introduction' },
         { name: 'Layout', url: '/ios/layout' },
         { name: 'Spacing', url: '/ios/spacing' },
-        { name: 'Text Styles', url: '/ios/text-styles', wip: true },
         { name: 'Navigation Bars', url: '/ios/navigation-bars' },
         { name: 'Search bars', url: '/ios/search-bars' },
         { name: 'Status bars', url: '/ios/status-bars' },
