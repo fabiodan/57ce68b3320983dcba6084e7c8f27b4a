@@ -248,16 +248,14 @@ $sg-layout__aside-width: 314px;
   }
 
   .sg-layout__aside {
-    height: auto;
-    position: static;
     transform: none;
-    z-index: auto;
     box-shadow: none;
   }
 
   .sg-layout__main {
     width: calc(100% - #{$sg-layout__aside-width});
     padding: 0 $spacing-xxxl $spacing-xxxl $spacing-xxxl;
+    margin-left: $sg-layout__aside-width;
   }
 
   .sg-layout__heading1,
