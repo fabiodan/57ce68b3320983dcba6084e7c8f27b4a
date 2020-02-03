@@ -42,7 +42,7 @@ import ModalsPage from './pages/web/modals'
 import AccordionsPage from './pages/web/accordions'
 
 // Pages (Content)
-import ContentOurApproachPage from './pages/content/our-approach'
+import ContentOverviewPage from './pages/content/overview'
 import ContentHowToWritePage from './pages/content/how-to-write'
 import ContentPatternsPage from './pages/content/patterns'
 import ContentAsdaVoicePage from './pages/content/asda-voice'
@@ -163,8 +163,8 @@ ReactDOM.render(
         <Route path="/common/brand" component={BrandPage} />
 
         {/* Content */}
-        <Route exact path="/content" render={() => <Redirect to="/content/our-approach" />} />
-        <Route path="/content/our-approach" component={ContentOurApproachPage} />
+        <Route exact path="/content" render={() => <Redirect to="/content/overview" />} />
+        <Route path="/content/overview" component={ContentOverviewPage} />
         <Route path="/content/how-to-write" component={ContentHowToWritePage} />
         <Route path="/content/patterns" component={ContentPatternsPage} />
         <Route path="/content/asda-voice" component={ContentAsdaVoicePage} />

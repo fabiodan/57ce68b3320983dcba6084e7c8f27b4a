@@ -73,7 +73,7 @@ const CustomRecommendation = () => (
   </div>
 )
 
-const ContentOurApproachPage = () => (
+const ContentOverviewPage = () => (
   <article className="content-how-to-write-page">
 
     <Heading1>How to write for digital</Heading1>
@@ -164,4 +164,4 @@ const ContentOurApproachPage = () => (
   </article>
 )
 
-export default ContentOurApproachPage
+export default ContentOverviewPage
