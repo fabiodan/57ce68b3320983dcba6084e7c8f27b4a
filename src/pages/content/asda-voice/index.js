@@ -113,14 +113,10 @@ const ContentAsdaVoicePage = () => (
         <span className="content-asda-voice-page__state" />
         Neutral
       </Heading3>
-      <Paragraph>
+      <Paragraph noMargin>
         The user is interacting with their account settings or doing something
         that does not directly lead to ordering their groceries. Language should
         be clear, concise and helpful but not cold.
-      </Paragraph>
-      <Paragraph noMargin>
-        If we consider a top level flow of touch points through the site, the
-        emotional state might look something like this:
       </Paragraph>
     </Section>
 
@@ -138,7 +134,7 @@ const ContentAsdaVoicePage = () => (
         {' '}
         for commerce websites.
       </Paragraph>
-      <Paragraph noMargin>
+      <Paragraph>
         <div className="content-asda-voice-page__range">
           <div className="content-asda-voice-page__tone">Formal</div>
           <div className="content-asda-voice-page__dashes" />
@@ -148,14 +144,17 @@ const ContentAsdaVoicePage = () => (
           <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Irreverant</div>
 
-          <div className="content-asda-voice-page__tone">Serious</div>
-          <div className="content-asda-voice-page__dashes" />
-          <div className="content-asda-voice-page__tone">Funny</div>
-
           <div className="content-asda-voice-page__tone">Enthusiastic</div>
           <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Matter of fact</div>
+
+          <div className="content-asda-voice-page__tone">Serious</div>
+          <div className="content-asda-voice-page__dashes" />
+          <div className="content-asda-voice-page__tone">Funny</div>
         </div>
+      </Paragraph>
+      <Paragraph noMargin>
+        We do not take ourselves too seriously and our optimism is infectious
       </Paragraph>
     </Section>
 

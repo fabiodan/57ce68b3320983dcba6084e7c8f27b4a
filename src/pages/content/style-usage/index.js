@@ -233,13 +233,13 @@ const ContentStyleUsagePage = () => (
           <Recommendation className="content-style-usage-page__recommendation">
             <RecommendationStatus recommended />
             <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
-              11:00am to 12:00pm
+              11am to 12pm
             </Paragraph>
           </Recommendation>
           <Recommendation className="content-style-usage-page__recommendation">
             <RecommendationStatus />
             <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
-              1100 to 1200
+              11:00am to 12:00pm
             </Paragraph>
           </Recommendation>
         </Container>

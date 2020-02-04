@@ -31,7 +31,7 @@ const Menu = ({ toggleMenu }) => {
       name: 'Content library',
       url: '/content',
       children: [
-        { name: 'Overview', url: '/content/overview' },
+        { name: 'Guiding principles', url: '/content/guiding-principles' },
         { name: 'How to write for digital', url: '/content/how-to-write' },
         { name: 'Patterns and heuristics', url: '/content/patterns' },
         { name: 'The Asda voice', url: '/content/asda-voice' },

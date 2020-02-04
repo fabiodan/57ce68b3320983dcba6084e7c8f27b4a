@@ -73,7 +73,7 @@ const CustomRecommendation = () => (
   </div>
 )
 
-const ContentOverviewPage = () => (
+const ContentGuidingPrinciplesPage = () => (
   <article className="content-how-to-write-page">
 
     <Heading1>How to write for digital</Heading1>
@@ -89,15 +89,14 @@ const ContentOverviewPage = () => (
       </Paragraph>
       <Paragraph>
         Content for Asda Groceries should be approved by a trained native British
-        English speaking Content Designer or UX writer.
+        English speaking Content Designer.
       </Paragraph>
       <Paragraph>
         Use the Hemingway app to flag up basic problems with your copy.
       </Paragraph>
       <Paragraph>
         Sentences marked as hard or very hard to read should be broken down into
-        smaller sentences. Aim for a reading grade that is as low as possible
-        and never above grade 7.
+        smaller sentences. Aim for a reading grade of around Grade 4 to 6.
       </Paragraph>
       <Paragraph noMargin>
         Use the Asda Groceries heuristics to check if content meets content
@@ -106,62 +105,54 @@ const ContentOverviewPage = () => (
     </Section>
 
     <Section>
-      <Heading2>Our Principles</Heading2>
-      <FeaturedSection>
-        <Paragraph>
-          <Heading3>We are on your side</Heading3>
-            We start with what you need and use the language you use.
-        </Paragraph>
-        <Paragraph>
-          <Heading3>We help you get things done</Heading3>
-            We know you are busy. We are helpful, clear and brief so you can save
-            money and live better.
-        </Paragraph>
-        <Paragraph>
-          <Heading3>We are open and inclusive</Heading3>
-            We serve everyone. We are respectful of difference.
-        </Paragraph>
-      </FeaturedSection>
-
+      <Heading2>4 UX principles</Heading2>
       <Paragraph>
-        All Asda Grocieres content should follow these 4 best practice UX writing
-        principles. These principles are not always in harmony. For example,
-        sometimes your content may need to be longer to make sure it is clear.
-      </Paragraph>
-      <Paragraph>
-        Consider your users and their context to find the right balance.
-      </Paragraph>
-      <Paragraph>
-        Don’t decide what to write. Don’t let the business tell you what to
-        write. Discover what the user needs to know. Use evidence and research
-        to understand the needs of the people you write for.
+        Content should follow these 4 best practice principles. These principles
+        are not always in harmony. For example, sometimes you may have to write
+        something longer to make sure it is clear.
       </Paragraph>
 
       <FeaturedSection>
         <Paragraph>
           <Heading3>Be useful</Heading3>
-          Make sure the user understands what to do next.
+          Don’t decide what to write. Don’t let the business tell you what to write.
+          Discover what the user needs to know at each stage of the process.
+        </Paragraph>
+        <Paragraph>
+          Use research and evidence to learn about your users, their goals and
+          their context of use.
         </Paragraph>
         <Paragraph>
           <Heading3>Be clear</Heading3>
+          Keep it simple and active. Be authentic and honest. Use words our
+          users would use.
+        </Paragraph>
+        <Paragraph>
           The average reading age in the UK is 9. Not everyone speaks English as
-          their first language. Some people have reading or learning difficulties.
-          Highly educated, highly literate users can process complex language but
-          will slow down and retain less. Simple works for all!
+          their first language. Some people have learning difficulties. Even
+          highly literate users slow down and retain less if language is complex.
         </Paragraph>
         <Paragraph>
           <Heading3>Be concise</Heading3>
-          Users may allow only 10 to 20 seconds to assess a page. Every word must
-          work hard. Edit ruthlessly.
+          Be efficient with your writing and edit ruthlessly. We read 25% slower
+          online and even slower on mobile. Every word must work hard.
+        </Paragraph>
+        <Paragraph>
+          Avoid marketing speak. Marketing speak slows user reading speed,
+          reduces information retention and erodes trust.
+        </Paragraph>
+        <Paragraph>
+          <Heading3>Write for how we read</Heading3>
+          Frontload: put the most important things first.
+        </Paragraph>
+        <Paragraph>
+          Users scan, skim and skip around a page, so signpost clearly. Use
+          white space, headings and bullet points to break up longer text. Keep
+          punctuation minimal and functional.
         </Paragraph>
       </FeaturedSection>
-
-      <Paragraph noMargin>
-        <Heading2>Words to Avoid</Heading2>
-        <CustomRecommendation />
-      </Paragraph>
     </Section>
   </article>
 )
 
-export default ContentOverviewPage
+export default ContentGuidingPrinciplesPage

@@ -76,7 +76,7 @@ const WordsToAvoidPage = () => (
       </Paragraph>
       <Paragraph noMargin>
         {'"'}Please{'"'} can also imply there’s a choice. But a choice between doing the
-        thing we ask and not getting to use the service is not really a choice
+        thing we ask and not getting to use the service is not really a choice.
         <Container>
           <Recommendation className="words-to-avoid-page__recommendation">
             <RecommendationStatus recommended />

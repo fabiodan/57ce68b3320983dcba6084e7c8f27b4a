@@ -24,10 +24,10 @@ const Container = ({ children }) => (
 const ContentFormattingPage = () => (
   <article className="content-formatting-page">
 
-    <Heading1>Sentence case</Heading1>
+    <Heading1>Formatting</Heading1>
 
     <Section>
-      <Heading2>Abbreviation</Heading2>
+      <Heading2>Sentence case</Heading2>
       <Paragraph>
         Use sentence case as default formatting option. It is modern, fresh and
         easier to read.
@@ -50,8 +50,7 @@ const ContentFormattingPage = () => (
       </Paragraph>
 
       <Paragraph noMargin>
-        Only exception is the order status labels where all caps are used
-        instead of sentence case
+        Only exception is the order status labels, which use all caps.
         <Container>
           <Recommendation>
             <RecommendationStatus recommended />
@@ -67,7 +66,7 @@ const ContentFormattingPage = () => (
     <Section>
       <Heading2>Title case</Heading2>
       <Paragraph>
-        Use for top nav, product, company, place names, postcodes and abbreviations.
+        Use for top nav, product names, company, place names, postcodes and abbreviations.
       </Paragraph>
       <Paragraph noMargin>
         Use for navigation and links
@@ -127,8 +126,7 @@ const ContentFormattingPage = () => (
     <Section>
       <Heading2>Bold and Semibold</Heading2>
       <Paragraph noMargin>
-        Avoid use of bold. To highlight an element reduce the clutter around it
-        and use semibold.
+        Avoid use of bold. To highlight an element, reduce the clutter around it and use semibold.
         <Container>
           <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus recommended />
@@ -182,7 +180,7 @@ const ContentFormattingPage = () => (
     <Section>
       <Heading2>Underline</Heading2>
       <Paragraph noMargin>
-        Avoid use of italics as they are substantially harder to read.
+        Do not use underline as this makes the text look like a link.
         <Container>
           <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus recommended />
@@ -206,7 +204,7 @@ const ContentFormattingPage = () => (
             <RecommendationStatus recommended />
             <Paragraph noMargin className="content-formatting-page__recommendation__paragraph content-formatting-page--small">
               If you{'\''}d like to get in touch, please call our customer services team on{' '}
-              <span className="content-formatting-page--underline content-formatting-page--semibold">
+              <span className="content-formatting-page--semibold">
                 0800 952 6060
               </span>
             </Paragraph>

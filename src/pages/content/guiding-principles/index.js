@@ -18,17 +18,17 @@ import { TextField, Label } from '@asda/form'
 import './_style.scss'
 
 const Container = ({ children }) => (
-  <div className="content-overview-page__container">{children}</div>
+  <div className="content-guiding-principles-page__container">{children}</div>
 )
 
-const ContentOverviewPage = () => (
-  <article className="content-overview-page">
+const ContentGuidingPrinciplesPage = () => (
+  <article className="content-guiding-principles-page">
 
-    <Heading1>Overview</Heading1>
+    <Heading1>Guiding principles</Heading1>
 
     <Section>
       <Paragraph>
-        <div className="content-overview-page__user-story">
+        <div className="content-guiding-principles-page__user-story">
           <Heading3>
             As an Asda customer<br />
             I need a simple and convenient way to shop online,<br />
@@ -119,7 +119,7 @@ const ContentOverviewPage = () => (
         </List>
 
         <Container>
-          <Recommendation className="content-overview-page__recommendation">
+          <Recommendation className="content-guiding-principles-page__recommendation">
             <RecommendationStatus recommended />
             <Label>Label</Label>
             <TextField
@@ -132,7 +132,7 @@ const ContentOverviewPage = () => (
               validate
             />
           </Recommendation>
-          <Recommendation className="content-overview-page__recommendation">
+          <Recommendation className="content-guiding-principles-page__recommendation">
             <RecommendationStatus />
             <Label>Postcode</Label>
             <TextField
@@ -162,7 +162,7 @@ const ContentOverviewPage = () => (
         </List>
 
         <Container>
-          <Recommendation recommended className="content-overview-page__recommendation">
+          <Recommendation recommended className="content-guiding-principles-page__recommendation">
             <RecommendationStatus recommended />
             <Label>Label</Label>
             <TextField
@@ -175,7 +175,7 @@ const ContentOverviewPage = () => (
               validate
             />
           </Recommendation>
-          <Recommendation className="content-overview-page__recommendation">
+          <Recommendation className="content-guiding-principles-page__recommendation">
             <RecommendationStatus />
             <Label>Postcode</Label>
             <TextField
@@ -252,4 +252,4 @@ const ContentOverviewPage = () => (
   </article>
 )
 
-export default ContentOverviewPage
+export default ContentGuidingPrinciplesPage

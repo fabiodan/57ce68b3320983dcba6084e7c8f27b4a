@@ -29,7 +29,7 @@ const ContentPunctuationPage = () => (
     <Section>
       <Heading2>Ampersand (&)</Heading2>
       <Paragraph>
-        The ampersand saves space in navigation, links and other tight spaces.
+        Use ampersand for navigation and links.
       </Paragraph>
       <Paragraph noMargin>
         Use for navigation and links
@@ -87,87 +87,82 @@ const ContentPunctuationPage = () => (
     <Section>
       <Heading2>Bullets (•)</Heading2>
       <Paragraph>
-        Bullets with a lead-in line do not start with a capital or end with a full stop.
-        <Container>
-          <Recommendation className="content-punctuation-page__recommendation">
-            <RecommendationStatus recommended />
-            <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
-              Add the following to your basket:
-              <br /><br />
-              <List className="content-punctuation-page__list">
-                <ListItem className="content-punctuation-page__list-item">
-                  apples
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  bananas
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  cherries
-                </ListItem>
-              </List>
-            </Paragraph>
-          </Recommendation>
-          <Recommendation className="content-punctuation-page__recommendation">
-            <RecommendationStatus />
-            <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
-              Add the following to your basket:
-              <br /><br />
-              <List className="content-punctuation-page__list">
-                <ListItem className="content-punctuation-page__list-item">
-                  Apples.
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  Bananas.
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  Cherries.
-                </ListItem>
-              </List>
-            </Paragraph>
-          </Recommendation>
-        </Container>
+        Bullets with no lead-in line start with a capital. They still do not end with a full stop.
       </Paragraph>
-      <Paragraph noMargin>
-        Bullets with no lead-in line start with a capital and do not end with a full stop.
-        <Container>
-          <Recommendation className="content-punctuation-page__recommendation">
-            <RecommendationStatus recommended />
-            <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
-              Add the following to your basket:
-              <br /><br />
-              <List className="content-punctuation-page__list">
-                <ListItem className="content-punctuation-page__list-item">
-                  Apples
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  Bananas
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  Cherries
-                </ListItem>
-              </List>
-            </Paragraph>
-          </Recommendation>
-          <Recommendation className="content-punctuation-page__recommendation">
-            <RecommendationStatus />
-            <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
-              Add the following to your basket:
-              <br /><br />
-              <List className="content-punctuation-page__list">
-                <ListItem className="content-punctuation-page__list-item">
-                  apples.
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  bananas.
-                </ListItem>
-                <ListItem className="content-punctuation-page__list-item">
-                  cherries.
-                </ListItem>
-              </List>
-            </Paragraph>
-          </Recommendation>
-        </Container>
-      </Paragraph>
+      <Container>
+        <Recommendation className="content-punctuation-page__recommendation">
+          <RecommendationStatus recommended />
+          <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
+            Add the following to your basket:
+            <br /><br />
+            <List className="content-punctuation-page__list">
+              <ListItem className="content-punctuation-page__list-item">
+                apples
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                bananas
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                cherries
+              </ListItem>
+            </List>
+          </Paragraph>
+        </Recommendation>
+        <Recommendation className="content-punctuation-page__recommendation">
+          <RecommendationStatus />
+          <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
+            Add the following to your basket:
+            <br /><br />
+            <List className="content-punctuation-page__list">
+              <ListItem className="content-punctuation-page__list-item">
+                Apples.
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                Bananas.
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                Cherries.
+              </ListItem>
+            </List>
+          </Paragraph>
+        </Recommendation>
+        <Recommendation className="content-punctuation-page__recommendation">
+          <RecommendationStatus recommended />
+          <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
+            Add the following to your basket:
+            <br /><br />
+            <List className="content-punctuation-page__list">
+              <ListItem className="content-punctuation-page__list-item">
+                Apples
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                Bananas
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                Cherries
+              </ListItem>
+            </List>
+          </Paragraph>
+        </Recommendation>
+        <Recommendation className="content-punctuation-page__recommendation">
+          <RecommendationStatus />
+          <Paragraph noMargin className="content-punctuation-page__recommendation__paragraph">
+            Add the following to your basket:
+            <br /><br />
+            <List className="content-punctuation-page__list">
+              <ListItem className="content-punctuation-page__list-item">
+                apples.
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                bananas.
+              </ListItem>
+              <ListItem className="content-punctuation-page__list-item">
+                cherries.
+              </ListItem>
+            </List>
+          </Paragraph>
+        </Recommendation>
+      </Container>
     </Section>
 
     <Section>
@@ -177,7 +172,7 @@ const ContentPunctuationPage = () => (
         space and proximity instead.
       </Paragraph>
       <Paragraph>
-        Use for frontloading titles
+        Use for frontloading titles.
         <Container>
           <Recommendation className="content-punctuation-page__recommendation">
             <RecommendationStatus recommended />
@@ -224,11 +219,7 @@ const ContentPunctuationPage = () => (
 
     <Section>
       <Heading2>Comma (,)</Heading2>
-      <Paragraph>
-        For minimal punctuation, use a comma if it helps to clarify what is
-        being said. Multiple sub clauses make sentences hard to understand and
-        add to visual clutter without adding meaning.
-      </Paragraph>
+
       <Paragraph>
         Avoid using more than one comma in same sentence. Break the sentence up
         into shorter sentences or rephrase instead.
@@ -281,8 +272,8 @@ const ContentPunctuationPage = () => (
         range.
       </Paragraph>
       <Paragraph>
-        Avoid using more than one comma in same sentence. Break the sentence up
-        into shorter sentences or rephrase instead.
+        Remove the hyphen in compound words such as “coordinate” if the end
+        result is readable.
         <Container>
           <Recommendation className="content-punctuation-page__recommendation">
             <RecommendationStatus recommended />
@@ -511,8 +502,7 @@ const ContentPunctuationPage = () => (
     <Section>
       <Heading2>Quotation mark (“”)</Heading2>
       <Paragraph noMargin>
-        Avoid use of exclamation mark. Convey excitement through colour,
-        placement, imagery and text treatment.
+        In addition to the normal uses, use quotation marks to refer to a link.
         <Container>
           <Recommendation className="content-punctuation-page__recommendation">
             <RecommendationStatus recommended />

@@ -1,35 +1,35 @@
-/* Content • Overview */
+/* Content • Guiding Principles */
 
 // Dependencies
 @import "@asda/core/style";
 @import "@sg/sg-core/style";
 
 // Block
-.content-overview-page {
+.content-guiding-principles-page {
 
 }
 
 // Elements/Mixes
-.content-overview-page__container {
+.content-guiding-principles-page__container {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: $spacing-m;
 }
 
-.content-overview-page__recommendation {
+.content-guiding-principles-page__recommendation {
   padding: 80px $spacing-xl;
   height: 250px;
   width: 100%;
 }
 
-.content-overview-page__user-story {
+.content-guiding-principles-page__user-story {
   background: $color-background-gray;
   border-radius: 4px;
   padding: $spacing-l;
 }
 
 @media (min-width: 1024px) {
-  .content-overview-page__container {
+  .content-guiding-principles-page__container {
     grid-template-columns: 1fr 1fr;
   }
 }
