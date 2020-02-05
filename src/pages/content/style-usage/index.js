@@ -27,7 +27,7 @@ const Container = ({ children }) => (
 )
 
 const Strong = ({ children }) => (
-  <strong className="content-punctuation-page__modal-strong">{children}</strong>
+  <strong className="content-style-usage-page__modal-strong">{children}</strong>
 )
 
 const ContentStyleUsagePage = () => (
@@ -258,6 +258,204 @@ const ContentStyleUsagePage = () => (
             <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
               11.00 a.m. to 12.00 p.m.
             </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Your versus My</Heading2>
+      <Paragraph noMargin>
+        Use {'"'}Your{'"'} to indicate areas that the user can interact with once they
+        are registered with the site. Using {'"'}Your{'"'} lets the user know we{'\''}re
+        addressing them and we are at their service.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus recommended />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
+              Your account
+            </Paragraph>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
+              My account
+            </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Walmart versus Wal-Mart</Heading2>
+      <Paragraph noMargin>
+        We are part of Walmart. Walmart no longer refers to Wal-Mart Stores, Inc.
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Please</Heading2>
+      <Paragraph>
+        Avoid please. It adds content without adding value.
+      </Paragraph>
+      <Paragraph>
+        UX writing does not seem impolite without it and adding it looks old
+        fashioned and formal.
+      </Paragraph>
+      <Paragraph noMargin>
+        {'"'}Please{'"'} can also imply there’s a choice. But a choice between doing the
+        thing we ask and not getting to use the service is not really a choice.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus recommended />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
+              The price may vary
+            </Paragraph>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
+              Please note that the price may vary
+            </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Thank you</Heading2>
+      <Paragraph noMargin>
+        Use it sparingly and genuinely. Use “thanks” rather than thank you to stay concise.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus recommended />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
+              Thanks for your order
+            </Paragraph>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation">
+            <RecommendationStatus />
+            <Paragraph noMargin className="content-style-usage-page__recommendation__paragraph">
+              Order placed
+            </Paragraph>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+    </Section>
+
+    <Section>
+      <Heading2>Sorry</Heading2>
+      <Paragraph>
+        Sorry does not help fix anything and quickly becomes meaningless. Use it
+        only where we prevented something or denied access to something.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation__fields">
+            <RecommendationStatus recommended />
+            <Modal className="content-style-usage-page__modal" scrollLock={false}>
+              <ModalContainer className="content-style-usage-page__modal-container" focusLock={false}>
+                <ModalHeader>Not available</ModalHeader>
+                <ModalContent>
+                  Sorry, we do not currently offer home delivery or Click &
+                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
+                  <TextField
+                    placeholder="Enter postcode"
+                    className="content-style-usage-page__modal-textfield"
+                  />
+                  <Button className="content-style-usage-page__modal-button">Check postcode</Button>
+                  <div className="content-style-usage-page__modal-paragraph">
+                    <Strong>New build house?</Strong><br />
+                    It may not be on our system yet.
+                    {' '}<LinkText>Contact us</LinkText>{' '}
+                    and we will add it for you.
+                  </div>
+                </ModalContent>
+                <ModalCloseIcon />
+              </ModalContainer>
+            </Modal>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation__fields">
+            <RecommendationStatus />
+            <Modal className="content-style-usage-page__modal" scrollLock={false}>
+              <ModalContainer className="content-style-usage-page__modal-container" focusLock={false}>
+                <ModalHeader>Not available</ModalHeader>
+                <ModalContent>
+                  We do not currently offer home delivery or Click &
+                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
+                  <TextField
+                    placeholder="Enter postcode"
+                    className="content-style-usage-page__modal-textfield"
+                  />
+                  <Button className="content-style-usage-page__modal-button">Check postcode</Button>
+                  <div className="content-style-usage-page__modal-paragraph">
+                    <Strong>New build house?</Strong><br />
+                    It may not be on our system yet.
+                    {' '}<LinkText>Contact us</LinkText>{' '}
+                    and we will add it for you.
+                  </div>
+                </ModalContent>
+                <ModalCloseIcon />
+              </ModalContainer>
+            </Modal>
+          </Recommendation>
+          <div>{/* Empty field */}</div>
+          <Recommendation className="content-style-usage-page__recommendation__fields">
+            <RecommendationStatus />
+            <Modal className="content-style-usage-page__modal" scrollLock={false}>
+              <ModalContainer className="content-style-usage-page__modal-container" focusLock={false}>
+                <ModalHeader>Sorry</ModalHeader>
+                <ModalContent>
+                  We do not currently offer home delivery or Click &
+                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
+                  <TextField
+                    placeholder="Enter postcode"
+                    className="content-style-usage-page__modal-textfield"
+                  />
+                  <Button className="content-style-usage-page__modal-button">Check postcode</Button>
+                  <div className="content-style-usage-page__modal-paragraph">
+                    <Strong>New build house?</Strong><br />
+                    It may not be on our system yet.
+                    {' '}<LinkText>Contact us</LinkText>{' '}
+                    and we will add it for you.
+                  </div>
+                </ModalContent>
+                <ModalCloseIcon />
+              </ModalContainer>
+            </Modal>
+          </Recommendation>
+        </Container>
+      </Paragraph>
+      <Paragraph noMargin>
+        Do not use sorry in validation messages.
+        <Container>
+          <Recommendation className="content-style-usage-page__recommendation__fields">
+            <RecommendationStatus />
+            <div className="content-style-usage-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="We do not recognise that postcode"
+                validate
+              />
+            </div>
+          </Recommendation>
+          <Recommendation className="content-style-usage-page__recommendation__fields">
+            <RecommendationStatus />
+            <div className="content-style-usage-page__recommendation-item">
+              <Label>Postcode</Label>
+              <TextField
+                placeholder="Input Text"
+                value="123456"
+                pattern=""
+                helperText="Helper text"
+                successMessage="Success message"
+                errorMessage="Sorry, we do not recognise that postcode"
+                validate
+              />
+            </div>
           </Recommendation>
         </Container>
       </Paragraph>

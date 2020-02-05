@@ -88,7 +88,7 @@ const ContentFormattingPage = () => (
               </li>
             </ul>
           </Recommendation>
-          <Recommendation className="content-punctuation-page__recommendation">
+          <Recommendation className="content-formatting-page__recommendation">
             <RecommendationStatus />
             <ul className="content-formatting-page__menu">
               <li className="content-formatting-page__menu-item">

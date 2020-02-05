@@ -7,89 +7,116 @@
 // Variables
 
 // Block
-.words-to-avoid-page {
+.content-words-to-avoid-page {
 
 }
 
 // Elements/Mixes
-.words-to-avoid-page__recommendation {
-  padding: $spacing-m $spacing-m 0 64px;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
+// .content-words-to-avoid-page__recommendation {
+//   padding: $spacing-m $spacing-m 0 64px;
+//   width: 100%;
+//   display: flex;
+//   align-items: flex-end;
+// }
+
+// .content-words-to-avoid-page__recommendation__paragraph {
+//   padding: 0;
+//   margin: 0;
+//   background: $color-white;
+//   border-radius: 4px 4px 0 0;
+//   width: 100%;
+//   padding: $spacing-xs $spacing-m;
+//   overflow: hidden;
+// }
+
+// .content-words-to-avoid-page__recommendation__slot {
+//   @include typography(s);
+//   color: $color-dark-gray;
+//   margin: $spacing-m 64px;
+//   background: $color-white;
+//   border-radius: 4px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: 82px;
+//   height: 68px;
+// }
+
+// .content-words-to-avoid-page__recommendation__cell {
+//   background-color: $color-white;
+//   border-radius: 4px 4px 0 0;
+//   padding: $spacing-xs $spacing-m;
+// }
+
+// .content-words-to-avoid-page__recommendation__cell-group {
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-gap: $spacing-m;
+// }
+
+// .content-words-to-avoid-page__recommendation__fields {
+//   padding: 80px $spacing-xl;
+//   width: 100%;
+// }
+
+// .content-words-to-avoid-page__modal {
+//   position: static;
+// }
+
+// .content-words-to-avoid-page__modal-container {
+//   width: 100%;
+// }
+
+// .content-words-to-avoid-page__modal-textfield {
+//   margin: $spacing-m 0;
+// }
+
+// .content-words-to-avoid-page__modal-paragraph {
+//   text-align: center;
+// }
+
+// .content-words-to-avoid-page__modal-button {
+//   width: 100%;
+//   margin-bottom: $spacing-m;
+// }
+
+// .content-words-to-avoid-page__recommendation-item {
+//   margin-bottom: $spacing-xxxl;
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+
+.content-words-to-avoid-page__custom-recommendation {
+  background: $color-background-gray;
 }
 
-.words-to-avoid-page__recommendation__paragraph {
-  padding: 0;
-  margin: 0;
-  background: $color-white;
-  border-radius: 4px 4px 0 0;
-  width: 100%;
-  padding: $spacing-xs $spacing-m;
-  overflow: hidden;
+.content-words-to-avoid-page__custom-recommendation-status {
+  left: -$spacing-s;
 }
 
-.words-to-avoid-page__recommendation__slot {
-  @include typography(s);
-  color: $color-dark-gray;
-  margin: $spacing-m 64px;
-  background: $color-white;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 82px;
-  height: 68px;
-}
+.content-words-to-avoid-page__custom-recommendation-table {
+  width: calc(100% - #{$spacing-s * 2});
+  border-collapse: collapse;
+  margin: $spacing-s;
+  & td {
+    height: 68px;
+    width: 50%;
+  }
 
-.words-to-avoid-page__recommendation__cell {
-  background-color: $color-white;
-  border-radius: 4px 4px 0 0;
-  padding: $spacing-xs $spacing-m;
-}
+  & thead td {
+    position: relative;
+  }
 
-.words-to-avoid-page__recommendation__cell-group {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $spacing-m;
-}
+  & tbody td {
+    border-bottom: solid 1px $color-white;
+    padding: $spacing-m $spacing-s;
+  }
 
-.words-to-avoid-page__recommendation__fields {
-  padding: 80px $spacing-xl;
-  width: 100%;
-}
-
-.words-to-avoid-page__modal {
-  position: static;
-}
-
-.words-to-avoid-page__modal-container {
-  width: 100%;
-}
-
-.words-to-avoid-page__modal-textfield {
-  margin: $spacing-m 0;
-}
-
-.words-to-avoid-page__modal-paragraph {
-  text-align: center;
-}
-
-.words-to-avoid-page__modal-strong {
-  font-weight: 600;
-}
-
-.words-to-avoid-page__modal-button {
-  width: 100%;
-  margin-bottom: $spacing-m;
-}
-
-.words-to-avoid-page__recommendation-item {
-  margin-bottom: $spacing-xxxl;
-  &:last-child {
-    margin-bottom: 0;
+  & tbody tr:last-child td {
+    border: none;
   }
 }
 
@@ -97,7 +124,13 @@
 
 // Breakpoints
 @media (min-width: 480px) {
-
+  .content-words-to-avoid-page__custom-recommendation-status {
+    left: -$spacing-l;
+  }
+  .content-words-to-avoid-page__custom-recommendation-table {
+    width: calc(100% - #{$spacing-l * 2});
+    margin: $spacing-l;
+  }
 }
 
 @media (min-width: 768px) {

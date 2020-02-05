@@ -144,17 +144,14 @@ const ContentAsdaVoicePage = () => (
           <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Irreverant</div>
 
-          <div className="content-asda-voice-page__tone">Enthusiastic</div>
-          <div className="content-asda-voice-page__dashes" />
-          <div className="content-asda-voice-page__tone">Matter of fact</div>
-
           <div className="content-asda-voice-page__tone">Serious</div>
           <div className="content-asda-voice-page__dashes" />
           <div className="content-asda-voice-page__tone">Funny</div>
+
+          <div className="content-asda-voice-page__tone">Enthusiastic</div>
+          <div className="content-asda-voice-page__dashes" />
+          <div className="content-asda-voice-page__tone">Matter of fact</div>
         </div>
-      </Paragraph>
-      <Paragraph noMargin>
-        We do not take ourselves too seriously and our optimism is infectious
       </Paragraph>
     </Section>
 
@@ -209,7 +206,7 @@ const ContentAsdaVoicePage = () => (
       <Paragraph>
         <List>
           <ListItem>
-            We do not take ourselves to seriously and our optimism is infectious
+            We do not take ourselves too seriously and our optimism is infectious
           </ListItem>
           <ListItem>
             Our brand personality is playful and cheeky but we need to be

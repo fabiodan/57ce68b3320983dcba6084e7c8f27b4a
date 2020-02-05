@@ -64,29 +64,34 @@
   grid-gap: $spacing-m;
 }
 
-.content-punctuation-page__modal {
-  position: static;
+.content-style-usage-page__modal {
+  position: relative;
 }
 
-.content-punctuation-page__modal-container {
+.content-style-usage-page__modal-container {
   width: 100%;
 }
 
-.content-punctuation-page__modal-textfield {
+.content-style-usage-page__modal-textfield {
   margin: $spacing-m 0;
 }
 
-.content-punctuation-page__modal-paragraph {
+.content-style-usage-page__modal-paragraph {
   text-align: center;
 }
 
-.content-punctuation-page__modal-strong {
+.content-style-usage-page__modal-strong {
   font-weight: 600;
 }
 
-.content-punctuation-page__modal-button {
+.content-style-usage-page__modal-button {
   width: 100%;
-  margin-bottom: $spacing-m;  
+  margin-bottom: $spacing-m;
+}
+
+.content-style-usage-page__recommendation__fields {
+  padding: 80px $spacing-xl;
+  width: 100%;
 }
 
 // Modifiers

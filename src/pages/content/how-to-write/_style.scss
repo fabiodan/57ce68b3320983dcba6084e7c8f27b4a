@@ -11,44 +11,19 @@
 
 // Elements/Mixes
 
-.content-how-to-write-page__custom-recommendation {
-  background: $color-background-gray;
-}
-
-.content-how-to-write-page__custom-recommendation-status {
-  left: -$spacing-s;
-}
-
-.content-how-to-write-page__custom-recommendation-table {
-  width: calc(100% - #{$spacing-s * 2});
-  border-collapse: collapse;
-  margin: $spacing-s;
-  & td {
-    height: 68px;
-    width: 50%;
-  }
-
-  & thead td {
-    position: relative;
-  }
-
-  & tbody td {
-    border-bottom: solid 1px $color-white;
-    padding: $spacing-m $spacing-s;
-  }
-
-  & tbody tr:last-child td {
-    border: none;
-  }
-}
-
 // Breakpoints
 @media (min-width: 480px) {
-  .content-how-to-write-page__custom-recommendation-status {
-    left: -$spacing-l;
-  }
-  .content-how-to-write-page__custom-recommendation-table {
-    width: calc(100% - #{$spacing-l * 2});
-    margin: $spacing-l;
-  }
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
 }

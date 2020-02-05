@@ -439,19 +439,6 @@ const ContentPunctuationPage = () => (
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus recommended />
             <div className="content-punctuation-page__recommendation-item">
-              <Label>Label</Label>
-              <TextField
-                placeholder="Input Text"
-                value="Input Text"
-
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="Error Message"
-                validate
-              />
-            </div>
-            <div className="content-punctuation-page__recommendation-item">
               <Label>Password</Label>
               <TextField
                 type="password"
@@ -468,18 +455,6 @@ const ContentPunctuationPage = () => (
           </Recommendation>
           <Recommendation className="content-punctuation-page__recommendation__fields">
             <RecommendationStatus />
-            <div className="content-punctuation-page__recommendation-item">
-              <Label>Label</Label>
-              <TextField
-                placeholder="Input Text"
-                value="Input Text"
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="Error Message"
-                validate
-              />
-            </div>
             <div className="content-punctuation-page__recommendation-item">
               <Label>Password</Label>
               <TextField

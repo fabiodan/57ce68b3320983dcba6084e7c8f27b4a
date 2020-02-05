@@ -22,217 +22,78 @@ import {
 // Assets
 import './_style.scss'
 
-const Container = ({ children }) => (
-  <div className="content-style-usage-page__container">{children}</div>
-)
-
-const Strong = ({ children }) => (
-  <strong className="words-to-avoid-page__modal-strong">{children}</strong>
+const CustomRecommendation = () => (
+  <div className="content-words-to-avoid-page__custom-recommendation">
+    <table className="content-words-to-avoid-page__custom-recommendation-table">
+      <thead>
+        <tr>
+          <td><RecommendationStatus className="content-words-to-avoid-page__custom-recommendation-status" /></td>
+          <td><RecommendationStatus className="content-words-to-avoid-page__custom-recommendation-status" recommended /></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Click</td><td>Tap, select</td></tr>
+        <tr><td>Click here</td><td><del>Omit this</del></td></tr>
+        <tr><td>Click</td><td>Tap, select</td></tr>
+        <tr><td>Revert</td><td>Go back to, change to, change back to</td></tr>
+        <tr><td>Verify</td><td>Confirm</td></tr>
+        <tr><td>Purchase</td><td>Buy</td></tr>
+        <tr><td>View</td><td>See</td></tr>
+        <tr><td>Unit</td><td>Product</td></tr>
+        <tr><td>Item</td><td>Rephrase to avoid if possible</td></tr>
+        <tr><td>Utilise</td><td>Use</td></tr>
+        <tr><td>Pick (products)</td><td>Select, choose</td></tr>
+        <tr>
+          <td>Fulfil, Fulfilment</td>
+          <td>Deliver, delivery option (or be specific about method, or rephrase to avoid)</td>
+        </tr>
+        <tr><td>Via</td><td>By</td></tr>
+        <tr><td>Preferences</td><td>Rephrase to avoid</td></tr>
+        <tr><td>Dispatch</td><td>Send, on the way</td></tr>
+        <tr><td>Process</td><td>Describe the action instead</td></tr>
+        <tr><td>Awaiting</td><td>Wait for</td></tr>
+        <tr><td>Uh oh</td><td>Rephrase to avoid</td></tr>
+        <tr><td>Ooops</td><td>Rephrase to avoid</td></tr>
+        <tr><td>Initialise</td><td>-</td></tr>
+        <tr><td>Ensure</td><td>Make sure</td></tr>
+        <tr><td>Import</td><td>-</td></tr>
+        <tr><td>Please</td><td>Unnecessary, overly formal, implies choice - omit</td></tr>
+        <tr><td>Sorry</td><td>Use sparingly and only where we have caused inconvenience</td></tr>
+        <tr><td>Check out, checkout</td><td>PayNote, please note</td></tr>
+        <tr><td>Note, please note</td><td><del>Omit this</del></td></tr>
+        <tr>
+          <td>Valid</td>
+          <td>
+            For error messaging use recognise instead eg {'"'}We do not recognise
+            that postcode{'"'} rather than {'"'}That is not a valid postcode{'"'}
+          </td>
+        </tr>
+        <tr><td>Proceed</td><td>Continue</td></tr>
+        <tr><td>Minimise</td><td>Reduce, cut down on</td></tr>
+        <tr><td>Lessen</td><td>Reduce, cut down on</td></tr>
+        <tr><td>Check out in, checking out</td><td>Pay</td></tr>
+        <tr><td>Select</td><td>Choose</td></tr>
+        <tr><td>Edit</td><td>Change</td></tr>
+        <tr><td>Advise</td><td>Tell, say</td></tr>
+      </tbody>
+    </table>
+  </div>
 )
 
 const WordsToAvoidPage = () => (
-  <article className="words-to-avoid-page">
+  <article className="content-words-to-avoid-page">
 
     <Heading1>Words to avoid</Heading1>
 
     <Section>
-      <Heading2>Your versus My</Heading2>
-      <Paragraph noMargin>
-        Use {'"'}Your{'"'} to indicate areas that the user can interact with once they
-        are registered with the site. Using {'"'}Your{'"'} lets the user know we{'\''}re
-        addressing them and we are at their service.
-        <Container>
-          <Recommendation className="words-to-avoid-page__recommendation">
-            <RecommendationStatus recommended />
-            <Paragraph noMargin className="words-to-avoid-page__recommendation__paragraph">
-              Your account
-            </Paragraph>
-          </Recommendation>
-          <Recommendation className="words-to-avoid-page__recommendation">
-            <RecommendationStatus />
-            <Paragraph noMargin className="words-to-avoid-page__recommendation__paragraph">
-              My account
-            </Paragraph>
-          </Recommendation>
-        </Container>
-      </Paragraph>
-    </Section>
-
-    <Section>
-      <Heading2>Walmart versus Wal-Mart</Heading2>
-      <Paragraph noMargin>
-        We are part of Walmart. Walmart no longer refers to Wal-Mart Stores, Inc.
-      </Paragraph>
-    </Section>
-
-    <Section>
-      <Heading2>Please</Heading2>
       <Paragraph>
-        Avoid please. It adds content without adding value.
+        Using the wrong words makes our language sound stilted and hard to understand.
+        It is very easy to slip into jargon and corporate speak so ruthlessly edit
+        your work.
       </Paragraph>
-      <Paragraph>
-        UX writing does not seem impolite without it and adding it looks old
-        fashioned and formal.
-      </Paragraph>
-      <Paragraph noMargin>
-        {'"'}Please{'"'} can also imply there’s a choice. But a choice between doing the
-        thing we ask and not getting to use the service is not really a choice.
-        <Container>
-          <Recommendation className="words-to-avoid-page__recommendation">
-            <RecommendationStatus recommended />
-            <Paragraph noMargin className="words-to-avoid-page__recommendation__paragraph">
-              The price may vary
-            </Paragraph>
-          </Recommendation>
-          <Recommendation className="words-to-avoid-page__recommendation">
-            <RecommendationStatus />
-            <Paragraph noMargin className="words-to-avoid-page__recommendation__paragraph">
-              Please note that the price may vary
-            </Paragraph>
-          </Recommendation>
-        </Container>
-      </Paragraph>
-    </Section>
 
-    <Section>
-      <Heading2>Thank you</Heading2>
-      <Paragraph noMargin>
-        Use it sparingly and genuinely. Use “thanks” rather than thank you to stay concise.
-        <Container>
-          <Recommendation className="words-to-avoid-page__recommendation">
-            <RecommendationStatus recommended />
-            <Paragraph noMargin className="words-to-avoid-page__recommendation__paragraph">
-              Thanks for your order
-            </Paragraph>
-          </Recommendation>
-          <Recommendation className="words-to-avoid-page__recommendation">
-            <RecommendationStatus />
-            <Paragraph noMargin className="words-to-avoid-page__recommendation__paragraph">
-              Order placed
-            </Paragraph>
-          </Recommendation>
-        </Container>
-      </Paragraph>
+      <CustomRecommendation />
     </Section>
-
-    <Section>
-      <Heading2>Sorry</Heading2>
-      <Paragraph>
-        Sorry does not help fix anything and quickly becomes meaningless. Use it
-        only where we prevented something or denied access to something.
-        <Container>
-          <Recommendation className="words-to-avoid-page__recommendation__fields">
-            <RecommendationStatus recommended />
-            <Modal className="words-to-avoid-page__modal" scrollLock={false}>
-              <ModalContainer className="words-to-avoid-page__modal-container" focusLock={false}>
-                <ModalHeader>Not available</ModalHeader>
-                <ModalContent>
-                  Sorry, we do not currently offer home delivery or Click &
-                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
-                  <TextField
-                    placeholder="Enter postcode"
-                    className="words-to-avoid-page__modal-textfield"
-                  />
-                  <Button className="words-to-avoid-page__modal-button">Check postcode</Button>
-                  <div className="words-to-avoid-page__modal-paragraph">
-                    <Strong>New build house?</Strong><br />
-                    It may not be on our system yet.
-                    {' '}<LinkText>Contact us</LinkText>{' '}
-                    and we will add it for you.
-                  </div>
-                </ModalContent>
-                <ModalCloseIcon />
-              </ModalContainer>
-            </Modal>
-          </Recommendation>
-          <Recommendation className="words-to-avoid-page__recommendation__fields">
-            <RecommendationStatus />
-            <Modal className="words-to-avoid-page__modal" scrollLock={false}>
-              <ModalContainer className="words-to-avoid-page__modal-container" focusLock={false}>
-                <ModalHeader>Not available</ModalHeader>
-                <ModalContent>
-                  We do not currently offer home delivery or Click &
-                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
-                  <TextField
-                    placeholder="Enter postcode"
-                    className="words-to-avoid-page__modal-textfield"
-                  />
-                  <Button className="words-to-avoid-page__modal-button">Check postcode</Button>
-                  <div className="words-to-avoid-page__modal-paragraph">
-                    <Strong>New build house?</Strong><br />
-                    It may not be on our system yet.
-                    {' '}<LinkText>Contact us</LinkText>{' '}
-                    and we will add it for you.
-                  </div>
-                </ModalContent>
-                <ModalCloseIcon />
-              </ModalContainer>
-            </Modal>
-          </Recommendation>
-          <div>{/* Empty field */}</div>
-          <Recommendation className="words-to-avoid-page__recommendation__fields">
-            <RecommendationStatus />
-            <Modal className="words-to-avoid-page__modal" scrollLock={false}>
-              <ModalContainer className="words-to-avoid-page__modal-container" focusLock={false}>
-                <ModalHeader>Sorry</ModalHeader>
-                <ModalContent>
-                  We do not currently offer home delivery or Click &
-                  Collect for <Strong>{'<postcode>'}</Strong>. Try another postcode:
-                  <TextField
-                    placeholder="Enter postcode"
-                    className="words-to-avoid-page__modal-textfield"
-                  />
-                  <Button className="words-to-avoid-page__modal-button">Check postcode</Button>
-                  <div className="words-to-avoid-page__modal-paragraph">
-                    <Strong>New build house?</Strong><br />
-                    It may not be on our system yet.
-                    {' '}<LinkText>Contact us</LinkText>{' '}
-                    and we will add it for you.
-                  </div>
-                </ModalContent>
-                <ModalCloseIcon />
-              </ModalContainer>
-            </Modal>
-          </Recommendation>
-        </Container>
-      </Paragraph>
-      <Paragraph noMargin>
-        Do not use sorry in validation messages.
-        <Container>
-          <Recommendation className="words-to-avoid-page__recommendation__fields">
-            <RecommendationStatus />
-            <div className="words-to-avoid-page__recommendation-item">
-              <Label>Postcode</Label>
-              <TextField
-                placeholder="Input Text"
-                value="123456"
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="We do not recognise that postcode"
-                validate
-              />
-            </div>
-          </Recommendation>
-          <Recommendation className="words-to-avoid-page__recommendation__fields">
-            <RecommendationStatus />
-            <div className="words-to-avoid-page__recommendation-item">
-              <Label>Postcode</Label>
-              <TextField
-                placeholder="Input Text"
-                value="123456"
-                pattern=""
-                helperText="Helper text"
-                successMessage="Success message"
-                errorMessage="Sorry, we do not recognise that postcode"
-                validate
-              />
-            </div>
-          </Recommendation>
-        </Container>
-      </Paragraph>
-    </Section>
-
   </article>
 )
 
