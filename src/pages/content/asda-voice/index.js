@@ -103,7 +103,7 @@ const ContentAsdaVoicePage = () => (
         Negative
       </Heading3>
       <Paragraph>
-        The user is blocked from acheiving their goal or task. While doing
+        The user is blocked from achieving their goal or task. While doing
         grocery shopping may not be a big win, not being able to do it can be a
         serious frustration. Especially at holidays and on special occasions.
         Language should be sincere and serious but not formal or fawning.

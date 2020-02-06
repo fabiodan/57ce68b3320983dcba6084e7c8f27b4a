@@ -58,7 +58,7 @@ const ContentGuidingPrinciplesPage = () => (
     </Section>
 
     <Section>
-      <Heading2>Our approach</Heading2>
+      <Heading2>Be useful</Heading2>
       <Paragraph>
         We create clear, helpful and friendly content to help our users save money and live better.
       </Paragraph>
