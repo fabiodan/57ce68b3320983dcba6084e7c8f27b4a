@@ -17,6 +17,7 @@ const Menu = ({ toggleMenu }) => {
       name: 'Common library',
       url: '/common',
       children: [
+        { name: 'Introduction', url: '/common/introduction' },
         { name: 'Guiding principles', url: '/common/guiding-principles' },
         { name: 'Atomic design', url: '/common/atomic-design' },
         { name: 'Typography', url: '/common/typography' },

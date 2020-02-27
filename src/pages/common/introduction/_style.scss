@@ -1,0 +1,75 @@
+/* common-introduction-page */
+
+// Dependencies
+@import "@asda/core/style";
+@import "@sg/sg-core/style";
+
+// Variables
+$common-introduction-page-element-height: 250px;
+$common-introduction-page-mix-border-color: $color-medium-gray;
+
+// Block
+.common-introduction-page {
+
+}
+
+// Elements/Mixes
+
+.common-introduction-page__grid {
+  grid-gap: 16px;
+  max-width: none;
+}
+
+.common-introduction-page__figure {
+  margin-bottom: $spacing-m;
+}
+
+.common-introduction-page__card {
+  border: solid 1px $color-light-gray;
+  border-radius: 8px;
+  height: 100%;
+  position: relative;
+}
+
+.common-introduction-page__card-image {
+  background-color: $color-background-gray;
+  min-height: 204px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.common-introduction-page__card-content {
+  padding: $spacing-m;
+}
+
+.common-introduction-page__card-paragraph {
+  margin-bottom: 64px;
+}
+
+.introduction-page__card-icon {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+
+// Modifiers
+
+// Breakpoints
+@media (min-width: 480px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}

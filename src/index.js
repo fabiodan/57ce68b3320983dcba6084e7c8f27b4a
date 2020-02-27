@@ -21,6 +21,7 @@ import { Header, Aside, Main } from './pages/components/sg-layout'
 import SamplePage from './pages/_sample'
 
 // Pages (Common)
+import CommonIntroductionPage from './pages/common/introduction'
 import CommonGuidingPrinciples from './pages/common/guiding-principles'
 import CommonAtomicDesign from './pages/common/atomic-design'
 import CommonTypographyPage from './pages/common/typography'
@@ -152,7 +153,8 @@ ReactDOM.render(
         <Route exact path="/" render={() => <Redirect to="/common" />} />
 
         {/* Common */}
-        <Route exact path="/common" render={() => <Redirect to="/common/guiding-principles" />} />
+        <Route exact path="/common" render={() => <Redirect to="/common/introduction" />} />
+        <Route path="/common/introduction" component={CommonIntroductionPage} />
         <Route path="/common/guiding-principles" component={CommonGuidingPrinciples} />
         <Route path="/common/atomic-design" component={CommonAtomicDesign} />
         <Route path="/common/typography" component={CommonTypographyPage} />
@@ -161,6 +163,7 @@ ReactDOM.render(
         <Route path="/common/links" component={LinksPage} />
         <Route path="/common/icons" component={IconsPage} />
         <Route path="/common/brand" component={BrandPage} />
+
 
         {/* Content */}
         <Route exact path="/content" render={() => <Redirect to="/content/guiding-principles" />} />
