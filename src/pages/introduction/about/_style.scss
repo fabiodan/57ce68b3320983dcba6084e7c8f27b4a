@@ -1,37 +1,35 @@
-/* common-introduction-page */
+/* Introduction • About Page */
 
 // Dependencies
 @import "@asda/core/style";
 @import "@sg/sg-core/style";
 
 // Variables
-$common-introduction-page-element-height: 250px;
-$common-introduction-page-mix-border-color: $color-medium-gray;
 
 // Block
-.common-introduction-page {
+.introduction-about-page {
 
 }
 
 // Elements/Mixes
 
-.common-introduction-page__grid {
+.introduction-about-page__grid {
   grid-gap: 16px;
   max-width: none;
 }
 
-.common-introduction-page__figure {
+.introduction-about-page__figure {
   margin-bottom: $spacing-m;
 }
 
-.common-introduction-page__card {
+.introduction-about-page__card {
   border: solid 1px $color-light-gray;
   border-radius: 8px;
   height: 100%;
   position: relative;
 }
 
-.common-introduction-page__card-image {
+.introduction-about-page__card-image {
   background-color: $color-background-gray;
   min-height: 204px;
   display: flex;
@@ -39,11 +37,11 @@ $common-introduction-page-mix-border-color: $color-medium-gray;
   justify-content: center;
 }
 
-.common-introduction-page__card-content {
+.introduction-about-page__card-content {
   padding: $spacing-m;
 }
 
-.common-introduction-page__card-paragraph {
+.introduction-about-page__card-paragraph {
   margin-bottom: 64px;
 }
 

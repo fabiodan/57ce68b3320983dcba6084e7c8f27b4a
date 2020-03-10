@@ -1,4 +1,4 @@
-/* Guiding Principles Page */
+/* Introduction • Guiding Principles Page */
 
 // Dependencies
 @import "@asda/core/style";
@@ -7,24 +7,24 @@
 // Variables
 
 // Block
-.common-guiding-principles-page {
+.introduction-guiding-principles-page {
 
 }
 
 // Elements/Mixes
-.common-guiding-principles-page__accessibility__example {
+.introduction-guiding-principles-page__accessibility__example {
   background: $color-light-gray;
   padding: $spacing-xxl;
   margin-bottom: $spacing-xxxl;
 }
 
-.common-guiding-principles-page__accessibility__text {
+.introduction-guiding-principles-page__accessibility__text {
   background: $color-white;
   padding: $spacing-l;
 }
 
 // Modifiers
-.common-guiding-principles-page--offset {
+.introduction-guiding-principles-page--offset {
   margin-top: -6px;
   margin-left: -6px;
 }

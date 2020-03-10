@@ -1,4 +1,4 @@
-/* Sample Page */
+/* Introduction • Atomic Design Page */
 
 // Dependencies
 @import "@asda/core/style";
@@ -7,23 +7,20 @@
 // Variables
 
 // Block
-.common-atomic-design-page {
+.introduction-atomic-design-page {
 
 }
 
 // Elements/Mixes
-.common-atomic-design-page__atomic-element {
+.introduction-atomic-design-page__atomic-element {
   margin-bottom: $spacing-xxxl;
   max-width: 878px;
   min-height: 127px;
 }
 
-.common-atomic-design-page__atomic-element__figure {
+.introduction-atomic-design-page__atomic-element__figure {
   float: left;
   margin-right: $spacing-xxxl;
-}
-
-.common-atomic-design-page__atomic-element__text {
 }
 
 // Modifiers

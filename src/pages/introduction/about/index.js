@@ -28,7 +28,7 @@ const IntroAboutPage = () => {
   const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 
   return (
-    <article className="common-introduction-page">
+    <article className="introduction-about-page">
 
       <Heading1>ASDA Design Language</Heading1>
 
@@ -43,15 +43,15 @@ const IntroAboutPage = () => {
 
       <Section>
         <Heading2>Libraries</Heading2>
-        <Grid className="common-introduction-page__grid" columnCount={minWidth1024 ? 2 : 1}>
+        <Grid className="introduction-about-page__grid" columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
-            <div className="common-introduction-page__card">
-              <div className="common-introduction-page__card-image">
+            <div className="introduction-about-page__card">
+              <div className="introduction-about-page__card-image">
                 <Figure fluid noMargin maxWidth="194px" src={introContentPNGSource} />
               </div>
-              <div className="common-introduction-page__card-content">
+              <div className="introduction-about-page__card-content">
                 <Heading3>Content library</Heading3>
-                <Paragraph className="common-introduction-page__card-paragraph">
+                <Paragraph className="introduction-about-page__card-paragraph">
                   Words are the basic component of human interaction. Use language to design meaningfully
                 </Paragraph>
                 <a href="#/content"><Icon className="introduction-page__card-icon" name="chevron-right" /></a>
@@ -59,13 +59,13 @@ const IntroAboutPage = () => {
             </div>
           </GridItem>
           <GridItem>
-            <div className="common-introduction-page__card">
-              <div className="common-introduction-page__card-image">
+            <div className="introduction-about-page__card">
+              <div className="introduction-about-page__card-image">
                 <Figure fluid noMargin maxWidth="246px" src={introCommonPNGSource} />
               </div>
-              <div className="common-introduction-page__card-content">
+              <div className="introduction-about-page__card-content">
                 <Heading3>Common library</Heading3>
-                <Paragraph className="common-introduction-page__card-paragraph">
+                <Paragraph className="introduction-about-page__card-paragraph">
                   Visual elements and components common to all Asda Groceries platforms
                 </Paragraph>
                 <a href="#/common"><Icon className="introduction-page__card-icon" name="chevron-right" /></a>
@@ -73,13 +73,13 @@ const IntroAboutPage = () => {
             </div>
           </GridItem>
           <GridItem>
-            <div className="common-introduction-page__card">
-              <div className="common-introduction-page__card-image">
+            <div className="introduction-about-page__card">
+              <div className="introduction-about-page__card-image">
                 <Figure fluid noMargin maxWidth="250px" src={introWebPNGSource} />
               </div>
-              <div className="common-introduction-page__card-content">
+              <div className="introduction-about-page__card-content">
                 <Heading3>Web library</Heading3>
-                <Paragraph className="common-introduction-page__card-paragraph">
+                <Paragraph className="introduction-about-page__card-paragraph">
                   Use this when designing for our web platform
                 </Paragraph>
                 <a href="#/web"><Icon className="introduction-page__card-icon" name="chevron-right" /></a>
@@ -87,13 +87,13 @@ const IntroAboutPage = () => {
             </div>
           </GridItem>
           <GridItem>
-            <div className="common-introduction-page__card">
-              <div className="common-introduction-page__card-image">
+            <div className="introduction-about-page__card">
+              <div className="introduction-about-page__card-image">
                 <Figure fluid noMargin maxWidth="218px" src={introAndroidPNGSource} />
               </div>
-              <div className="common-introduction-page__card-content">
+              <div className="introduction-about-page__card-content">
                 <Heading3>Android library</Heading3>
-                <Paragraph className="common-introduction-page__card-paragraph">
+                <Paragraph className="introduction-about-page__card-paragraph">
                   Use this when designing for our android applications
                 </Paragraph>
                 <a href="#/android"><Icon className="introduction-page__card-icon" name="chevron-right" /></a>
@@ -101,13 +101,13 @@ const IntroAboutPage = () => {
             </div>
           </GridItem>
           <GridItem>
-            <div className="common-introduction-page__card">
-              <div className="common-introduction-page__card-image">
+            <div className="introduction-about-page__card">
+              <div className="introduction-about-page__card-image">
                 <Figure fluid noMargin maxWidth="218px" src={introiOSPNGSource} />
               </div>
-              <div className="common-introduction-page__card-content">
+              <div className="introduction-about-page__card-content">
                 <Heading3>iOS library</Heading3>
-                <Paragraph className="common-introduction-page__card-paragraph">
+                <Paragraph className="introduction-about-page__card-paragraph">
                   Use this when designing for our iOS applications.
                 </Paragraph>
                 <a href="#/ios"><Icon className="introduction-page__card-icon" name="chevron-right" /></a>

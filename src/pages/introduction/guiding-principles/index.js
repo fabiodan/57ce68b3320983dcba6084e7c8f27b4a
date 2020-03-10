@@ -28,15 +28,11 @@ import scalable2PNGSource from './images/scalable-2.png'
 
 import './_style.scss'
 
-const MyComponent = ({ children }) => (
-  <div className="common-guiding-principles-page__component">{ children }</div>
-)
-
 const CommonGuidingPrinciples = () => {
   const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 
   return (
-    <article className="common-guiding-principles-page">
+    <article className="introduction-guiding-principles-page">
 
       <Heading1>Guiding principles</Heading1>
 
@@ -106,13 +102,13 @@ const CommonGuidingPrinciples = () => {
         </Paragraph>
         <Grid columnCount={minWidth1024 ? 2 : 1}>
           <GridItem>
-            <div className="common-guiding-principles-page__accessibility">
-              <div className="common-guiding-principles-page__accessibility__example">
-                <div className="common-guiding-principles-page__accessibility__text">
+            <div className="introduction-guiding-principles-page__accessibility">
+              <div className="introduction-guiding-principles-page__accessibility__example">
+                <div className="introduction-guiding-principles-page__accessibility__text">
                   Text on a white background.
                 </div>
               </div>
-              <div className="common-guiding-principles-page__accessibility__check">
+              <div className="introduction-guiding-principles-page__accessibility__check">
                 <Icon name="check" />
                 Check text against background colours.
               </div>
@@ -120,20 +116,20 @@ const CommonGuidingPrinciples = () => {
           </GridItem>
           <GridItem>
             <Figure
-              className="common-guiding-principles-page--offset"
+              className="introduction-guiding-principles-page--offset"
               maxWidth="383px" src={accessible1PNGSource} noMargin fluid />
           </GridItem>
           <GridItem>
             <GridItem>
-              <div className="common-guiding-principles-page__accessibility">
-                <div className="common-guiding-principles-page__accessibility__example">
-                  <div className="common-guiding-principles-page__accessibility__text">
+              <div className="introduction-guiding-principles-page__accessibility">
+                <div className="introduction-guiding-principles-page__accessibility__example">
+                  <div className="introduction-guiding-principles-page__accessibility__text">
                     <Checkbox id="checkbox--ui-comp" />
                     <Label inline htmlFor="checkbox--ui-comp">UI Components</Label>
 
                   </div>
                 </div>
-                <div className="common-guiding-principles-page__accessibility__check">
+                <div className="introduction-guiding-principles-page__accessibility__check">
                   <Icon name="check" />
                   Check UI components against background colours.
                 </div>
@@ -142,7 +138,7 @@ const CommonGuidingPrinciples = () => {
           </GridItem>
           <GridItem>
             <Figure
-              className="common-guiding-principles-page--offset"
+              className="introduction-guiding-principles-page--offset"
               maxWidth="383px" src={accessible2PNGSource} noMargin fluid />
           </GridItem>
         </Grid>

@@ -31,12 +31,12 @@ const elements = {
 
 const AtomicElement = ({ type, children }) => {
   return (
-    <div className="common-atomic-design-page__atomic-element">
+    <div className="introduction-atomic-design-page__atomic-element">
       <Figure
-        className="common-atomic-design-page__atomic-element__figure"
+        className="introduction-atomic-design-page__atomic-element__figure"
         maxWidth="100px" src={elements[type]} noMargin
       />
-      <div className="common-atomic-design-page__atomic-element__text">
+      <div className="introduction-atomic-design-page__atomic-element__text">
         {children}
       </div>
     </div>
@@ -44,7 +44,7 @@ const AtomicElement = ({ type, children }) => {
 }
 
 const CommonAtomicDesignPage = () => (
-  <article className="common-atomic-design-page">
+  <article className="introduction-atomic-design-page">
 
     <Heading1>Atomic design</Heading1>
 
