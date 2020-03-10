@@ -24,7 +24,7 @@ import introAndroidPNGSource from './images/introductionAndroidLibrary.png'
 import introiOSPNGSource from './images/introductioniOSLibrary.png'
 import './_style.scss'
 
-const CommonIntroductionPage = () => {
+const IntroAboutPage = () => {
   const minWidth1024 = useMediaQuery({ query: '(min-width: 1024px)' })
 
   return (
@@ -120,4 +120,4 @@ const CommonIntroductionPage = () => {
   )
 }
 
-export default CommonIntroductionPage
+export default IntroAboutPage

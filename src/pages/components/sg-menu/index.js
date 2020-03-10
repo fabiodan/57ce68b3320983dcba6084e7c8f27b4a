@@ -14,12 +14,18 @@ const Menu = ({ toggleMenu }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
     {
+      name: 'Introduction',
+      url: '/introduction',
+      children: [
+        { name: 'About ASDA Design Language', url: '/introduction/about' },
+        { name: 'Guiding principles', url: '/introduction/guiding-principles' },
+        { name: 'Atomic design', url: '/introduction/atomic-design' },
+      ],
+    },
+    {
       name: 'Common library',
       url: '/common',
       children: [
-        { name: 'Introduction', url: '/common/introduction' },
-        { name: 'Guiding principles', url: '/common/guiding-principles' },
-        { name: 'Atomic design', url: '/common/atomic-design' },
         { name: 'Typography', url: '/common/typography' },
         { name: 'Color scheme', url: '/common/color-scheme' },
         { name: 'Buttons', url: '/common/buttons' },
@@ -136,20 +142,26 @@ const List = (props) => {
 }
 
 const ListItem = ({
-  name, items, toggleMenu, url,
-}) => (
-  <li className="sg-menu__list-item">
-    <NavLink
-      className="sg-menu__anchor"
-      to={url}
-      activeClassName="sg-menu--active"
-    >
-      {name}
-      <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
-    </NavLink>
-    <SubList subMenuItems={items} toggleMenu={toggleMenu} />
-  </li>
-)
+  className, name, items, toggleMenu, url,
+}) => {
+  const modifiers = []  
+  const classNames = joinClassNames('sg-menu__list-item', className, modifiers)
+  return (
+    <li className={classNames}>
+      <NavLink
+        className="sg-menu__anchor"
+        to={url}
+        activeClassName="sg-menu--active"
+      >
+        {name}
+        {items.length > 0 &&
+          <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
+        }
+      </NavLink>
+      <SubList subMenuItems={items} toggleMenu={toggleMenu} />
+    </li>
+  )
+}
 
 const SubList = ({ subMenuItems, toggleMenu }) => {
   const items = subMenuItems.map(item => (

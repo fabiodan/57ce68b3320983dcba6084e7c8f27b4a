@@ -20,10 +20,12 @@ import { Header, Aside, Main } from './pages/components/sg-layout'
 // Sample Page
 import SamplePage from './pages/_sample'
 
+// Pages (Intro)
+import IntroAboutPage from './pages/introduction/about'
+import IntroGuidingPrinciplesPage from './pages/introduction/guiding-principles'
+import IntroAtomicDesignPage from './pages/introduction/atomic-design'
+
 // Pages (Common)
-import CommonIntroductionPage from './pages/common/introduction'
-import CommonGuidingPrinciples from './pages/common/guiding-principles'
-import CommonAtomicDesign from './pages/common/atomic-design'
 import CommonTypographyPage from './pages/common/typography'
 import ColorSchemePage from './pages/common/color-scheme'
 import ButtonsPage from './pages/common/buttons'
@@ -150,20 +152,22 @@ ReactDOM.render(
   (
     <Router>
       <Page>
-        <Route exact path="/" render={() => <Redirect to="/common" />} />
+        <Route exact path="/" render={() => <Redirect to="/introduction" />} />
+
+        {/* Introduction */}
+        <Route exact path="/introduction" render={() => <Redirect to="/introduction/about" />} />
+        <Route path="/introduction/about" component={IntroAboutPage} />
+        <Route path="/introduction/guiding-principles" component={IntroGuidingPrinciplesPage} />
+        <Route path="/introduction/atomic-design" component={IntroAtomicDesignPage} />
 
         {/* Common */}
-        <Route exact path="/common" render={() => <Redirect to="/common/introduction" />} />
-        <Route path="/common/introduction" component={CommonIntroductionPage} />
-        <Route path="/common/guiding-principles" component={CommonGuidingPrinciples} />
-        <Route path="/common/atomic-design" component={CommonAtomicDesign} />
+        <Route exact path="/common" render={() => <Redirect to="/common/typography" />} />
         <Route path="/common/typography" component={CommonTypographyPage} />
         <Route path="/common/color-scheme" component={ColorSchemePage} />
         <Route path="/common/buttons" component={ButtonsPage} />
         <Route path="/common/links" component={LinksPage} />
         <Route path="/common/icons" component={IconsPage} />
         <Route path="/common/brand" component={BrandPage} />
-
 
         {/* Content */}
         <Route exact path="/content" render={() => <Redirect to="/content/guiding-principles" />} />

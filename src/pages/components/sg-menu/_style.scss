@@ -24,7 +24,6 @@ $sg-menu-border-width: 1px;
 
 .sg-menu__anchor {
   @include typography(xl);
-  font-weight: 600;
   vertical-align: middle;
   padding: 0 $spacing-s 0 $spacing-xl;
   line-height: $sg-menu-item-height;
@@ -80,12 +79,14 @@ $sg-menu-border-width: 1px;
   width: 100%;
   color: currentColor;
   &:hover {
-    background-color: $color-background-gray;
+    font-weight: 600;
   }
 }
 
 // Modifiers
 .sg-menu--active {
+  background-color: $color-background-gray;
+  font-weight: 600;
   .sg-menu__icon {
     transform: rotate(180deg);
   }
@@ -99,7 +100,6 @@ $sg-menu-border-width: 1px;
 
 .sg-menu__sublist-anchor--active {
   font-weight: 600;
-  background-color: $color-background-gray;
 }
 
 .sg-menu--scroll-lock {
