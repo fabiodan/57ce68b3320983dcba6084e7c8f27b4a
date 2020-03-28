@@ -1,5 +1,5 @@
 // Libs
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 import joinClassNames from 'classnames'
@@ -10,7 +10,7 @@ import Icon, { IconButton } from '@asda/icon'
 // Assets
 import './_style.scss'
 
-const Menu = ({ toggleMenu, selectedIndex, setSelectedIndex }) => {
+const Menu = ({ toggleMenu }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
     {
@@ -110,47 +110,55 @@ const Menu = ({ toggleMenu, selectedIndex, setSelectedIndex }) => {
   return (
     <Fragment>
       <MediaQuery query="(max-width: 767px)">
-        <List
-          selectedIndex={selectedIndex}
-          setSelectedIndex={setSelectedIndex}
-          toggleMenu={toggleMenu}
-          items={menuItems}
-        />
+        <List toggleMenu={toggleMenu} items={menuItems} />
       </MediaQuery>
       <MediaQuery query="(min-width: 768px)">
-        <List
-          selectedIndex={selectedIndex}
-          setSelectedIndex={setSelectedIndex}
-          items={menuItems}
-        />
+        <List items={menuItems} />
       </MediaQuery>
     </Fragment>
   )
 }
 
-const List = (props) => {
-  const { toggleMenu, selectedIndex, setSelectedIndex } = props
-  const items = props.items.map((item, index) => (
-    <ListItem
-      key={item.url}
-      index={index}
-      name={item.name}
-      url={item.url}
-      toggleMenu={toggleMenu}
-      items={item.children}
-      selectedIndex={selectedIndex}
-      setSelectedIndex={setSelectedIndex}
-    />
-  ))
+class List extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectedIndex: null,
+    }
+    this.setSelectedIndex = this.setSelectedIndex.bind(this)
+  }
 
-  return (
-    <nav className="sg-menu">
-      <MediaQuery query="(max-width: 767px)">
-        <IconButton name="close" className="sg-menu__close-button" onClick={toggleMenu} />
-      </MediaQuery>
-      <ul className="sg-menu__list">{items}</ul>
-    </nav>
-  )
+  setSelectedIndex(index) {
+    this.setState({
+      selectedIndex: index,
+    })
+  }
+
+  render() {
+    const { selectedIndex } = this.state
+    const { toggleMenu, items } = this.props
+    const listItems = items.map((item, index) => (
+      <ListItem
+        key={item.url}
+        index={index}
+        name={item.name}
+        url={item.url}
+        toggleMenu={toggleMenu}
+        items={item.children}
+        selectedIndex={selectedIndex}
+        setSelectedIndex={this.setSelectedIndex}
+      />
+    ))
+
+    return (
+      <nav className="sg-menu">
+        <MediaQuery query="(max-width: 767px)">
+          <IconButton name="close" className="sg-menu__close-button" onClick={toggleMenu} />
+        </MediaQuery>
+        <ul className="sg-menu__list">{listItems}</ul>
+      </nav>
+    )
+  }
 }
 
 const ListItem = ({
