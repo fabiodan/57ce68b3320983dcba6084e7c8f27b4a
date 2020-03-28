@@ -137,18 +137,26 @@ class List extends Component {
   render() {
     const { selectedIndex } = this.state
     const { toggleMenu, items } = this.props
-    const listItems = items.map((item, index) => (
-      <ListItem
-        key={item.url}
-        index={index}
-        name={item.name}
-        url={item.url}
-        toggleMenu={toggleMenu}
-        items={item.children}
-        selectedIndex={selectedIndex}
-        setSelectedIndex={this.setSelectedIndex}
-      />
-    ))
+    const listItems = items.map((item, index) => {
+      let isActive = selectedIndex === index
+
+      if (selectedIndex === null) {
+        isActive = !!window.location.href.match(item.url)
+      }
+
+      return (
+        <ListItem
+          isActive={isActive}
+          key={item.url}
+          index={index}
+          name={item.name}
+          url={item.url}
+          toggleMenu={toggleMenu}
+          items={item.children}
+          setSelectedIndex={this.setSelectedIndex}
+        />
+      )
+    })
 
     return (
       <nav className="sg-menu">
@@ -162,15 +170,8 @@ class List extends Component {
 }
 
 const ListItem = ({
-  className, name, items, toggleMenu, url, index, selectedIndex, setSelectedIndex,
+  className, name, items, toggleMenu, url, index, setSelectedIndex, isActive
 }) => {
-
-  let isActive = selectedIndex === index
-
-  // If first load
-  if (selectedIndex === null) {
-    isActive = !!window.location.href.match(url)
-  }
 
   const modifiers = [
      isActive && 'sg-menu--active',
@@ -178,10 +179,7 @@ const ListItem = ({
   const classNames = joinClassNames('sg-menu__list-item', className, modifiers)
   return (
     <li className={classNames}>
-      <a
-        className="sg-menu__anchor"
-        onClick={() => setSelectedIndex(index)}
-      >
+      <a className="sg-menu__anchor" onClick={() => setSelectedIndex(index)}>
         {name}
         {items.length > 0 &&
           <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
