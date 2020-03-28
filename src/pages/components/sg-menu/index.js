@@ -123,14 +123,16 @@ class List extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selectedIndex: null,
+      selectedIndex: -1, // -1 = First load
     }
     this.setSelectedIndex = this.setSelectedIndex.bind(this)
   }
 
-  setSelectedIndex(index) {
+  setSelectedIndex(index, isActive) {
+    const selectedIndex = isActive ? null : index
+
     this.setState({
-      selectedIndex: index,
+      selectedIndex: selectedIndex
     })
   }
 
@@ -140,7 +142,8 @@ class List extends Component {
     const listItems = items.map((item, index) => {
       let isActive = selectedIndex === index
 
-      if (selectedIndex === null) {
+      // First load
+      if (selectedIndex === -1) {
         isActive = !!window.location.href.match(item.url)
       }
 
@@ -179,7 +182,7 @@ const ListItem = ({
   const classNames = joinClassNames('sg-menu__list-item', className, modifiers)
   return (
     <li className={classNames}>
-      <a className="sg-menu__anchor" onClick={() => setSelectedIndex(index)}>
+      <a className="sg-menu__anchor" onClick={() => setSelectedIndex(index, isActive)}>
         {name}
         {items.length > 0 &&
           <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
