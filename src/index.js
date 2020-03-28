@@ -95,8 +95,10 @@ class Page extends Component {
     super(props)
     this.state = {
       menuVisible: false,
+      menuSelectedIndex: null,
     }
     this.toggleMenu = this.toggleMenu.bind(this)
+    this.setSelectedIndex = this.setSelectedIndex.bind(this)
   }
 
   componentDidUpdate() {
@@ -115,9 +117,16 @@ class Page extends Component {
     })
   }
 
+  setSelectedIndex(index) {
+    this.setState({
+      menuSelectedIndex: index,
+    })
+  }
+
   render() {
     const { children } = this.props
-    const asideModifier = this.state.menuVisible ? 'sg-layout__aside--visible' : ''
+    const { menuVisible, menuSelectedIndex } = this.state
+    const asideModifier = menuVisible ? 'sg-layout__aside--visible' : ''
 
     return (
       <Fragment>
@@ -137,7 +146,11 @@ class Page extends Component {
             <MediaQuery query="(min-width: 768px)">
               <Logo className="sg-layout__aside__logo" />
             </MediaQuery>
-            <Menu toggleMenu={this.toggleMenu} />
+            <Menu
+              selectedIndex={menuSelectedIndex}
+              setSelectedIndex={this.setSelectedIndex}
+              toggleMenu={this.toggleMenu}
+            />
           </Aside>
           <Main>
             {children}

@@ -33,6 +33,7 @@ $sg-menu-border-width: 1px;
   color: $color-charcoal;
   text-decoration: none;
   position: relative;
+  cursor: pointer;
 }
 
 .sg-menu__close-button {
@@ -85,16 +86,17 @@ $sg-menu-border-width: 1px;
 
 // Modifiers
 .sg-menu--active {
-  background-color: $color-background-gray;
-  font-weight: 600;
+  .sg-menu__anchor {
+    background-color: $color-background-gray;
+    font-weight: 600;
+    & ~ {
+      .sg-menu__sublist {
+        height: auto;
+      }
+    }
+  }
   .sg-menu__icon {
     transform: rotate(180deg);
-  }
-
-  & ~ {
-    .sg-menu__sublist {
-      height: auto;
-    }
   }
 }
 

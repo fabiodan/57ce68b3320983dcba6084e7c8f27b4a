@@ -10,7 +10,7 @@ import Icon, { IconButton } from '@asda/icon'
 // Assets
 import './_style.scss'
 
-const Menu = ({ toggleMenu }) => {
+const Menu = ({ toggleMenu, selectedIndex, setSelectedIndex }) => {
   const menuItems = [
     // { name: 'Sample', url: '/sample' }, // Don't delete
     {
@@ -110,24 +110,36 @@ const Menu = ({ toggleMenu }) => {
   return (
     <Fragment>
       <MediaQuery query="(max-width: 767px)">
-        <List toggleMenu={toggleMenu} items={menuItems} />
+        <List
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndex}
+          toggleMenu={toggleMenu}
+          items={menuItems}
+        />
       </MediaQuery>
       <MediaQuery query="(min-width: 768px)">
-        <List items={menuItems} />
+        <List
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndex}
+          items={menuItems}
+        />
       </MediaQuery>
     </Fragment>
   )
 }
 
 const List = (props) => {
-  const { toggleMenu } = props
-  const items = props.items.map(item => (
+  const { toggleMenu, selectedIndex, setSelectedIndex } = props
+  const items = props.items.map((item, index) => (
     <ListItem
       key={item.url}
+      index={index}
       name={item.name}
       url={item.url}
       toggleMenu={toggleMenu}
       items={item.children}
+      selectedIndex={selectedIndex}
+      setSelectedIndex={setSelectedIndex}
     />
   ))
 
@@ -142,22 +154,31 @@ const List = (props) => {
 }
 
 const ListItem = ({
-  className, name, items, toggleMenu, url,
+  className, name, items, toggleMenu, url, index, selectedIndex, setSelectedIndex,
 }) => {
-  const modifiers = []  
+
+  let isActive = selectedIndex === index
+
+  // If first load
+  if (selectedIndex === null) {
+    isActive = !!window.location.href.match(url)
+  }
+
+  const modifiers = [
+     isActive && 'sg-menu--active',
+  ]
   const classNames = joinClassNames('sg-menu__list-item', className, modifiers)
   return (
     <li className={classNames}>
-      <NavLink
+      <a
         className="sg-menu__anchor"
-        to={url}
-        activeClassName="sg-menu--active"
+        onClick={() => setSelectedIndex(index)}
       >
         {name}
         {items.length > 0 &&
           <Icon name="chevron-down" size="x-small" className="sg-menu__icon" />
         }
-      </NavLink>
+      </a>
       <SubList subMenuItems={items} toggleMenu={toggleMenu} />
     </li>
   )
@@ -193,7 +214,6 @@ const SubListItem = ({
       onClick()
     }
   }
-
 
   return (
     <li className={classNames}>
