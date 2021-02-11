@@ -129,7 +129,7 @@ class AddButton extends Component {
       children, className, unit, quantity,
     } = this.props
     const { isDecimal, inputFocused } = this.state
-    const kgPerUnit = 6.25
+    const kgPerUnit = 2
     const value = isDecimal ? (quantity * kgPerUnit).toFixed(2) : quantity
 
     return (

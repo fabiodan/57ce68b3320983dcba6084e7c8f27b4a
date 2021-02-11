@@ -20,7 +20,7 @@ $button-secondary-border-width-hover: 2px;
   padding: 0 $spacing-m;
   position: relative;
   user-select: none;
-  line-height: $button-height;
+  line-height: $button-height + 1;
   background-color: $color-transparent;
   border: 0;
   border-radius: 4px;
@@ -74,7 +74,8 @@ $button-secondary-border-width-hover: 2px;
   background-color: $color-white;
   border: solid $button-secondary-border-width currentColor;
   padding: 0 $spacing-m - $button-secondary-border-width;
-  line-height: $button-height - ($button-secondary-border-width * 2);
+  // line-height: $button-height - ($button-secondary-border-width * 2);
+  line-height: $button-height + $button-secondary-border-width;
 
 
   &:focus:not(.button--disabled),
@@ -82,7 +83,8 @@ $button-secondary-border-width-hover: 2px;
   &.button--hover:not(.button--disabled) { // For demostrantion purposes only
     border: solid $button-secondary-border-width-hover currentColor;
     padding: 0 ($spacing-m - $button-secondary-border-width-hover);
-    line-height: $button-height - ($button-secondary-border-width-hover * 2);
+    // line-height: $button-height - ($button-secondary-border-width-hover * 2);
+    line-height: $button-height;
 
     .button__content {
       height: $button-height - ($button-secondary-border-width-hover);
